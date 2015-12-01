@@ -60,7 +60,7 @@ public class TestMetamutator {
             fail();
         }
         catch (IllegalArgumentException expected){}
-
+        
         // test with the second mutation hotspot
         Selector sel1=Selector.getSelectorByName("_s2");
         sel1.choose(0);// GT

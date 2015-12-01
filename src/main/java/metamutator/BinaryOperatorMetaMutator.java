@@ -38,6 +38,10 @@ public class BinaryOperatorMetaMutator extends
 					BinaryOperatorKind.LT, BinaryOperatorKind.NE);
 	private static final EnumSet<BinaryOperatorKind> REDUCED_COMPARISON_OPERATORS = EnumSet
 			.of(BinaryOperatorKind.EQ, BinaryOperatorKind.NE);
+	
+	private static final EnumSet<BinaryOperatorKind> ARITHMETIC_OPERATORS = EnumSet
+			.of(BinaryOperatorKind.PLUS, BinaryOperatorKind.MINUS, 
+					BinaryOperatorKind.MUL, BinaryOperatorKind.MOD);
 
 	private Set<CtElement> hostSpots = Sets.newHashSet();
 
@@ -73,19 +77,25 @@ public class BinaryOperatorMetaMutator extends
 
 	public void process(CtBinaryOperator<Boolean> binaryOperator) {
 		BinaryOperatorKind kind = binaryOperator.getKind();
-
+		System.out.println(kind);
 		if (LOGICAL_OPERATORS.contains(kind)) {
 			mutateOperator(binaryOperator, LOGICAL_OPERATORS);
 		} else if (COMPARISON_OPERATORS.contains(kind)) {
 			if (isNumber(binaryOperator.getLeftHandOperand())
-			 || isNumber(binaryOperator.getRightHandOperand()))
-			{
-				mutateOperator(binaryOperator, COMPARISON_OPERATORS);
+				 || isNumber(binaryOperator.getRightHandOperand()))
+				{
+					mutateOperator(binaryOperator, COMPARISON_OPERATORS);
+				}
+			else {
+				mutateOperator(binaryOperator, REDUCED_COMPARISON_OPERATORS);
 			}
-			 else {
-			 mutateOperator(binaryOperator, REDUCED_COMPARISON_OPERATORS);
-			 }
-		}
+		} else if(ARITHMETIC_OPERATORS.contains(kind)){
+			//if (isNumber(binaryOperator.getLeftHandOperand())
+			//		 || isNumber(binaryOperator.getRightHandOperand()))
+			//{
+				mutateOperator(binaryOperator, ARITHMETIC_OPERATORS);
+			//}
+		}	
 	}
 
 	private boolean isNumber(CtExpression<?> operand) {
@@ -185,7 +195,7 @@ public class BinaryOperatorMetaMutator extends
 		CtTypeReference<Object> fieldType = getFactory().Type()
 				.createTypeParameterReference(SELECTOR_CLASS);
 		String selectorId = "_s" + index;
-
+		
 		CtCodeSnippetExpression<Object> codeSnippet = getFactory().Core()
 				.createCodeSnippetExpression();
 
