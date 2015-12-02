@@ -26,8 +26,7 @@ import spoon.reflect.reference.CtTypeReference;
 public class BinaryOperatorMetaMutator extends
 		AbstractProcessor<CtBinaryOperator<Boolean>> {
 
-	public static final String SELECTOR_CLASS = Selector.class.getName();
-
+	public static final String PREFIX =  "_binaryLogicalOperatorHotSpot";
 	private static int index = 0;
 
 	private static final EnumSet<BinaryOperatorKind> LOGICAL_OPERATORS = EnumSet
@@ -38,10 +37,6 @@ public class BinaryOperatorMetaMutator extends
 					BinaryOperatorKind.LT, BinaryOperatorKind.NE);
 	private static final EnumSet<BinaryOperatorKind> REDUCED_COMPARISON_OPERATORS = EnumSet
 			.of(BinaryOperatorKind.EQ, BinaryOperatorKind.NE);
-	
-	private static final EnumSet<BinaryOperatorKind> ARITHMETIC_OPERATORS = EnumSet
-			.of(BinaryOperatorKind.PLUS, BinaryOperatorKind.MINUS, 
-					BinaryOperatorKind.MUL, BinaryOperatorKind.MOD);
 
 	private Set<CtElement> hostSpots = Sets.newHashSet();
 
@@ -51,7 +46,7 @@ public class BinaryOperatorMetaMutator extends
 		// System.out.println(element.getParent(CtAnonymousExecutable.class));
 		// }
 		try {
-			getTopLevelClass(element);
+			Selector.getTopLevelClass(element);
 		} catch (NullPointerException e) {
 			return false;
 		}
@@ -77,25 +72,19 @@ public class BinaryOperatorMetaMutator extends
 
 	public void process(CtBinaryOperator<Boolean> binaryOperator) {
 		BinaryOperatorKind kind = binaryOperator.getKind();
-		System.out.println(kind);
+
 		if (LOGICAL_OPERATORS.contains(kind)) {
 			mutateOperator(binaryOperator, LOGICAL_OPERATORS);
 		} else if (COMPARISON_OPERATORS.contains(kind)) {
 			if (isNumber(binaryOperator.getLeftHandOperand())
-				 || isNumber(binaryOperator.getRightHandOperand()))
-				{
-					mutateOperator(binaryOperator, COMPARISON_OPERATORS);
-				}
-			else {
-				mutateOperator(binaryOperator, REDUCED_COMPARISON_OPERATORS);
+			 || isNumber(binaryOperator.getRightHandOperand()))
+			{
+				mutateOperator(binaryOperator, COMPARISON_OPERATORS);
 			}
-		} else if(ARITHMETIC_OPERATORS.contains(kind)){
-			//if (isNumber(binaryOperator.getLeftHandOperand())
-			//		 || isNumber(binaryOperator.getRightHandOperand()))
-			//{
-				mutateOperator(binaryOperator, ARITHMETIC_OPERATORS);
-			//}
-		}	
+			 else {
+			 mutateOperator(binaryOperator, REDUCED_COMPARISON_OPERATORS);
+			 }
+		}
 	}
 
 	private boolean isNumber(CtExpression<?> operand) {
@@ -121,8 +110,8 @@ public class BinaryOperatorMetaMutator extends
 	 * @param expression
 	 * @param operators
 	 */
-	private void mutateOperator(final CtBinaryOperator<Boolean> expression,
-			EnumSet<BinaryOperatorKind> operators) {
+	private void mutateOperator(final CtBinaryOperator<Boolean> expression, EnumSet<BinaryOperatorKind> operators) {
+		
 		if (!operators.contains(expression.getKind())) {
 			throw new IllegalArgumentException("not consistent");
 		}
@@ -143,7 +132,7 @@ public class BinaryOperatorMetaMutator extends
 				.stream()
 				.map(kind -> {
 					expression.setKind(kind);
-					return String.format("(_s%s.is(\"%s\") && (%s))",
+					return String.format("("+ PREFIX + "%s.is(\"%s\") && (%s))",
 							thisIndex, kind, expression);
 				}).collect(Collectors.joining(" || "));
 
@@ -153,7 +142,7 @@ public class BinaryOperatorMetaMutator extends
 
 		expression.replace(codeSnippet);
 		expression.replace(expression);
-		addVariableToClass(expression, originalKind, thisIndex, operators);
+		Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
 
 		hostSpots.add(expression);
 
@@ -183,71 +172,5 @@ public class BinaryOperatorMetaMutator extends
 
 	private boolean isTopLevel(CtElement parent) {
 		return parent instanceof CtClass && ((CtClass) parent).isTopLevel();
-	}
-
-	private void addVariableToClass(CtBinaryOperator element,
-			String originalKind, int index,
-			EnumSet<BinaryOperatorKind> operators) {
-
-		long hashCode = (element.getPosition().toString() + element.getParent()
-				.toString()).hashCode();
-
-		CtTypeReference<Object> fieldType = getFactory().Type()
-				.createTypeParameterReference(SELECTOR_CLASS);
-		String selectorId = "_s" + index;
-		
-		CtCodeSnippetExpression<Object> codeSnippet = getFactory().Core()
-				.createCodeSnippetExpression();
-
-		StringBuilder sb = new StringBuilder(SELECTOR_CLASS + ".of(")
-				.append(index);
-
-		sb.append(',');
-
-		// now the options
-		sb.append("new String[]{");
-
-		// the original operator, always the first one
-		sb.append('"').append(originalKind).append('"');
-
-		// the other alternatives
-		for (BinaryOperatorKind kind : operators) {
-			if (kind.toString().equals(originalKind)) {
-				continue;
-			}
-			sb.append(',').append('"').append(kind).append('"');
-		}
-
-		sb.append("})");
-
-		// adding location
-		if (element.getParent(CtType.class).isTopLevel()) {
-			sb.append(".in("
-					+ element.getParent(CtType.class).getQualifiedName()
-					+ ".class)");
-		}
-
-		// adding identifier
-		sb.append(".id(\"" + selectorId + "\")");
-
-		codeSnippet.setValue(sb.toString());
-
-		CtClass<?> type = getTopLevelClass(element);
-
-		CtField<Object> field = getFactory().Field().create(
-				type,
-				EnumSet.of(ModifierKind.FINAL, ModifierKind.PRIVATE,
-						ModifierKind.STATIC), fieldType, selectorId,
-				codeSnippet);
-
-		type.addField(field);
-	}
-
-	private CtClass<?> getTopLevelClass(CtElement element) {
-		CtClass parent = element.getParent(CtClass.class);
-		while (!parent.isTopLevel()) {
-			parent = parent.getParent(CtClass.class);
-		}
-		return parent;
 	}
 }

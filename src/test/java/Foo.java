@@ -9,10 +9,6 @@ public class Foo {
 	}
 
 	public boolean op3(Class c) {
-		return Foo.class == c;
-	}
-	
-	public int op4(int a, int b) {
-		return a+b;
+		return Foo.class==c;
 	}
 }
