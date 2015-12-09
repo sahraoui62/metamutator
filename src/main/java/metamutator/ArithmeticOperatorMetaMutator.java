@@ -16,27 +16,17 @@ import spoon.reflect.declaration.CtClass;
 import spoon.reflect.declaration.CtConstructor;
 import spoon.reflect.declaration.CtElement;
 import spoon.reflect.declaration.CtField;
-import spoon.reflect.declaration.CtType;
-import spoon.reflect.declaration.ModifierKind;
-import spoon.reflect.reference.CtTypeReference;
 
 /**
- * inserts a mutation hotspot for each binary operator
+ * inserts a mutation hotspot for each arithmetic operator
  */
-public class BinaryOperatorMetaMutator extends
+public class ArithmeticOperatorMetaMutator extends
 		AbstractProcessor<CtBinaryOperator<Boolean>> {
 
-	public static final String PREFIX =  "_binaryLogicalOperatorHotSpot";
+	public static final String PREFIX =  "_arithmeticOperatorHotSpot";
 	private static int index = 0;
-
-	private static final EnumSet<BinaryOperatorKind> LOGICAL_OPERATORS = EnumSet
-			.of(BinaryOperatorKind.AND, BinaryOperatorKind.OR);
-	private static final EnumSet<BinaryOperatorKind> COMPARISON_OPERATORS = EnumSet
-			.of(BinaryOperatorKind.EQ, BinaryOperatorKind.GE,
-					BinaryOperatorKind.GT, BinaryOperatorKind.LE,
-					BinaryOperatorKind.LT, BinaryOperatorKind.NE);
-	private static final EnumSet<BinaryOperatorKind> REDUCED_COMPARISON_OPERATORS = EnumSet
-			.of(BinaryOperatorKind.EQ, BinaryOperatorKind.NE);
+	private static final EnumSet<BinaryOperatorKind> ARITHMETIC_OPERATORS = EnumSet
+			.of(BinaryOperatorKind.PLUS, BinaryOperatorKind.MINUS, BinaryOperatorKind.DIV, BinaryOperatorKind.MUL);
 	
 	private Set<CtElement> hostSpots = Sets.newHashSet();
 
@@ -61,28 +51,18 @@ public class BinaryOperatorMetaMutator extends
 			return false;
 		}
 
-		return (LOGICAL_OPERATORS.contains(element.getKind()) || COMPARISON_OPERATORS
-				.contains(element.getKind()))
-				&& (element.getParent(CtAnonymousExecutable.class) == null) // not
-																			// in
-																			// static
-																			// block
-		;
+		return (ARITHMETIC_OPERATORS.contains(element.getKind()))
+				&& (element.getParent(CtAnonymousExecutable.class) == null);
 	}
 
 	public void process(CtBinaryOperator<Boolean> binaryOperator) {
 		BinaryOperatorKind kind = binaryOperator.getKind();
-		if (LOGICAL_OPERATORS.contains(kind)) {
-			mutateOperator(binaryOperator, LOGICAL_OPERATORS);
-		} else if (COMPARISON_OPERATORS.contains(kind)) {
+		if(ARITHMETIC_OPERATORS.contains(kind)){
 			if (isNumber(binaryOperator.getLeftHandOperand())
 			 || isNumber(binaryOperator.getRightHandOperand()))
 			{
-				mutateOperator(binaryOperator, COMPARISON_OPERATORS);
+				mutateOperator(binaryOperator, ARITHMETIC_OPERATORS);
 			}
-			 else {
-			 mutateOperator(binaryOperator, REDUCED_COMPARISON_OPERATORS);
-			 }
 		}
 	}
 
@@ -97,15 +77,13 @@ public class BinaryOperatorMetaMutator extends
 	}
 
 /**
-	 * Converts "a op b" bean op one of "<", "<=", "==", ">=", "!=" to:
-	 *    (  (op(1, 0, "<")  && (a < b))
-	 *    || (op(1, 1, "<=") && (a <= b))
-	 *    || (op(1, 2, "==") && (a == b))
-	 *    || (op(1, 3, ">=") && (a >= b))
-	 *    || (op(1, 4, ">")  && (a > b))
+	 * Converts "a op b" bean op one of "-", "+", "*", "/"
+	 *    (  (op(1, 0, "-") && (a - b))
+	 *    || (op(1, 1, "+") && (a + b))
+	 *    || (op(1, 2, "*") && (a * b))
+	 *    || (op(1, 3, "/") && (a / b))
 	 *    )
 	 *
-	 * com.medallia.codefixer
 	 * @param expression
 	 * @param operators
 	 */
