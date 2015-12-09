@@ -35,7 +35,7 @@ public class ArithmeticOperatorMetaMutatorTest {
         // creating a new instance of the class
         Object o = ((Class)bsh.eval(c.toString())).newInstance();        
         System.out.println(Selector.getAllSelectors().size());
-        assertEquals(1,Selector.getAllSelectors().size());
+        assertEquals(2,Selector.getAllSelectors().size());
       
         
     }

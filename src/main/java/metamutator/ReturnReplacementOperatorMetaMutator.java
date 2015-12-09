@@ -1,14 +1,11 @@
 package metamutator;
 
-import java.util.Collection;
 import java.util.EnumSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import com.google.common.collect.Sets;
 
 import spoon.processing.AbstractProcessor;
-import spoon.reflect.code.BinaryOperatorKind;
 import spoon.reflect.code.CtCodeSnippetExpression;
 import spoon.reflect.code.CtExpression;
 import spoon.reflect.code.CtReturn;
@@ -18,27 +15,29 @@ import spoon.reflect.declaration.CtElement;
 public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtReturn> {
 
 	public static final String PREFIX = "_returnReplacementOperatorHotSpot";
-	private static int index = 0;
+	private static int index = 0;	
+	private static final EnumSet<RETURN_REPLACEMENT> absSet = EnumSet.of(RETURN_REPLACEMENT.INT_MIN, RETURN_REPLACEMENT.INT_MAX, RETURN_REPLACEMENT.NULL, RETURN_REPLACEMENT.ZERO);
 	
-	//private static final Set CONSTANT_VALUES = new HashSet<String>(Arrays.asList("0",Integer.toString(Integer.MIN_VALUE),Integer.toString(Integer.MAX_VALUE)));
 	
-	private Set<CtElement> hostSpots = Sets.newHashSet();
-
-
-	public void process(CtReturn returnStatement) {
-		CtExpression returnValue = returnStatement.getReturnedExpression();
-		if (isNumber(returnValue)) {
-			// mutateOperator(returnStatement, CONSTANT_VALUES);
-			CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core().createCodeSnippetExpression();
-			codeSnippet.setValue("100");
-			returnStatement.setReturnedExpression(codeSnippet);
-		}else{
-			// intégrer un null
-			CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core().createCodeSnippetExpression();
-			codeSnippet.setValue("null");
-			returnStatement.setReturnedExpression(codeSnippet);
+	public enum RETURN_REPLACEMENT {
+		INIT, // INIT VALUE
+		NULL, // CHANGE BY NULL
+		INT_MIN, // CHANGE BY MIN INT
+		INT_MAX, // CHANGE BY MAX INT,
+		ZERO // CHANGE BY 0
+	};
+	
+	private String permutations(RETURN_REPLACEMENT value) {
+		switch(value) {
+			case NULL : return "null";
+			case INT_MIN : return Integer.toString(Integer.MIN_VALUE);
+			case INT_MAX : return Integer.toString(Integer.MAX_VALUE);
+			case ZERO : return Integer.toString(0);
+			default : return "";
 		}
 	}
+	
+	private Set<CtElement> hostSpots = Sets.newHashSet();
 
 	private boolean isNumber(CtExpression<?> operand) {
 		return operand.getType().getSimpleName().equals("int") || operand.getType().getSimpleName().equals("long")
@@ -48,58 +47,36 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 				|| Number.class.isAssignableFrom(operand.getType().getActualClass());
 	}
 
-	/**
-	 *
-	 *
-	 * @param ctReturn
-	 * @param operators
-	 */
-	/*private void mutateOperator(final CtReturn ctReturn, String[] operators) {
-
-		/*if (!operators.contains(ctReturn.getKind())) {
-			throw new IllegalArgumentException("not consistent");
-		}
-
-		if (alreadyInHotsSpot(ctReturn) || ctReturn.toString().contains(".is(\"")) {
-			System.out.println(
-					String.format("Expression '%s' ignored because it is included in previous hot spot", ctReturn));
-			return;
-		}*/
-
-		/*int thisIndex = ++index;
-
-		String originalKind = ctReturn.getReturnedExpression().toString();
-		String newExpression = operators.stream().map(kind -> {
-			expression.setKind(kind);
-			return String.format("(" + PREFIX + "%s.is(\"%s\") && (%s))", thisIndex, kind, expression);
-		}).collect(Collectors.joining(" || "));
-
-		CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core().createCodeSnippetExpression();
-		codeSnippet.setValue('(' + newExpression + ')');
-
-		ctReturn.replace(codeSnippet);
-		ctReturn.replace(ctReturn);
-		Selector.generateSelector(ctReturn, originalKind, thisIndex, operators, PREFIX);
-
-		hostSpots.add(ctReturn);
-
-	}*/
-
-	/*public void process(CtVariableRead candidate) {
+	public void process(CtReturn returnStatement) {
 		index++;
 		
 		String expression = "(";
-		for(UNARY unary : absSet){
-			if(unary.equals(UNARY.INIT)) continue;
-			expression += PREFIX+index + ".is(\"" + unary.toString() + "\")?( " + UnaryEquivalent(unary)  + candidate.getVariable().getSimpleName() + ")):";
+		CtExpression returnValue = returnStatement.getReturnedExpression();
+		System.out.println(returnValue.getType());
+
+		if (isNumber(returnValue)) {	
+			for(RETURN_REPLACEMENT replacement : absSet){
+				if(replacement.equals(RETURN_REPLACEMENT.INIT) || replacement.equals(RETURN_REPLACEMENT.NULL)) continue;
+				expression += PREFIX+index + ".is(\"" + replacement.toString() + "\")?( " + permutations(replacement) + " )):";
+			}		
+		}//if(returnValue.getType()){
+			
+		//}
+		else{
+			expression += PREFIX+index + ".is(\" NULL \")?( " + permutations(RETURN_REPLACEMENT.NULL) +" )):";
 		}
-		expression += "(" + candidate.getVariable().getSimpleName() + "))";
+		
+		
+		expression += "(" + returnValue + "))";
 		CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core()
 				.createCodeSnippetExpression();
 		codeSnippet.setValue(expression);
-		candidate.replace(codeSnippet);
-		Selector.generateSelector(candidate, UNARY.INIT.toString(), index, absSet, PREFIX);
-	}*/
+		
+		CtReturn newReturn = getFactory().Core().createReturn();
+		newReturn.setReturnedExpression(codeSnippet);
+		returnStatement.replace(newReturn);
+		Selector.generateSelector(returnStatement, RETURN_REPLACEMENT.INIT.toString(), index, absSet, PREFIX);
+	}
 	
 	
 	

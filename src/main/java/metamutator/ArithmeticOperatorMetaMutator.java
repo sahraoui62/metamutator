@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import com.google.common.collect.Sets;
 
+import metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT;
 import spoon.processing.AbstractProcessor;
 import spoon.reflect.code.BinaryOperatorKind;
 import spoon.reflect.code.CtBinaryOperator;
@@ -29,7 +30,18 @@ public class ArithmeticOperatorMetaMutator extends
 			.of(BinaryOperatorKind.PLUS, BinaryOperatorKind.MINUS, BinaryOperatorKind.DIV, BinaryOperatorKind.MUL);
 	
 	private Set<CtElement> hostSpots = Sets.newHashSet();
-
+	
+	private String permutations(BinaryOperatorKind value) {
+		switch(value) {
+			case PLUS : return "+";
+			case MINUS : return "-";
+			case DIV : return "/";
+			case MUL : return "*";
+			default : return "";
+		}
+	}
+	
+	
 	@Override
 	public boolean isToBeProcessed(CtBinaryOperator<Boolean> element) {
 		// if (element.getParent(CtAnonymousExecutable.class)!=null) {
@@ -58,11 +70,11 @@ public class ArithmeticOperatorMetaMutator extends
 	public void process(CtBinaryOperator<Boolean> binaryOperator) {
 		BinaryOperatorKind kind = binaryOperator.getKind();
 		if(ARITHMETIC_OPERATORS.contains(kind)){
-			if (isNumber(binaryOperator.getLeftHandOperand())
-			 || isNumber(binaryOperator.getRightHandOperand()))
-			{
+			//if ( isNumber(binaryOperator.getLeftHandOperand())
+			// || isNumber(binaryOperator.getRightHandOperand()))
+			//{
 				mutateOperator(binaryOperator, ARITHMETIC_OPERATORS);
-			}
+			//}
 		}
 	}
 
@@ -109,10 +121,15 @@ public class ArithmeticOperatorMetaMutator extends
 				.stream()
 				.map(kind -> {
 					expression.setKind(kind);
-					return String.format("("+ PREFIX + "%s.is(\"%s\") && (%s))",
+					return String.format("("+ PREFIX + "%s.is(\"%s\") ? (%s))",
 							thisIndex, kind, expression);
-				}).collect(Collectors.joining(" || "));
-
+				}).collect(Collectors.joining(" : "));
+		 
+		/*String newExpression = "";
+		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){
+			newExpression += PREFIX + index + ".is(\"" + op.toString() + "\")?( " + permutations(op) + " )):";
+		}		
+		*/
 		CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core()
 				.createCodeSnippetExpression();
 		codeSnippet.setValue('(' + newExpression + ')');
