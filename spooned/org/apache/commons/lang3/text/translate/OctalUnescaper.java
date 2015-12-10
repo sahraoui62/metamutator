@@ -18,25 +18,25 @@ public class OctalUnescaper extends org.apache.commons.lang3.text.translate.Char
                 } 
             } 
             out.write(java.lang.Integer.parseInt(builder.toString(), 8));
-            return ((_returnReplacementOperator1135.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1135.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1135.is("ZERO")) ? ( 0 ) : (1 + (builder.length())));
+            return ((_returnReplacementOperatorHotSpot1135.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1135.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1135.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (1 + (builder.length())));
         } 
-        return ((_returnReplacementOperator1136.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1136.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1136.is("ZERO")) ? ( 0 ) : (0));
+        return ((_returnReplacementOperatorHotSpot1136.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1136.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1136.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
     }
 
     private boolean isOctalDigit(final char ch) {
-        return ((_returnReplacementOperator1133.is("NULL")) ? ( null ) : ((ch >= '0') && (ch <= '7')));
+        return ((_returnReplacementOperatorHotSpot1133.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((ch >= '0') && (ch <= '7')));
     }
 
     private boolean isZeroToThree(final char ch) {
-        return ((_returnReplacementOperator1134.is("NULL")) ? ( null ) : ((ch >= '0') && (ch <= '3')));
+        return ((_returnReplacementOperatorHotSpot1134.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((ch >= '0') && (ch <= '3')));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1133 = metamutator.Selector.of(1133,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperator1133");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1133 = metamutator.Selector.of(1133,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperatorHotSpot1133");
 
-    private static final metamutator.Selector _returnReplacementOperator1134 = metamutator.Selector.of(1134,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperator1134");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1134 = metamutator.Selector.of(1134,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperatorHotSpot1134");
 
-    private static final metamutator.Selector _returnReplacementOperator1135 = metamutator.Selector.of(1135,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperator1135");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1135 = metamutator.Selector.of(1135,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperatorHotSpot1135");
 
-    private static final metamutator.Selector _returnReplacementOperator1136 = metamutator.Selector.of(1136,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperator1136");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1136 = metamutator.Selector.of(1136,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.OctalUnescaper.class).id("_returnReplacementOperatorHotSpot1136");
 }
 

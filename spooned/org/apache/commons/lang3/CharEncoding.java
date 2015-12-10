@@ -16,19 +16,19 @@ public class CharEncoding {
 
     public static boolean isSupported(final java.lang.String name) {
         if (name == null) {
-            return ((_returnReplacementOperator2455.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot2455.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         } 
         try {
-            return ((_returnReplacementOperator2456.is("NULL")) ? ( null ) : (java.nio.charset.Charset.isSupported(name)));
+            return ((_returnReplacementOperatorHotSpot2456.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.nio.charset.Charset.isSupported(name)));
         } catch (final java.nio.charset.IllegalCharsetNameException ex) {
-            return ((_returnReplacementOperator2457.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot2457.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         }
     }
 
-    private static final metamutator.Selector _returnReplacementOperator2455 = metamutator.Selector.of(2455,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperator2455");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2455 = metamutator.Selector.of(2455,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperatorHotSpot2455");
 
-    private static final metamutator.Selector _returnReplacementOperator2456 = metamutator.Selector.of(2456,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperator2456");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2456 = metamutator.Selector.of(2456,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperatorHotSpot2456");
 
-    private static final metamutator.Selector _returnReplacementOperator2457 = metamutator.Selector.of(2457,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperator2457");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2457 = metamutator.Selector.of(2457,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperatorHotSpot2457");
 }
 

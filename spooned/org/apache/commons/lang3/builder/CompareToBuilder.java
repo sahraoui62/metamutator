@@ -10,24 +10,24 @@ public class CompareToBuilder implements org.apache.commons.lang3.builder.Builde
     }
 
     public static int reflectionCompare(final java.lang.Object lhs, final java.lang.Object rhs) {
-        return ((_returnReplacementOperator1.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, false, null)));
+        return ((_returnReplacementOperatorHotSpot1.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, false, null)));
     }
 
     public static int reflectionCompare(final java.lang.Object lhs, final java.lang.Object rhs, final boolean compareTransients) {
-        return ((_returnReplacementOperator2.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, compareTransients, null)));
+        return ((_returnReplacementOperatorHotSpot2.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot2.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot2.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, compareTransients, null)));
     }
 
     public static int reflectionCompare(final java.lang.Object lhs, final java.lang.Object rhs, final java.util.Collection<java.lang.String> excludeFields) {
-        return ((_returnReplacementOperator6.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator6.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator6.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(excludeFields))));
+        return ((_returnReplacementOperatorHotSpot6.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot6.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot6.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(excludeFields))));
     }
 
     public static int reflectionCompare(final java.lang.Object lhs, final java.lang.Object rhs, final java.lang.String... excludeFields) {
-        return ((_returnReplacementOperator5.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator5.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator5.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, false, null, excludeFields)));
+        return ((_returnReplacementOperatorHotSpot5.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot5.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot5.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (org.apache.commons.lang3.builder.CompareToBuilder.reflectionCompare(lhs, rhs, false, null, excludeFields)));
     }
 
     public static int reflectionCompare(final java.lang.Object lhs, final java.lang.Object rhs, final boolean compareTransients, final java.lang.Class<?> reflectUpToClass, final java.lang.String... excludeFields) {
         if (lhs == rhs) {
-            return ((_returnReplacementOperator3.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator3.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator3.is("ZERO")) ? ( 0 ) : (0));
+            return ((_returnReplacementOperatorHotSpot3.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot3.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot3.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
         } 
         if ((lhs == null) || (rhs == null)) {
             throw new java.lang.NullPointerException();
@@ -42,7 +42,7 @@ public class CompareToBuilder implements org.apache.commons.lang3.builder.Builde
             lhsClazz = lhsClazz.getSuperclass();
             org.apache.commons.lang3.builder.CompareToBuilder.reflectionAppend(lhs, rhs, lhsClazz, compareToBuilder, compareTransients, excludeFields);
         }
-        return ((_returnReplacementOperator4.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator4.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator4.is("ZERO")) ? ( 0 ) : (compareToBuilder.toComparison()));
+        return ((_returnReplacementOperatorHotSpot4.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot4.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot4.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (compareToBuilder.toComparison()));
     }
 
     private static void reflectionAppend(final java.lang.Object lhs, final java.lang.Object rhs, final java.lang.Class<?> clazz, final org.apache.commons.lang3.builder.CompareToBuilder builder, final boolean useTransients, final java.lang.String[] excludeFields) {
@@ -62,30 +62,30 @@ public class CompareToBuilder implements org.apache.commons.lang3.builder.Builde
 
     public org.apache.commons.lang3.builder.CompareToBuilder appendSuper(final int superCompareTo) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator87.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot87.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = superCompareTo;
-        return ((_returnReplacementOperator88.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot88.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final java.lang.Object lhs, final java.lang.Object rhs) {
-        return ((_returnReplacementOperator58.is("NULL")) ? ( null ) : (append(lhs, rhs, null)));
+        return ((_returnReplacementOperatorHotSpot58.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (append(lhs, rhs, null)));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final java.lang.Object lhs, final java.lang.Object rhs, final java.util.Comparator<?> comparator) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator59.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot59.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator60.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot60.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator61.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot61.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator62.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot62.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs.getClass().isArray()) {
             if (lhs instanceof long[]) {
@@ -118,492 +118,492 @@ public class CompareToBuilder implements org.apache.commons.lang3.builder.Builde
                 comparison = comparator2.compare(lhs, rhs);
             }
         }
-        return ((_returnReplacementOperator63.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot63.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final long lhs, final long rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator71.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot71.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = lhs < rhs ? -1 : lhs > rhs ? 1 : 0;
-        return ((_returnReplacementOperator72.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot72.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final int lhs, final int rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator50.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot50.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = lhs < rhs ? -1 : lhs > rhs ? 1 : 0;
-        return ((_returnReplacementOperator51.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot51.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final short lhs, final short rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator79.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot79.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = lhs < rhs ? -1 : lhs > rhs ? 1 : 0;
-        return ((_returnReplacementOperator80.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot80.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final char lhs, final char rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator26.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot26.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = lhs < rhs ? -1 : lhs > rhs ? 1 : 0;
-        return ((_returnReplacementOperator27.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot27.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final byte lhs, final byte rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator18.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot18.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = lhs < rhs ? -1 : lhs > rhs ? 1 : 0;
-        return ((_returnReplacementOperator19.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot19.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final double lhs, final double rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator34.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot34.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = java.lang.Double.compare(lhs, rhs);
-        return ((_returnReplacementOperator35.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot35.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final float lhs, final float rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator42.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot42.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         comparison = java.lang.Float.compare(lhs, rhs);
-        return ((_returnReplacementOperator43.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot43.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final boolean lhs, final boolean rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator9.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot9.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator10.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot10.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == false) {
             comparison = -1;
         } else {
             comparison = +1;
         }
-        return ((_returnReplacementOperator11.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot11.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final java.lang.Object[] lhs, final java.lang.Object[] rhs) {
-        return ((_returnReplacementOperator64.is("NULL")) ? ( null ) : (append(lhs, rhs, null)));
+        return ((_returnReplacementOperatorHotSpot64.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (append(lhs, rhs, null)));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final java.lang.Object[] lhs, final java.lang.Object[] rhs, final java.util.Comparator<?> comparator) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator65.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot65.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator66.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot66.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator67.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot67.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator68.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot68.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator69.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot69.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i], comparator);
         }
-        return ((_returnReplacementOperator70.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot70.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final long[] lhs, final long[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator73.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot73.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator74.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot74.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator75.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot75.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator76.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot76.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator77.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot77.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator78.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot78.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final int[] lhs, final int[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator52.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot52.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator53.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot53.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator54.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot54.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator55.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot55.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator56.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot56.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator57.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot57.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final short[] lhs, final short[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator81.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot81.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator82.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot82.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator83.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot83.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator84.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot84.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator85.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot85.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator86.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot86.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final char[] lhs, final char[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator28.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot28.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator29.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot29.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator30.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot30.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator31.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot31.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator32.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot32.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator33.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot33.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final byte[] lhs, final byte[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator20.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot20.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator21.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot21.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator22.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot22.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator23.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot23.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator24.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot24.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator25.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot25.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final double[] lhs, final double[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator36.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot36.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator37.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot37.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator38.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot38.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator39.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot39.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator40.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot40.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator41.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot41.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final float[] lhs, final float[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator44.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot44.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator45.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot45.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator46.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot46.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator47.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot47.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator48.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot48.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator49.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot49.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.builder.CompareToBuilder append(final boolean[] lhs, final boolean[] rhs) {
         if ((comparison) != 0) {
-            return ((_returnReplacementOperator12.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot12.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == rhs) {
-            return ((_returnReplacementOperator13.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot13.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (lhs == null) {
             comparison = -1;
-            return ((_returnReplacementOperator14.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot14.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if (rhs == null) {
             comparison = +1;
-            return ((_returnReplacementOperator15.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot15.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         if ((lhs.length) != (rhs.length)) {
             comparison = (lhs.length) < (rhs.length) ? -1 : +1;
-            return ((_returnReplacementOperator16.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot16.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         for (int i = 0 ; (i < (lhs.length)) && ((comparison) == 0) ; i++) {
             append(lhs[i], rhs[i]);
         }
-        return ((_returnReplacementOperator17.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot17.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     public int toComparison() {
-        return ((_returnReplacementOperator7.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator7.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator7.is("ZERO")) ? ( 0 ) : (comparison));
+        return ((_returnReplacementOperatorHotSpot7.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot7.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot7.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (comparison));
     }
 
     @java.lang.Override
     public java.lang.Integer build() {
-        return ((_returnReplacementOperator8.is("NULL")) ? ( null ) : (java.lang.Integer.valueOf(toComparison())));
+        return ((_returnReplacementOperatorHotSpot8.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Integer.valueOf(toComparison())));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1 = metamutator.Selector.of(1,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator1");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1 = metamutator.Selector.of(1,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot1");
 
-    private static final metamutator.Selector _returnReplacementOperator2 = metamutator.Selector.of(2,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator2");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2 = metamutator.Selector.of(2,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot2");
 
-    private static final metamutator.Selector _returnReplacementOperator3 = metamutator.Selector.of(3,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator3");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3 = metamutator.Selector.of(3,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot3");
 
-    private static final metamutator.Selector _returnReplacementOperator4 = metamutator.Selector.of(4,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator4");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot4 = metamutator.Selector.of(4,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot4");
 
-    private static final metamutator.Selector _returnReplacementOperator5 = metamutator.Selector.of(5,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator5");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot5 = metamutator.Selector.of(5,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot5");
 
-    private static final metamutator.Selector _returnReplacementOperator6 = metamutator.Selector.of(6,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator6");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot6 = metamutator.Selector.of(6,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot6");
 
-    private static final metamutator.Selector _returnReplacementOperator7 = metamutator.Selector.of(7,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator7");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot7 = metamutator.Selector.of(7,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot7");
 
-    private static final metamutator.Selector _returnReplacementOperator8 = metamutator.Selector.of(8,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator8");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot8 = metamutator.Selector.of(8,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot8");
 
-    private static final metamutator.Selector _returnReplacementOperator9 = metamutator.Selector.of(9,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator9");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot9 = metamutator.Selector.of(9,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot9");
 
-    private static final metamutator.Selector _returnReplacementOperator10 = metamutator.Selector.of(10,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator10");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot10 = metamutator.Selector.of(10,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot10");
 
-    private static final metamutator.Selector _returnReplacementOperator11 = metamutator.Selector.of(11,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator11");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot11 = metamutator.Selector.of(11,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot11");
 
-    private static final metamutator.Selector _returnReplacementOperator12 = metamutator.Selector.of(12,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator12");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot12 = metamutator.Selector.of(12,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot12");
 
-    private static final metamutator.Selector _returnReplacementOperator13 = metamutator.Selector.of(13,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator13");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot13 = metamutator.Selector.of(13,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot13");
 
-    private static final metamutator.Selector _returnReplacementOperator14 = metamutator.Selector.of(14,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator14");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot14 = metamutator.Selector.of(14,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot14");
 
-    private static final metamutator.Selector _returnReplacementOperator15 = metamutator.Selector.of(15,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator15");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot15 = metamutator.Selector.of(15,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot15");
 
-    private static final metamutator.Selector _returnReplacementOperator16 = metamutator.Selector.of(16,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator16");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot16 = metamutator.Selector.of(16,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot16");
 
-    private static final metamutator.Selector _returnReplacementOperator17 = metamutator.Selector.of(17,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator17");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot17 = metamutator.Selector.of(17,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot17");
 
-    private static final metamutator.Selector _returnReplacementOperator18 = metamutator.Selector.of(18,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator18");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot18 = metamutator.Selector.of(18,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot18");
 
-    private static final metamutator.Selector _returnReplacementOperator19 = metamutator.Selector.of(19,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator19");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot19 = metamutator.Selector.of(19,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot19");
 
-    private static final metamutator.Selector _returnReplacementOperator20 = metamutator.Selector.of(20,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator20");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot20 = metamutator.Selector.of(20,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot20");
 
-    private static final metamutator.Selector _returnReplacementOperator21 = metamutator.Selector.of(21,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator21");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot21 = metamutator.Selector.of(21,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot21");
 
-    private static final metamutator.Selector _returnReplacementOperator22 = metamutator.Selector.of(22,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator22");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot22 = metamutator.Selector.of(22,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot22");
 
-    private static final metamutator.Selector _returnReplacementOperator23 = metamutator.Selector.of(23,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator23");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot23 = metamutator.Selector.of(23,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot23");
 
-    private static final metamutator.Selector _returnReplacementOperator24 = metamutator.Selector.of(24,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator24");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot24 = metamutator.Selector.of(24,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot24");
 
-    private static final metamutator.Selector _returnReplacementOperator25 = metamutator.Selector.of(25,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator25");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot25 = metamutator.Selector.of(25,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot25");
 
-    private static final metamutator.Selector _returnReplacementOperator26 = metamutator.Selector.of(26,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator26");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot26 = metamutator.Selector.of(26,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot26");
 
-    private static final metamutator.Selector _returnReplacementOperator27 = metamutator.Selector.of(27,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator27");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot27 = metamutator.Selector.of(27,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot27");
 
-    private static final metamutator.Selector _returnReplacementOperator28 = metamutator.Selector.of(28,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator28");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot28 = metamutator.Selector.of(28,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot28");
 
-    private static final metamutator.Selector _returnReplacementOperator29 = metamutator.Selector.of(29,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator29");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot29 = metamutator.Selector.of(29,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot29");
 
-    private static final metamutator.Selector _returnReplacementOperator30 = metamutator.Selector.of(30,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator30");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot30 = metamutator.Selector.of(30,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot30");
 
-    private static final metamutator.Selector _returnReplacementOperator31 = metamutator.Selector.of(31,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator31");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot31 = metamutator.Selector.of(31,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot31");
 
-    private static final metamutator.Selector _returnReplacementOperator32 = metamutator.Selector.of(32,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator32");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot32 = metamutator.Selector.of(32,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot32");
 
-    private static final metamutator.Selector _returnReplacementOperator33 = metamutator.Selector.of(33,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator33");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot33 = metamutator.Selector.of(33,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot33");
 
-    private static final metamutator.Selector _returnReplacementOperator34 = metamutator.Selector.of(34,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator34");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot34 = metamutator.Selector.of(34,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot34");
 
-    private static final metamutator.Selector _returnReplacementOperator35 = metamutator.Selector.of(35,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator35");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot35 = metamutator.Selector.of(35,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot35");
 
-    private static final metamutator.Selector _returnReplacementOperator36 = metamutator.Selector.of(36,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator36");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot36 = metamutator.Selector.of(36,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot36");
 
-    private static final metamutator.Selector _returnReplacementOperator37 = metamutator.Selector.of(37,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator37");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot37 = metamutator.Selector.of(37,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot37");
 
-    private static final metamutator.Selector _returnReplacementOperator38 = metamutator.Selector.of(38,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator38");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot38 = metamutator.Selector.of(38,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot38");
 
-    private static final metamutator.Selector _returnReplacementOperator39 = metamutator.Selector.of(39,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator39");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot39 = metamutator.Selector.of(39,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot39");
 
-    private static final metamutator.Selector _returnReplacementOperator40 = metamutator.Selector.of(40,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator40");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot40 = metamutator.Selector.of(40,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot40");
 
-    private static final metamutator.Selector _returnReplacementOperator41 = metamutator.Selector.of(41,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator41");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot41 = metamutator.Selector.of(41,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot41");
 
-    private static final metamutator.Selector _returnReplacementOperator42 = metamutator.Selector.of(42,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator42");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot42 = metamutator.Selector.of(42,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot42");
 
-    private static final metamutator.Selector _returnReplacementOperator43 = metamutator.Selector.of(43,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator43");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot43 = metamutator.Selector.of(43,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot43");
 
-    private static final metamutator.Selector _returnReplacementOperator44 = metamutator.Selector.of(44,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator44");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot44 = metamutator.Selector.of(44,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot44");
 
-    private static final metamutator.Selector _returnReplacementOperator45 = metamutator.Selector.of(45,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator45");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot45 = metamutator.Selector.of(45,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot45");
 
-    private static final metamutator.Selector _returnReplacementOperator46 = metamutator.Selector.of(46,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator46");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot46 = metamutator.Selector.of(46,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot46");
 
-    private static final metamutator.Selector _returnReplacementOperator47 = metamutator.Selector.of(47,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator47");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot47 = metamutator.Selector.of(47,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot47");
 
-    private static final metamutator.Selector _returnReplacementOperator48 = metamutator.Selector.of(48,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator48");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot48 = metamutator.Selector.of(48,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot48");
 
-    private static final metamutator.Selector _returnReplacementOperator49 = metamutator.Selector.of(49,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator49");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot49 = metamutator.Selector.of(49,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot49");
 
-    private static final metamutator.Selector _returnReplacementOperator50 = metamutator.Selector.of(50,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator50");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot50 = metamutator.Selector.of(50,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot50");
 
-    private static final metamutator.Selector _returnReplacementOperator51 = metamutator.Selector.of(51,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator51");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot51 = metamutator.Selector.of(51,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot51");
 
-    private static final metamutator.Selector _returnReplacementOperator52 = metamutator.Selector.of(52,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator52");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot52 = metamutator.Selector.of(52,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot52");
 
-    private static final metamutator.Selector _returnReplacementOperator53 = metamutator.Selector.of(53,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator53");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot53 = metamutator.Selector.of(53,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot53");
 
-    private static final metamutator.Selector _returnReplacementOperator54 = metamutator.Selector.of(54,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator54");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot54 = metamutator.Selector.of(54,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot54");
 
-    private static final metamutator.Selector _returnReplacementOperator55 = metamutator.Selector.of(55,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator55");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot55 = metamutator.Selector.of(55,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot55");
 
-    private static final metamutator.Selector _returnReplacementOperator56 = metamutator.Selector.of(56,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator56");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot56 = metamutator.Selector.of(56,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot56");
 
-    private static final metamutator.Selector _returnReplacementOperator57 = metamutator.Selector.of(57,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator57");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot57 = metamutator.Selector.of(57,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot57");
 
-    private static final metamutator.Selector _returnReplacementOperator58 = metamutator.Selector.of(58,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator58");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot58 = metamutator.Selector.of(58,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot58");
 
-    private static final metamutator.Selector _returnReplacementOperator59 = metamutator.Selector.of(59,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator59");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot59 = metamutator.Selector.of(59,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot59");
 
-    private static final metamutator.Selector _returnReplacementOperator60 = metamutator.Selector.of(60,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator60");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot60 = metamutator.Selector.of(60,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot60");
 
-    private static final metamutator.Selector _returnReplacementOperator61 = metamutator.Selector.of(61,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator61");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot61 = metamutator.Selector.of(61,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot61");
 
-    private static final metamutator.Selector _returnReplacementOperator62 = metamutator.Selector.of(62,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator62");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot62 = metamutator.Selector.of(62,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot62");
 
-    private static final metamutator.Selector _returnReplacementOperator63 = metamutator.Selector.of(63,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator63");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot63 = metamutator.Selector.of(63,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot63");
 
-    private static final metamutator.Selector _returnReplacementOperator64 = metamutator.Selector.of(64,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator64");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot64 = metamutator.Selector.of(64,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot64");
 
-    private static final metamutator.Selector _returnReplacementOperator65 = metamutator.Selector.of(65,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator65");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot65 = metamutator.Selector.of(65,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot65");
 
-    private static final metamutator.Selector _returnReplacementOperator66 = metamutator.Selector.of(66,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator66");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot66 = metamutator.Selector.of(66,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot66");
 
-    private static final metamutator.Selector _returnReplacementOperator67 = metamutator.Selector.of(67,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator67");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot67 = metamutator.Selector.of(67,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot67");
 
-    private static final metamutator.Selector _returnReplacementOperator68 = metamutator.Selector.of(68,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator68");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot68 = metamutator.Selector.of(68,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot68");
 
-    private static final metamutator.Selector _returnReplacementOperator69 = metamutator.Selector.of(69,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator69");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot69 = metamutator.Selector.of(69,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot69");
 
-    private static final metamutator.Selector _returnReplacementOperator70 = metamutator.Selector.of(70,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator70");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot70 = metamutator.Selector.of(70,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot70");
 
-    private static final metamutator.Selector _returnReplacementOperator71 = metamutator.Selector.of(71,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator71");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot71 = metamutator.Selector.of(71,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot71");
 
-    private static final metamutator.Selector _returnReplacementOperator72 = metamutator.Selector.of(72,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator72");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot72 = metamutator.Selector.of(72,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot72");
 
-    private static final metamutator.Selector _returnReplacementOperator73 = metamutator.Selector.of(73,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator73");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot73 = metamutator.Selector.of(73,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot73");
 
-    private static final metamutator.Selector _returnReplacementOperator74 = metamutator.Selector.of(74,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator74");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot74 = metamutator.Selector.of(74,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot74");
 
-    private static final metamutator.Selector _returnReplacementOperator75 = metamutator.Selector.of(75,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator75");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot75 = metamutator.Selector.of(75,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot75");
 
-    private static final metamutator.Selector _returnReplacementOperator76 = metamutator.Selector.of(76,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator76");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot76 = metamutator.Selector.of(76,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot76");
 
-    private static final metamutator.Selector _returnReplacementOperator77 = metamutator.Selector.of(77,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator77");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot77 = metamutator.Selector.of(77,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot77");
 
-    private static final metamutator.Selector _returnReplacementOperator78 = metamutator.Selector.of(78,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator78");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot78 = metamutator.Selector.of(78,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot78");
 
-    private static final metamutator.Selector _returnReplacementOperator79 = metamutator.Selector.of(79,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator79");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot79 = metamutator.Selector.of(79,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot79");
 
-    private static final metamutator.Selector _returnReplacementOperator80 = metamutator.Selector.of(80,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator80");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot80 = metamutator.Selector.of(80,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot80");
 
-    private static final metamutator.Selector _returnReplacementOperator81 = metamutator.Selector.of(81,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator81");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot81 = metamutator.Selector.of(81,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot81");
 
-    private static final metamutator.Selector _returnReplacementOperator82 = metamutator.Selector.of(82,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator82");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot82 = metamutator.Selector.of(82,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot82");
 
-    private static final metamutator.Selector _returnReplacementOperator83 = metamutator.Selector.of(83,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator83");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot83 = metamutator.Selector.of(83,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot83");
 
-    private static final metamutator.Selector _returnReplacementOperator84 = metamutator.Selector.of(84,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator84");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot84 = metamutator.Selector.of(84,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot84");
 
-    private static final metamutator.Selector _returnReplacementOperator85 = metamutator.Selector.of(85,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator85");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot85 = metamutator.Selector.of(85,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot85");
 
-    private static final metamutator.Selector _returnReplacementOperator86 = metamutator.Selector.of(86,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator86");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot86 = metamutator.Selector.of(86,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot86");
 
-    private static final metamutator.Selector _returnReplacementOperator87 = metamutator.Selector.of(87,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator87");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot87 = metamutator.Selector.of(87,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot87");
 
-    private static final metamutator.Selector _returnReplacementOperator88 = metamutator.Selector.of(88,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperator88");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot88 = metamutator.Selector.of(88,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.CompareToBuilder.class).id("_returnReplacementOperatorHotSpot88");
 }
 

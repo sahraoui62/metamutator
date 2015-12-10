@@ -36,24 +36,24 @@ public class EventUtils {
         public java.lang.Object invoke(final java.lang.Object proxy, final java.lang.reflect.Method method, final java.lang.Object[] parameters) throws java.lang.Throwable {
             if ((eventTypes.isEmpty()) || (eventTypes.contains(method.getName()))) {
                 if (hasMatchingParametersMethod(method)) {
-                    return ((_returnReplacementOperator516.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName, parameters)));
+                    return ((_returnReplacementOperatorHotSpot516.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName, parameters)));
                 } 
-                return ((_returnReplacementOperator517.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName)));
+                return ((_returnReplacementOperatorHotSpot517.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName)));
             } 
-            return ((_returnReplacementOperator518.is("NULL")) ? ( null ) : (null));
+            return ((_returnReplacementOperatorHotSpot518.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (null));
         }
 
         private boolean hasMatchingParametersMethod(final java.lang.reflect.Method method) {
-            return ((_returnReplacementOperator515.is("NULL")) ? ( null ) : ((org.apache.commons.lang3.reflect.MethodUtils.getAccessibleMethod(target.getClass(), methodName, method.getParameterTypes())) != null));
+            return ((_returnReplacementOperatorHotSpot515.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((org.apache.commons.lang3.reflect.MethodUtils.getAccessibleMethod(target.getClass(), methodName, method.getParameterTypes())) != null));
         }
     }
 
-    private static final metamutator.Selector _returnReplacementOperator515 = metamutator.Selector.of(515,new String[]{"INIT","NULL"}).id("_returnReplacementOperator515");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot515 = metamutator.Selector.of(515,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot515");
 
-    private static final metamutator.Selector _returnReplacementOperator516 = metamutator.Selector.of(516,new String[]{"INIT","NULL"}).id("_returnReplacementOperator516");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot516 = metamutator.Selector.of(516,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot516");
 
-    private static final metamutator.Selector _returnReplacementOperator517 = metamutator.Selector.of(517,new String[]{"INIT","NULL"}).id("_returnReplacementOperator517");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot517 = metamutator.Selector.of(517,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot517");
 
-    private static final metamutator.Selector _returnReplacementOperator518 = metamutator.Selector.of(518,new String[]{"INIT","NULL"}).id("_returnReplacementOperator518");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot518 = metamutator.Selector.of(518,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot518");
 }
 

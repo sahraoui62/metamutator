@@ -8,7 +8,7 @@ public class SerializationUtils {
 
     public static <T extends java.io.Serializable>T clone(final T object) {
         if (object == null) {
-            return ((_returnReplacementOperator2945.is("NULL")) ? ( null ) : (null));
+            return ((_returnReplacementOperatorHotSpot2945.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (null));
         } 
         final byte[] objectData = org.apache.commons.lang3.SerializationUtils.serialize(object);
         final java.io.ByteArrayInputStream bais = new java.io.ByteArrayInputStream(objectData);
@@ -17,7 +17,7 @@ public class SerializationUtils {
             in = new org.apache.commons.lang3.SerializationUtils.ClassLoaderAwareObjectInputStream(bais , object.getClass().getClassLoader());
             @java.lang.SuppressWarnings(value = "unchecked")
             final T readObject = ((T)(in.readObject()));
-            return ((_returnReplacementOperator2946.is("NULL")) ? ( null ) : (readObject));
+            return ((_returnReplacementOperatorHotSpot2946.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (readObject));
         } catch (final java.lang.ClassNotFoundException ex) {
             throw new org.apache.commons.lang3.SerializationException("ClassNotFoundException while reading cloned object data" , ex);
         } catch (final java.io.IOException ex) {
@@ -35,7 +35,7 @@ public class SerializationUtils {
 
     @java.lang.SuppressWarnings(value = "unchecked")
     public static <T extends java.io.Serializable>T roundtrip(final T msg) {
-        return ((_returnReplacementOperator2947.is("NULL")) ? ( null ) : (((T)(org.apache.commons.lang3.SerializationUtils.deserialize(org.apache.commons.lang3.SerializationUtils.serialize(msg))))));
+        return ((_returnReplacementOperatorHotSpot2947.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((T)(org.apache.commons.lang3.SerializationUtils.deserialize(org.apache.commons.lang3.SerializationUtils.serialize(msg))))));
     }
 
     public static void serialize(final java.io.Serializable obj, final java.io.OutputStream outputStream) {
@@ -61,7 +61,7 @@ public class SerializationUtils {
     public static byte[] serialize(final java.io.Serializable obj) {
         final java.io.ByteArrayOutputStream baos = new java.io.ByteArrayOutputStream(512);
         org.apache.commons.lang3.SerializationUtils.serialize(obj, baos);
-        return ((_returnReplacementOperator2950.is("NULL")) ? ( null ) : (baos.toByteArray()));
+        return ((_returnReplacementOperatorHotSpot2950.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (baos.toByteArray()));
     }
 
     public static <T>T deserialize(final java.io.InputStream inputStream) {
@@ -73,7 +73,7 @@ public class SerializationUtils {
             in = new java.io.ObjectInputStream(inputStream);
             @java.lang.SuppressWarnings(value = "unchecked")
             final T obj = ((T)(in.readObject()));
-            return ((_returnReplacementOperator2949.is("NULL")) ? ( null ) : (obj));
+            return ((_returnReplacementOperatorHotSpot2949.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (obj));
         } catch (final java.lang.ClassCastException ex) {
             throw new org.apache.commons.lang3.SerializationException(ex);
         } catch (final java.lang.ClassNotFoundException ex) {
@@ -94,7 +94,7 @@ public class SerializationUtils {
         if (objectData == null) {
             throw new java.lang.IllegalArgumentException("The byte[] must not be null");
         } 
-        return ((_returnReplacementOperator2948.is("NULL")) ? ( null ) : (org.apache.commons.lang3.SerializationUtils.<T>deserialize(new java.io.ByteArrayInputStream(objectData))));
+        return ((_returnReplacementOperatorHotSpot2948.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.SerializationUtils.<T>deserialize(new java.io.ByteArrayInputStream(objectData))));
     }
 
     static class ClassLoaderAwareObjectInputStream extends java.io.ObjectInputStream {
@@ -120,14 +120,14 @@ public class SerializationUtils {
         protected java.lang.Class<?> resolveClass(final java.io.ObjectStreamClass desc) throws java.io.IOException, java.lang.ClassNotFoundException {
             final java.lang.String name = desc.getName();
             try {
-                return ((_returnReplacementOperator2942.is("NULL")) ? ( null ) : (java.lang.Class.forName(name, false, classLoader)));
+                return ((_returnReplacementOperatorHotSpot2942.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Class.forName(name, false, classLoader)));
             } catch (final java.lang.ClassNotFoundException ex) {
                 try {
-                    return ((_returnReplacementOperator2943.is("NULL")) ? ( null ) : (java.lang.Class.forName(name, false, java.lang.Thread.currentThread().getContextClassLoader())));
+                    return ((_returnReplacementOperatorHotSpot2943.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Class.forName(name, false, java.lang.Thread.currentThread().getContextClassLoader())));
                 } catch (final java.lang.ClassNotFoundException cnfe) {
                     final java.lang.Class<?> cls = primitiveTypes.get(name);
                     if (cls != null) {
-                        return ((_returnReplacementOperator2944.is("NULL")) ? ( null ) : (cls));
+                        return ((_returnReplacementOperatorHotSpot2944.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (cls));
                     } 
                     throw cnfe;
                 }
@@ -135,22 +135,22 @@ public class SerializationUtils {
         }
     }
 
-    private static final metamutator.Selector _returnReplacementOperator2942 = metamutator.Selector.of(2942,new String[]{"INIT","NULL"}).id("_returnReplacementOperator2942");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2942 = metamutator.Selector.of(2942,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot2942");
 
-    private static final metamutator.Selector _returnReplacementOperator2943 = metamutator.Selector.of(2943,new String[]{"INIT","NULL"}).id("_returnReplacementOperator2943");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2943 = metamutator.Selector.of(2943,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot2943");
 
-    private static final metamutator.Selector _returnReplacementOperator2944 = metamutator.Selector.of(2944,new String[]{"INIT","NULL"}).id("_returnReplacementOperator2944");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2944 = metamutator.Selector.of(2944,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot2944");
 
-    private static final metamutator.Selector _returnReplacementOperator2945 = metamutator.Selector.of(2945,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperator2945");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2945 = metamutator.Selector.of(2945,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperatorHotSpot2945");
 
-    private static final metamutator.Selector _returnReplacementOperator2946 = metamutator.Selector.of(2946,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperator2946");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2946 = metamutator.Selector.of(2946,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperatorHotSpot2946");
 
-    private static final metamutator.Selector _returnReplacementOperator2947 = metamutator.Selector.of(2947,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperator2947");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2947 = metamutator.Selector.of(2947,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperatorHotSpot2947");
 
-    private static final metamutator.Selector _returnReplacementOperator2948 = metamutator.Selector.of(2948,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperator2948");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2948 = metamutator.Selector.of(2948,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperatorHotSpot2948");
 
-    private static final metamutator.Selector _returnReplacementOperator2949 = metamutator.Selector.of(2949,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperator2949");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2949 = metamutator.Selector.of(2949,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperatorHotSpot2949");
 
-    private static final metamutator.Selector _returnReplacementOperator2950 = metamutator.Selector.of(2950,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperator2950");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2950 = metamutator.Selector.of(2950,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.SerializationUtils.class).id("_returnReplacementOperatorHotSpot2950");
 }
 

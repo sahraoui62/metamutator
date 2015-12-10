@@ -27,7 +27,7 @@ public class MutableFloat extends java.lang.Number implements java.lang.Comparab
 
     @java.lang.Override
     public java.lang.Float getValue() {
-        return ((_returnReplacementOperator812.is("NULL")) ? ( null ) : (java.lang.Float.valueOf(this.value)));
+        return ((_returnReplacementOperatorHotSpot812.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Float.valueOf(this.value)));
     }
 
     public void setValue(final float value) {
@@ -40,11 +40,11 @@ public class MutableFloat extends java.lang.Number implements java.lang.Comparab
     }
 
     public boolean isNaN() {
-        return ((_returnReplacementOperator806.is("NULL")) ? ( null ) : (java.lang.Float.isNaN(value)));
+        return ((_returnReplacementOperatorHotSpot806.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Float.isNaN(value)));
     }
 
     public boolean isInfinite() {
-        return ((_returnReplacementOperator805.is("NULL")) ? ( null ) : (java.lang.Float.isInfinite(value)));
+        return ((_returnReplacementOperatorHotSpot805.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Float.isInfinite(value)));
     }
 
     public void increment() {
@@ -73,70 +73,70 @@ public class MutableFloat extends java.lang.Number implements java.lang.Comparab
 
     @java.lang.Override
     public int intValue() {
-        return ((_returnReplacementOperator811.is("NULL")) ? ( null ) : (((int)(value))));
+        return ((_returnReplacementOperatorHotSpot811.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((int)(value))));
     }
 
     @java.lang.Override
     public long longValue() {
-        return ((_returnReplacementOperator815.is("NULL")) ? ( null ) : (((long)(value))));
+        return ((_returnReplacementOperatorHotSpot815.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((long)(value))));
     }
 
     @java.lang.Override
     public float floatValue() {
-        return ((_returnReplacementOperator808.is("NULL")) ? ( null ) : (value));
+        return ((_returnReplacementOperatorHotSpot808.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public double doubleValue() {
-        return ((_returnReplacementOperator807.is("NULL")) ? ( null ) : (value));
+        return ((_returnReplacementOperatorHotSpot807.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (value));
     }
 
     public java.lang.Float toFloat() {
-        return ((_returnReplacementOperator813.is("NULL")) ? ( null ) : (java.lang.Float.valueOf(floatValue())));
+        return ((_returnReplacementOperatorHotSpot813.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Float.valueOf(floatValue())));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
-        return ((_returnReplacementOperator804.is("NULL")) ? ( null ) : ((obj instanceof org.apache.commons.lang3.mutable.MutableFloat) && ((java.lang.Float.floatToIntBits(((org.apache.commons.lang3.mutable.MutableFloat)(obj)).value)) == (java.lang.Float.floatToIntBits(value)))));
+        return ((_returnReplacementOperatorHotSpot804.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((obj instanceof org.apache.commons.lang3.mutable.MutableFloat) && ((java.lang.Float.floatToIntBits(((org.apache.commons.lang3.mutable.MutableFloat)(obj)).value)) == (java.lang.Float.floatToIntBits(value)))));
     }
 
     @java.lang.Override
     public int hashCode() {
-        return ((_returnReplacementOperator810.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator810.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator810.is("ZERO")) ? ( 0 ) : (java.lang.Float.floatToIntBits(value)));
+        return ((_returnReplacementOperatorHotSpot810.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot810.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot810.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (java.lang.Float.floatToIntBits(value)));
     }
 
     @java.lang.Override
     public int compareTo(final org.apache.commons.lang3.mutable.MutableFloat other) {
-        return ((_returnReplacementOperator809.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator809.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator809.is("ZERO")) ? ( 0 ) : (java.lang.Float.compare(this.value, other.value)));
+        return ((_returnReplacementOperatorHotSpot809.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot809.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot809.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (java.lang.Float.compare(this.value, other.value)));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return ((_returnReplacementOperator814.is("NULL")) ? ( null ) : (java.lang.String.valueOf(value)));
+        return ((_returnReplacementOperatorHotSpot814.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.String.valueOf(value)));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator804 = metamutator.Selector.of(804,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator804");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot804 = metamutator.Selector.of(804,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot804");
 
-    private static final metamutator.Selector _returnReplacementOperator805 = metamutator.Selector.of(805,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator805");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot805 = metamutator.Selector.of(805,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot805");
 
-    private static final metamutator.Selector _returnReplacementOperator806 = metamutator.Selector.of(806,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator806");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot806 = metamutator.Selector.of(806,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot806");
 
-    private static final metamutator.Selector _returnReplacementOperator807 = metamutator.Selector.of(807,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator807");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot807 = metamutator.Selector.of(807,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot807");
 
-    private static final metamutator.Selector _returnReplacementOperator808 = metamutator.Selector.of(808,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator808");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot808 = metamutator.Selector.of(808,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot808");
 
-    private static final metamutator.Selector _returnReplacementOperator809 = metamutator.Selector.of(809,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator809");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot809 = metamutator.Selector.of(809,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot809");
 
-    private static final metamutator.Selector _returnReplacementOperator810 = metamutator.Selector.of(810,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator810");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot810 = metamutator.Selector.of(810,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot810");
 
-    private static final metamutator.Selector _returnReplacementOperator811 = metamutator.Selector.of(811,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator811");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot811 = metamutator.Selector.of(811,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot811");
 
-    private static final metamutator.Selector _returnReplacementOperator812 = metamutator.Selector.of(812,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator812");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot812 = metamutator.Selector.of(812,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot812");
 
-    private static final metamutator.Selector _returnReplacementOperator813 = metamutator.Selector.of(813,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator813");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot813 = metamutator.Selector.of(813,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot813");
 
-    private static final metamutator.Selector _returnReplacementOperator814 = metamutator.Selector.of(814,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator814");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot814 = metamutator.Selector.of(814,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot814");
 
-    private static final metamutator.Selector _returnReplacementOperator815 = metamutator.Selector.of(815,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator815");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot815 = metamutator.Selector.of(815,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperatorHotSpot815");
 }
 

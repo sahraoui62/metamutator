@@ -2,7 +2,7 @@ package launcher;
 
 import java.io.File;
 
-import org.apache.commons.lang3.AnnotationUtilsTest;
+import org.apache.commons.lang3.ClassUtilsTest;
 
 import metamutator.MutantSearchSpaceExplorator;
 
@@ -13,19 +13,18 @@ public class LaunchMutantSerachSpaceExplorator {
 		File dir = new File("target/classes/org/apache/commons/lang3");
 		
 		File tab[] = dir.listFiles();
+		System.out.println("Start running ...");
 		for(int i = 0 ; i < tab.length ; i++){
-			if(!tab[i].getName().contains("$") && tab[i].getName().endsWith(".class")){
+			if(tab[i].getName().endsWith(".class") && !tab[i].getName().contains("$")){
 				System.out.println("********** " + tab[i].getName() + " ***********");
-
-				String[] res = tab[i].getName().split("\\.");
-				System.out.println(res[0]);
-				System.out.println(res[1]);				
+				String[] res = tab[i].getName().split("\\.");			
 				MutantSearchSpaceExplorator.runMetaProgramWith(Class.forName("org.apache.commons.lang3."+res[0]));
 				//
 				//res[0];
 			}
 		}
-				//MutantSearchSpaceExplorator.runMetaProgramWith(ClassUtilsTest.class);
+		System.out.println("Finished !");
+		MutantSearchSpaceExplorator.runMetaProgramWith(ClassUtilsTest.class);
 		
 	}
 }

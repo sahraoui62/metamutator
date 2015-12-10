@@ -22,11 +22,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>commons-sources</name>
-			<type>2</type>
-			<location>/Users/slimane/Documents/master2/OPL/commons-lang-master/src/main/java</location>
-		</link>
-		<link>
 			<name>commons-tests</name>
 			<type>2</type>
 			<location>/Users/slimane/Documents/master2/OPL/commons-lang-master/src/test/java</location>

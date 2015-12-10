@@ -1,4 +1,4 @@
-package binary;
+
 import static org.apache.commons.lang.reflect.MethodUtils.invokeExactMethod;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -18,7 +18,7 @@ public class BinaryOperatorMetaMutatorTest {
     public void testBinaryOperatorMetaMutator() throws Exception {
         // build the model and apply the transformation
         Launcher l = new Launcher();
-        l.addInputResource("src/test/java");
+        l.addInputResource("src/test/java/Foo.java");
         l.addProcessor(new BinaryOperatorMetaMutator());
         l.run();
 
@@ -37,8 +37,7 @@ public class BinaryOperatorMetaMutatorTest {
 
         // creating a new instance of the class
         Object o = ((Class)bsh.eval(c.toString())).newInstance();        
-        System.out.println(Selector.getAllSelectors().size());
-        assertEquals(4,Selector.getAllSelectors().size());
+        assertEquals(3,Selector.getAllSelectors().size());
         
         // test with the first
         Selector sel=Selector.getSelectorByName(BinaryOperatorMetaMutator.PREFIX + "1");

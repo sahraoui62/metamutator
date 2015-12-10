@@ -33,7 +33,7 @@ public class MultiBackgroundInitializer extends org.apache.commons.lang3.concurr
         for (final org.apache.commons.lang3.concurrent.BackgroundInitializer<?> bi : childInitializers.values()) {
             result += bi.getTaskCount();
         }
-        return ((_returnReplacementOperator497.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator497.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator497.is("ZERO")) ? ( 0 ) : (result));
+        return ((_returnReplacementOperatorHotSpot497.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot497.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot497.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (result));
     }
 
     @java.lang.Override
@@ -58,7 +58,7 @@ public class MultiBackgroundInitializer extends org.apache.commons.lang3.concurr
                 excepts.put(e.getKey(), cex);
             }
         }
-        return ((_returnReplacementOperator498.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.concurrent.MultiBackgroundInitializer.MultiBackgroundInitializerResults(inits , results , excepts)));
+        return ((_returnReplacementOperatorHotSpot498.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.concurrent.MultiBackgroundInitializer.MultiBackgroundInitializerResults(inits , results , excepts)));
     }
 
     public static class MultiBackgroundInitializerResults {
@@ -75,30 +75,30 @@ public class MultiBackgroundInitializer extends org.apache.commons.lang3.concurr
         }
 
         public org.apache.commons.lang3.concurrent.BackgroundInitializer<?> getInitializer(final java.lang.String name) {
-            return ((_returnReplacementOperator495.is("NULL")) ? ( null ) : (checkName(name)));
+            return ((_returnReplacementOperatorHotSpot495.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (checkName(name)));
         }
 
         public java.lang.Object getResultObject(final java.lang.String name) {
             checkName(name);
-            return ((_returnReplacementOperator492.is("NULL")) ? ( null ) : (resultObjects.get(name)));
+            return ((_returnReplacementOperatorHotSpot492.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (resultObjects.get(name)));
         }
 
         public boolean isException(final java.lang.String name) {
             checkName(name);
-            return ((_returnReplacementOperator490.is("NULL")) ? ( null ) : (exceptions.containsKey(name)));
+            return ((_returnReplacementOperatorHotSpot490.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (exceptions.containsKey(name)));
         }
 
         public org.apache.commons.lang3.concurrent.ConcurrentException getException(final java.lang.String name) {
             checkName(name);
-            return ((_returnReplacementOperator496.is("NULL")) ? ( null ) : (exceptions.get(name)));
+            return ((_returnReplacementOperatorHotSpot496.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (exceptions.get(name)));
         }
 
         public java.util.Set<java.lang.String> initializerNames() {
-            return ((_returnReplacementOperator493.is("NULL")) ? ( null ) : (java.util.Collections.unmodifiableSet(initializers.keySet())));
+            return ((_returnReplacementOperatorHotSpot493.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.util.Collections.unmodifiableSet(initializers.keySet())));
         }
 
         public boolean isSuccessful() {
-            return ((_returnReplacementOperator491.is("NULL")) ? ( null ) : (exceptions.isEmpty()));
+            return ((_returnReplacementOperatorHotSpot491.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (exceptions.isEmpty()));
         }
 
         private org.apache.commons.lang3.concurrent.BackgroundInitializer<?> checkName(final java.lang.String name) {
@@ -106,26 +106,26 @@ public class MultiBackgroundInitializer extends org.apache.commons.lang3.concurr
             if (init == null) {
                 throw new java.util.NoSuchElementException(("No child initializer with name " + name));
             } 
-            return ((_returnReplacementOperator494.is("NULL")) ? ( null ) : (init));
+            return ((_returnReplacementOperatorHotSpot494.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (init));
         }
     }
 
-    private static final metamutator.Selector _returnReplacementOperator490 = metamutator.Selector.of(490,new String[]{"INIT","NULL"}).id("_returnReplacementOperator490");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot490 = metamutator.Selector.of(490,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot490");
 
-    private static final metamutator.Selector _returnReplacementOperator491 = metamutator.Selector.of(491,new String[]{"INIT","NULL"}).id("_returnReplacementOperator491");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot491 = metamutator.Selector.of(491,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot491");
 
-    private static final metamutator.Selector _returnReplacementOperator492 = metamutator.Selector.of(492,new String[]{"INIT","NULL"}).id("_returnReplacementOperator492");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot492 = metamutator.Selector.of(492,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot492");
 
-    private static final metamutator.Selector _returnReplacementOperator493 = metamutator.Selector.of(493,new String[]{"INIT","NULL"}).id("_returnReplacementOperator493");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot493 = metamutator.Selector.of(493,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot493");
 
-    private static final metamutator.Selector _returnReplacementOperator494 = metamutator.Selector.of(494,new String[]{"INIT","NULL"}).id("_returnReplacementOperator494");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot494 = metamutator.Selector.of(494,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot494");
 
-    private static final metamutator.Selector _returnReplacementOperator495 = metamutator.Selector.of(495,new String[]{"INIT","NULL"}).id("_returnReplacementOperator495");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot495 = metamutator.Selector.of(495,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot495");
 
-    private static final metamutator.Selector _returnReplacementOperator496 = metamutator.Selector.of(496,new String[]{"INIT","NULL"}).id("_returnReplacementOperator496");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot496 = metamutator.Selector.of(496,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot496");
 
-    private static final metamutator.Selector _returnReplacementOperator497 = metamutator.Selector.of(497,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.concurrent.MultiBackgroundInitializer.class).id("_returnReplacementOperator497");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot497 = metamutator.Selector.of(497,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.concurrent.MultiBackgroundInitializer.class).id("_returnReplacementOperatorHotSpot497");
 
-    private static final metamutator.Selector _returnReplacementOperator498 = metamutator.Selector.of(498,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.MultiBackgroundInitializer.class).id("_returnReplacementOperator498");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot498 = metamutator.Selector.of(498,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.concurrent.MultiBackgroundInitializer.class).id("_returnReplacementOperatorHotSpot498");
 }
 

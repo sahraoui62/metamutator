@@ -27,7 +27,7 @@ public class MultilineRecursiveToStringStyle extends org.apache.commons.lang3.bu
         for (int i = 0 ; i < spaces ; i++) {
             sb.append(" ");
         }
-        return ((_returnReplacementOperator295.is("NULL")) ? ( null ) : (sb));
+        return ((_returnReplacementOperatorHotSpot295.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (sb));
     }
 
     @java.lang.Override
@@ -133,6 +133,6 @@ public class MultilineRecursiveToStringStyle extends org.apache.commons.lang3.bu
         resetIndent();
     }
 
-    private static final metamutator.Selector _returnReplacementOperator295 = metamutator.Selector.of(295,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.MultilineRecursiveToStringStyle.class).id("_returnReplacementOperator295");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot295 = metamutator.Selector.of(295,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.MultilineRecursiveToStringStyle.class).id("_returnReplacementOperatorHotSpot295");
 }
 

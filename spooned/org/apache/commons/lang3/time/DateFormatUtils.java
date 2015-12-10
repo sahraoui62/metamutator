@@ -45,101 +45,101 @@ public class DateFormatUtils {
     }
 
     public static java.lang.String formatUTC(final long millis, final java.lang.String pattern) {
-        return ((_returnReplacementOperator1597.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, null)));
+        return ((_returnReplacementOperatorHotSpot1597.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, null)));
     }
 
     public static java.lang.String formatUTC(final java.util.Date date, final java.lang.String pattern) {
-        return ((_returnReplacementOperator1595.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, null)));
+        return ((_returnReplacementOperatorHotSpot1595.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, null)));
     }
 
     public static java.lang.String formatUTC(final long millis, final java.lang.String pattern, final java.util.Locale locale) {
-        return ((_returnReplacementOperator1598.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, locale)));
+        return ((_returnReplacementOperatorHotSpot1598.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, locale)));
     }
 
     public static java.lang.String formatUTC(final java.util.Date date, final java.lang.String pattern, final java.util.Locale locale) {
-        return ((_returnReplacementOperator1596.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, locale)));
+        return ((_returnReplacementOperatorHotSpot1596.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, org.apache.commons.lang3.time.DateFormatUtils.UTC_TIME_ZONE, locale)));
     }
 
     public static java.lang.String format(final long millis, final java.lang.String pattern) {
-        return ((_returnReplacementOperator1591.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, null, null)));
+        return ((_returnReplacementOperatorHotSpot1591.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, null, null)));
     }
 
     public static java.lang.String format(final java.util.Date date, final java.lang.String pattern) {
-        return ((_returnReplacementOperator1587.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, null, null)));
+        return ((_returnReplacementOperatorHotSpot1587.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, null, null)));
     }
 
     public static java.lang.String format(final java.util.Calendar calendar, final java.lang.String pattern) {
-        return ((_returnReplacementOperator1583.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(calendar, pattern, null, null)));
+        return ((_returnReplacementOperatorHotSpot1583.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(calendar, pattern, null, null)));
     }
 
     public static java.lang.String format(final long millis, final java.lang.String pattern, final java.util.TimeZone timeZone) {
-        return ((_returnReplacementOperator1593.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, timeZone, null)));
+        return ((_returnReplacementOperatorHotSpot1593.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, timeZone, null)));
     }
 
     public static java.lang.String format(final java.util.Date date, final java.lang.String pattern, final java.util.TimeZone timeZone) {
-        return ((_returnReplacementOperator1589.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, timeZone, null)));
+        return ((_returnReplacementOperatorHotSpot1589.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, timeZone, null)));
     }
 
     public static java.lang.String format(final java.util.Calendar calendar, final java.lang.String pattern, final java.util.TimeZone timeZone) {
-        return ((_returnReplacementOperator1585.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(calendar, pattern, timeZone, null)));
+        return ((_returnReplacementOperatorHotSpot1585.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(calendar, pattern, timeZone, null)));
     }
 
     public static java.lang.String format(final long millis, final java.lang.String pattern, final java.util.Locale locale) {
-        return ((_returnReplacementOperator1592.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, null, locale)));
+        return ((_returnReplacementOperatorHotSpot1592.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, null, locale)));
     }
 
     public static java.lang.String format(final java.util.Date date, final java.lang.String pattern, final java.util.Locale locale) {
-        return ((_returnReplacementOperator1588.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, null, locale)));
+        return ((_returnReplacementOperatorHotSpot1588.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(date, pattern, null, locale)));
     }
 
     public static java.lang.String format(final java.util.Calendar calendar, final java.lang.String pattern, final java.util.Locale locale) {
-        return ((_returnReplacementOperator1584.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(calendar, pattern, null, locale)));
+        return ((_returnReplacementOperatorHotSpot1584.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(calendar, pattern, null, locale)));
     }
 
     public static java.lang.String format(final long millis, final java.lang.String pattern, final java.util.TimeZone timeZone, final java.util.Locale locale) {
-        return ((_returnReplacementOperator1594.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, timeZone, locale)));
+        return ((_returnReplacementOperatorHotSpot1594.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.DateFormatUtils.format(new java.util.Date(millis), pattern, timeZone, locale)));
     }
 
     public static java.lang.String format(final java.util.Date date, final java.lang.String pattern, final java.util.TimeZone timeZone, final java.util.Locale locale) {
         final org.apache.commons.lang3.time.FastDateFormat df = org.apache.commons.lang3.time.FastDateFormat.getInstance(pattern, timeZone, locale);
-        return ((_returnReplacementOperator1590.is("NULL")) ? ( null ) : (df.format(date)));
+        return ((_returnReplacementOperatorHotSpot1590.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (df.format(date)));
     }
 
     public static java.lang.String format(final java.util.Calendar calendar, final java.lang.String pattern, final java.util.TimeZone timeZone, final java.util.Locale locale) {
         final org.apache.commons.lang3.time.FastDateFormat df = org.apache.commons.lang3.time.FastDateFormat.getInstance(pattern, timeZone, locale);
-        return ((_returnReplacementOperator1586.is("NULL")) ? ( null ) : (df.format(calendar)));
+        return ((_returnReplacementOperatorHotSpot1586.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (df.format(calendar)));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1583 = metamutator.Selector.of(1583,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1583");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1583 = metamutator.Selector.of(1583,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1583");
 
-    private static final metamutator.Selector _returnReplacementOperator1584 = metamutator.Selector.of(1584,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1584");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1584 = metamutator.Selector.of(1584,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1584");
 
-    private static final metamutator.Selector _returnReplacementOperator1585 = metamutator.Selector.of(1585,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1585");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1585 = metamutator.Selector.of(1585,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1585");
 
-    private static final metamutator.Selector _returnReplacementOperator1586 = metamutator.Selector.of(1586,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1586");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1586 = metamutator.Selector.of(1586,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1586");
 
-    private static final metamutator.Selector _returnReplacementOperator1587 = metamutator.Selector.of(1587,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1587");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1587 = metamutator.Selector.of(1587,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1587");
 
-    private static final metamutator.Selector _returnReplacementOperator1588 = metamutator.Selector.of(1588,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1588");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1588 = metamutator.Selector.of(1588,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1588");
 
-    private static final metamutator.Selector _returnReplacementOperator1589 = metamutator.Selector.of(1589,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1589");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1589 = metamutator.Selector.of(1589,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1589");
 
-    private static final metamutator.Selector _returnReplacementOperator1590 = metamutator.Selector.of(1590,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1590");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1590 = metamutator.Selector.of(1590,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1590");
 
-    private static final metamutator.Selector _returnReplacementOperator1591 = metamutator.Selector.of(1591,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1591");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1591 = metamutator.Selector.of(1591,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1591");
 
-    private static final metamutator.Selector _returnReplacementOperator1592 = metamutator.Selector.of(1592,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1592");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1592 = metamutator.Selector.of(1592,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1592");
 
-    private static final metamutator.Selector _returnReplacementOperator1593 = metamutator.Selector.of(1593,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1593");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1593 = metamutator.Selector.of(1593,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1593");
 
-    private static final metamutator.Selector _returnReplacementOperator1594 = metamutator.Selector.of(1594,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1594");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1594 = metamutator.Selector.of(1594,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1594");
 
-    private static final metamutator.Selector _returnReplacementOperator1595 = metamutator.Selector.of(1595,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1595");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1595 = metamutator.Selector.of(1595,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1595");
 
-    private static final metamutator.Selector _returnReplacementOperator1596 = metamutator.Selector.of(1596,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1596");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1596 = metamutator.Selector.of(1596,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1596");
 
-    private static final metamutator.Selector _returnReplacementOperator1597 = metamutator.Selector.of(1597,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1597");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1597 = metamutator.Selector.of(1597,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1597");
 
-    private static final metamutator.Selector _returnReplacementOperator1598 = metamutator.Selector.of(1598,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperator1598");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1598 = metamutator.Selector.of(1598,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.DateFormatUtils.class).id("_returnReplacementOperatorHotSpot1598");
 }
 

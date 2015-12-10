@@ -55,7 +55,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             numerator = -numerator;
             denominator = -denominator;
         } 
-        return ((_returnReplacementOperator612.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(numerator , denominator)));
+        return ((_returnReplacementOperatorHotSpot612.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(numerator , denominator)));
     }
 
     public static org.apache.commons.lang3.math.Fraction getFraction(final int whole, final int numerator, final int denominator) {
@@ -77,7 +77,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((numeratorValue < (java.lang.Integer.MIN_VALUE)) || (numeratorValue > (java.lang.Integer.MAX_VALUE))) {
             throw new java.lang.ArithmeticException("Numerator too large to represent as an Integer.");
         } 
-        return ((_returnReplacementOperator613.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(((int)(numeratorValue)) , denominator)));
+        return ((_returnReplacementOperatorHotSpot613.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(((int)(numeratorValue)) , denominator)));
     }
 
     public static org.apache.commons.lang3.math.Fraction getReducedFraction(int numerator, int denominator) {
@@ -85,7 +85,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             throw new java.lang.ArithmeticException("The denominator must not be zero");
         } 
         if (numerator == 0) {
-            return ((_returnReplacementOperator618.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.ZERO));
+            return ((_returnReplacementOperatorHotSpot618.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.ZERO));
         } 
         if ((denominator == (java.lang.Integer.MIN_VALUE)) && ((numerator & 1) == 0)) {
             numerator /= 2;
@@ -101,7 +101,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         final int gcd = org.apache.commons.lang3.math.Fraction.greatestCommonDivisor(numerator, denominator);
         numerator /= gcd;
         denominator /= gcd;
-        return ((_returnReplacementOperator619.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(numerator , denominator)));
+        return ((_returnReplacementOperatorHotSpot619.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(numerator , denominator)));
     }
 
     public static org.apache.commons.lang3.math.Fraction getFraction(double value) {
@@ -149,7 +149,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if (i == 25) {
             throw new java.lang.ArithmeticException("Unable to convert double to fraction");
         } 
-        return ((_returnReplacementOperator611.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getReducedFraction(((numer0 + (wholeNumber * denom0)) * sign), denom0)));
+        return ((_returnReplacementOperatorHotSpot611.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getReducedFraction(((numer0 + (wholeNumber * denom0)) * sign), denom0)));
     }
 
     public static org.apache.commons.lang3.math.Fraction getFraction(java.lang.String str) {
@@ -158,7 +158,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         } 
         int pos = str.indexOf('.');
         if (pos >= 0) {
-            return ((_returnReplacementOperator614.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(java.lang.Double.parseDouble(str))));
+            return ((_returnReplacementOperatorHotSpot614.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(java.lang.Double.parseDouble(str))));
         } 
         pos = str.indexOf(' ');
         if (pos > 0) {
@@ -170,62 +170,62 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             } 
             final int numer = java.lang.Integer.parseInt(str.substring(0, pos));
             final int denom = java.lang.Integer.parseInt(str.substring((pos + 1)));
-            return ((_returnReplacementOperator615.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(whole, numer, denom)));
+            return ((_returnReplacementOperatorHotSpot615.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(whole, numer, denom)));
         } 
         pos = str.indexOf('/');
         if (pos < 0) {
-            return ((_returnReplacementOperator616.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(java.lang.Integer.parseInt(str), 1)));
+            return ((_returnReplacementOperatorHotSpot616.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(java.lang.Integer.parseInt(str), 1)));
         } 
         final int numer = java.lang.Integer.parseInt(str.substring(0, pos));
         final int denom = java.lang.Integer.parseInt(str.substring((pos + 1)));
-        return ((_returnReplacementOperator617.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(numer, denom)));
+        return ((_returnReplacementOperatorHotSpot617.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(numer, denom)));
     }
 
     public int getNumerator() {
-        return ((_returnReplacementOperator589.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator589.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator589.is("ZERO")) ? ( 0 ) : (numerator));
+        return ((_returnReplacementOperatorHotSpot589.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot589.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot589.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (numerator));
     }
 
     public int getDenominator() {
-        return ((_returnReplacementOperator588.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator588.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator588.is("ZERO")) ? ( 0 ) : (denominator));
+        return ((_returnReplacementOperatorHotSpot588.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot588.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot588.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (denominator));
     }
 
     public int getProperNumerator() {
-        return ((_returnReplacementOperator590.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator590.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator590.is("ZERO")) ? ( 0 ) : (java.lang.Math.abs(((numerator) % (denominator)))));
+        return ((_returnReplacementOperatorHotSpot590.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot590.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot590.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (java.lang.Math.abs(((numerator) % (denominator)))));
     }
 
     public int getProperWhole() {
-        return ((_returnReplacementOperator591.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator591.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator591.is("ZERO")) ? ( 0 ) : ((numerator) / (denominator)));
+        return ((_returnReplacementOperatorHotSpot591.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot591.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot591.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : ((numerator) / (denominator)));
     }
 
     @java.lang.Override
     public int intValue() {
-        return ((_returnReplacementOperator596.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator596.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator596.is("ZERO")) ? ( 0 ) : ((numerator) / (denominator)));
+        return ((_returnReplacementOperatorHotSpot596.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot596.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot596.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : ((numerator) / (denominator)));
     }
 
     @java.lang.Override
     public long longValue() {
-        return ((_returnReplacementOperator602.is("NULL")) ? ( null ) : (((long)(numerator)) / (denominator)));
+        return ((_returnReplacementOperatorHotSpot602.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((long)(numerator)) / (denominator)));
     }
 
     @java.lang.Override
     public float floatValue() {
-        return ((_returnReplacementOperator581.is("NULL")) ? ( null ) : (((float)(numerator)) / ((float)(denominator))));
+        return ((_returnReplacementOperatorHotSpot581.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((float)(numerator)) / ((float)(denominator))));
     }
 
     @java.lang.Override
     public double doubleValue() {
-        return ((_returnReplacementOperator580.is("NULL")) ? ( null ) : (((double)(numerator)) / ((double)(denominator))));
+        return ((_returnReplacementOperatorHotSpot580.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((double)(numerator)) / ((double)(denominator))));
     }
 
     public org.apache.commons.lang3.math.Fraction reduce() {
         if ((numerator) == 0) {
-            return ((_returnReplacementOperator631.is("NULL")) ? ( null ) : (equals(org.apache.commons.lang3.math.Fraction.ZERO) ? this : org.apache.commons.lang3.math.Fraction.ZERO));
+            return ((_returnReplacementOperatorHotSpot631.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (equals(org.apache.commons.lang3.math.Fraction.ZERO) ? this : org.apache.commons.lang3.math.Fraction.ZERO));
         } 
         final int gcd = org.apache.commons.lang3.math.Fraction.greatestCommonDivisor(java.lang.Math.abs(numerator), denominator);
         if (gcd == 1) {
-            return ((_returnReplacementOperator632.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot632.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
-        return ((_returnReplacementOperator633.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(((numerator) / gcd), ((denominator) / gcd))));
+        return ((_returnReplacementOperatorHotSpot633.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getFraction(((numerator) / gcd), ((denominator) / gcd))));
     }
 
     public org.apache.commons.lang3.math.Fraction invert() {
@@ -236,41 +236,41 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             throw new java.lang.ArithmeticException("overflow: can't negate numerator");
         } 
         if ((numerator) < 0) {
-            return ((_returnReplacementOperator620.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(-(denominator) , -(numerator))));
+            return ((_returnReplacementOperatorHotSpot620.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(-(denominator) , -(numerator))));
         } 
-        return ((_returnReplacementOperator621.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(denominator , numerator)));
+        return ((_returnReplacementOperatorHotSpot621.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(denominator , numerator)));
     }
 
     public org.apache.commons.lang3.math.Fraction negate() {
         if ((numerator) == (java.lang.Integer.MIN_VALUE)) {
             throw new java.lang.ArithmeticException("overflow: too large to negate");
         } 
-        return ((_returnReplacementOperator624.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(-(numerator) , denominator)));
+        return ((_returnReplacementOperatorHotSpot624.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(-(numerator) , denominator)));
     }
 
     public org.apache.commons.lang3.math.Fraction abs() {
         if ((numerator) >= 0) {
-            return ((_returnReplacementOperator603.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot603.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
-        return ((_returnReplacementOperator604.is("NULL")) ? ( null ) : (negate()));
+        return ((_returnReplacementOperatorHotSpot604.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (negate()));
     }
 
     public org.apache.commons.lang3.math.Fraction pow(final int power) {
         if (power == 1) {
-            return ((_returnReplacementOperator625.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot625.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } else if (power == 0) {
-            return ((_returnReplacementOperator626.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.ONE));
+            return ((_returnReplacementOperatorHotSpot626.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.ONE));
         } else if (power < 0) {
             if (power == (java.lang.Integer.MIN_VALUE)) {
-                return ((_returnReplacementOperator627.is("NULL")) ? ( null ) : (invert().pow(2).pow(-(power / 2))));
+                return ((_returnReplacementOperatorHotSpot627.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (invert().pow(2).pow(-(power / 2))));
             } 
-            return ((_returnReplacementOperator628.is("NULL")) ? ( null ) : (invert().pow(-power)));
+            return ((_returnReplacementOperatorHotSpot628.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (invert().pow(-power)));
         } else {
             final org.apache.commons.lang3.math.Fraction f = multiplyBy(this);
             if ((power % 2) == 0) {
-                return ((_returnReplacementOperator629.is("NULL")) ? ( null ) : (f.pow((power / 2))));
+                return ((_returnReplacementOperatorHotSpot629.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (f.pow((power / 2))));
             } 
-            return ((_returnReplacementOperator630.is("NULL")) ? ( null ) : (f.pow((power / 2)).multiplyBy(this)));
+            return ((_returnReplacementOperatorHotSpot630.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (f.pow((power / 2)).multiplyBy(this)));
         }
     }
 
@@ -279,10 +279,10 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             if ((u == (java.lang.Integer.MIN_VALUE)) || (v == (java.lang.Integer.MIN_VALUE))) {
                 throw new java.lang.ArithmeticException("overflow: gcd is 2^31");
             } 
-            return ((_returnReplacementOperator592.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator592.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator592.is("ZERO")) ? ( 0 ) : ((java.lang.Math.abs(u)) + (java.lang.Math.abs(v))));
+            return ((_returnReplacementOperatorHotSpot592.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot592.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot592.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : ((java.lang.Math.abs(u)) + (java.lang.Math.abs(v))));
         } 
         if (((java.lang.Math.abs(u)) == 1) || ((java.lang.Math.abs(v)) == 1)) {
-            return ((_returnReplacementOperator593.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator593.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator593.is("ZERO")) ? ( 0 ) : (1));
+            return ((_returnReplacementOperatorHotSpot593.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot593.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot593.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (1));
         } 
         if (u > 0) {
             u = -u;
@@ -311,7 +311,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             }
             t = (v - u) / 2;
         } while (t != 0 );
-        return ((_returnReplacementOperator594.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator594.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator594.is("ZERO")) ? ( 0 ) : ((-u) * (1 << k)));
+        return ((_returnReplacementOperatorHotSpot594.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot594.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot594.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : ((-u) * (1 << k)));
     }
 
     private static int mulAndCheck(final int x, final int y) {
@@ -319,7 +319,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((m < (java.lang.Integer.MIN_VALUE)) || (m > (java.lang.Integer.MAX_VALUE))) {
             throw new java.lang.ArithmeticException("overflow: mul");
         } 
-        return ((_returnReplacementOperator597.is("NULL")) ? ( null ) : (((int)(m))));
+        return ((_returnReplacementOperatorHotSpot597.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((int)(m))));
     }
 
     private static int mulPosAndCheck(final int x, final int y) {
@@ -327,7 +327,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if (m > (java.lang.Integer.MAX_VALUE)) {
             throw new java.lang.ArithmeticException("overflow: mulPos");
         } 
-        return ((_returnReplacementOperator598.is("NULL")) ? ( null ) : (((int)(m))));
+        return ((_returnReplacementOperatorHotSpot598.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((int)(m))));
     }
 
     private static int addAndCheck(final int x, final int y) {
@@ -335,7 +335,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((s < (java.lang.Integer.MIN_VALUE)) || (s > (java.lang.Integer.MAX_VALUE))) {
             throw new java.lang.ArithmeticException("overflow: add");
         } 
-        return ((_returnReplacementOperator582.is("NULL")) ? ( null ) : (((int)(s))));
+        return ((_returnReplacementOperatorHotSpot582.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((int)(s))));
     }
 
     private static int subAndCheck(final int x, final int y) {
@@ -343,15 +343,15 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((s < (java.lang.Integer.MIN_VALUE)) || (s > (java.lang.Integer.MAX_VALUE))) {
             throw new java.lang.ArithmeticException("overflow: add");
         } 
-        return ((_returnReplacementOperator599.is("NULL")) ? ( null ) : (((int)(s))));
+        return ((_returnReplacementOperatorHotSpot599.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((int)(s))));
     }
 
     public org.apache.commons.lang3.math.Fraction add(final org.apache.commons.lang3.math.Fraction fraction) {
-        return ((_returnReplacementOperator605.is("NULL")) ? ( null ) : (addSub(fraction, true)));
+        return ((_returnReplacementOperatorHotSpot605.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (addSub(fraction, true)));
     }
 
     public org.apache.commons.lang3.math.Fraction subtract(final org.apache.commons.lang3.math.Fraction fraction) {
-        return ((_returnReplacementOperator634.is("NULL")) ? ( null ) : (addSub(fraction, false)));
+        return ((_returnReplacementOperatorHotSpot634.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (addSub(fraction, false)));
     }
 
     private org.apache.commons.lang3.math.Fraction addSub(final org.apache.commons.lang3.math.Fraction fraction, final boolean isAdd) {
@@ -359,16 +359,16 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             throw new java.lang.IllegalArgumentException("The fraction must not be null");
         } 
         if ((numerator) == 0) {
-            return ((_returnReplacementOperator606.is("NULL")) ? ( null ) : (isAdd ? fraction : fraction.negate()));
+            return ((_returnReplacementOperatorHotSpot606.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (isAdd ? fraction : fraction.negate()));
         } 
         if ((fraction.numerator) == 0) {
-            return ((_returnReplacementOperator607.is("NULL")) ? ( null ) : (this));
+            return ((_returnReplacementOperatorHotSpot607.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
         } 
         final int d1 = org.apache.commons.lang3.math.Fraction.greatestCommonDivisor(denominator, fraction.denominator);
         if (d1 == 1) {
             final int uvp = org.apache.commons.lang3.math.Fraction.mulAndCheck(numerator, fraction.denominator);
             final int upv = org.apache.commons.lang3.math.Fraction.mulAndCheck(fraction.numerator, denominator);
-            return ((_returnReplacementOperator608.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction((isAdd ? org.apache.commons.lang3.math.Fraction.addAndCheck(uvp, upv) : org.apache.commons.lang3.math.Fraction.subAndCheck(uvp, upv)) , org.apache.commons.lang3.math.Fraction.mulPosAndCheck(denominator, fraction.denominator))));
+            return ((_returnReplacementOperatorHotSpot608.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction((isAdd ? org.apache.commons.lang3.math.Fraction.addAndCheck(uvp, upv) : org.apache.commons.lang3.math.Fraction.subAndCheck(uvp, upv)) , org.apache.commons.lang3.math.Fraction.mulPosAndCheck(denominator, fraction.denominator))));
         } 
         final java.math.BigInteger uvp = java.math.BigInteger.valueOf(numerator).multiply(java.math.BigInteger.valueOf(((fraction.denominator) / d1)));
         final java.math.BigInteger upv = java.math.BigInteger.valueOf(fraction.numerator).multiply(java.math.BigInteger.valueOf(((denominator) / d1)));
@@ -379,7 +379,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((w.bitLength()) > 31) {
             throw new java.lang.ArithmeticException("overflow: numerator too large after multiply");
         } 
-        return ((_returnReplacementOperator609.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(w.intValue() , org.apache.commons.lang3.math.Fraction.mulPosAndCheck(((denominator) / d1), ((fraction.denominator) / d2)))));
+        return ((_returnReplacementOperatorHotSpot609.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.math.Fraction(w.intValue() , org.apache.commons.lang3.math.Fraction.mulPosAndCheck(((denominator) / d1), ((fraction.denominator) / d2)))));
     }
 
     public org.apache.commons.lang3.math.Fraction multiplyBy(final org.apache.commons.lang3.math.Fraction fraction) {
@@ -387,11 +387,11 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
             throw new java.lang.IllegalArgumentException("The fraction must not be null");
         } 
         if (((numerator) == 0) || ((fraction.numerator) == 0)) {
-            return ((_returnReplacementOperator622.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.ZERO));
+            return ((_returnReplacementOperatorHotSpot622.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.ZERO));
         } 
         final int d1 = org.apache.commons.lang3.math.Fraction.greatestCommonDivisor(numerator, fraction.denominator);
         final int d2 = org.apache.commons.lang3.math.Fraction.greatestCommonDivisor(fraction.numerator, denominator);
-        return ((_returnReplacementOperator623.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getReducedFraction(org.apache.commons.lang3.math.Fraction.mulAndCheck(((numerator) / d1), ((fraction.numerator) / d2)), org.apache.commons.lang3.math.Fraction.mulPosAndCheck(((denominator) / d2), ((fraction.denominator) / d1)))));
+        return ((_returnReplacementOperatorHotSpot623.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.math.Fraction.getReducedFraction(org.apache.commons.lang3.math.Fraction.mulAndCheck(((numerator) / d1), ((fraction.numerator) / d2)), org.apache.commons.lang3.math.Fraction.mulPosAndCheck(((denominator) / d2), ((fraction.denominator) / d1)))));
     }
 
     public org.apache.commons.lang3.math.Fraction divideBy(final org.apache.commons.lang3.math.Fraction fraction) {
@@ -401,19 +401,19 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((fraction.numerator) == 0) {
             throw new java.lang.ArithmeticException("The fraction to divide by must not be zero");
         } 
-        return ((_returnReplacementOperator610.is("NULL")) ? ( null ) : (multiplyBy(fraction.invert())));
+        return ((_returnReplacementOperatorHotSpot610.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (multiplyBy(fraction.invert())));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
         if (obj == (this)) {
-            return ((_returnReplacementOperator577.is("NULL")) ? ( null ) : (true));
+            return ((_returnReplacementOperatorHotSpot577.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (true));
         } 
         if ((obj instanceof org.apache.commons.lang3.math.Fraction) == false) {
-            return ((_returnReplacementOperator578.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot578.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         } 
         final org.apache.commons.lang3.math.Fraction other = ((org.apache.commons.lang3.math.Fraction)(obj));
-        return ((_returnReplacementOperator579.is("NULL")) ? ( null ) : (((getNumerator()) == (other.getNumerator())) && ((getDenominator()) == (other.getDenominator()))));
+        return ((_returnReplacementOperatorHotSpot579.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((getNumerator()) == (other.getNumerator())) && ((getDenominator()) == (other.getDenominator()))));
     }
 
     @java.lang.Override
@@ -421,25 +421,25 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((hashCode) == 0) {
             hashCode = (37 * ((37 * 17) + (getNumerator()))) + (getDenominator());
         } 
-        return ((_returnReplacementOperator595.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator595.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator595.is("ZERO")) ? ( 0 ) : (hashCode));
+        return ((_returnReplacementOperatorHotSpot595.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot595.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot595.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (hashCode));
     }
 
     @java.lang.Override
     public int compareTo(final org.apache.commons.lang3.math.Fraction other) {
         if ((this) == other) {
-            return ((_returnReplacementOperator583.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator583.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator583.is("ZERO")) ? ( 0 ) : (0));
+            return ((_returnReplacementOperatorHotSpot583.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot583.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot583.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
         } 
         if (((numerator) == (other.numerator)) && ((denominator) == (other.denominator))) {
-            return ((_returnReplacementOperator584.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator584.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator584.is("ZERO")) ? ( 0 ) : (0));
+            return ((_returnReplacementOperatorHotSpot584.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot584.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot584.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
         } 
         final long first = ((long)(numerator)) * ((long)(other.denominator));
         final long second = ((long)(other.numerator)) * ((long)(denominator));
         if (first == second) {
-            return ((_returnReplacementOperator585.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator585.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator585.is("ZERO")) ? ( 0 ) : (0));
+            return ((_returnReplacementOperatorHotSpot585.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot585.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot585.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
         } else if (first < second) {
-            return ((_returnReplacementOperator586.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator586.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator586.is("ZERO")) ? ( 0 ) : (-1));
+            return ((_returnReplacementOperatorHotSpot586.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot586.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot586.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (-1));
         } else {
-            return ((_returnReplacementOperator587.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator587.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator587.is("ZERO")) ? ( 0 ) : (1));
+            return ((_returnReplacementOperatorHotSpot587.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot587.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot587.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (1));
         }
     }
 
@@ -448,7 +448,7 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
         if ((toString) == null) {
             toString = ((getNumerator()) + "/") + (getDenominator());
         } 
-        return ((_returnReplacementOperator601.is("NULL")) ? ( null ) : (toString));
+        return ((_returnReplacementOperatorHotSpot601.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (toString));
     }
 
     public java.lang.String toProperString() {
@@ -470,123 +470,123 @@ public final class Fraction extends java.lang.Number implements java.lang.Compar
                 toProperString = ((getNumerator()) + "/") + (getDenominator());
             }
         } 
-        return ((_returnReplacementOperator600.is("NULL")) ? ( null ) : (toProperString));
+        return ((_returnReplacementOperatorHotSpot600.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (toProperString));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator577 = metamutator.Selector.of(577,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator577");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot577 = metamutator.Selector.of(577,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot577");
 
-    private static final metamutator.Selector _returnReplacementOperator578 = metamutator.Selector.of(578,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator578");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot578 = metamutator.Selector.of(578,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot578");
 
-    private static final metamutator.Selector _returnReplacementOperator579 = metamutator.Selector.of(579,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator579");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot579 = metamutator.Selector.of(579,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot579");
 
-    private static final metamutator.Selector _returnReplacementOperator580 = metamutator.Selector.of(580,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator580");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot580 = metamutator.Selector.of(580,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot580");
 
-    private static final metamutator.Selector _returnReplacementOperator581 = metamutator.Selector.of(581,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator581");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot581 = metamutator.Selector.of(581,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot581");
 
-    private static final metamutator.Selector _returnReplacementOperator582 = metamutator.Selector.of(582,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator582");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot582 = metamutator.Selector.of(582,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot582");
 
-    private static final metamutator.Selector _returnReplacementOperator583 = metamutator.Selector.of(583,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator583");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot583 = metamutator.Selector.of(583,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot583");
 
-    private static final metamutator.Selector _returnReplacementOperator584 = metamutator.Selector.of(584,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator584");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot584 = metamutator.Selector.of(584,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot584");
 
-    private static final metamutator.Selector _returnReplacementOperator585 = metamutator.Selector.of(585,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator585");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot585 = metamutator.Selector.of(585,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot585");
 
-    private static final metamutator.Selector _returnReplacementOperator586 = metamutator.Selector.of(586,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator586");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot586 = metamutator.Selector.of(586,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot586");
 
-    private static final metamutator.Selector _returnReplacementOperator587 = metamutator.Selector.of(587,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator587");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot587 = metamutator.Selector.of(587,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot587");
 
-    private static final metamutator.Selector _returnReplacementOperator588 = metamutator.Selector.of(588,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator588");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot588 = metamutator.Selector.of(588,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot588");
 
-    private static final metamutator.Selector _returnReplacementOperator589 = metamutator.Selector.of(589,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator589");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot589 = metamutator.Selector.of(589,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot589");
 
-    private static final metamutator.Selector _returnReplacementOperator590 = metamutator.Selector.of(590,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator590");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot590 = metamutator.Selector.of(590,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot590");
 
-    private static final metamutator.Selector _returnReplacementOperator591 = metamutator.Selector.of(591,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator591");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot591 = metamutator.Selector.of(591,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot591");
 
-    private static final metamutator.Selector _returnReplacementOperator592 = metamutator.Selector.of(592,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator592");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot592 = metamutator.Selector.of(592,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot592");
 
-    private static final metamutator.Selector _returnReplacementOperator593 = metamutator.Selector.of(593,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator593");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot593 = metamutator.Selector.of(593,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot593");
 
-    private static final metamutator.Selector _returnReplacementOperator594 = metamutator.Selector.of(594,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator594");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot594 = metamutator.Selector.of(594,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot594");
 
-    private static final metamutator.Selector _returnReplacementOperator595 = metamutator.Selector.of(595,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator595");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot595 = metamutator.Selector.of(595,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot595");
 
-    private static final metamutator.Selector _returnReplacementOperator596 = metamutator.Selector.of(596,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator596");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot596 = metamutator.Selector.of(596,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot596");
 
-    private static final metamutator.Selector _returnReplacementOperator597 = metamutator.Selector.of(597,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator597");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot597 = metamutator.Selector.of(597,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot597");
 
-    private static final metamutator.Selector _returnReplacementOperator598 = metamutator.Selector.of(598,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator598");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot598 = metamutator.Selector.of(598,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot598");
 
-    private static final metamutator.Selector _returnReplacementOperator599 = metamutator.Selector.of(599,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator599");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot599 = metamutator.Selector.of(599,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot599");
 
-    private static final metamutator.Selector _returnReplacementOperator600 = metamutator.Selector.of(600,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator600");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot600 = metamutator.Selector.of(600,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot600");
 
-    private static final metamutator.Selector _returnReplacementOperator601 = metamutator.Selector.of(601,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator601");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot601 = metamutator.Selector.of(601,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot601");
 
-    private static final metamutator.Selector _returnReplacementOperator602 = metamutator.Selector.of(602,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator602");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot602 = metamutator.Selector.of(602,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot602");
 
-    private static final metamutator.Selector _returnReplacementOperator603 = metamutator.Selector.of(603,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator603");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot603 = metamutator.Selector.of(603,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot603");
 
-    private static final metamutator.Selector _returnReplacementOperator604 = metamutator.Selector.of(604,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator604");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot604 = metamutator.Selector.of(604,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot604");
 
-    private static final metamutator.Selector _returnReplacementOperator605 = metamutator.Selector.of(605,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator605");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot605 = metamutator.Selector.of(605,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot605");
 
-    private static final metamutator.Selector _returnReplacementOperator606 = metamutator.Selector.of(606,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator606");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot606 = metamutator.Selector.of(606,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot606");
 
-    private static final metamutator.Selector _returnReplacementOperator607 = metamutator.Selector.of(607,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator607");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot607 = metamutator.Selector.of(607,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot607");
 
-    private static final metamutator.Selector _returnReplacementOperator608 = metamutator.Selector.of(608,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator608");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot608 = metamutator.Selector.of(608,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot608");
 
-    private static final metamutator.Selector _returnReplacementOperator609 = metamutator.Selector.of(609,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator609");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot609 = metamutator.Selector.of(609,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot609");
 
-    private static final metamutator.Selector _returnReplacementOperator610 = metamutator.Selector.of(610,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator610");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot610 = metamutator.Selector.of(610,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot610");
 
-    private static final metamutator.Selector _returnReplacementOperator611 = metamutator.Selector.of(611,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator611");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot611 = metamutator.Selector.of(611,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot611");
 
-    private static final metamutator.Selector _returnReplacementOperator612 = metamutator.Selector.of(612,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator612");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot612 = metamutator.Selector.of(612,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot612");
 
-    private static final metamutator.Selector _returnReplacementOperator613 = metamutator.Selector.of(613,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator613");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot613 = metamutator.Selector.of(613,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot613");
 
-    private static final metamutator.Selector _returnReplacementOperator614 = metamutator.Selector.of(614,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator614");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot614 = metamutator.Selector.of(614,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot614");
 
-    private static final metamutator.Selector _returnReplacementOperator615 = metamutator.Selector.of(615,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator615");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot615 = metamutator.Selector.of(615,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot615");
 
-    private static final metamutator.Selector _returnReplacementOperator616 = metamutator.Selector.of(616,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator616");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot616 = metamutator.Selector.of(616,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot616");
 
-    private static final metamutator.Selector _returnReplacementOperator617 = metamutator.Selector.of(617,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator617");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot617 = metamutator.Selector.of(617,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot617");
 
-    private static final metamutator.Selector _returnReplacementOperator618 = metamutator.Selector.of(618,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator618");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot618 = metamutator.Selector.of(618,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot618");
 
-    private static final metamutator.Selector _returnReplacementOperator619 = metamutator.Selector.of(619,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator619");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot619 = metamutator.Selector.of(619,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot619");
 
-    private static final metamutator.Selector _returnReplacementOperator620 = metamutator.Selector.of(620,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator620");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot620 = metamutator.Selector.of(620,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot620");
 
-    private static final metamutator.Selector _returnReplacementOperator621 = metamutator.Selector.of(621,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator621");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot621 = metamutator.Selector.of(621,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot621");
 
-    private static final metamutator.Selector _returnReplacementOperator622 = metamutator.Selector.of(622,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator622");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot622 = metamutator.Selector.of(622,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot622");
 
-    private static final metamutator.Selector _returnReplacementOperator623 = metamutator.Selector.of(623,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator623");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot623 = metamutator.Selector.of(623,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot623");
 
-    private static final metamutator.Selector _returnReplacementOperator624 = metamutator.Selector.of(624,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator624");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot624 = metamutator.Selector.of(624,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot624");
 
-    private static final metamutator.Selector _returnReplacementOperator625 = metamutator.Selector.of(625,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator625");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot625 = metamutator.Selector.of(625,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot625");
 
-    private static final metamutator.Selector _returnReplacementOperator626 = metamutator.Selector.of(626,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator626");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot626 = metamutator.Selector.of(626,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot626");
 
-    private static final metamutator.Selector _returnReplacementOperator627 = metamutator.Selector.of(627,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator627");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot627 = metamutator.Selector.of(627,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot627");
 
-    private static final metamutator.Selector _returnReplacementOperator628 = metamutator.Selector.of(628,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator628");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot628 = metamutator.Selector.of(628,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot628");
 
-    private static final metamutator.Selector _returnReplacementOperator629 = metamutator.Selector.of(629,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator629");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot629 = metamutator.Selector.of(629,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot629");
 
-    private static final metamutator.Selector _returnReplacementOperator630 = metamutator.Selector.of(630,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator630");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot630 = metamutator.Selector.of(630,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot630");
 
-    private static final metamutator.Selector _returnReplacementOperator631 = metamutator.Selector.of(631,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator631");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot631 = metamutator.Selector.of(631,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot631");
 
-    private static final metamutator.Selector _returnReplacementOperator632 = metamutator.Selector.of(632,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator632");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot632 = metamutator.Selector.of(632,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot632");
 
-    private static final metamutator.Selector _returnReplacementOperator633 = metamutator.Selector.of(633,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator633");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot633 = metamutator.Selector.of(633,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot633");
 
-    private static final metamutator.Selector _returnReplacementOperator634 = metamutator.Selector.of(634,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperator634");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot634 = metamutator.Selector.of(634,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.math.Fraction.class).id("_returnReplacementOperatorHotSpot634");
 }
 

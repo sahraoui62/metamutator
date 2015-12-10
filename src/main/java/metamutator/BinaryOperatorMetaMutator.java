@@ -37,7 +37,7 @@ public class BinaryOperatorMetaMutator extends
 					BinaryOperatorKind.LT, BinaryOperatorKind.NE);
 	private static final EnumSet<BinaryOperatorKind> REDUCED_COMPARISON_OPERATORS = EnumSet
 			.of(BinaryOperatorKind.EQ, BinaryOperatorKind.NE);
-	
+
 	private Set<CtElement> hostSpots = Sets.newHashSet();
 
 	@Override
@@ -72,6 +72,7 @@ public class BinaryOperatorMetaMutator extends
 
 	public void process(CtBinaryOperator<Boolean> binaryOperator) {
 		BinaryOperatorKind kind = binaryOperator.getKind();
+
 		if (LOGICAL_OPERATORS.contains(kind)) {
 			mutateOperator(binaryOperator, LOGICAL_OPERATORS);
 		} else if (COMPARISON_OPERATORS.contains(kind)) {
@@ -126,13 +127,13 @@ public class BinaryOperatorMetaMutator extends
 
 		int thisIndex = ++index;
 
-		String originalKind = expression.getKind().toString();
+		BinaryOperatorKind originalKind = expression.getKind();
 		String newExpression = operators
 				.stream()
 				.map(kind -> {
 					expression.setKind(kind);
-					return String.format("("+ PREFIX + "%s.is(\"%s\") && (%s))",
-							thisIndex, kind, expression);
+					return String.format("("+ PREFIX + "%s.is(%s) && (%s))",
+							thisIndex, kind.getDeclaringClass().getName()+"."+kind.name(), expression);
 				}).collect(Collectors.joining(" || "));
 
 		CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core()

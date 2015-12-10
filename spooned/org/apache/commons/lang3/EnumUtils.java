@@ -18,33 +18,33 @@ public class EnumUtils {
         for (final E e : enumClass.getEnumConstants()) {
             map.put(e.name(), e);
         }
-        return ((_returnReplacementOperator2816.is("NULL")) ? ( null ) : (map));
+        return ((_returnReplacementOperatorHotSpot2816.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (map));
     }
 
     public static <E extends java.lang.Enum<E>>java.util.List<E> getEnumList(final java.lang.Class<E> enumClass) {
-        return ((_returnReplacementOperator2815.is("NULL")) ? ( null ) : (new java.util.ArrayList<E>(java.util.Arrays.asList(enumClass.getEnumConstants()))));
+        return ((_returnReplacementOperatorHotSpot2815.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new java.util.ArrayList<E>(java.util.Arrays.asList(enumClass.getEnumConstants()))));
     }
 
     public static <E extends java.lang.Enum<E>>boolean isValidEnum(final java.lang.Class<E> enumClass, final java.lang.String enumName) {
         if (enumName == null) {
-            return ((_returnReplacementOperator2808.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot2808.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         } 
         try {
             java.lang.Enum.valueOf(enumClass, enumName);
-            return ((_returnReplacementOperator2809.is("NULL")) ? ( null ) : (true));
+            return ((_returnReplacementOperatorHotSpot2809.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (true));
         } catch (final java.lang.IllegalArgumentException ex) {
-            return ((_returnReplacementOperator2810.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot2810.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         }
     }
 
     public static <E extends java.lang.Enum<E>>E getEnum(final java.lang.Class<E> enumClass, final java.lang.String enumName) {
         if (enumName == null) {
-            return ((_returnReplacementOperator2805.is("NULL")) ? ( null ) : (null));
+            return ((_returnReplacementOperatorHotSpot2805.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (null));
         } 
         try {
-            return ((_returnReplacementOperator2806.is("NULL")) ? ( null ) : (java.lang.Enum.valueOf(enumClass, enumName)));
+            return ((_returnReplacementOperatorHotSpot2806.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Enum.valueOf(enumClass, enumName)));
         } catch (final java.lang.IllegalArgumentException ex) {
-            return ((_returnReplacementOperator2807.is("NULL")) ? ( null ) : (null));
+            return ((_returnReplacementOperatorHotSpot2807.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (null));
         }
     }
 
@@ -56,7 +56,7 @@ public class EnumUtils {
             org.apache.commons.lang3.Validate.isTrue((constant != null), NULL_ELEMENTS_NOT_PERMITTED);
             total |= 1L << (constant.ordinal());
         }
-        return ((_returnReplacementOperator2818.is("NULL")) ? ( null ) : (total));
+        return ((_returnReplacementOperatorHotSpot2818.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (total));
     }
 
     public static <E extends java.lang.Enum<E>>long[] generateBitVectors(final java.lang.Class<E> enumClass, final java.lang.Iterable<? extends E> values) {
@@ -72,12 +72,12 @@ public class EnumUtils {
             result[((value.ordinal()) / (java.lang.Long.SIZE))] |= 1L << ((value.ordinal()) % (java.lang.Long.SIZE));
         }
         org.apache.commons.lang3.ArrayUtils.reverse(result);
-        return ((_returnReplacementOperator2820.is("NULL")) ? ( null ) : (result));
+        return ((_returnReplacementOperatorHotSpot2820.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (result));
     }
 
     public static <E extends java.lang.Enum<E>>long generateBitVector(final java.lang.Class<E> enumClass, final E... values) {
         org.apache.commons.lang3.Validate.noNullElements(values);
-        return ((_returnReplacementOperator2817.is("NULL")) ? ( null ) : (org.apache.commons.lang3.EnumUtils.generateBitVector(enumClass, java.util.Arrays.<E>asList(values))));
+        return ((_returnReplacementOperatorHotSpot2817.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.EnumUtils.generateBitVector(enumClass, java.util.Arrays.<E>asList(values))));
     }
 
     public static <E extends java.lang.Enum<E>>long[] generateBitVectors(final java.lang.Class<E> enumClass, final E... values) {
@@ -90,12 +90,12 @@ public class EnumUtils {
             result[((value.ordinal()) / (java.lang.Long.SIZE))] |= 1L << ((value.ordinal()) % (java.lang.Long.SIZE));
         }
         org.apache.commons.lang3.ArrayUtils.reverse(result);
-        return ((_returnReplacementOperator2819.is("NULL")) ? ( null ) : (result));
+        return ((_returnReplacementOperatorHotSpot2819.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (result));
     }
 
     public static <E extends java.lang.Enum<E>>java.util.EnumSet<E> processBitVector(final java.lang.Class<E> enumClass, final long value) {
         org.apache.commons.lang3.EnumUtils.checkBitVectorable(enumClass).getEnumConstants();
-        return ((_returnReplacementOperator2813.is("NULL")) ? ( null ) : (org.apache.commons.lang3.EnumUtils.processBitVectors(enumClass, value)));
+        return ((_returnReplacementOperatorHotSpot2813.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.EnumUtils.processBitVectors(enumClass, value)));
     }
 
     public static <E extends java.lang.Enum<E>>java.util.EnumSet<E> processBitVectors(final java.lang.Class<E> enumClass, final long... values) {
@@ -108,51 +108,51 @@ public class EnumUtils {
                 results.add(constant);
             } 
         }
-        return ((_returnReplacementOperator2814.is("NULL")) ? ( null ) : (results));
+        return ((_returnReplacementOperatorHotSpot2814.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (results));
     }
 
     private static <E extends java.lang.Enum<E>>java.lang.Class<E> checkBitVectorable(final java.lang.Class<E> enumClass) {
         final E[] constants = org.apache.commons.lang3.EnumUtils.asEnum(enumClass).getEnumConstants();
         org.apache.commons.lang3.Validate.isTrue(((constants.length) <= (java.lang.Long.SIZE)), CANNOT_STORE_S_S_VALUES_IN_S_BITS, java.lang.Integer.valueOf(constants.length), enumClass.getSimpleName(), java.lang.Integer.valueOf(java.lang.Long.SIZE));
-        return ((_returnReplacementOperator2812.is("NULL")) ? ( null ) : (enumClass));
+        return ((_returnReplacementOperatorHotSpot2812.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (enumClass));
     }
 
     private static <E extends java.lang.Enum<E>>java.lang.Class<E> asEnum(final java.lang.Class<E> enumClass) {
         org.apache.commons.lang3.Validate.notNull(enumClass, ENUM_CLASS_MUST_BE_DEFINED);
         org.apache.commons.lang3.Validate.isTrue(enumClass.isEnum(), S_DOES_NOT_SEEM_TO_BE_AN_ENUM_TYPE, enumClass);
-        return ((_returnReplacementOperator2811.is("NULL")) ? ( null ) : (enumClass));
+        return ((_returnReplacementOperatorHotSpot2811.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (enumClass));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator2805 = metamutator.Selector.of(2805,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2805");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2805 = metamutator.Selector.of(2805,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2805");
 
-    private static final metamutator.Selector _returnReplacementOperator2806 = metamutator.Selector.of(2806,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2806");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2806 = metamutator.Selector.of(2806,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2806");
 
-    private static final metamutator.Selector _returnReplacementOperator2807 = metamutator.Selector.of(2807,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2807");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2807 = metamutator.Selector.of(2807,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2807");
 
-    private static final metamutator.Selector _returnReplacementOperator2808 = metamutator.Selector.of(2808,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2808");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2808 = metamutator.Selector.of(2808,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2808");
 
-    private static final metamutator.Selector _returnReplacementOperator2809 = metamutator.Selector.of(2809,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2809");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2809 = metamutator.Selector.of(2809,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2809");
 
-    private static final metamutator.Selector _returnReplacementOperator2810 = metamutator.Selector.of(2810,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2810");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2810 = metamutator.Selector.of(2810,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2810");
 
-    private static final metamutator.Selector _returnReplacementOperator2811 = metamutator.Selector.of(2811,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2811");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2811 = metamutator.Selector.of(2811,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2811");
 
-    private static final metamutator.Selector _returnReplacementOperator2812 = metamutator.Selector.of(2812,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2812");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2812 = metamutator.Selector.of(2812,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2812");
 
-    private static final metamutator.Selector _returnReplacementOperator2813 = metamutator.Selector.of(2813,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2813");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2813 = metamutator.Selector.of(2813,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2813");
 
-    private static final metamutator.Selector _returnReplacementOperator2814 = metamutator.Selector.of(2814,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2814");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2814 = metamutator.Selector.of(2814,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2814");
 
-    private static final metamutator.Selector _returnReplacementOperator2815 = metamutator.Selector.of(2815,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2815");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2815 = metamutator.Selector.of(2815,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2815");
 
-    private static final metamutator.Selector _returnReplacementOperator2816 = metamutator.Selector.of(2816,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2816");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2816 = metamutator.Selector.of(2816,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2816");
 
-    private static final metamutator.Selector _returnReplacementOperator2817 = metamutator.Selector.of(2817,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2817");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2817 = metamutator.Selector.of(2817,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2817");
 
-    private static final metamutator.Selector _returnReplacementOperator2818 = metamutator.Selector.of(2818,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2818");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2818 = metamutator.Selector.of(2818,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2818");
 
-    private static final metamutator.Selector _returnReplacementOperator2819 = metamutator.Selector.of(2819,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2819");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2819 = metamutator.Selector.of(2819,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2819");
 
-    private static final metamutator.Selector _returnReplacementOperator2820 = metamutator.Selector.of(2820,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperator2820");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot2820 = metamutator.Selector.of(2820,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.EnumUtils.class).id("_returnReplacementOperatorHotSpot2820");
 }
 

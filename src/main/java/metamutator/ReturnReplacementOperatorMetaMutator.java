@@ -18,7 +18,7 @@ import spoon.reflect.declaration.CtField;
 
 public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtReturn> {
 
-	public static final String PREFIX = "_returnReplacementOperator";
+	public static final String PREFIX = "_returnReplacementOperatorHotSpot";
 	private static int index = 0;	
 	private static final EnumSet<RETURN_REPLACEMENT_INT> int_replacement = EnumSet.of(RETURN_REPLACEMENT_INT.INT_MIN, RETURN_REPLACEMENT_INT.INT_MAX, RETURN_REPLACEMENT_INT.ZERO);
 	private static final EnumSet<RETURN_REPLACEMENT_OBJECT> object_replacement = EnumSet.of(RETURN_REPLACEMENT_OBJECT.NULL);
@@ -87,10 +87,10 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 					if(cpt < RETURN_REPLACEMENT_INT.values().length){
 						if(replacement.equals(RETURN_REPLACEMENT_INT.INIT)) continue;
 						if(returnValue.getTypeCasts().size() != 0){
-							expression += "(" + PREFIX + index + ".is(\"" + replacement.toString() + "\")) ? (("+ returnValue.getTypeCasts().get(0) +")( " + permutations(replacement) + " ))";
+							expression += "(" + PREFIX + index + ".is(" + replacement.getClass().getCanonicalName()+"."+replacement.toString() + ")) ? (("+ returnValue.getTypeCasts().get(0) +")( " + permutations(replacement) + " ))";
 							expression += " : ";
 						}else{
-							expression += "(" + PREFIX + index + ".is(\"" + replacement.toString() + "\")) ? ( " + permutations(replacement) + " )";
+							expression += "(" + PREFIX + index + ".is(" + replacement.getClass().getCanonicalName()+"."+replacement.toString() + ")) ? ( " + permutations(replacement) + " )";
 							expression += " : ";
 						}
 					}else{
@@ -106,12 +106,12 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 				CtReturn newReturn = getFactory().Core().createReturn();
 				newReturn.setReturnedExpression(codeSnippet);
 				returnStatement.replace(newReturn);
-				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_INT.INIT.toString(), index, int_replacement, PREFIX);
+				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_INT.INIT, index, int_replacement, PREFIX);
 				
 				hostSpots.add(returnStatement);
 				
 			}else if (!isBoolean(returnValue)){
-				expression += "(" + PREFIX + index + ".is(\"" + RETURN_REPLACEMENT_OBJECT.NULL + "\")) ? ( null )";
+				expression += "(" + PREFIX + index + ".is(" + RETURN_REPLACEMENT_OBJECT.NULL.getClass().getCanonicalName()+"."+RETURN_REPLACEMENT_OBJECT.NULL.toString() + ")) ? ( null )";
 				expression += " : ";
 				expression += "(" + returnValue + "))";
 				CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core()
@@ -121,7 +121,7 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 				CtReturn newReturn = getFactory().Core().createReturn();
 				newReturn.setReturnedExpression(codeSnippet);
 				returnStatement.replace(newReturn);
-				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_OBJECT.INIT.toString(), index, object_replacement, PREFIX);
+				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_OBJECT.INIT, index, object_replacement, PREFIX);
 				
 				hostSpots.add(returnStatement);
 			}

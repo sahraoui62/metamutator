@@ -16,7 +16,7 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
     }
 
     public boolean isSet(final org.apache.commons.lang3.text.translate.NumericEntityUnescaper.OPTION option) {
-        return ((_returnReplacementOperator1127.is("NULL")) ? ( null ) : ((options) == null ? false : options.contains(option)));
+        return ((_returnReplacementOperatorHotSpot1127.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((options) == null ? false : options.contains(option)));
     }
 
     @java.lang.Override
@@ -30,7 +30,7 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
                 start++;
                 isHex = true;
                 if (start == seqEnd) {
-                    return ((_returnReplacementOperator1128.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1128.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1128.is("ZERO")) ? ( 0 ) : (0));
+                    return ((_returnReplacementOperatorHotSpot1128.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1128.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1128.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
                 } 
             } 
             int end = start;
@@ -40,7 +40,7 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
             final boolean semiNext = (end != seqEnd) && ((input.charAt(end)) == ';');
             if (!semiNext) {
                 if (isSet(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.OPTION.semiColonRequired)) {
-                    return ((_returnReplacementOperator1129.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1129.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1129.is("ZERO")) ? ( 0 ) : (0));
+                    return ((_returnReplacementOperatorHotSpot1129.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1129.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1129.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
                 } else if (isSet(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.OPTION.errorIfNoSemiColon)) {
                     throw new java.lang.IllegalArgumentException("Semi-colon required at end of numeric entity");
                 } 
@@ -53,7 +53,7 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
                     entityValue = java.lang.Integer.parseInt(input.subSequence(start, end).toString(), 10);
                 }
             } catch (final java.lang.NumberFormatException nfe) {
-                return ((_returnReplacementOperator1130.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1130.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1130.is("ZERO")) ? ( 0 ) : (0));
+                return ((_returnReplacementOperatorHotSpot1130.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1130.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1130.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
             }
             if (entityValue > 65535) {
                 final char[] chrs = java.lang.Character.toChars(entityValue);
@@ -62,21 +62,21 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
             } else {
                 out.write(entityValue);
             }
-            return ((_returnReplacementOperator1131.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1131.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1131.is("ZERO")) ? ( 0 ) : ((((2 + end) - start) + (isHex ? 1 : 0)) + (semiNext ? 1 : 0)));
+            return ((_returnReplacementOperatorHotSpot1131.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1131.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1131.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : ((((2 + end) - start) + (isHex ? 1 : 0)) + (semiNext ? 1 : 0)));
         } 
-        return ((_returnReplacementOperator1132.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1132.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1132.is("ZERO")) ? ( 0 ) : (0));
+        return ((_returnReplacementOperatorHotSpot1132.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1132.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1132.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1127 = metamutator.Selector.of(1127,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1127");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1127 = metamutator.Selector.of(1127,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperatorHotSpot1127");
 
-    private static final metamutator.Selector _returnReplacementOperator1128 = metamutator.Selector.of(1128,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1128");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1128 = metamutator.Selector.of(1128,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperatorHotSpot1128");
 
-    private static final metamutator.Selector _returnReplacementOperator1129 = metamutator.Selector.of(1129,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1129");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1129 = metamutator.Selector.of(1129,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperatorHotSpot1129");
 
-    private static final metamutator.Selector _returnReplacementOperator1130 = metamutator.Selector.of(1130,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1130");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1130 = metamutator.Selector.of(1130,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperatorHotSpot1130");
 
-    private static final metamutator.Selector _returnReplacementOperator1131 = metamutator.Selector.of(1131,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1131");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1131 = metamutator.Selector.of(1131,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperatorHotSpot1131");
 
-    private static final metamutator.Selector _returnReplacementOperator1132 = metamutator.Selector.of(1132,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1132");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1132 = metamutator.Selector.of(1132,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperatorHotSpot1132");
 }
 

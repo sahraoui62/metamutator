@@ -67,14 +67,14 @@ public class Validate {
     }
 
     public static <T>T notNull(final T object) {
-        return ((_returnReplacementOperator3531.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.notNull(object, org.apache.commons.lang3.Validate.DEFAULT_IS_NULL_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3531.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.notNull(object, org.apache.commons.lang3.Validate.DEFAULT_IS_NULL_EX_MESSAGE)));
     }
 
     public static <T>T notNull(final T object, final java.lang.String message, final java.lang.Object... values) {
         if (object == null) {
             throw new java.lang.NullPointerException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3532.is("NULL")) ? ( null ) : (object));
+        return ((_returnReplacementOperatorHotSpot3532.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (object));
     }
 
     public static <T>T[] notEmpty(final T[] array, final java.lang.String message, final java.lang.Object... values) {
@@ -84,11 +84,11 @@ public class Validate {
         if ((array.length) == 0) {
             throw new java.lang.IllegalArgumentException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3536.is("NULL")) ? ( null ) : (array));
+        return ((_returnReplacementOperatorHotSpot3536.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (array));
     }
 
     public static <T>T[] notEmpty(final T[] array) {
-        return ((_returnReplacementOperator3535.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(array, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_ARRAY_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3535.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(array, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_ARRAY_EX_MESSAGE)));
     }
 
     public static <T extends java.util.Collection<?>>T notEmpty(final T collection, final java.lang.String message, final java.lang.Object... values) {
@@ -98,11 +98,11 @@ public class Validate {
         if (collection.isEmpty()) {
             throw new java.lang.IllegalArgumentException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3526.is("NULL")) ? ( null ) : (collection));
+        return ((_returnReplacementOperatorHotSpot3526.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (collection));
     }
 
     public static <T extends java.util.Collection<?>>T notEmpty(final T collection) {
-        return ((_returnReplacementOperator3525.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(collection, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_COLLECTION_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3525.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(collection, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_COLLECTION_EX_MESSAGE)));
     }
 
     public static <T extends java.util.Map<?, ?>>T notEmpty(final T map, final java.lang.String message, final java.lang.Object... values) {
@@ -112,11 +112,11 @@ public class Validate {
         if (map.isEmpty()) {
             throw new java.lang.IllegalArgumentException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3530.is("NULL")) ? ( null ) : (map));
+        return ((_returnReplacementOperatorHotSpot3530.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (map));
     }
 
     public static <T extends java.util.Map<?, ?>>T notEmpty(final T map) {
-        return ((_returnReplacementOperator3529.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(map, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_MAP_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3529.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(map, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_MAP_EX_MESSAGE)));
     }
 
     public static <T extends java.lang.CharSequence>T notEmpty(final T chars, final java.lang.String message, final java.lang.Object... values) {
@@ -126,11 +126,11 @@ public class Validate {
         if ((chars.length()) == 0) {
             throw new java.lang.IllegalArgumentException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3520.is("NULL")) ? ( null ) : (chars));
+        return ((_returnReplacementOperatorHotSpot3520.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (chars));
     }
 
     public static <T extends java.lang.CharSequence>T notEmpty(final T chars) {
-        return ((_returnReplacementOperator3519.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(chars, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_CHAR_SEQUENCE_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3519.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.notEmpty(chars, org.apache.commons.lang3.Validate.DEFAULT_NOT_EMPTY_CHAR_SEQUENCE_EX_MESSAGE)));
     }
 
     public static <T extends java.lang.CharSequence>T notBlank(final T chars, final java.lang.String message, final java.lang.Object... values) {
@@ -140,11 +140,11 @@ public class Validate {
         if (org.apache.commons.lang3.StringUtils.isBlank(chars)) {
             throw new java.lang.IllegalArgumentException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3518.is("NULL")) ? ( null ) : (chars));
+        return ((_returnReplacementOperatorHotSpot3518.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (chars));
     }
 
     public static <T extends java.lang.CharSequence>T notBlank(final T chars) {
-        return ((_returnReplacementOperator3517.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.notBlank(chars, org.apache.commons.lang3.Validate.DEFAULT_NOT_BLANK_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3517.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.notBlank(chars, org.apache.commons.lang3.Validate.DEFAULT_NOT_BLANK_EX_MESSAGE)));
     }
 
     public static <T>T[] noNullElements(final T[] array, final java.lang.String message, final java.lang.Object... values) {
@@ -155,11 +155,11 @@ public class Validate {
                 throw new java.lang.IllegalArgumentException(java.lang.String.format(message, values2));
             } 
         }
-        return ((_returnReplacementOperator3534.is("NULL")) ? ( null ) : (array));
+        return ((_returnReplacementOperatorHotSpot3534.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (array));
     }
 
     public static <T>T[] noNullElements(final T[] array) {
-        return ((_returnReplacementOperator3533.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.noNullElements(array, org.apache.commons.lang3.Validate.DEFAULT_NO_NULL_ELEMENTS_ARRAY_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3533.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.noNullElements(array, org.apache.commons.lang3.Validate.DEFAULT_NO_NULL_ELEMENTS_ARRAY_EX_MESSAGE)));
     }
 
     public static <T extends java.lang.Iterable<?>>T noNullElements(final T iterable, final java.lang.String message, final java.lang.Object... values) {
@@ -171,11 +171,11 @@ public class Validate {
                 throw new java.lang.IllegalArgumentException(java.lang.String.format(message, values2));
             } 
         }
-        return ((_returnReplacementOperator3524.is("NULL")) ? ( null ) : (iterable));
+        return ((_returnReplacementOperatorHotSpot3524.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (iterable));
     }
 
     public static <T extends java.lang.Iterable<?>>T noNullElements(final T iterable) {
-        return ((_returnReplacementOperator3523.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.noNullElements(iterable, org.apache.commons.lang3.Validate.DEFAULT_NO_NULL_ELEMENTS_COLLECTION_EX_MESSAGE)));
+        return ((_returnReplacementOperatorHotSpot3523.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.noNullElements(iterable, org.apache.commons.lang3.Validate.DEFAULT_NO_NULL_ELEMENTS_COLLECTION_EX_MESSAGE)));
     }
 
     public static <T>T[] validIndex(final T[] array, final int index, final java.lang.String message, final java.lang.Object... values) {
@@ -183,11 +183,11 @@ public class Validate {
         if ((index < 0) || (index >= (array.length))) {
             throw new java.lang.IndexOutOfBoundsException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3538.is("NULL")) ? ( null ) : (array));
+        return ((_returnReplacementOperatorHotSpot3538.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (array));
     }
 
     public static <T>T[] validIndex(final T[] array, final int index) {
-        return ((_returnReplacementOperator3537.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.validIndex(array, index, org.apache.commons.lang3.Validate.DEFAULT_VALID_INDEX_ARRAY_EX_MESSAGE, java.lang.Integer.valueOf(index))));
+        return ((_returnReplacementOperatorHotSpot3537.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.validIndex(array, index, org.apache.commons.lang3.Validate.DEFAULT_VALID_INDEX_ARRAY_EX_MESSAGE, java.lang.Integer.valueOf(index))));
     }
 
     public static <T extends java.util.Collection<?>>T validIndex(final T collection, final int index, final java.lang.String message, final java.lang.Object... values) {
@@ -195,11 +195,11 @@ public class Validate {
         if ((index < 0) || (index >= (collection.size()))) {
             throw new java.lang.IndexOutOfBoundsException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3528.is("NULL")) ? ( null ) : (collection));
+        return ((_returnReplacementOperatorHotSpot3528.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (collection));
     }
 
     public static <T extends java.util.Collection<?>>T validIndex(final T collection, final int index) {
-        return ((_returnReplacementOperator3527.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.validIndex(collection, index, org.apache.commons.lang3.Validate.DEFAULT_VALID_INDEX_COLLECTION_EX_MESSAGE, java.lang.Integer.valueOf(index))));
+        return ((_returnReplacementOperatorHotSpot3527.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.validIndex(collection, index, org.apache.commons.lang3.Validate.DEFAULT_VALID_INDEX_COLLECTION_EX_MESSAGE, java.lang.Integer.valueOf(index))));
     }
 
     public static <T extends java.lang.CharSequence>T validIndex(final T chars, final int index, final java.lang.String message, final java.lang.Object... values) {
@@ -207,11 +207,11 @@ public class Validate {
         if ((index < 0) || (index >= (chars.length()))) {
             throw new java.lang.IndexOutOfBoundsException(java.lang.String.format(message, values));
         } 
-        return ((_returnReplacementOperator3522.is("NULL")) ? ( null ) : (chars));
+        return ((_returnReplacementOperatorHotSpot3522.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (chars));
     }
 
     public static <T extends java.lang.CharSequence>T validIndex(final T chars, final int index) {
-        return ((_returnReplacementOperator3521.is("NULL")) ? ( null ) : (org.apache.commons.lang3.Validate.validIndex(chars, index, org.apache.commons.lang3.Validate.DEFAULT_VALID_INDEX_CHAR_SEQUENCE_EX_MESSAGE, java.lang.Integer.valueOf(index))));
+        return ((_returnReplacementOperatorHotSpot3521.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.Validate.validIndex(chars, index, org.apache.commons.lang3.Validate.DEFAULT_VALID_INDEX_CHAR_SEQUENCE_EX_MESSAGE, java.lang.Integer.valueOf(index))));
     }
 
     public static void validState(final boolean expression) {
@@ -338,48 +338,48 @@ public class Validate {
         } 
     }
 
-    private static final metamutator.Selector _returnReplacementOperator3517 = metamutator.Selector.of(3517,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3517");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3517 = metamutator.Selector.of(3517,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3517");
 
-    private static final metamutator.Selector _returnReplacementOperator3518 = metamutator.Selector.of(3518,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3518");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3518 = metamutator.Selector.of(3518,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3518");
 
-    private static final metamutator.Selector _returnReplacementOperator3519 = metamutator.Selector.of(3519,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3519");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3519 = metamutator.Selector.of(3519,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3519");
 
-    private static final metamutator.Selector _returnReplacementOperator3520 = metamutator.Selector.of(3520,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3520");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3520 = metamutator.Selector.of(3520,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3520");
 
-    private static final metamutator.Selector _returnReplacementOperator3521 = metamutator.Selector.of(3521,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3521");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3521 = metamutator.Selector.of(3521,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3521");
 
-    private static final metamutator.Selector _returnReplacementOperator3522 = metamutator.Selector.of(3522,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3522");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3522 = metamutator.Selector.of(3522,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3522");
 
-    private static final metamutator.Selector _returnReplacementOperator3523 = metamutator.Selector.of(3523,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3523");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3523 = metamutator.Selector.of(3523,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3523");
 
-    private static final metamutator.Selector _returnReplacementOperator3524 = metamutator.Selector.of(3524,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3524");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3524 = metamutator.Selector.of(3524,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3524");
 
-    private static final metamutator.Selector _returnReplacementOperator3525 = metamutator.Selector.of(3525,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3525");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3525 = metamutator.Selector.of(3525,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3525");
 
-    private static final metamutator.Selector _returnReplacementOperator3526 = metamutator.Selector.of(3526,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3526");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3526 = metamutator.Selector.of(3526,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3526");
 
-    private static final metamutator.Selector _returnReplacementOperator3527 = metamutator.Selector.of(3527,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3527");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3527 = metamutator.Selector.of(3527,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3527");
 
-    private static final metamutator.Selector _returnReplacementOperator3528 = metamutator.Selector.of(3528,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3528");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3528 = metamutator.Selector.of(3528,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3528");
 
-    private static final metamutator.Selector _returnReplacementOperator3529 = metamutator.Selector.of(3529,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3529");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3529 = metamutator.Selector.of(3529,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3529");
 
-    private static final metamutator.Selector _returnReplacementOperator3530 = metamutator.Selector.of(3530,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3530");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3530 = metamutator.Selector.of(3530,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3530");
 
-    private static final metamutator.Selector _returnReplacementOperator3531 = metamutator.Selector.of(3531,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3531");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3531 = metamutator.Selector.of(3531,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3531");
 
-    private static final metamutator.Selector _returnReplacementOperator3532 = metamutator.Selector.of(3532,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3532");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3532 = metamutator.Selector.of(3532,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3532");
 
-    private static final metamutator.Selector _returnReplacementOperator3533 = metamutator.Selector.of(3533,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3533");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3533 = metamutator.Selector.of(3533,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3533");
 
-    private static final metamutator.Selector _returnReplacementOperator3534 = metamutator.Selector.of(3534,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3534");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3534 = metamutator.Selector.of(3534,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3534");
 
-    private static final metamutator.Selector _returnReplacementOperator3535 = metamutator.Selector.of(3535,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3535");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3535 = metamutator.Selector.of(3535,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3535");
 
-    private static final metamutator.Selector _returnReplacementOperator3536 = metamutator.Selector.of(3536,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3536");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3536 = metamutator.Selector.of(3536,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3536");
 
-    private static final metamutator.Selector _returnReplacementOperator3537 = metamutator.Selector.of(3537,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3537");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3537 = metamutator.Selector.of(3537,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3537");
 
-    private static final metamutator.Selector _returnReplacementOperator3538 = metamutator.Selector.of(3538,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperator3538");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot3538 = metamutator.Selector.of(3538,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.Validate.class).id("_returnReplacementOperatorHotSpot3538");
 }
 

@@ -44,15 +44,15 @@ public class LookupTranslator extends org.apache.commons.lang3.text.translate.Ch
                 final java.lang.String result = lookupMap.get(subSeq.toString());
                 if (result != null) {
                     out.write(result);
-                    return ((_returnReplacementOperator1118.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1118.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1118.is("ZERO")) ? ( 0 ) : (i));
+                    return ((_returnReplacementOperatorHotSpot1118.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1118.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1118.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (i));
                 } 
             }
         } 
-        return ((_returnReplacementOperator1119.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1119.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1119.is("ZERO")) ? ( 0 ) : (0));
+        return ((_returnReplacementOperatorHotSpot1119.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1119.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1119.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1118 = metamutator.Selector.of(1118,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_returnReplacementOperator1118");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1118 = metamutator.Selector.of(1118,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_returnReplacementOperatorHotSpot1118");
 
-    private static final metamutator.Selector _returnReplacementOperator1119 = metamutator.Selector.of(1119,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_returnReplacementOperator1119");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1119 = metamutator.Selector.of(1119,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_returnReplacementOperatorHotSpot1119");
 }
 

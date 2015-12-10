@@ -1,4 +1,4 @@
-package arithmetic;
+
 import static org.apache.commons.lang.reflect.MethodUtils.invokeExactMethod;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -19,7 +19,7 @@ public class ArithmeticOperatorMetaMutatorTest {
     public void testBinaryOperatorMetaMutator() throws Exception {
         // build the model and apply the transformation
         Launcher l = new Launcher();
-        l.addInputResource("src/test/java/arithmetic");
+        l.addInputResource("src/test/java/Foo.java");
         l.addProcessor(new ArithmeticOperatorMetaMutator());
         l.run();
 
@@ -38,7 +38,7 @@ public class ArithmeticOperatorMetaMutatorTest {
 
         // creating a new instance of the class
         Object o = ((Class)bsh.eval(c.toString())).newInstance();        
-
+        
         assertEquals(1,Selector.getAllSelectors().size());
       
         // test with the first
@@ -46,19 +46,19 @@ public class ArithmeticOperatorMetaMutatorTest {
         
         // check PLUS
         sel.choose(0);
-        assertEquals(5, invokeExactMethod(o, "op", new Object[] {2, 3}));
+        assertEquals(5, invokeExactMethod(o, "op_add", new Object[] {2, 3}));
 
         // check MINUS
         sel.choose(1);
-        assertEquals(5, invokeExactMethod(o, "op", new Object[] {10, 5}));
+        assertEquals(5, invokeExactMethod(o, "op_add", new Object[] {10, 5}));
         
         // check MUL
         sel.choose(2);
-        assertEquals(16, invokeExactMethod(o, "op", new Object[] {4, 4}));
+        assertEquals(16, invokeExactMethod(o, "op_add", new Object[] {4, 4}));
         
         // check DIV
         sel.choose(3);
-        assertEquals(4, invokeExactMethod(o, "op", new Object[] {20, 5}));
+        assertEquals(4, invokeExactMethod(o, "op_add", new Object[] {20, 5}));
         
     }
 }

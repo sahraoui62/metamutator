@@ -20,15 +20,15 @@ public class UnicodeUnescaper extends org.apache.commons.lang3.text.translate.Ch
                 } catch (final java.lang.NumberFormatException nfe) {
                     throw new java.lang.IllegalArgumentException(("Unable to parse unicode value: " + unicode) , nfe);
                 }
-                return ((_returnReplacementOperator1145.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1145.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1145.is("ZERO")) ? ( 0 ) : (i + 4));
+                return ((_returnReplacementOperatorHotSpot1145.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1145.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1145.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (i + 4));
             } 
             throw new java.lang.IllegalArgumentException((("Less than 4 hex digits in unicode value: '" + (input.subSequence(index, input.length()))) + "' due to end of CharSequence"));
         } 
-        return ((_returnReplacementOperator1146.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1146.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1146.is("ZERO")) ? ( 0 ) : (0));
+        return ((_returnReplacementOperatorHotSpot1146.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1146.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1146.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (0));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1145 = metamutator.Selector.of(1145,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.UnicodeUnescaper.class).id("_returnReplacementOperator1145");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1145 = metamutator.Selector.of(1145,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.UnicodeUnescaper.class).id("_returnReplacementOperatorHotSpot1145");
 
-    private static final metamutator.Selector _returnReplacementOperator1146 = metamutator.Selector.of(1146,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.UnicodeUnescaper.class).id("_returnReplacementOperator1146");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1146 = metamutator.Selector.of(1146,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.text.translate.UnicodeUnescaper.class).id("_returnReplacementOperatorHotSpot1146");
 }
 

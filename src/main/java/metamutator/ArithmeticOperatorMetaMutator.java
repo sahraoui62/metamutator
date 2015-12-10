@@ -116,30 +116,24 @@ public class ArithmeticOperatorMetaMutator extends
 		}
 
 		int thisIndex = ++index;
-
 		String originalKind = expression.getKind().toString();
-		/*String newExpression = operators
-				.stream()
-				.map(kind -> {
-					expression.setKind(kind);
-					return String.format("(" + PREFIX + "%s.is(\"%s\")) ? (%s)",
-							thisIndex, kind, expression);
-				}).collect(Collectors.joining(" : "));
-		*/
+		String originalExpression = expression.toString();
+		
 		String newExpression = "";
 		
 		int cpt = 0;
+		BinaryOperatorKind tmp = null;
 		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){
-			cpt++;
-			CtBinaryOperator<Boolean> tmp = expression;
-			tmp.setKind(op);
-			if(cpt < ARITHMETIC_OPERATORS.size()){
-				newExpression += "(" + PREFIX + thisIndex + ".is(\"" + op + "\")) ? (" + tmp + ")";
+			//if(!op.equals(expression.getKind())){
+				expression.setKind(op);
+				newExpression += "(" + PREFIX + thisIndex + ".is(\"" + op + "\")) ? (" + expression + ")";
 				newExpression += " : ";
-			}else{
-				newExpression += " (" + tmp + ")";
-			}
+			//}
 		}
+
+		
+		//newExpression += "(" + expression + ")";
+		newExpression += "(" + originalExpression + ")"; 
 		
 		/*String newExpression = "";
 		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){

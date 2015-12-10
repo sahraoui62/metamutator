@@ -8,12 +8,12 @@ public abstract class CharSequenceTranslator {
 
     public final java.lang.String translate(final java.lang.CharSequence input) {
         if (input == null) {
-            return ((_returnReplacementOperator1098.is("NULL")) ? ( null ) : (null));
+            return ((_returnReplacementOperatorHotSpot1098.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (null));
         } 
         try {
             final java.io.StringWriter writer = new java.io.StringWriter(((input.length()) * 2));
             translate(input, writer);
-            return ((_returnReplacementOperator1099.is("NULL")) ? ( null ) : (writer.toString()));
+            return ((_returnReplacementOperatorHotSpot1099.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (writer.toString()));
         } catch (final java.io.IOException ioe) {
             throw new java.lang.RuntimeException(ioe);
         }
@@ -53,19 +53,19 @@ public abstract class CharSequenceTranslator {
         final org.apache.commons.lang3.text.translate.CharSequenceTranslator[] newArray = new org.apache.commons.lang3.text.translate.CharSequenceTranslator[(translators.length) + 1];
         newArray[0] = this;
         java.lang.System.arraycopy(translators, 0, newArray, 1, translators.length);
-        return ((_returnReplacementOperator1100.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.text.translate.AggregateTranslator(newArray)));
+        return ((_returnReplacementOperatorHotSpot1100.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.text.translate.AggregateTranslator(newArray)));
     }
 
     public static java.lang.String hex(final int codepoint) {
-        return ((_returnReplacementOperator1097.is("NULL")) ? ( null ) : (java.lang.Integer.toHexString(codepoint).toUpperCase(java.util.Locale.ENGLISH)));
+        return ((_returnReplacementOperatorHotSpot1097.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Integer.toHexString(codepoint).toUpperCase(java.util.Locale.ENGLISH)));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1097 = metamutator.Selector.of(1097,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1097");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1097 = metamutator.Selector.of(1097,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperatorHotSpot1097");
 
-    private static final metamutator.Selector _returnReplacementOperator1098 = metamutator.Selector.of(1098,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1098");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1098 = metamutator.Selector.of(1098,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperatorHotSpot1098");
 
-    private static final metamutator.Selector _returnReplacementOperator1099 = metamutator.Selector.of(1099,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1099");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1099 = metamutator.Selector.of(1099,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperatorHotSpot1099");
 
-    private static final metamutator.Selector _returnReplacementOperator1100 = metamutator.Selector.of(1100,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1100");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1100 = metamutator.Selector.of(1100,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperatorHotSpot1100");
 }
 

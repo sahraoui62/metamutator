@@ -37,65 +37,65 @@ public class ContextedException extends java.lang.Exception implements org.apach
     @java.lang.Override
     public org.apache.commons.lang3.exception.ContextedException addContextValue(final java.lang.String label, final java.lang.Object value) {
         exceptionContext.addContextValue(label, value);
-        return ((_returnReplacementOperator526.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot526.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     @java.lang.Override
     public org.apache.commons.lang3.exception.ContextedException setContextValue(final java.lang.String label, final java.lang.Object value) {
         exceptionContext.setContextValue(label, value);
-        return ((_returnReplacementOperator527.is("NULL")) ? ( null ) : (this));
+        return ((_returnReplacementOperatorHotSpot527.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this));
     }
 
     @java.lang.Override
     public java.util.List<java.lang.Object> getContextValues(final java.lang.String label) {
-        return ((_returnReplacementOperator524.is("NULL")) ? ( null ) : (this.exceptionContext.getContextValues(label)));
+        return ((_returnReplacementOperatorHotSpot524.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this.exceptionContext.getContextValues(label)));
     }
 
     @java.lang.Override
     public java.lang.Object getFirstContextValue(final java.lang.String label) {
-        return ((_returnReplacementOperator519.is("NULL")) ? ( null ) : (this.exceptionContext.getFirstContextValue(label)));
+        return ((_returnReplacementOperatorHotSpot519.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this.exceptionContext.getFirstContextValue(label)));
     }
 
     @java.lang.Override
     public java.util.List<org.apache.commons.lang3.tuple.Pair<java.lang.String, java.lang.Object>> getContextEntries() {
-        return ((_returnReplacementOperator523.is("NULL")) ? ( null ) : (this.exceptionContext.getContextEntries()));
+        return ((_returnReplacementOperatorHotSpot523.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (this.exceptionContext.getContextEntries()));
     }
 
     @java.lang.Override
     public java.util.Set<java.lang.String> getContextLabels() {
-        return ((_returnReplacementOperator525.is("NULL")) ? ( null ) : (exceptionContext.getContextLabels()));
+        return ((_returnReplacementOperatorHotSpot525.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (exceptionContext.getContextLabels()));
     }
 
     @java.lang.Override
     public java.lang.String getMessage() {
-        return ((_returnReplacementOperator521.is("NULL")) ? ( null ) : (getFormattedExceptionMessage(super.getMessage())));
+        return ((_returnReplacementOperatorHotSpot521.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (getFormattedExceptionMessage(super.getMessage())));
     }
 
     public java.lang.String getRawMessage() {
-        return ((_returnReplacementOperator522.is("NULL")) ? ( null ) : (super.getMessage()));
+        return ((_returnReplacementOperatorHotSpot522.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getMessage()));
     }
 
     @java.lang.Override
     public java.lang.String getFormattedExceptionMessage(final java.lang.String baseMessage) {
-        return ((_returnReplacementOperator520.is("NULL")) ? ( null ) : (exceptionContext.getFormattedExceptionMessage(baseMessage)));
+        return ((_returnReplacementOperatorHotSpot520.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (exceptionContext.getFormattedExceptionMessage(baseMessage)));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator519 = metamutator.Selector.of(519,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator519");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot519 = metamutator.Selector.of(519,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot519");
 
-    private static final metamutator.Selector _returnReplacementOperator520 = metamutator.Selector.of(520,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator520");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot520 = metamutator.Selector.of(520,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot520");
 
-    private static final metamutator.Selector _returnReplacementOperator521 = metamutator.Selector.of(521,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator521");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot521 = metamutator.Selector.of(521,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot521");
 
-    private static final metamutator.Selector _returnReplacementOperator522 = metamutator.Selector.of(522,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator522");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot522 = metamutator.Selector.of(522,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot522");
 
-    private static final metamutator.Selector _returnReplacementOperator523 = metamutator.Selector.of(523,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator523");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot523 = metamutator.Selector.of(523,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot523");
 
-    private static final metamutator.Selector _returnReplacementOperator524 = metamutator.Selector.of(524,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator524");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot524 = metamutator.Selector.of(524,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot524");
 
-    private static final metamutator.Selector _returnReplacementOperator525 = metamutator.Selector.of(525,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator525");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot525 = metamutator.Selector.of(525,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot525");
 
-    private static final metamutator.Selector _returnReplacementOperator526 = metamutator.Selector.of(526,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator526");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot526 = metamutator.Selector.of(526,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot526");
 
-    private static final metamutator.Selector _returnReplacementOperator527 = metamutator.Selector.of(527,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperator527");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot527 = metamutator.Selector.of(527,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.exception.ContextedException.class).id("_returnReplacementOperatorHotSpot527");
 }
 

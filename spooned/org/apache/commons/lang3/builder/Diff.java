@@ -14,16 +14,16 @@ public abstract class Diff<T> extends org.apache.commons.lang3.tuple.Pair<T, T> 
     }
 
     public final java.lang.reflect.Type getType() {
-        return ((_returnReplacementOperator91.is("NULL")) ? ( null ) : (type));
+        return ((_returnReplacementOperatorHotSpot91.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (type));
     }
 
     public final java.lang.String getFieldName() {
-        return ((_returnReplacementOperator89.is("NULL")) ? ( null ) : (fieldName));
+        return ((_returnReplacementOperatorHotSpot89.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (fieldName));
     }
 
     @java.lang.Override
     public final java.lang.String toString() {
-        return ((_returnReplacementOperator90.is("NULL")) ? ( null ) : (java.lang.String.format("[%s: %s, %s]", fieldName, getLeft(), getRight())));
+        return ((_returnReplacementOperatorHotSpot90.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.String.format("[%s: %s, %s]", fieldName, getLeft(), getRight())));
     }
 
     @java.lang.Override
@@ -31,10 +31,10 @@ public abstract class Diff<T> extends org.apache.commons.lang3.tuple.Pair<T, T> 
         throw new java.lang.UnsupportedOperationException("Cannot alter Diff object.");
     }
 
-    private static final metamutator.Selector _returnReplacementOperator89 = metamutator.Selector.of(89,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.Diff.class).id("_returnReplacementOperator89");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot89 = metamutator.Selector.of(89,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.Diff.class).id("_returnReplacementOperatorHotSpot89");
 
-    private static final metamutator.Selector _returnReplacementOperator90 = metamutator.Selector.of(90,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.Diff.class).id("_returnReplacementOperator90");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot90 = metamutator.Selector.of(90,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.Diff.class).id("_returnReplacementOperatorHotSpot90");
 
-    private static final metamutator.Selector _returnReplacementOperator91 = metamutator.Selector.of(91,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.Diff.class).id("_returnReplacementOperator91");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot91 = metamutator.Selector.of(91,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.Diff.class).id("_returnReplacementOperatorHotSpot91");
 }
 

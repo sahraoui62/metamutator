@@ -10,7 +10,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isUseClassName() {
-        return ((_returnReplacementOperator327.is("NULL")) ? ( null ) : (super.isUseClassName()));
+        return ((_returnReplacementOperatorHotSpot327.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isUseClassName()));
     }
 
     @java.lang.Override
@@ -20,7 +20,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isUseShortClassName() {
-        return ((_returnReplacementOperator330.is("NULL")) ? ( null ) : (super.isUseShortClassName()));
+        return ((_returnReplacementOperatorHotSpot330.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isUseShortClassName()));
     }
 
     @java.lang.Override
@@ -30,7 +30,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isUseIdentityHashCode() {
-        return ((_returnReplacementOperator329.is("NULL")) ? ( null ) : (super.isUseIdentityHashCode()));
+        return ((_returnReplacementOperatorHotSpot329.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isUseIdentityHashCode()));
     }
 
     @java.lang.Override
@@ -40,7 +40,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isUseFieldNames() {
-        return ((_returnReplacementOperator328.is("NULL")) ? ( null ) : (super.isUseFieldNames()));
+        return ((_returnReplacementOperatorHotSpot328.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isUseFieldNames()));
     }
 
     @java.lang.Override
@@ -50,7 +50,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isDefaultFullDetail() {
-        return ((_returnReplacementOperator324.is("NULL")) ? ( null ) : (super.isDefaultFullDetail()));
+        return ((_returnReplacementOperatorHotSpot324.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isDefaultFullDetail()));
     }
 
     @java.lang.Override
@@ -60,7 +60,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isArrayContentDetail() {
-        return ((_returnReplacementOperator323.is("NULL")) ? ( null ) : (super.isArrayContentDetail()));
+        return ((_returnReplacementOperatorHotSpot323.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isArrayContentDetail()));
     }
 
     @java.lang.Override
@@ -70,7 +70,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getArrayStart() {
-        return ((_returnReplacementOperator333.is("NULL")) ? ( null ) : (super.getArrayStart()));
+        return ((_returnReplacementOperatorHotSpot333.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getArrayStart()));
     }
 
     @java.lang.Override
@@ -80,7 +80,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getArrayEnd() {
-        return ((_returnReplacementOperator331.is("NULL")) ? ( null ) : (super.getArrayEnd()));
+        return ((_returnReplacementOperatorHotSpot331.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getArrayEnd()));
     }
 
     @java.lang.Override
@@ -90,7 +90,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getArraySeparator() {
-        return ((_returnReplacementOperator332.is("NULL")) ? ( null ) : (super.getArraySeparator()));
+        return ((_returnReplacementOperatorHotSpot332.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getArraySeparator()));
     }
 
     @java.lang.Override
@@ -100,7 +100,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getContentStart() {
-        return ((_returnReplacementOperator335.is("NULL")) ? ( null ) : (super.getContentStart()));
+        return ((_returnReplacementOperatorHotSpot335.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getContentStart()));
     }
 
     @java.lang.Override
@@ -110,7 +110,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getContentEnd() {
-        return ((_returnReplacementOperator334.is("NULL")) ? ( null ) : (super.getContentEnd()));
+        return ((_returnReplacementOperatorHotSpot334.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getContentEnd()));
     }
 
     @java.lang.Override
@@ -120,7 +120,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getFieldNameValueSeparator() {
-        return ((_returnReplacementOperator336.is("NULL")) ? ( null ) : (super.getFieldNameValueSeparator()));
+        return ((_returnReplacementOperatorHotSpot336.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getFieldNameValueSeparator()));
     }
 
     @java.lang.Override
@@ -130,7 +130,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getFieldSeparator() {
-        return ((_returnReplacementOperator337.is("NULL")) ? ( null ) : (super.getFieldSeparator()));
+        return ((_returnReplacementOperatorHotSpot337.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getFieldSeparator()));
     }
 
     @java.lang.Override
@@ -140,7 +140,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isFieldSeparatorAtStart() {
-        return ((_returnReplacementOperator326.is("NULL")) ? ( null ) : (super.isFieldSeparatorAtStart()));
+        return ((_returnReplacementOperatorHotSpot326.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isFieldSeparatorAtStart()));
     }
 
     @java.lang.Override
@@ -150,7 +150,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public boolean isFieldSeparatorAtEnd() {
-        return ((_returnReplacementOperator325.is("NULL")) ? ( null ) : (super.isFieldSeparatorAtEnd()));
+        return ((_returnReplacementOperatorHotSpot325.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.isFieldSeparatorAtEnd()));
     }
 
     @java.lang.Override
@@ -160,7 +160,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getNullText() {
-        return ((_returnReplacementOperator338.is("NULL")) ? ( null ) : (super.getNullText()));
+        return ((_returnReplacementOperatorHotSpot338.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getNullText()));
     }
 
     @java.lang.Override
@@ -170,7 +170,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getSizeStartText() {
-        return ((_returnReplacementOperator340.is("NULL")) ? ( null ) : (super.getSizeStartText()));
+        return ((_returnReplacementOperatorHotSpot340.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getSizeStartText()));
     }
 
     @java.lang.Override
@@ -180,7 +180,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getSizeEndText() {
-        return ((_returnReplacementOperator339.is("NULL")) ? ( null ) : (super.getSizeEndText()));
+        return ((_returnReplacementOperatorHotSpot339.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getSizeEndText()));
     }
 
     @java.lang.Override
@@ -190,7 +190,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getSummaryObjectStartText() {
-        return ((_returnReplacementOperator342.is("NULL")) ? ( null ) : (super.getSummaryObjectStartText()));
+        return ((_returnReplacementOperatorHotSpot342.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getSummaryObjectStartText()));
     }
 
     @java.lang.Override
@@ -200,7 +200,7 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
 
     @java.lang.Override
     public java.lang.String getSummaryObjectEndText() {
-        return ((_returnReplacementOperator341.is("NULL")) ? ( null ) : (super.getSummaryObjectEndText()));
+        return ((_returnReplacementOperatorHotSpot341.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (super.getSummaryObjectEndText()));
     }
 
     @java.lang.Override
@@ -208,44 +208,44 @@ public class StandardToStringStyle extends org.apache.commons.lang3.builder.ToSt
         super.setSummaryObjectEndText(summaryObjectEndText);
     }
 
-    private static final metamutator.Selector _returnReplacementOperator323 = metamutator.Selector.of(323,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator323");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot323 = metamutator.Selector.of(323,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot323");
 
-    private static final metamutator.Selector _returnReplacementOperator324 = metamutator.Selector.of(324,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator324");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot324 = metamutator.Selector.of(324,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot324");
 
-    private static final metamutator.Selector _returnReplacementOperator325 = metamutator.Selector.of(325,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator325");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot325 = metamutator.Selector.of(325,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot325");
 
-    private static final metamutator.Selector _returnReplacementOperator326 = metamutator.Selector.of(326,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator326");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot326 = metamutator.Selector.of(326,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot326");
 
-    private static final metamutator.Selector _returnReplacementOperator327 = metamutator.Selector.of(327,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator327");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot327 = metamutator.Selector.of(327,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot327");
 
-    private static final metamutator.Selector _returnReplacementOperator328 = metamutator.Selector.of(328,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator328");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot328 = metamutator.Selector.of(328,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot328");
 
-    private static final metamutator.Selector _returnReplacementOperator329 = metamutator.Selector.of(329,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator329");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot329 = metamutator.Selector.of(329,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot329");
 
-    private static final metamutator.Selector _returnReplacementOperator330 = metamutator.Selector.of(330,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator330");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot330 = metamutator.Selector.of(330,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot330");
 
-    private static final metamutator.Selector _returnReplacementOperator331 = metamutator.Selector.of(331,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator331");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot331 = metamutator.Selector.of(331,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot331");
 
-    private static final metamutator.Selector _returnReplacementOperator332 = metamutator.Selector.of(332,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator332");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot332 = metamutator.Selector.of(332,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot332");
 
-    private static final metamutator.Selector _returnReplacementOperator333 = metamutator.Selector.of(333,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator333");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot333 = metamutator.Selector.of(333,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot333");
 
-    private static final metamutator.Selector _returnReplacementOperator334 = metamutator.Selector.of(334,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator334");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot334 = metamutator.Selector.of(334,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot334");
 
-    private static final metamutator.Selector _returnReplacementOperator335 = metamutator.Selector.of(335,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator335");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot335 = metamutator.Selector.of(335,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot335");
 
-    private static final metamutator.Selector _returnReplacementOperator336 = metamutator.Selector.of(336,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator336");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot336 = metamutator.Selector.of(336,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot336");
 
-    private static final metamutator.Selector _returnReplacementOperator337 = metamutator.Selector.of(337,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator337");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot337 = metamutator.Selector.of(337,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot337");
 
-    private static final metamutator.Selector _returnReplacementOperator338 = metamutator.Selector.of(338,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator338");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot338 = metamutator.Selector.of(338,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot338");
 
-    private static final metamutator.Selector _returnReplacementOperator339 = metamutator.Selector.of(339,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator339");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot339 = metamutator.Selector.of(339,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot339");
 
-    private static final metamutator.Selector _returnReplacementOperator340 = metamutator.Selector.of(340,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator340");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot340 = metamutator.Selector.of(340,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot340");
 
-    private static final metamutator.Selector _returnReplacementOperator341 = metamutator.Selector.of(341,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator341");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot341 = metamutator.Selector.of(341,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot341");
 
-    private static final metamutator.Selector _returnReplacementOperator342 = metamutator.Selector.of(342,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperator342");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot342 = metamutator.Selector.of(342,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.builder.StandardToStringStyle.class).id("_returnReplacementOperatorHotSpot342");
 }
 

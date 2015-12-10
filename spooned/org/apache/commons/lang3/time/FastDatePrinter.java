@@ -156,7 +156,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
             }
             rules.add(rule);
         }
-        return ((_returnReplacementOperator1831.is("NULL")) ? ( null ) : (rules));
+        return ((_returnReplacementOperatorHotSpot1831.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (rules));
     }
 
     protected java.lang.String parseToken(final java.lang.String pattern, final int[] indexRef) {
@@ -196,17 +196,17 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
             }
         }
         indexRef[0] = i;
-        return ((_returnReplacementOperator1822.is("NULL")) ? ( null ) : (buf.toString()));
+        return ((_returnReplacementOperatorHotSpot1822.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (buf.toString()));
     }
 
     protected NumberRule selectNumberRule(final int field, final int padding) {
         switch (padding) {
             case 1 :
-                return ((_returnReplacementOperator1834.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField(field)));
+                return ((_returnReplacementOperatorHotSpot1834.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField(field)));
             case 2 :
-                return ((_returnReplacementOperator1835.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField(field)));
+                return ((_returnReplacementOperatorHotSpot1835.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField(field)));
             default :
-                return ((_returnReplacementOperator1836.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField(field , padding)));
+                return ((_returnReplacementOperatorHotSpot1836.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField(field , padding)));
         }
     }
 
@@ -214,11 +214,11 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
     @java.lang.Override
     public java.lang.StringBuffer format(final java.lang.Object obj, final java.lang.StringBuffer toAppendTo, final java.text.FieldPosition pos) {
         if (obj instanceof java.util.Date) {
-            return ((_returnReplacementOperator1824.is("NULL")) ? ( null ) : (format(((java.util.Date)(obj)), toAppendTo)));
+            return ((_returnReplacementOperatorHotSpot1824.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(((java.util.Date)(obj)), toAppendTo)));
         } else if (obj instanceof java.util.Calendar) {
-            return ((_returnReplacementOperator1825.is("NULL")) ? ( null ) : (format(((java.util.Calendar)(obj)), toAppendTo)));
+            return ((_returnReplacementOperatorHotSpot1825.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(((java.util.Calendar)(obj)), toAppendTo)));
         } else if (obj instanceof java.lang.Long) {
-            return ((_returnReplacementOperator1826.is("NULL")) ? ( null ) : (format(((java.lang.Long)(obj)).longValue(), toAppendTo)));
+            return ((_returnReplacementOperatorHotSpot1826.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(((java.lang.Long)(obj)).longValue(), toAppendTo)));
         } else {
             throw new java.lang.IllegalArgumentException(("Unknown class: " + (obj == null ? "<null>" : obj.getClass().getName())));
         }
@@ -226,11 +226,11 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
     java.lang.String format(java.lang.Object obj) {
         if (obj instanceof java.util.Date) {
-            return ((_returnReplacementOperator1814.is("NULL")) ? ( null ) : (format(((java.util.Date)(obj)))));
+            return ((_returnReplacementOperatorHotSpot1814.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(((java.util.Date)(obj)))));
         } else if (obj instanceof java.util.Calendar) {
-            return ((_returnReplacementOperator1815.is("NULL")) ? ( null ) : (format(((java.util.Calendar)(obj)))));
+            return ((_returnReplacementOperatorHotSpot1815.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(((java.util.Calendar)(obj)))));
         } else if (obj instanceof java.lang.Long) {
-            return ((_returnReplacementOperator1816.is("NULL")) ? ( null ) : (format(((java.lang.Long)(obj)).longValue())));
+            return ((_returnReplacementOperatorHotSpot1816.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(((java.lang.Long)(obj)).longValue())));
         } else {
             throw new java.lang.IllegalArgumentException(("Unknown class: " + (obj == null ? "<null>" : obj.getClass().getName())));
         }
@@ -240,61 +240,61 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
     public java.lang.String format(final long millis) {
         final java.util.Calendar c = newCalendar();
         c.setTimeInMillis(millis);
-        return ((_returnReplacementOperator1819.is("NULL")) ? ( null ) : (applyRulesToString(c)));
+        return ((_returnReplacementOperatorHotSpot1819.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (applyRulesToString(c)));
     }
 
     private java.lang.String applyRulesToString(final java.util.Calendar c) {
-        return ((_returnReplacementOperator1813.is("NULL")) ? ( null ) : (applyRules(c, new java.lang.StringBuilder(mMaxLengthEstimate)).toString()));
+        return ((_returnReplacementOperatorHotSpot1813.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (applyRules(c, new java.lang.StringBuilder(mMaxLengthEstimate)).toString()));
     }
 
     private java.util.GregorianCalendar newCalendar() {
-        return ((_returnReplacementOperator1830.is("NULL")) ? ( null ) : (new java.util.GregorianCalendar(mTimeZone , mLocale)));
+        return ((_returnReplacementOperatorHotSpot1830.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new java.util.GregorianCalendar(mTimeZone , mLocale)));
     }
 
     @java.lang.Override
     public java.lang.String format(final java.util.Date date) {
         final java.util.Calendar c = newCalendar();
         c.setTime(date);
-        return ((_returnReplacementOperator1818.is("NULL")) ? ( null ) : (applyRulesToString(c)));
+        return ((_returnReplacementOperatorHotSpot1818.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (applyRulesToString(c)));
     }
 
     @java.lang.Override
     public java.lang.String format(final java.util.Calendar calendar) {
-        return ((_returnReplacementOperator1817.is("NULL")) ? ( null ) : (format(calendar, new java.lang.StringBuilder(mMaxLengthEstimate)).toString()));
+        return ((_returnReplacementOperatorHotSpot1817.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(calendar, new java.lang.StringBuilder(mMaxLengthEstimate)).toString()));
     }
 
     @java.lang.Override
     public java.lang.StringBuffer format(final long millis, final java.lang.StringBuffer buf) {
-        return ((_returnReplacementOperator1829.is("NULL")) ? ( null ) : (format(new java.util.Date(millis), buf)));
+        return ((_returnReplacementOperatorHotSpot1829.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(new java.util.Date(millis), buf)));
     }
 
     @java.lang.Override
     public java.lang.StringBuffer format(final java.util.Date date, final java.lang.StringBuffer buf) {
         final java.util.Calendar c = newCalendar();
         c.setTime(date);
-        return ((_returnReplacementOperator1828.is("NULL")) ? ( null ) : (applyRules(c, buf)));
+        return ((_returnReplacementOperatorHotSpot1828.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (applyRules(c, buf)));
     }
 
     @java.lang.Override
     public java.lang.StringBuffer format(final java.util.Calendar calendar, final java.lang.StringBuffer buf) {
-        return ((_returnReplacementOperator1827.is("NULL")) ? ( null ) : (format(calendar.getTime(), buf)));
+        return ((_returnReplacementOperatorHotSpot1827.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(calendar.getTime(), buf)));
     }
 
     @java.lang.Override
     public <B extends java.lang.Appendable>B format(final long millis, final B buf) {
-        return ((_returnReplacementOperator1808.is("NULL")) ? ( null ) : (format(new java.util.Date(millis), buf)));
+        return ((_returnReplacementOperatorHotSpot1808.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(new java.util.Date(millis), buf)));
     }
 
     @java.lang.Override
     public <B extends java.lang.Appendable>B format(final java.util.Date date, final B buf) {
         final java.util.Calendar c = newCalendar();
         c.setTime(date);
-        return ((_returnReplacementOperator1807.is("NULL")) ? ( null ) : (applyRules(c, buf)));
+        return ((_returnReplacementOperatorHotSpot1807.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (applyRules(c, buf)));
     }
 
     @java.lang.Override
     public <B extends java.lang.Appendable>B format(final java.util.Calendar calendar, final B buf) {
-        return ((_returnReplacementOperator1806.is("NULL")) ? ( null ) : (format(calendar.getTime(), buf)));
+        return ((_returnReplacementOperatorHotSpot1806.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (format(calendar.getTime(), buf)));
     }
 
     protected <B extends java.lang.Appendable>B applyRules(final java.util.Calendar calendar, final B buf) {
@@ -305,45 +305,45 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
         } catch (java.io.IOException ioe) {
             org.apache.commons.lang3.exception.ExceptionUtils.rethrow(ioe);
         }
-        return ((_returnReplacementOperator1805.is("NULL")) ? ( null ) : (buf));
+        return ((_returnReplacementOperatorHotSpot1805.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (buf));
     }
 
     @java.lang.Override
     public java.lang.String getPattern() {
-        return ((_returnReplacementOperator1820.is("NULL")) ? ( null ) : (mPattern));
+        return ((_returnReplacementOperatorHotSpot1820.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (mPattern));
     }
 
     @java.lang.Override
     public java.util.TimeZone getTimeZone() {
-        return ((_returnReplacementOperator1833.is("NULL")) ? ( null ) : (mTimeZone));
+        return ((_returnReplacementOperatorHotSpot1833.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (mTimeZone));
     }
 
     @java.lang.Override
     public java.util.Locale getLocale() {
-        return ((_returnReplacementOperator1832.is("NULL")) ? ( null ) : (mLocale));
+        return ((_returnReplacementOperatorHotSpot1832.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (mLocale));
     }
 
     public int getMaxLengthEstimate() {
-        return ((_returnReplacementOperator1811.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1811.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1811.is("ZERO")) ? ( 0 ) : (mMaxLengthEstimate));
+        return ((_returnReplacementOperatorHotSpot1811.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1811.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1811.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (mMaxLengthEstimate));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
         if ((obj instanceof org.apache.commons.lang3.time.FastDatePrinter) == false) {
-            return ((_returnReplacementOperator1809.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot1809.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         } 
         final org.apache.commons.lang3.time.FastDatePrinter other = ((org.apache.commons.lang3.time.FastDatePrinter)(obj));
-        return ((_returnReplacementOperator1810.is("NULL")) ? ( null ) : (((mPattern.equals(other.mPattern)) && (mTimeZone.equals(other.mTimeZone))) && (mLocale.equals(other.mLocale))));
+        return ((_returnReplacementOperatorHotSpot1810.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((mPattern.equals(other.mPattern)) && (mTimeZone.equals(other.mTimeZone))) && (mLocale.equals(other.mLocale))));
     }
 
     @java.lang.Override
     public int hashCode() {
-        return ((_returnReplacementOperator1812.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1812.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1812.is("ZERO")) ? ( 0 ) : ((mPattern.hashCode()) + (13 * ((mTimeZone.hashCode()) + (13 * (mLocale.hashCode()))))));
+        return ((_returnReplacementOperatorHotSpot1812.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1812.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1812.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : ((mPattern.hashCode()) + (13 * ((mTimeZone.hashCode()) + (13 * (mLocale.hashCode()))))));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return ((_returnReplacementOperator1823.is("NULL")) ? ( null ) : (((((("FastDatePrinter[" + (mPattern)) + ",") + (mLocale)) + ",") + (mTimeZone.getID())) + "]"));
+        return ((_returnReplacementOperatorHotSpot1823.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((((("FastDatePrinter[" + (mPattern)) + ",") + (mLocale)) + ",") + (mTimeZone.getID())) + "]"));
     }
 
     private void readObject(final java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
@@ -393,7 +393,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1784.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1784.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1784.is("ZERO")) ? ( 0 ) : (1));
+            return ((_returnReplacementOperatorHotSpot1784.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1784.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1784.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (1));
         }
 
         @java.lang.Override
@@ -411,7 +411,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1790.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1790.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1790.is("ZERO")) ? ( 0 ) : (mValue.length()));
+            return ((_returnReplacementOperatorHotSpot1790.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1790.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1790.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (mValue.length()));
         }
 
         @java.lang.Override
@@ -439,7 +439,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
                     max = len;
                 } 
             }
-            return ((_returnReplacementOperator1791.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1791.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1791.is("ZERO")) ? ( 0 ) : (max));
+            return ((_returnReplacementOperatorHotSpot1791.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1791.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1791.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (max));
         }
 
         @java.lang.Override
@@ -457,7 +457,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1804.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1804.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1804.is("ZERO")) ? ( 0 ) : (4));
+            return ((_returnReplacementOperatorHotSpot1804.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1804.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1804.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (4));
         }
 
         @java.lang.Override
@@ -486,7 +486,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1803.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1803.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1803.is("ZERO")) ? ( 0 ) : (2));
+            return ((_returnReplacementOperatorHotSpot1803.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1803.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1803.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
@@ -519,7 +519,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1789.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1789.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1789.is("ZERO")) ? ( 0 ) : (mSize));
+            return ((_returnReplacementOperatorHotSpot1789.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1789.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1789.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (mSize));
         }
 
         @java.lang.Override
@@ -542,7 +542,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1801.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1801.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1801.is("ZERO")) ? ( 0 ) : (2));
+            return ((_returnReplacementOperatorHotSpot1801.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1801.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1801.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
@@ -569,7 +569,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1802.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1802.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1802.is("ZERO")) ? ( 0 ) : (2));
+            return ((_returnReplacementOperatorHotSpot1802.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1802.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1802.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
@@ -592,7 +592,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1800.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1800.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1800.is("ZERO")) ? ( 0 ) : (2));
+            return ((_returnReplacementOperatorHotSpot1800.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1800.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1800.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
@@ -615,7 +615,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1798.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1798.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1798.is("ZERO")) ? ( 0 ) : (mRule.estimateLength()));
+            return ((_returnReplacementOperatorHotSpot1798.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1798.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1798.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (mRule.estimateLength()));
         }
 
         @java.lang.Override
@@ -642,7 +642,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1799.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1799.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1799.is("ZERO")) ? ( 0 ) : (mRule.estimateLength()));
+            return ((_returnReplacementOperatorHotSpot1799.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1799.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1799.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (mRule.estimateLength()));
         }
 
         @java.lang.Override
@@ -672,7 +672,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
                 value = prior;
             } 
         } 
-        return ((_returnReplacementOperator1821.is("NULL")) ? ( null ) : (value));
+        return ((_returnReplacementOperatorHotSpot1821.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (value));
     }
 
     private static class TimeZoneNameRule implements Rule {
@@ -693,7 +693,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1796.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1796.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1796.is("ZERO")) ? ( 0 ) : (java.lang.Math.max(mStandard.length(), mDaylight.length())));
+            return ((_returnReplacementOperatorHotSpot1796.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1796.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1796.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (java.lang.Math.max(mStandard.length(), mDaylight.length())));
         }
 
         @java.lang.Override
@@ -720,7 +720,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1797.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1797.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1797.is("ZERO")) ? ( 0 ) : (5));
+            return ((_returnReplacementOperatorHotSpot1797.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1797.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1797.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (5));
         }
 
         @java.lang.Override
@@ -752,11 +752,11 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
         static org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule getRule(int tokenLen) {
             switch (tokenLen) {
                 case 1 :
-                    return ((_returnReplacementOperator1786.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS));
+                    return ((_returnReplacementOperatorHotSpot1786.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS));
                 case 2 :
-                    return ((_returnReplacementOperator1787.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS_MINUTES));
+                    return ((_returnReplacementOperatorHotSpot1787.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS_MINUTES));
                 case 3 :
-                    return ((_returnReplacementOperator1788.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS_COLON_MINUTES));
+                    return ((_returnReplacementOperatorHotSpot1788.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS_COLON_MINUTES));
                 default :
                     throw new java.lang.IllegalArgumentException("invalid number of X");
             }
@@ -770,7 +770,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return ((_returnReplacementOperator1785.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1785.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1785.is("ZERO")) ? ( 0 ) : (length));
+            return ((_returnReplacementOperatorHotSpot1785.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1785.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1785.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (length));
         }
 
         @java.lang.Override
@@ -818,126 +818,126 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int hashCode() {
-            return ((_returnReplacementOperator1795.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1795.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1795.is("ZERO")) ? ( 0 ) : (((((mStyle) * 31) + (mLocale.hashCode())) * 31) + (mTimeZone.hashCode())));
+            return ((_returnReplacementOperatorHotSpot1795.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot1795.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot1795.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (((((mStyle) * 31) + (mLocale.hashCode())) * 31) + (mTimeZone.hashCode())));
         }
 
         @java.lang.Override
         public boolean equals(final java.lang.Object obj) {
             if ((this) == obj) {
-                return ((_returnReplacementOperator1792.is("NULL")) ? ( null ) : (true));
+                return ((_returnReplacementOperatorHotSpot1792.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (true));
             } 
             if (obj instanceof org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey) {
                 final org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey other = ((org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey)(obj));
-                return ((_returnReplacementOperator1793.is("NULL")) ? ( null ) : (((mTimeZone.equals(other.mTimeZone)) && ((mStyle) == (other.mStyle))) && (mLocale.equals(other.mLocale))));
+                return ((_returnReplacementOperatorHotSpot1793.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((mTimeZone.equals(other.mTimeZone)) && ((mStyle) == (other.mStyle))) && (mLocale.equals(other.mLocale))));
             } 
-            return ((_returnReplacementOperator1794.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot1794.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         }
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1784 = metamutator.Selector.of(1784,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1784");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1784 = metamutator.Selector.of(1784,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1784");
 
-    private static final metamutator.Selector _returnReplacementOperator1785 = metamutator.Selector.of(1785,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1785");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1785 = metamutator.Selector.of(1785,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1785");
 
-    private static final metamutator.Selector _returnReplacementOperator1786 = metamutator.Selector.of(1786,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1786");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1786 = metamutator.Selector.of(1786,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot1786");
 
-    private static final metamutator.Selector _returnReplacementOperator1787 = metamutator.Selector.of(1787,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1787");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1787 = metamutator.Selector.of(1787,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot1787");
 
-    private static final metamutator.Selector _returnReplacementOperator1788 = metamutator.Selector.of(1788,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1788");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1788 = metamutator.Selector.of(1788,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot1788");
 
-    private static final metamutator.Selector _returnReplacementOperator1789 = metamutator.Selector.of(1789,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1789");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1789 = metamutator.Selector.of(1789,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1789");
 
-    private static final metamutator.Selector _returnReplacementOperator1790 = metamutator.Selector.of(1790,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1790");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1790 = metamutator.Selector.of(1790,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1790");
 
-    private static final metamutator.Selector _returnReplacementOperator1791 = metamutator.Selector.of(1791,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1791");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1791 = metamutator.Selector.of(1791,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1791");
 
-    private static final metamutator.Selector _returnReplacementOperator1792 = metamutator.Selector.of(1792,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1792");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1792 = metamutator.Selector.of(1792,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot1792");
 
-    private static final metamutator.Selector _returnReplacementOperator1793 = metamutator.Selector.of(1793,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1793");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1793 = metamutator.Selector.of(1793,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot1793");
 
-    private static final metamutator.Selector _returnReplacementOperator1794 = metamutator.Selector.of(1794,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1794");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1794 = metamutator.Selector.of(1794,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).id("_returnReplacementOperatorHotSpot1794");
 
-    private static final metamutator.Selector _returnReplacementOperator1795 = metamutator.Selector.of(1795,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1795");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1795 = metamutator.Selector.of(1795,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1795");
 
-    private static final metamutator.Selector _returnReplacementOperator1796 = metamutator.Selector.of(1796,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1796");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1796 = metamutator.Selector.of(1796,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1796");
 
-    private static final metamutator.Selector _returnReplacementOperator1797 = metamutator.Selector.of(1797,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1797");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1797 = metamutator.Selector.of(1797,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1797");
 
-    private static final metamutator.Selector _returnReplacementOperator1798 = metamutator.Selector.of(1798,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1798");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1798 = metamutator.Selector.of(1798,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1798");
 
-    private static final metamutator.Selector _returnReplacementOperator1799 = metamutator.Selector.of(1799,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1799");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1799 = metamutator.Selector.of(1799,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1799");
 
-    private static final metamutator.Selector _returnReplacementOperator1800 = metamutator.Selector.of(1800,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1800");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1800 = metamutator.Selector.of(1800,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1800");
 
-    private static final metamutator.Selector _returnReplacementOperator1801 = metamutator.Selector.of(1801,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1801");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1801 = metamutator.Selector.of(1801,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1801");
 
-    private static final metamutator.Selector _returnReplacementOperator1802 = metamutator.Selector.of(1802,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1802");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1802 = metamutator.Selector.of(1802,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1802");
 
-    private static final metamutator.Selector _returnReplacementOperator1803 = metamutator.Selector.of(1803,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1803");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1803 = metamutator.Selector.of(1803,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1803");
 
-    private static final metamutator.Selector _returnReplacementOperator1804 = metamutator.Selector.of(1804,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1804");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1804 = metamutator.Selector.of(1804,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).id("_returnReplacementOperatorHotSpot1804");
 
-    private static final metamutator.Selector _returnReplacementOperator1805 = metamutator.Selector.of(1805,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1805");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1805 = metamutator.Selector.of(1805,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1805");
 
-    private static final metamutator.Selector _returnReplacementOperator1806 = metamutator.Selector.of(1806,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1806");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1806 = metamutator.Selector.of(1806,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1806");
 
-    private static final metamutator.Selector _returnReplacementOperator1807 = metamutator.Selector.of(1807,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1807");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1807 = metamutator.Selector.of(1807,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1807");
 
-    private static final metamutator.Selector _returnReplacementOperator1808 = metamutator.Selector.of(1808,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1808");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1808 = metamutator.Selector.of(1808,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1808");
 
-    private static final metamutator.Selector _returnReplacementOperator1809 = metamutator.Selector.of(1809,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1809");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1809 = metamutator.Selector.of(1809,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1809");
 
-    private static final metamutator.Selector _returnReplacementOperator1810 = metamutator.Selector.of(1810,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1810");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1810 = metamutator.Selector.of(1810,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1810");
 
-    private static final metamutator.Selector _returnReplacementOperator1811 = metamutator.Selector.of(1811,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1811");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1811 = metamutator.Selector.of(1811,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1811");
 
-    private static final metamutator.Selector _returnReplacementOperator1812 = metamutator.Selector.of(1812,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1812");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1812 = metamutator.Selector.of(1812,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1812");
 
-    private static final metamutator.Selector _returnReplacementOperator1813 = metamutator.Selector.of(1813,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1813");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1813 = metamutator.Selector.of(1813,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1813");
 
-    private static final metamutator.Selector _returnReplacementOperator1814 = metamutator.Selector.of(1814,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1814");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1814 = metamutator.Selector.of(1814,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1814");
 
-    private static final metamutator.Selector _returnReplacementOperator1815 = metamutator.Selector.of(1815,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1815");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1815 = metamutator.Selector.of(1815,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1815");
 
-    private static final metamutator.Selector _returnReplacementOperator1816 = metamutator.Selector.of(1816,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1816");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1816 = metamutator.Selector.of(1816,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1816");
 
-    private static final metamutator.Selector _returnReplacementOperator1817 = metamutator.Selector.of(1817,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1817");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1817 = metamutator.Selector.of(1817,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1817");
 
-    private static final metamutator.Selector _returnReplacementOperator1818 = metamutator.Selector.of(1818,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1818");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1818 = metamutator.Selector.of(1818,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1818");
 
-    private static final metamutator.Selector _returnReplacementOperator1819 = metamutator.Selector.of(1819,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1819");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1819 = metamutator.Selector.of(1819,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1819");
 
-    private static final metamutator.Selector _returnReplacementOperator1820 = metamutator.Selector.of(1820,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1820");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1820 = metamutator.Selector.of(1820,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1820");
 
-    private static final metamutator.Selector _returnReplacementOperator1821 = metamutator.Selector.of(1821,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1821");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1821 = metamutator.Selector.of(1821,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1821");
 
-    private static final metamutator.Selector _returnReplacementOperator1822 = metamutator.Selector.of(1822,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1822");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1822 = metamutator.Selector.of(1822,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1822");
 
-    private static final metamutator.Selector _returnReplacementOperator1823 = metamutator.Selector.of(1823,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1823");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1823 = metamutator.Selector.of(1823,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1823");
 
-    private static final metamutator.Selector _returnReplacementOperator1824 = metamutator.Selector.of(1824,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1824");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1824 = metamutator.Selector.of(1824,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1824");
 
-    private static final metamutator.Selector _returnReplacementOperator1825 = metamutator.Selector.of(1825,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1825");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1825 = metamutator.Selector.of(1825,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1825");
 
-    private static final metamutator.Selector _returnReplacementOperator1826 = metamutator.Selector.of(1826,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1826");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1826 = metamutator.Selector.of(1826,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1826");
 
-    private static final metamutator.Selector _returnReplacementOperator1827 = metamutator.Selector.of(1827,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1827");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1827 = metamutator.Selector.of(1827,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1827");
 
-    private static final metamutator.Selector _returnReplacementOperator1828 = metamutator.Selector.of(1828,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1828");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1828 = metamutator.Selector.of(1828,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1828");
 
-    private static final metamutator.Selector _returnReplacementOperator1829 = metamutator.Selector.of(1829,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1829");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1829 = metamutator.Selector.of(1829,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1829");
 
-    private static final metamutator.Selector _returnReplacementOperator1830 = metamutator.Selector.of(1830,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1830");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1830 = metamutator.Selector.of(1830,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1830");
 
-    private static final metamutator.Selector _returnReplacementOperator1831 = metamutator.Selector.of(1831,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1831");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1831 = metamutator.Selector.of(1831,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1831");
 
-    private static final metamutator.Selector _returnReplacementOperator1832 = metamutator.Selector.of(1832,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1832");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1832 = metamutator.Selector.of(1832,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1832");
 
-    private static final metamutator.Selector _returnReplacementOperator1833 = metamutator.Selector.of(1833,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1833");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1833 = metamutator.Selector.of(1833,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1833");
 
-    private static final metamutator.Selector _returnReplacementOperator1834 = metamutator.Selector.of(1834,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1834");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1834 = metamutator.Selector.of(1834,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1834");
 
-    private static final metamutator.Selector _returnReplacementOperator1835 = metamutator.Selector.of(1835,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1835");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1835 = metamutator.Selector.of(1835,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1835");
 
-    private static final metamutator.Selector _returnReplacementOperator1836 = metamutator.Selector.of(1836,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1836");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1836 = metamutator.Selector.of(1836,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperatorHotSpot1836");
 }
 

@@ -43,15 +43,15 @@ public class MutableBoolean implements java.io.Serializable , java.lang.Comparab
     }
 
     public boolean isTrue() {
-        return ((_returnReplacementOperator776.is("NULL")) ? ( null ) : ((value) == true));
+        return ((_returnReplacementOperatorHotSpot776.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((value) == true));
     }
 
     public boolean isFalse() {
-        return ((_returnReplacementOperator775.is("NULL")) ? ( null ) : ((value) == false));
+        return ((_returnReplacementOperatorHotSpot775.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((value) == false));
     }
 
     public boolean booleanValue() {
-        return ((_returnReplacementOperator772.is("NULL")) ? ( null ) : (value));
+        return ((_returnReplacementOperatorHotSpot772.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (value));
     }
 
     public java.lang.Boolean toBoolean() {
@@ -61,40 +61,40 @@ public class MutableBoolean implements java.io.Serializable , java.lang.Comparab
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
         if (obj instanceof org.apache.commons.lang3.mutable.MutableBoolean) {
-            return ((_returnReplacementOperator773.is("NULL")) ? ( null ) : ((value) == (((org.apache.commons.lang3.mutable.MutableBoolean)(obj)).booleanValue())));
+            return ((_returnReplacementOperatorHotSpot773.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((value) == (((org.apache.commons.lang3.mutable.MutableBoolean)(obj)).booleanValue())));
         } 
-        return ((_returnReplacementOperator774.is("NULL")) ? ( null ) : (false));
+        return ((_returnReplacementOperatorHotSpot774.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
     }
 
     @java.lang.Override
     public int hashCode() {
-        return ((_returnReplacementOperator778.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator778.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator778.is("ZERO")) ? ( 0 ) : (value ? java.lang.Boolean.TRUE.hashCode() : java.lang.Boolean.FALSE.hashCode()));
+        return ((_returnReplacementOperatorHotSpot778.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot778.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot778.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (value ? java.lang.Boolean.TRUE.hashCode() : java.lang.Boolean.FALSE.hashCode()));
     }
 
     @java.lang.Override
     public int compareTo(final org.apache.commons.lang3.mutable.MutableBoolean other) {
-        return ((_returnReplacementOperator777.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator777.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator777.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.BooleanUtils.compare(this.value, other.value)));
+        return ((_returnReplacementOperatorHotSpot777.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot777.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot777.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (org.apache.commons.lang3.BooleanUtils.compare(this.value, other.value)));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return ((_returnReplacementOperator779.is("NULL")) ? ( null ) : (java.lang.String.valueOf(value)));
+        return ((_returnReplacementOperatorHotSpot779.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.String.valueOf(value)));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator772 = metamutator.Selector.of(772,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator772");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot772 = metamutator.Selector.of(772,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot772");
 
-    private static final metamutator.Selector _returnReplacementOperator773 = metamutator.Selector.of(773,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator773");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot773 = metamutator.Selector.of(773,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot773");
 
-    private static final metamutator.Selector _returnReplacementOperator774 = metamutator.Selector.of(774,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator774");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot774 = metamutator.Selector.of(774,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot774");
 
-    private static final metamutator.Selector _returnReplacementOperator775 = metamutator.Selector.of(775,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator775");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot775 = metamutator.Selector.of(775,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot775");
 
-    private static final metamutator.Selector _returnReplacementOperator776 = metamutator.Selector.of(776,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator776");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot776 = metamutator.Selector.of(776,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot776");
 
-    private static final metamutator.Selector _returnReplacementOperator777 = metamutator.Selector.of(777,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator777");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot777 = metamutator.Selector.of(777,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot777");
 
-    private static final metamutator.Selector _returnReplacementOperator778 = metamutator.Selector.of(778,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator778");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot778 = metamutator.Selector.of(778,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot778");
 
-    private static final metamutator.Selector _returnReplacementOperator779 = metamutator.Selector.of(779,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperator779");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot779 = metamutator.Selector.of(779,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableBoolean.class).id("_returnReplacementOperatorHotSpot779");
 }
 

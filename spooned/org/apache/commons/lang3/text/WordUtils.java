@@ -7,12 +7,12 @@ public class WordUtils {
     }
 
     public static java.lang.String wrap(final java.lang.String str, final int wrapLength) {
-        return ((_returnReplacementOperator1580.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.wrap(str, wrapLength, null, false)));
+        return ((_returnReplacementOperatorHotSpot1580.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.wrap(str, wrapLength, null, false)));
     }
 
     public static java.lang.String wrap(final java.lang.String str, int wrapLength, java.lang.String newLineStr, final boolean wrapLongWords) {
         if (str == null) {
-            return ((_returnReplacementOperator1581.is("NULL")) ? ( null ) : (null));
+            return ((_returnReplacementOperatorHotSpot1581.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (null));
         } 
         if (newLineStr == null) {
             newLineStr = org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR;
@@ -55,17 +55,17 @@ public class WordUtils {
             }
         }
         wrappedLine.append(str.substring(offset));
-        return ((_returnReplacementOperator1582.is("NULL")) ? ( null ) : (wrappedLine.toString()));
+        return ((_returnReplacementOperatorHotSpot1582.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (wrappedLine.toString()));
     }
 
     public static java.lang.String capitalize(final java.lang.String str) {
-        return ((_returnReplacementOperator1565.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalize(str, null)));
+        return ((_returnReplacementOperatorHotSpot1565.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalize(str, null)));
     }
 
     public static java.lang.String capitalize(final java.lang.String str, final char... delimiters) {
         final int delimLen = delimiters == null ? -1 : delimiters.length;
         if ((org.apache.commons.lang3.StringUtils.isEmpty(str)) || (delimLen == 0)) {
-            return ((_returnReplacementOperator1566.is("NULL")) ? ( null ) : (str));
+            return ((_returnReplacementOperatorHotSpot1566.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (str));
         } 
         final char[] buffer = str.toCharArray();
         boolean capitalizeNext = true;
@@ -78,30 +78,30 @@ public class WordUtils {
                 capitalizeNext = false;
             } 
         }
-        return ((_returnReplacementOperator1567.is("NULL")) ? ( null ) : (new java.lang.String(buffer)));
+        return ((_returnReplacementOperatorHotSpot1567.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new java.lang.String(buffer)));
     }
 
     public static java.lang.String capitalizeFully(final java.lang.String str) {
-        return ((_returnReplacementOperator1568.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalizeFully(str, null)));
+        return ((_returnReplacementOperatorHotSpot1568.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalizeFully(str, null)));
     }
 
     public static java.lang.String capitalizeFully(java.lang.String str, final char... delimiters) {
         final int delimLen = delimiters == null ? -1 : delimiters.length;
         if ((org.apache.commons.lang3.StringUtils.isEmpty(str)) || (delimLen == 0)) {
-            return ((_returnReplacementOperator1569.is("NULL")) ? ( null ) : (str));
+            return ((_returnReplacementOperatorHotSpot1569.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (str));
         } 
         str = str.toLowerCase();
-        return ((_returnReplacementOperator1570.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalize(str, delimiters)));
+        return ((_returnReplacementOperatorHotSpot1570.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalize(str, delimiters)));
     }
 
     public static java.lang.String uncapitalize(final java.lang.String str) {
-        return ((_returnReplacementOperator1577.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.uncapitalize(str, null)));
+        return ((_returnReplacementOperatorHotSpot1577.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.uncapitalize(str, null)));
     }
 
     public static java.lang.String uncapitalize(final java.lang.String str, final char... delimiters) {
         final int delimLen = delimiters == null ? -1 : delimiters.length;
         if ((org.apache.commons.lang3.StringUtils.isEmpty(str)) || (delimLen == 0)) {
-            return ((_returnReplacementOperator1578.is("NULL")) ? ( null ) : (str));
+            return ((_returnReplacementOperatorHotSpot1578.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (str));
         } 
         final char[] buffer = str.toCharArray();
         boolean uncapitalizeNext = true;
@@ -114,12 +114,12 @@ public class WordUtils {
                 uncapitalizeNext = false;
             } 
         }
-        return ((_returnReplacementOperator1579.is("NULL")) ? ( null ) : (new java.lang.String(buffer)));
+        return ((_returnReplacementOperatorHotSpot1579.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new java.lang.String(buffer)));
     }
 
     public static java.lang.String swapCase(final java.lang.String str) {
         if (org.apache.commons.lang3.StringUtils.isEmpty(str)) {
-            return ((_returnReplacementOperator1575.is("NULL")) ? ( null ) : (str));
+            return ((_returnReplacementOperatorHotSpot1575.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (str));
         } 
         final char[] buffer = str.toCharArray();
         boolean whitespace = true;
@@ -142,19 +142,19 @@ public class WordUtils {
                 whitespace = java.lang.Character.isWhitespace(ch);
             }
         }
-        return ((_returnReplacementOperator1576.is("NULL")) ? ( null ) : (new java.lang.String(buffer)));
+        return ((_returnReplacementOperatorHotSpot1576.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new java.lang.String(buffer)));
     }
 
     public static java.lang.String initials(final java.lang.String str) {
-        return ((_returnReplacementOperator1571.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.initials(str, null)));
+        return ((_returnReplacementOperatorHotSpot1571.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.initials(str, null)));
     }
 
     public static java.lang.String initials(final java.lang.String str, final char... delimiters) {
         if (org.apache.commons.lang3.StringUtils.isEmpty(str)) {
-            return ((_returnReplacementOperator1572.is("NULL")) ? ( null ) : (str));
+            return ((_returnReplacementOperatorHotSpot1572.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (str));
         } 
         if ((delimiters != null) && ((delimiters.length) == 0)) {
-            return ((_returnReplacementOperator1573.is("NULL")) ? ( null ) : (""));
+            return ((_returnReplacementOperatorHotSpot1573.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (""));
         } 
         final int strLen = str.length();
         final char[] buf = new char[(strLen / 2) + 1];
@@ -171,85 +171,85 @@ public class WordUtils {
                 continue;
             }
         }
-        return ((_returnReplacementOperator1574.is("NULL")) ? ( null ) : (new java.lang.String(buf , 0 , count)));
+        return ((_returnReplacementOperatorHotSpot1574.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new java.lang.String(buf , 0 , count)));
     }
 
     public static boolean containsAllWords(java.lang.CharSequence word, java.lang.CharSequence... words) {
         if ((org.apache.commons.lang3.StringUtils.isEmpty(word)) || (org.apache.commons.lang3.ArrayUtils.isEmpty(words))) {
-            return ((_returnReplacementOperator1558.is("NULL")) ? ( null ) : (false));
+            return ((_returnReplacementOperatorHotSpot1558.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
         } 
         for (java.lang.CharSequence w : words) {
             if (org.apache.commons.lang3.StringUtils.isBlank(w)) {
-                return ((_returnReplacementOperator1559.is("NULL")) ? ( null ) : (false));
+                return ((_returnReplacementOperatorHotSpot1559.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
             } 
             java.util.regex.Pattern p = java.util.regex.Pattern.compile(((".*\\b" + w) + "\\b.*"));
             if (!(p.matcher(word).matches())) {
-                return ((_returnReplacementOperator1560.is("NULL")) ? ( null ) : (false));
+                return ((_returnReplacementOperatorHotSpot1560.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
             } 
         }
-        return ((_returnReplacementOperator1561.is("NULL")) ? ( null ) : (true));
+        return ((_returnReplacementOperatorHotSpot1561.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (true));
     }
 
     private static boolean isDelimiter(final char ch, final char[] delimiters) {
         if (delimiters == null) {
-            return ((_returnReplacementOperator1562.is("NULL")) ? ( null ) : (java.lang.Character.isWhitespace(ch)));
+            return ((_returnReplacementOperatorHotSpot1562.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Character.isWhitespace(ch)));
         } 
         for (final char delimiter : delimiters) {
             if (ch == delimiter) {
-                return ((_returnReplacementOperator1563.is("NULL")) ? ( null ) : (true));
+                return ((_returnReplacementOperatorHotSpot1563.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (true));
             } 
         }
-        return ((_returnReplacementOperator1564.is("NULL")) ? ( null ) : (false));
+        return ((_returnReplacementOperatorHotSpot1564.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (false));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1558 = metamutator.Selector.of(1558,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1558");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1558 = metamutator.Selector.of(1558,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1558");
 
-    private static final metamutator.Selector _returnReplacementOperator1559 = metamutator.Selector.of(1559,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1559");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1559 = metamutator.Selector.of(1559,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1559");
 
-    private static final metamutator.Selector _returnReplacementOperator1560 = metamutator.Selector.of(1560,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1560");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1560 = metamutator.Selector.of(1560,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1560");
 
-    private static final metamutator.Selector _returnReplacementOperator1561 = metamutator.Selector.of(1561,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1561");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1561 = metamutator.Selector.of(1561,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1561");
 
-    private static final metamutator.Selector _returnReplacementOperator1562 = metamutator.Selector.of(1562,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1562");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1562 = metamutator.Selector.of(1562,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1562");
 
-    private static final metamutator.Selector _returnReplacementOperator1563 = metamutator.Selector.of(1563,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1563");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1563 = metamutator.Selector.of(1563,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1563");
 
-    private static final metamutator.Selector _returnReplacementOperator1564 = metamutator.Selector.of(1564,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1564");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1564 = metamutator.Selector.of(1564,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1564");
 
-    private static final metamutator.Selector _returnReplacementOperator1565 = metamutator.Selector.of(1565,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1565");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1565 = metamutator.Selector.of(1565,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1565");
 
-    private static final metamutator.Selector _returnReplacementOperator1566 = metamutator.Selector.of(1566,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1566");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1566 = metamutator.Selector.of(1566,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1566");
 
-    private static final metamutator.Selector _returnReplacementOperator1567 = metamutator.Selector.of(1567,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1567");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1567 = metamutator.Selector.of(1567,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1567");
 
-    private static final metamutator.Selector _returnReplacementOperator1568 = metamutator.Selector.of(1568,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1568");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1568 = metamutator.Selector.of(1568,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1568");
 
-    private static final metamutator.Selector _returnReplacementOperator1569 = metamutator.Selector.of(1569,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1569");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1569 = metamutator.Selector.of(1569,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1569");
 
-    private static final metamutator.Selector _returnReplacementOperator1570 = metamutator.Selector.of(1570,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1570");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1570 = metamutator.Selector.of(1570,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1570");
 
-    private static final metamutator.Selector _returnReplacementOperator1571 = metamutator.Selector.of(1571,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1571");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1571 = metamutator.Selector.of(1571,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1571");
 
-    private static final metamutator.Selector _returnReplacementOperator1572 = metamutator.Selector.of(1572,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1572");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1572 = metamutator.Selector.of(1572,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1572");
 
-    private static final metamutator.Selector _returnReplacementOperator1573 = metamutator.Selector.of(1573,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1573");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1573 = metamutator.Selector.of(1573,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1573");
 
-    private static final metamutator.Selector _returnReplacementOperator1574 = metamutator.Selector.of(1574,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1574");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1574 = metamutator.Selector.of(1574,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1574");
 
-    private static final metamutator.Selector _returnReplacementOperator1575 = metamutator.Selector.of(1575,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1575");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1575 = metamutator.Selector.of(1575,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1575");
 
-    private static final metamutator.Selector _returnReplacementOperator1576 = metamutator.Selector.of(1576,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1576");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1576 = metamutator.Selector.of(1576,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1576");
 
-    private static final metamutator.Selector _returnReplacementOperator1577 = metamutator.Selector.of(1577,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1577");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1577 = metamutator.Selector.of(1577,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1577");
 
-    private static final metamutator.Selector _returnReplacementOperator1578 = metamutator.Selector.of(1578,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1578");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1578 = metamutator.Selector.of(1578,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1578");
 
-    private static final metamutator.Selector _returnReplacementOperator1579 = metamutator.Selector.of(1579,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1579");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1579 = metamutator.Selector.of(1579,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1579");
 
-    private static final metamutator.Selector _returnReplacementOperator1580 = metamutator.Selector.of(1580,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1580");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1580 = metamutator.Selector.of(1580,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1580");
 
-    private static final metamutator.Selector _returnReplacementOperator1581 = metamutator.Selector.of(1581,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1581");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1581 = metamutator.Selector.of(1581,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1581");
 
-    private static final metamutator.Selector _returnReplacementOperator1582 = metamutator.Selector.of(1582,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1582");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1582 = metamutator.Selector.of(1582,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperatorHotSpot1582");
 }
 

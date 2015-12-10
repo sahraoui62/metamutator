@@ -9,7 +9,7 @@ public final class ImmutablePair<L, R> extends org.apache.commons.lang3.tuple.Pa
     public final R right;
 
     public static <L, R>org.apache.commons.lang3.tuple.ImmutablePair<L, R> of(final L left, final R right) {
-        return ((_returnReplacementOperator1859.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.tuple.ImmutablePair<L, R>(left , right)));
+        return ((_returnReplacementOperatorHotSpot1859.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.tuple.ImmutablePair<L, R>(left , right)));
     }
 
     public ImmutablePair(final L left ,final R right) {
@@ -20,12 +20,12 @@ public final class ImmutablePair<L, R> extends org.apache.commons.lang3.tuple.Pa
 
     @java.lang.Override
     public L getLeft() {
-        return ((_returnReplacementOperator1860.is("NULL")) ? ( null ) : (left));
+        return ((_returnReplacementOperatorHotSpot1860.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (left));
     }
 
     @java.lang.Override
     public R getRight() {
-        return ((_returnReplacementOperator1861.is("NULL")) ? ( null ) : (right));
+        return ((_returnReplacementOperatorHotSpot1861.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (right));
     }
 
     @java.lang.Override
@@ -33,10 +33,10 @@ public final class ImmutablePair<L, R> extends org.apache.commons.lang3.tuple.Pa
         throw new java.lang.UnsupportedOperationException();
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1859 = metamutator.Selector.of(1859,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.tuple.ImmutablePair.class).id("_returnReplacementOperator1859");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1859 = metamutator.Selector.of(1859,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.tuple.ImmutablePair.class).id("_returnReplacementOperatorHotSpot1859");
 
-    private static final metamutator.Selector _returnReplacementOperator1860 = metamutator.Selector.of(1860,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.tuple.ImmutablePair.class).id("_returnReplacementOperator1860");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1860 = metamutator.Selector.of(1860,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.tuple.ImmutablePair.class).id("_returnReplacementOperatorHotSpot1860");
 
-    private static final metamutator.Selector _returnReplacementOperator1861 = metamutator.Selector.of(1861,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.tuple.ImmutablePair.class).id("_returnReplacementOperator1861");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1861 = metamutator.Selector.of(1861,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.tuple.ImmutablePair.class).id("_returnReplacementOperatorHotSpot1861");
 }
 

@@ -50,7 +50,7 @@ public class TimedSemaphore {
     }
 
     public final synchronized int getLimit() {
-        return ((_returnReplacementOperator504.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator504.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator504.is("ZERO")) ? ( 0 ) : (limit));
+        return ((_returnReplacementOperatorHotSpot504.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot504.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot504.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (limit));
     }
 
     public final synchronized void setLimit(final int limit) {
@@ -70,7 +70,7 @@ public class TimedSemaphore {
     }
 
     public synchronized boolean isShutdown() {
-        return ((_returnReplacementOperator499.is("NULL")) ? ( null ) : (shutdown));
+        return ((_returnReplacementOperatorHotSpot499.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (shutdown));
     }
 
     public synchronized void acquire() throws java.lang.InterruptedException {
@@ -92,35 +92,35 @@ public class TimedSemaphore {
     }
 
     public synchronized int getLastAcquiresPerPeriod() {
-        return ((_returnReplacementOperator503.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator503.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator503.is("ZERO")) ? ( 0 ) : (lastCallsPerPeriod));
+        return ((_returnReplacementOperatorHotSpot503.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot503.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot503.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (lastCallsPerPeriod));
     }
 
     public synchronized int getAcquireCount() {
-        return ((_returnReplacementOperator501.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator501.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator501.is("ZERO")) ? ( 0 ) : (acquireCount));
+        return ((_returnReplacementOperatorHotSpot501.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot501.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot501.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (acquireCount));
     }
 
     public synchronized int getAvailablePermits() {
-        return ((_returnReplacementOperator502.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator502.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator502.is("ZERO")) ? ( 0 ) : ((getLimit()) - (getAcquireCount())));
+        return ((_returnReplacementOperatorHotSpot502.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot502.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot502.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : ((getLimit()) - (getAcquireCount())));
     }
 
     public synchronized double getAverageCallsPerPeriod() {
-        return ((_returnReplacementOperator500.is("NULL")) ? ( null ) : ((periodCount) == 0 ? 0 : ((double)(totalAcquireCount)) / ((double)(periodCount))));
+        return ((_returnReplacementOperatorHotSpot500.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((periodCount) == 0 ? 0 : ((double)(totalAcquireCount)) / ((double)(periodCount))));
     }
 
     public long getPeriod() {
-        return ((_returnReplacementOperator508.is("NULL")) ? ( null ) : (period));
+        return ((_returnReplacementOperatorHotSpot508.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (period));
     }
 
     public java.util.concurrent.TimeUnit getUnit() {
-        return ((_returnReplacementOperator507.is("NULL")) ? ( null ) : (unit));
+        return ((_returnReplacementOperatorHotSpot507.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (unit));
     }
 
     protected java.util.concurrent.ScheduledExecutorService getExecutorService() {
-        return ((_returnReplacementOperator505.is("NULL")) ? ( null ) : (executorService));
+        return ((_returnReplacementOperatorHotSpot505.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (executorService));
     }
 
     protected java.util.concurrent.ScheduledFuture<?> startTimer() {
-        return ((_returnReplacementOperator506.is("NULL")) ? ( null ) : (getExecutorService().scheduleAtFixedRate(new java.lang.Runnable() {
+        return ((_returnReplacementOperatorHotSpot506.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (getExecutorService().scheduleAtFixedRate(new java.lang.Runnable() {
     @java.lang.Override
     public void run() {
         endOfPeriod();
@@ -136,24 +136,24 @@ public class TimedSemaphore {
         notifyAll();
     }
 
-    private static final metamutator.Selector _returnReplacementOperator499 = metamutator.Selector.of(499,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator499");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot499 = metamutator.Selector.of(499,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot499");
 
-    private static final metamutator.Selector _returnReplacementOperator500 = metamutator.Selector.of(500,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator500");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot500 = metamutator.Selector.of(500,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot500");
 
-    private static final metamutator.Selector _returnReplacementOperator501 = metamutator.Selector.of(501,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator501");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot501 = metamutator.Selector.of(501,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot501");
 
-    private static final metamutator.Selector _returnReplacementOperator502 = metamutator.Selector.of(502,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator502");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot502 = metamutator.Selector.of(502,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot502");
 
-    private static final metamutator.Selector _returnReplacementOperator503 = metamutator.Selector.of(503,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator503");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot503 = metamutator.Selector.of(503,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot503");
 
-    private static final metamutator.Selector _returnReplacementOperator504 = metamutator.Selector.of(504,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator504");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot504 = metamutator.Selector.of(504,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot504");
 
-    private static final metamutator.Selector _returnReplacementOperator505 = metamutator.Selector.of(505,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator505");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot505 = metamutator.Selector.of(505,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot505");
 
-    private static final metamutator.Selector _returnReplacementOperator506 = metamutator.Selector.of(506,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator506");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot506 = metamutator.Selector.of(506,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot506");
 
-    private static final metamutator.Selector _returnReplacementOperator507 = metamutator.Selector.of(507,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator507");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot507 = metamutator.Selector.of(507,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot507");
 
-    private static final metamutator.Selector _returnReplacementOperator508 = metamutator.Selector.of(508,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperator508");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot508 = metamutator.Selector.of(508,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.concurrent.TimedSemaphore.class).id("_returnReplacementOperatorHotSpot508");
 }
 

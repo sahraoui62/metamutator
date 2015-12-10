@@ -27,7 +27,7 @@ public class MutableDouble extends java.lang.Number implements java.lang.Compara
 
     @java.lang.Override
     public java.lang.Double getValue() {
-        return ((_returnReplacementOperator800.is("NULL")) ? ( null ) : (java.lang.Double.valueOf(this.value)));
+        return ((_returnReplacementOperatorHotSpot800.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Double.valueOf(this.value)));
     }
 
     public void setValue(final double value) {
@@ -40,11 +40,11 @@ public class MutableDouble extends java.lang.Number implements java.lang.Compara
     }
 
     public boolean isNaN() {
-        return ((_returnReplacementOperator794.is("NULL")) ? ( null ) : (java.lang.Double.isNaN(value)));
+        return ((_returnReplacementOperatorHotSpot794.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Double.isNaN(value)));
     }
 
     public boolean isInfinite() {
-        return ((_returnReplacementOperator793.is("NULL")) ? ( null ) : (java.lang.Double.isInfinite(value)));
+        return ((_returnReplacementOperatorHotSpot793.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Double.isInfinite(value)));
     }
 
     public void increment() {
@@ -73,71 +73,71 @@ public class MutableDouble extends java.lang.Number implements java.lang.Compara
 
     @java.lang.Override
     public int intValue() {
-        return ((_returnReplacementOperator799.is("NULL")) ? ( null ) : (((int)(value))));
+        return ((_returnReplacementOperatorHotSpot799.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((int)(value))));
     }
 
     @java.lang.Override
     public long longValue() {
-        return ((_returnReplacementOperator803.is("NULL")) ? ( null ) : (((long)(value))));
+        return ((_returnReplacementOperatorHotSpot803.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((long)(value))));
     }
 
     @java.lang.Override
     public float floatValue() {
-        return ((_returnReplacementOperator796.is("NULL")) ? ( null ) : (((float)(value))));
+        return ((_returnReplacementOperatorHotSpot796.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((float)(value))));
     }
 
     @java.lang.Override
     public double doubleValue() {
-        return ((_returnReplacementOperator795.is("NULL")) ? ( null ) : (value));
+        return ((_returnReplacementOperatorHotSpot795.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (value));
     }
 
     public java.lang.Double toDouble() {
-        return ((_returnReplacementOperator801.is("NULL")) ? ( null ) : (java.lang.Double.valueOf(doubleValue())));
+        return ((_returnReplacementOperatorHotSpot801.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.Double.valueOf(doubleValue())));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
-        return ((_returnReplacementOperator792.is("NULL")) ? ( null ) : ((obj instanceof org.apache.commons.lang3.mutable.MutableDouble) && ((java.lang.Double.doubleToLongBits(((org.apache.commons.lang3.mutable.MutableDouble)(obj)).value)) == (java.lang.Double.doubleToLongBits(value)))));
+        return ((_returnReplacementOperatorHotSpot792.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : ((obj instanceof org.apache.commons.lang3.mutable.MutableDouble) && ((java.lang.Double.doubleToLongBits(((org.apache.commons.lang3.mutable.MutableDouble)(obj)).value)) == (java.lang.Double.doubleToLongBits(value)))));
     }
 
     @java.lang.Override
     public int hashCode() {
         final long bits = java.lang.Double.doubleToLongBits(value);
-        return ((_returnReplacementOperator798.is("NULL")) ? ( null ) : (((int)(bits ^ (bits >>> 32)))));
+        return ((_returnReplacementOperatorHotSpot798.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (((int)(bits ^ (bits >>> 32)))));
     }
 
     @java.lang.Override
     public int compareTo(final org.apache.commons.lang3.mutable.MutableDouble other) {
-        return ((_returnReplacementOperator797.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator797.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator797.is("ZERO")) ? ( 0 ) : (java.lang.Double.compare(this.value, other.value)));
+        return ((_returnReplacementOperatorHotSpot797.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN)) ? ( -2147483647 ) : (_returnReplacementOperatorHotSpot797.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX)) ? ( 2147483646 ) : (_returnReplacementOperatorHotSpot797.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO)) ? ( 0 ) : (java.lang.Double.compare(this.value, other.value)));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return ((_returnReplacementOperator802.is("NULL")) ? ( null ) : (java.lang.String.valueOf(value)));
+        return ((_returnReplacementOperatorHotSpot802.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.String.valueOf(value)));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator792 = metamutator.Selector.of(792,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator792");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot792 = metamutator.Selector.of(792,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot792");
 
-    private static final metamutator.Selector _returnReplacementOperator793 = metamutator.Selector.of(793,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator793");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot793 = metamutator.Selector.of(793,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot793");
 
-    private static final metamutator.Selector _returnReplacementOperator794 = metamutator.Selector.of(794,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator794");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot794 = metamutator.Selector.of(794,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot794");
 
-    private static final metamutator.Selector _returnReplacementOperator795 = metamutator.Selector.of(795,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator795");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot795 = metamutator.Selector.of(795,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot795");
 
-    private static final metamutator.Selector _returnReplacementOperator796 = metamutator.Selector.of(796,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator796");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot796 = metamutator.Selector.of(796,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot796");
 
-    private static final metamutator.Selector _returnReplacementOperator797 = metamutator.Selector.of(797,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator797");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot797 = metamutator.Selector.of(797,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MIN,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.INT_MAX,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT.ZERO}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot797");
 
-    private static final metamutator.Selector _returnReplacementOperator798 = metamutator.Selector.of(798,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator798");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot798 = metamutator.Selector.of(798,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot798");
 
-    private static final metamutator.Selector _returnReplacementOperator799 = metamutator.Selector.of(799,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator799");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot799 = metamutator.Selector.of(799,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot799");
 
-    private static final metamutator.Selector _returnReplacementOperator800 = metamutator.Selector.of(800,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator800");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot800 = metamutator.Selector.of(800,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot800");
 
-    private static final metamutator.Selector _returnReplacementOperator801 = metamutator.Selector.of(801,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator801");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot801 = metamutator.Selector.of(801,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot801");
 
-    private static final metamutator.Selector _returnReplacementOperator802 = metamutator.Selector.of(802,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator802");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot802 = metamutator.Selector.of(802,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot802");
 
-    private static final metamutator.Selector _returnReplacementOperator803 = metamutator.Selector.of(803,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperator803");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot803 = metamutator.Selector.of(803,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.mutable.MutableDouble.class).id("_returnReplacementOperatorHotSpot803");
 }
 

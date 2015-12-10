@@ -9,19 +9,19 @@ public class FormattableUtils {
     }
 
     public static java.lang.String toString(final java.util.Formattable formattable) {
-        return ((_returnReplacementOperator1174.is("NULL")) ? ( null ) : (java.lang.String.format(org.apache.commons.lang3.text.FormattableUtils.SIMPLEST_FORMAT, formattable)));
+        return ((_returnReplacementOperatorHotSpot1174.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (java.lang.String.format(org.apache.commons.lang3.text.FormattableUtils.SIMPLEST_FORMAT, formattable)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision) {
-        return ((_returnReplacementOperator1175.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', null)));
+        return ((_returnReplacementOperatorHotSpot1175.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', null)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision, final char padChar) {
-        return ((_returnReplacementOperator1176.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, padChar, null)));
+        return ((_returnReplacementOperatorHotSpot1176.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, padChar, null)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision, final java.lang.CharSequence ellipsis) {
-        return ((_returnReplacementOperator1178.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', ellipsis)));
+        return ((_returnReplacementOperatorHotSpot1178.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', ellipsis)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision, final char padChar, final java.lang.CharSequence ellipsis) {
@@ -36,17 +36,17 @@ public class FormattableUtils {
             buf.insert((leftJustify ? i : 0), padChar);
         }
         formatter.format(buf.toString());
-        return ((_returnReplacementOperator1177.is("NULL")) ? ( null ) : (formatter));
+        return ((_returnReplacementOperatorHotSpot1177.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (formatter));
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1174 = metamutator.Selector.of(1174,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1174");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1174 = metamutator.Selector.of(1174,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperatorHotSpot1174");
 
-    private static final metamutator.Selector _returnReplacementOperator1175 = metamutator.Selector.of(1175,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1175");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1175 = metamutator.Selector.of(1175,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperatorHotSpot1175");
 
-    private static final metamutator.Selector _returnReplacementOperator1176 = metamutator.Selector.of(1176,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1176");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1176 = metamutator.Selector.of(1176,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperatorHotSpot1176");
 
-    private static final metamutator.Selector _returnReplacementOperator1177 = metamutator.Selector.of(1177,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1177");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1177 = metamutator.Selector.of(1177,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperatorHotSpot1177");
 
-    private static final metamutator.Selector _returnReplacementOperator1178 = metamutator.Selector.of(1178,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1178");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1178 = metamutator.Selector.of(1178,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperatorHotSpot1178");
 }
 

@@ -11,7 +11,7 @@ public class MutableTriple<L, M, R> extends org.apache.commons.lang3.tuple.Tripl
     public R right;
 
     public static <L, M, R>org.apache.commons.lang3.tuple.MutableTriple<L, M, R> of(final L left, final M middle, final R right) {
-        return ((_returnReplacementOperator1870.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.tuple.MutableTriple<L, M, R>(left , middle , right)));
+        return ((_returnReplacementOperatorHotSpot1870.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (new org.apache.commons.lang3.tuple.MutableTriple<L, M, R>(left , middle , right)));
     }
 
     public MutableTriple() {
@@ -27,7 +27,7 @@ public class MutableTriple<L, M, R> extends org.apache.commons.lang3.tuple.Tripl
 
     @java.lang.Override
     public L getLeft() {
-        return ((_returnReplacementOperator1871.is("NULL")) ? ( null ) : (left));
+        return ((_returnReplacementOperatorHotSpot1871.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (left));
     }
 
     public void setLeft(final L left) {
@@ -36,7 +36,7 @@ public class MutableTriple<L, M, R> extends org.apache.commons.lang3.tuple.Tripl
 
     @java.lang.Override
     public M getMiddle() {
-        return ((_returnReplacementOperator1872.is("NULL")) ? ( null ) : (middle));
+        return ((_returnReplacementOperatorHotSpot1872.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (middle));
     }
 
     public void setMiddle(final M middle) {
@@ -45,19 +45,19 @@ public class MutableTriple<L, M, R> extends org.apache.commons.lang3.tuple.Tripl
 
     @java.lang.Override
     public R getRight() {
-        return ((_returnReplacementOperator1873.is("NULL")) ? ( null ) : (right));
+        return ((_returnReplacementOperatorHotSpot1873.is(metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL)) ? ( null ) : (right));
     }
 
     public void setRight(final R right) {
         this.right = right;
     }
 
-    private static final metamutator.Selector _returnReplacementOperator1870 = metamutator.Selector.of(1870,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperator1870");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1870 = metamutator.Selector.of(1870,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperatorHotSpot1870");
 
-    private static final metamutator.Selector _returnReplacementOperator1871 = metamutator.Selector.of(1871,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperator1871");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1871 = metamutator.Selector.of(1871,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperatorHotSpot1871");
 
-    private static final metamutator.Selector _returnReplacementOperator1872 = metamutator.Selector.of(1872,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperator1872");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1872 = metamutator.Selector.of(1872,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperatorHotSpot1872");
 
-    private static final metamutator.Selector _returnReplacementOperator1873 = metamutator.Selector.of(1873,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperator1873");
+    private static final metamutator.Selector _returnReplacementOperatorHotSpot1873 = metamutator.Selector.of(1873,new metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT[]{metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.INIT,metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_OBJECT.NULL}).in(org.apache.commons.lang3.tuple.MutableTriple.class).id("_returnReplacementOperatorHotSpot1873");
 }
 
