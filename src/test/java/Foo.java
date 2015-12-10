@@ -11,4 +11,10 @@ public class Foo {
 	public boolean op3(Class c) {
 		return Foo.class==c;
 	}
+	
+	public int constant() {
+		  int i = 42;
+		  
+		  return i;
+	}
 }

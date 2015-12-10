@@ -2,6 +2,8 @@ import static org.apache.commons.lang.reflect.MethodUtils.invokeExactMethod;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import metamutator.BinaryOperatorMetaMutator;
+import metamutator.ConstantReplacementMetaMutator;
+import metamutator.ConstantReplacementMetaMutator;
 import metamutator.Selector;
 
 import org.junit.Test;
