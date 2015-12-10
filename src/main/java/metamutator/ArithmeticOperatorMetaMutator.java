@@ -70,11 +70,12 @@ public class ArithmeticOperatorMetaMutator extends
 	public void process(CtBinaryOperator<Boolean> binaryOperator) {
 		BinaryOperatorKind kind = binaryOperator.getKind();
 		if(ARITHMETIC_OPERATORS.contains(kind)){
-			//if ( isNumber(binaryOperator.getLeftHandOperand())
-			// || isNumber(binaryOperator.getRightHandOperand()))
-			//{
-				mutateOperator(binaryOperator, ARITHMETIC_OPERATORS);
-			//}
+			if(binaryOperator.getLeftHandOperand().getType() != null && binaryOperator.getRightHandOperand().getType() != null)
+				if ( isNumber(binaryOperator.getLeftHandOperand())
+				&& isNumber(binaryOperator.getRightHandOperand()))
+				{
+					mutateOperator(binaryOperator, ARITHMETIC_OPERATORS);
+				}
 		}
 	}
 
@@ -117,14 +118,29 @@ public class ArithmeticOperatorMetaMutator extends
 		int thisIndex = ++index;
 
 		String originalKind = expression.getKind().toString();
-		String newExpression = operators
+		/*String newExpression = operators
 				.stream()
 				.map(kind -> {
 					expression.setKind(kind);
-					return String.format("("+ PREFIX + "%s.is(\"%s\") ? (%s))",
+					return String.format("(" + PREFIX + "%s.is(\"%s\")) ? (%s)",
 							thisIndex, kind, expression);
 				}).collect(Collectors.joining(" : "));
-		 
+		*/
+		String newExpression = "";
+		
+		int cpt = 0;
+		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){
+			cpt++;
+			CtBinaryOperator<Boolean> tmp = expression;
+			tmp.setKind(op);
+			if(cpt < ARITHMETIC_OPERATORS.size()){
+				newExpression += "(" + PREFIX + thisIndex + ".is(\"" + op + "\")) ? (" + tmp + ")";
+				newExpression += " : ";
+			}else{
+				newExpression += " (" + tmp + ")";
+			}
+		}
+		
 		/*String newExpression = "";
 		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){
 			newExpression += PREFIX + index + ".is(\"" + op.toString() + "\")?( " + permutations(op) + " )):";

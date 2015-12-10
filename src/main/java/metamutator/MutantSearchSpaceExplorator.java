@@ -62,7 +62,7 @@ public class MutantSearchSpaceExplorator {
 			outputTraces.println(selectors.get(sel).getIdentifier());
 			
 			//int k=0;
-			System.out.println(selectors.get(sel).getOptionCount());
+			//System.out.println(selectors.get(sel).getOptionCount());
 			for (int k = 0; k < selectors.get(sel).getOptionCount(); k++) 
 			{
 
