@@ -156,7 +156,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
             }
             rules.add(rule);
         }
-        return rules;
+        return ((_returnReplacementOperator1831.is("NULL")) ? ( null ) : (rules));
     }
 
     protected java.lang.String parseToken(final java.lang.String pattern, final int[] indexRef) {
@@ -166,8 +166,8 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
         char c = pattern.charAt(i);
         if (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))) {
             buf.append(c);
-            while (((_arithmeticOperatorHotSpot334.is("PLUS")) ? ((i + 1)) : (_arithmeticOperatorHotSpot334.is("MINUS")) ? ((i - 1)) : (_arithmeticOperatorHotSpot334.is("MUL")) ? ((i * 1)) :  ((i / 1))) < length) {
-                final char peek = pattern.charAt(((_arithmeticOperatorHotSpot335.is("PLUS")) ? ((i + 1)) : (_arithmeticOperatorHotSpot335.is("MINUS")) ? ((i - 1)) : (_arithmeticOperatorHotSpot335.is("MUL")) ? ((i * 1)) :  ((i / 1))));
+            while ((i + 1) < length) {
+                final char peek = pattern.charAt((i + 1));
                 if (peek == c) {
                     buf.append(c);
                     i++;
@@ -181,7 +181,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
             for ( ; i < length ; i++) {
                 c = pattern.charAt(i);
                 if (c == '\'') {
-                    if ((((_arithmeticOperatorHotSpot336.is("PLUS")) ? ((i + 1)) : (_arithmeticOperatorHotSpot336.is("MINUS")) ? ((i - 1)) : (_arithmeticOperatorHotSpot336.is("MUL")) ? ((i * 1)) :  ((i / 1))) < length) && ((pattern.charAt(((_arithmeticOperatorHotSpot337.is("PLUS")) ? ((i + 1)) : (_arithmeticOperatorHotSpot337.is("MINUS")) ? ((i - 1)) : (_arithmeticOperatorHotSpot337.is("MUL")) ? ((i * 1)) :  ((i / 1))))) == '\'')) {
+                    if (((i + 1) < length) && ((pattern.charAt((i + 1))) == '\'')) {
                         i++;
                         buf.append(c);
                     } else {
@@ -196,17 +196,17 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
             }
         }
         indexRef[0] = i;
-        return buf.toString();
+        return ((_returnReplacementOperator1822.is("NULL")) ? ( null ) : (buf.toString()));
     }
 
     protected NumberRule selectNumberRule(final int field, final int padding) {
         switch (padding) {
             case 1 :
-                return new org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField(field);
+                return ((_returnReplacementOperator1834.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField(field)));
             case 2 :
-                return new org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField(field);
+                return ((_returnReplacementOperator1835.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField(field)));
             default :
-                return new org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField(field , padding);
+                return ((_returnReplacementOperator1836.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField(field , padding)));
         }
     }
 
@@ -214,11 +214,11 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
     @java.lang.Override
     public java.lang.StringBuffer format(final java.lang.Object obj, final java.lang.StringBuffer toAppendTo, final java.text.FieldPosition pos) {
         if (obj instanceof java.util.Date) {
-            return format(((java.util.Date)(obj)), toAppendTo);
+            return ((_returnReplacementOperator1824.is("NULL")) ? ( null ) : (format(((java.util.Date)(obj)), toAppendTo)));
         } else if (obj instanceof java.util.Calendar) {
-            return format(((java.util.Calendar)(obj)), toAppendTo);
+            return ((_returnReplacementOperator1825.is("NULL")) ? ( null ) : (format(((java.util.Calendar)(obj)), toAppendTo)));
         } else if (obj instanceof java.lang.Long) {
-            return format(((java.lang.Long)(obj)).longValue(), toAppendTo);
+            return ((_returnReplacementOperator1826.is("NULL")) ? ( null ) : (format(((java.lang.Long)(obj)).longValue(), toAppendTo)));
         } else {
             throw new java.lang.IllegalArgumentException(("Unknown class: " + (obj == null ? "<null>" : obj.getClass().getName())));
         }
@@ -226,11 +226,11 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
     java.lang.String format(java.lang.Object obj) {
         if (obj instanceof java.util.Date) {
-            return format(((java.util.Date)(obj)));
+            return ((_returnReplacementOperator1814.is("NULL")) ? ( null ) : (format(((java.util.Date)(obj)))));
         } else if (obj instanceof java.util.Calendar) {
-            return format(((java.util.Calendar)(obj)));
+            return ((_returnReplacementOperator1815.is("NULL")) ? ( null ) : (format(((java.util.Calendar)(obj)))));
         } else if (obj instanceof java.lang.Long) {
-            return format(((java.lang.Long)(obj)).longValue());
+            return ((_returnReplacementOperator1816.is("NULL")) ? ( null ) : (format(((java.lang.Long)(obj)).longValue())));
         } else {
             throw new java.lang.IllegalArgumentException(("Unknown class: " + (obj == null ? "<null>" : obj.getClass().getName())));
         }
@@ -240,61 +240,61 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
     public java.lang.String format(final long millis) {
         final java.util.Calendar c = newCalendar();
         c.setTimeInMillis(millis);
-        return applyRulesToString(c);
+        return ((_returnReplacementOperator1819.is("NULL")) ? ( null ) : (applyRulesToString(c)));
     }
 
     private java.lang.String applyRulesToString(final java.util.Calendar c) {
-        return applyRules(c, new java.lang.StringBuilder(mMaxLengthEstimate)).toString();
+        return ((_returnReplacementOperator1813.is("NULL")) ? ( null ) : (applyRules(c, new java.lang.StringBuilder(mMaxLengthEstimate)).toString()));
     }
 
     private java.util.GregorianCalendar newCalendar() {
-        return new java.util.GregorianCalendar(mTimeZone , mLocale);
+        return ((_returnReplacementOperator1830.is("NULL")) ? ( null ) : (new java.util.GregorianCalendar(mTimeZone , mLocale)));
     }
 
     @java.lang.Override
     public java.lang.String format(final java.util.Date date) {
         final java.util.Calendar c = newCalendar();
         c.setTime(date);
-        return applyRulesToString(c);
+        return ((_returnReplacementOperator1818.is("NULL")) ? ( null ) : (applyRulesToString(c)));
     }
 
     @java.lang.Override
     public java.lang.String format(final java.util.Calendar calendar) {
-        return format(calendar, new java.lang.StringBuilder(mMaxLengthEstimate)).toString();
+        return ((_returnReplacementOperator1817.is("NULL")) ? ( null ) : (format(calendar, new java.lang.StringBuilder(mMaxLengthEstimate)).toString()));
     }
 
     @java.lang.Override
     public java.lang.StringBuffer format(final long millis, final java.lang.StringBuffer buf) {
-        return format(new java.util.Date(millis), buf);
+        return ((_returnReplacementOperator1829.is("NULL")) ? ( null ) : (format(new java.util.Date(millis), buf)));
     }
 
     @java.lang.Override
     public java.lang.StringBuffer format(final java.util.Date date, final java.lang.StringBuffer buf) {
         final java.util.Calendar c = newCalendar();
         c.setTime(date);
-        return applyRules(c, buf);
+        return ((_returnReplacementOperator1828.is("NULL")) ? ( null ) : (applyRules(c, buf)));
     }
 
     @java.lang.Override
     public java.lang.StringBuffer format(final java.util.Calendar calendar, final java.lang.StringBuffer buf) {
-        return format(calendar.getTime(), buf);
+        return ((_returnReplacementOperator1827.is("NULL")) ? ( null ) : (format(calendar.getTime(), buf)));
     }
 
     @java.lang.Override
     public <B extends java.lang.Appendable>B format(final long millis, final B buf) {
-        return format(new java.util.Date(millis), buf);
+        return ((_returnReplacementOperator1808.is("NULL")) ? ( null ) : (format(new java.util.Date(millis), buf)));
     }
 
     @java.lang.Override
     public <B extends java.lang.Appendable>B format(final java.util.Date date, final B buf) {
         final java.util.Calendar c = newCalendar();
         c.setTime(date);
-        return applyRules(c, buf);
+        return ((_returnReplacementOperator1807.is("NULL")) ? ( null ) : (applyRules(c, buf)));
     }
 
     @java.lang.Override
     public <B extends java.lang.Appendable>B format(final java.util.Calendar calendar, final B buf) {
-        return format(calendar.getTime(), buf);
+        return ((_returnReplacementOperator1806.is("NULL")) ? ( null ) : (format(calendar.getTime(), buf)));
     }
 
     protected <B extends java.lang.Appendable>B applyRules(final java.util.Calendar calendar, final B buf) {
@@ -305,45 +305,45 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
         } catch (java.io.IOException ioe) {
             org.apache.commons.lang3.exception.ExceptionUtils.rethrow(ioe);
         }
-        return buf;
+        return ((_returnReplacementOperator1805.is("NULL")) ? ( null ) : (buf));
     }
 
     @java.lang.Override
     public java.lang.String getPattern() {
-        return mPattern;
+        return ((_returnReplacementOperator1820.is("NULL")) ? ( null ) : (mPattern));
     }
 
     @java.lang.Override
     public java.util.TimeZone getTimeZone() {
-        return mTimeZone;
+        return ((_returnReplacementOperator1833.is("NULL")) ? ( null ) : (mTimeZone));
     }
 
     @java.lang.Override
     public java.util.Locale getLocale() {
-        return mLocale;
+        return ((_returnReplacementOperator1832.is("NULL")) ? ( null ) : (mLocale));
     }
 
     public int getMaxLengthEstimate() {
-        return mMaxLengthEstimate;
+        return ((_returnReplacementOperator1811.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1811.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1811.is("ZERO")) ? ( 0 ) : (mMaxLengthEstimate));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
         if ((obj instanceof org.apache.commons.lang3.time.FastDatePrinter) == false) {
-            return false;
+            return ((_returnReplacementOperator1809.is("NULL")) ? ( null ) : (false));
         } 
         final org.apache.commons.lang3.time.FastDatePrinter other = ((org.apache.commons.lang3.time.FastDatePrinter)(obj));
-        return ((mPattern.equals(other.mPattern)) && (mTimeZone.equals(other.mTimeZone))) && (mLocale.equals(other.mLocale));
+        return ((_returnReplacementOperator1810.is("NULL")) ? ( null ) : (((mPattern.equals(other.mPattern)) && (mTimeZone.equals(other.mTimeZone))) && (mLocale.equals(other.mLocale))));
     }
 
     @java.lang.Override
     public int hashCode() {
-        return (mPattern.hashCode()) + (13 * ((mTimeZone.hashCode()) + ((_arithmeticOperatorHotSpot333.is("PLUS")) ? ((13 + (mLocale.hashCode()))) : (_arithmeticOperatorHotSpot333.is("MINUS")) ? ((13 - (mLocale.hashCode()))) : (_arithmeticOperatorHotSpot333.is("MUL")) ? ((13 * (mLocale.hashCode()))) :  ((13 / (mLocale.hashCode()))))));
+        return ((_returnReplacementOperator1812.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1812.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1812.is("ZERO")) ? ( 0 ) : ((mPattern.hashCode()) + (13 * ((mTimeZone.hashCode()) + (13 * (mLocale.hashCode()))))));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return ((((("FastDatePrinter[" + (mPattern)) + ",") + (mLocale)) + ",") + (mTimeZone.getID())) + "]";
+        return ((_returnReplacementOperator1823.is("NULL")) ? ( null ) : (((((("FastDatePrinter[" + (mPattern)) + ",") + (mLocale)) + ",") + (mTimeZone.getID())) + "]"));
     }
 
     private void readObject(final java.io.ObjectInputStream in) throws java.io.IOException, java.lang.ClassNotFoundException {
@@ -352,8 +352,8 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
     }
 
     private static void appendDigits(final java.lang.Appendable buffer, final int value) throws java.io.IOException {
-        buffer.append(((char)(((_arithmeticOperatorHotSpot338.is("PLUS")) ? ((value + 10)) : (_arithmeticOperatorHotSpot338.is("MINUS")) ? ((value - 10)) : (_arithmeticOperatorHotSpot338.is("MUL")) ? ((value * 10)) :  ((value / 10))) + '0')));
-        buffer.append(((_arithmeticOperatorHotSpot339.is("PLUS")) ? (((char)((value % 10) + '0'))) : (_arithmeticOperatorHotSpot339.is("MINUS")) ? (((char)((value % 10) - '0'))) : (_arithmeticOperatorHotSpot339.is("MUL")) ? (((char)((value % 10) * '0'))) :  (((char)((value % 10) / '0')))));
+        buffer.append(((char)((value / 10) + '0')));
+        buffer.append(((char)((value % 10) + '0')));
     }
 
     private static final int MAX_DIGITS = 10;
@@ -362,8 +362,8 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
         char[] work = new char[MAX_DIGITS];
         int digit = 0;
         while (value != 0) {
-            work[digit++] = ((_arithmeticOperatorHotSpot340.is("PLUS")) ? (((char)((value % 10) + '0'))) : (_arithmeticOperatorHotSpot340.is("MINUS")) ? (((char)((value % 10) - '0'))) : (_arithmeticOperatorHotSpot340.is("MUL")) ? (((char)((value % 10) * '0'))) :  (((char)((value % 10) / '0'))));
-            value = ((_arithmeticOperatorHotSpot341.is("PLUS")) ? (value + 10) : (_arithmeticOperatorHotSpot341.is("MINUS")) ? (value - 10) : (_arithmeticOperatorHotSpot341.is("MUL")) ? (value * 10) :  (value / 10));
+            work[digit++] = ((char)((value % 10) + '0'));
+            value = value / 10;
         }
         while (digit < minFieldWidth) {
             buffer.append('0');
@@ -393,7 +393,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return 1;
+            return ((_returnReplacementOperator1784.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1784.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1784.is("ZERO")) ? ( 0 ) : (1));
         }
 
         @java.lang.Override
@@ -411,7 +411,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return mValue.length();
+            return ((_returnReplacementOperator1790.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1790.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1790.is("ZERO")) ? ( 0 ) : (mValue.length()));
         }
 
         @java.lang.Override
@@ -439,7 +439,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
                     max = len;
                 } 
             }
-            return max;
+            return ((_returnReplacementOperator1791.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1791.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1791.is("ZERO")) ? ( 0 ) : (max));
         }
 
         @java.lang.Override
@@ -457,7 +457,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return 4;
+            return ((_returnReplacementOperator1804.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1804.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1804.is("ZERO")) ? ( 0 ) : (4));
         }
 
         @java.lang.Override
@@ -468,7 +468,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
         @java.lang.Override
         public final void appendTo(final java.lang.Appendable buffer, final int value) throws java.io.IOException {
             if (value < 10) {
-                buffer.append(((_arithmeticOperatorHotSpot332.is("PLUS")) ? (((char)(value + '0'))) : (_arithmeticOperatorHotSpot332.is("MINUS")) ? (((char)(value - '0'))) : (_arithmeticOperatorHotSpot332.is("MUL")) ? (((char)(value * '0'))) :  (((char)(value / '0')))));
+                buffer.append(((char)(value + '0')));
             } else if (value < 100) {
                 org.apache.commons.lang3.time.FastDatePrinter.appendDigits(buffer, value);
             } else {
@@ -486,18 +486,18 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return 2;
+            return ((_returnReplacementOperator1803.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1803.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1803.is("ZERO")) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
         public void appendTo(final java.lang.Appendable buffer, final java.util.Calendar calendar) throws java.io.IOException {
-            appendTo(buffer, ((_arithmeticOperatorHotSpot331.is("PLUS")) ? (((calendar.get(java.util.Calendar.MONTH)) + 1)) : (_arithmeticOperatorHotSpot331.is("MINUS")) ? (((calendar.get(java.util.Calendar.MONTH)) - 1)) : (_arithmeticOperatorHotSpot331.is("MUL")) ? (((calendar.get(java.util.Calendar.MONTH)) * 1)) :  (((calendar.get(java.util.Calendar.MONTH)) / 1))));
+            appendTo(buffer, ((calendar.get(java.util.Calendar.MONTH)) + 1));
         }
 
         @java.lang.Override
         public final void appendTo(final java.lang.Appendable buffer, final int value) throws java.io.IOException {
             if (value < 10) {
-                buffer.append(((_arithmeticOperatorHotSpot330.is("PLUS")) ? (((char)(value + '0'))) : (_arithmeticOperatorHotSpot330.is("MINUS")) ? (((char)(value - '0'))) : (_arithmeticOperatorHotSpot330.is("MUL")) ? (((char)(value * '0'))) :  (((char)(value / '0')))));
+                buffer.append(((char)(value + '0')));
             } else {
                 org.apache.commons.lang3.time.FastDatePrinter.appendDigits(buffer, value);
             }
@@ -519,7 +519,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return mSize;
+            return ((_returnReplacementOperator1789.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1789.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1789.is("ZERO")) ? ( 0 ) : (mSize));
         }
 
         @java.lang.Override
@@ -542,7 +542,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return 2;
+            return ((_returnReplacementOperator1801.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1801.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1801.is("ZERO")) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
@@ -569,7 +569,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return 2;
+            return ((_returnReplacementOperator1802.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1802.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1802.is("ZERO")) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
@@ -592,12 +592,12 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return 2;
+            return ((_returnReplacementOperator1800.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1800.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1800.is("ZERO")) ? ( 0 ) : (2));
         }
 
         @java.lang.Override
         public void appendTo(final java.lang.Appendable buffer, final java.util.Calendar calendar) throws java.io.IOException {
-            appendTo(buffer, ((_arithmeticOperatorHotSpot329.is("PLUS")) ? (((calendar.get(java.util.Calendar.MONTH)) + 1)) : (_arithmeticOperatorHotSpot329.is("MINUS")) ? (((calendar.get(java.util.Calendar.MONTH)) - 1)) : (_arithmeticOperatorHotSpot329.is("MUL")) ? (((calendar.get(java.util.Calendar.MONTH)) * 1)) :  (((calendar.get(java.util.Calendar.MONTH)) / 1))));
+            appendTo(buffer, ((calendar.get(java.util.Calendar.MONTH)) + 1));
         }
 
         @java.lang.Override
@@ -615,14 +615,14 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return mRule.estimateLength();
+            return ((_returnReplacementOperator1798.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1798.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1798.is("ZERO")) ? ( 0 ) : (mRule.estimateLength()));
         }
 
         @java.lang.Override
         public void appendTo(final java.lang.Appendable buffer, final java.util.Calendar calendar) throws java.io.IOException {
             int value = calendar.get(java.util.Calendar.HOUR);
             if (value == 0) {
-                value = ((_arithmeticOperatorHotSpot327.is("PLUS")) ? ((calendar.getLeastMaximum(java.util.Calendar.HOUR)) + 1) : (_arithmeticOperatorHotSpot327.is("MINUS")) ? ((calendar.getLeastMaximum(java.util.Calendar.HOUR)) - 1) : (_arithmeticOperatorHotSpot327.is("MUL")) ? ((calendar.getLeastMaximum(java.util.Calendar.HOUR)) * 1) :  ((calendar.getLeastMaximum(java.util.Calendar.HOUR)) / 1));
+                value = (calendar.getLeastMaximum(java.util.Calendar.HOUR)) + 1;
             } 
             mRule.appendTo(buffer, value);
         }
@@ -642,14 +642,14 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return mRule.estimateLength();
+            return ((_returnReplacementOperator1799.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1799.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1799.is("ZERO")) ? ( 0 ) : (mRule.estimateLength()));
         }
 
         @java.lang.Override
         public void appendTo(final java.lang.Appendable buffer, final java.util.Calendar calendar) throws java.io.IOException {
             int value = calendar.get(java.util.Calendar.HOUR_OF_DAY);
             if (value == 0) {
-                value = ((_arithmeticOperatorHotSpot328.is("PLUS")) ? ((calendar.getMaximum(java.util.Calendar.HOUR_OF_DAY)) + 1) : (_arithmeticOperatorHotSpot328.is("MINUS")) ? ((calendar.getMaximum(java.util.Calendar.HOUR_OF_DAY)) - 1) : (_arithmeticOperatorHotSpot328.is("MUL")) ? ((calendar.getMaximum(java.util.Calendar.HOUR_OF_DAY)) * 1) :  ((calendar.getMaximum(java.util.Calendar.HOUR_OF_DAY)) / 1));
+                value = (calendar.getMaximum(java.util.Calendar.HOUR_OF_DAY)) + 1;
             } 
             mRule.appendTo(buffer, value);
         }
@@ -672,7 +672,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
                 value = prior;
             } 
         } 
-        return value;
+        return ((_returnReplacementOperator1821.is("NULL")) ? ( null ) : (value));
     }
 
     private static class TimeZoneNameRule implements Rule {
@@ -693,7 +693,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return java.lang.Math.max(mStandard.length(), mDaylight.length());
+            return ((_returnReplacementOperator1796.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1796.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1796.is("ZERO")) ? ( 0 ) : (java.lang.Math.max(mStandard.length(), mDaylight.length())));
         }
 
         @java.lang.Override
@@ -720,24 +720,24 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return 5;
+            return ((_returnReplacementOperator1797.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1797.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1797.is("ZERO")) ? ( 0 ) : (5));
         }
 
         @java.lang.Override
         public void appendTo(final java.lang.Appendable buffer, final java.util.Calendar calendar) throws java.io.IOException {
-            int offset = ((_arithmeticOperatorHotSpot323.is("PLUS")) ? ((calendar.get(java.util.Calendar.ZONE_OFFSET)) + (calendar.get(java.util.Calendar.DST_OFFSET))) : (_arithmeticOperatorHotSpot323.is("MINUS")) ? ((calendar.get(java.util.Calendar.ZONE_OFFSET)) - (calendar.get(java.util.Calendar.DST_OFFSET))) : (_arithmeticOperatorHotSpot323.is("MUL")) ? ((calendar.get(java.util.Calendar.ZONE_OFFSET)) * (calendar.get(java.util.Calendar.DST_OFFSET))) :  ((calendar.get(java.util.Calendar.ZONE_OFFSET)) / (calendar.get(java.util.Calendar.DST_OFFSET))));
+            int offset = (calendar.get(java.util.Calendar.ZONE_OFFSET)) + (calendar.get(java.util.Calendar.DST_OFFSET));
             if (offset < 0) {
                 buffer.append('-');
                 offset = -offset;
             } else {
                 buffer.append('+');
             }
-            final int hours = offset / (((_arithmeticOperatorHotSpot324.is("PLUS")) ? ((60 + 60)) : (_arithmeticOperatorHotSpot324.is("MINUS")) ? ((60 - 60)) : (_arithmeticOperatorHotSpot324.is("MUL")) ? ((60 * 60)) :  ((60 / 60))) * 1000);
+            final int hours = offset / ((60 * 60) * 1000);
             org.apache.commons.lang3.time.FastDatePrinter.appendDigits(buffer, hours);
             if (mColon) {
                 buffer.append(':');
             } 
-            final int minutes = (offset / ((_arithmeticOperatorHotSpot325.is("PLUS")) ? ((60 + 1000)) : (_arithmeticOperatorHotSpot325.is("MINUS")) ? ((60 - 1000)) : (_arithmeticOperatorHotSpot325.is("MUL")) ? ((60 * 1000)) :  ((60 / 1000)))) - ((_arithmeticOperatorHotSpot326.is("PLUS")) ? ((60 + hours)) : (_arithmeticOperatorHotSpot326.is("MINUS")) ? ((60 - hours)) : (_arithmeticOperatorHotSpot326.is("MUL")) ? ((60 * hours)) :  ((60 / hours)));
+            final int minutes = (offset / (60 * 1000)) - (60 * hours);
             org.apache.commons.lang3.time.FastDatePrinter.appendDigits(buffer, minutes);
         }
     }
@@ -752,11 +752,11 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
         static org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule getRule(int tokenLen) {
             switch (tokenLen) {
                 case 1 :
-                    return ISO8601_HOURS;
+                    return ((_returnReplacementOperator1786.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS));
                 case 2 :
-                    return ISO8601_HOURS_MINUTES;
+                    return ((_returnReplacementOperator1787.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS_MINUTES));
                 case 3 :
-                    return ISO8601_HOURS_COLON_MINUTES;
+                    return ((_returnReplacementOperator1788.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.FastDatePrinter.Iso8601_Rule.ISO8601_HOURS_COLON_MINUTES));
                 default :
                     throw new java.lang.IllegalArgumentException("invalid number of X");
             }
@@ -770,12 +770,12 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int estimateLength() {
-            return length;
+            return ((_returnReplacementOperator1785.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1785.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1785.is("ZERO")) ? ( 0 ) : (length));
         }
 
         @java.lang.Override
         public void appendTo(final java.lang.Appendable buffer, final java.util.Calendar calendar) throws java.io.IOException {
-            int offset = ((_arithmeticOperatorHotSpot318.is("PLUS")) ? ((calendar.get(java.util.Calendar.ZONE_OFFSET)) + (calendar.get(java.util.Calendar.DST_OFFSET))) : (_arithmeticOperatorHotSpot318.is("MINUS")) ? ((calendar.get(java.util.Calendar.ZONE_OFFSET)) - (calendar.get(java.util.Calendar.DST_OFFSET))) : (_arithmeticOperatorHotSpot318.is("MUL")) ? ((calendar.get(java.util.Calendar.ZONE_OFFSET)) * (calendar.get(java.util.Calendar.DST_OFFSET))) :  ((calendar.get(java.util.Calendar.ZONE_OFFSET)) / (calendar.get(java.util.Calendar.DST_OFFSET))));
+            int offset = (calendar.get(java.util.Calendar.ZONE_OFFSET)) + (calendar.get(java.util.Calendar.DST_OFFSET));
             if (offset == 0) {
                 buffer.append("Z");
                 return ;
@@ -786,7 +786,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
             } else {
                 buffer.append('+');
             }
-            final int hours = offset / (((_arithmeticOperatorHotSpot319.is("PLUS")) ? ((60 + 60)) : (_arithmeticOperatorHotSpot319.is("MINUS")) ? ((60 - 60)) : (_arithmeticOperatorHotSpot319.is("MUL")) ? ((60 * 60)) :  ((60 / 60))) * 1000);
+            final int hours = offset / ((60 * 60) * 1000);
             org.apache.commons.lang3.time.FastDatePrinter.appendDigits(buffer, hours);
             if ((length) < 5) {
                 return ;
@@ -794,7 +794,7 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
             if ((length) == 6) {
                 buffer.append(':');
             } 
-            final int minutes = (offset / ((_arithmeticOperatorHotSpot320.is("PLUS")) ? ((60 + 1000)) : (_arithmeticOperatorHotSpot320.is("MINUS")) ? ((60 - 1000)) : (_arithmeticOperatorHotSpot320.is("MUL")) ? ((60 * 1000)) :  ((60 / 1000)))) - ((_arithmeticOperatorHotSpot321.is("PLUS")) ? ((60 + hours)) : (_arithmeticOperatorHotSpot321.is("MINUS")) ? ((60 - hours)) : (_arithmeticOperatorHotSpot321.is("MUL")) ? ((60 * hours)) :  ((60 / hours)));
+            final int minutes = (offset / (60 * 1000)) - (60 * hours);
             org.apache.commons.lang3.time.FastDatePrinter.appendDigits(buffer, minutes);
         }
     }
@@ -818,68 +818,126 @@ public class FastDatePrinter implements java.io.Serializable , org.apache.common
 
         @java.lang.Override
         public int hashCode() {
-            return ((((_arithmeticOperatorHotSpot322.is("PLUS")) ? (((mStyle) + 31)) : (_arithmeticOperatorHotSpot322.is("MINUS")) ? (((mStyle) - 31)) : (_arithmeticOperatorHotSpot322.is("MUL")) ? (((mStyle) * 31)) :  (((mStyle) / 31))) + (mLocale.hashCode())) * 31) + (mTimeZone.hashCode());
+            return ((_returnReplacementOperator1795.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1795.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1795.is("ZERO")) ? ( 0 ) : (((((mStyle) * 31) + (mLocale.hashCode())) * 31) + (mTimeZone.hashCode())));
         }
 
         @java.lang.Override
         public boolean equals(final java.lang.Object obj) {
             if ((this) == obj) {
-                return true;
+                return ((_returnReplacementOperator1792.is("NULL")) ? ( null ) : (true));
             } 
             if (obj instanceof org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey) {
                 final org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey other = ((org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey)(obj));
-                return ((mTimeZone.equals(other.mTimeZone)) && ((mStyle) == (other.mStyle))) && (mLocale.equals(other.mLocale));
+                return ((_returnReplacementOperator1793.is("NULL")) ? ( null ) : (((mTimeZone.equals(other.mTimeZone)) && ((mStyle) == (other.mStyle))) && (mLocale.equals(other.mLocale))));
             } 
-            return false;
+            return ((_returnReplacementOperator1794.is("NULL")) ? ( null ) : (false));
         }
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot318 = metamutator.Selector.of(318,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot318");
+    private static final metamutator.Selector _returnReplacementOperator1784 = metamutator.Selector.of(1784,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1784");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot319 = metamutator.Selector.of(319,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot319");
+    private static final metamutator.Selector _returnReplacementOperator1785 = metamutator.Selector.of(1785,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1785");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot320 = metamutator.Selector.of(320,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot320");
+    private static final metamutator.Selector _returnReplacementOperator1786 = metamutator.Selector.of(1786,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1786");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot321 = metamutator.Selector.of(321,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot321");
+    private static final metamutator.Selector _returnReplacementOperator1787 = metamutator.Selector.of(1787,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1787");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot322 = metamutator.Selector.of(322,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot322");
+    private static final metamutator.Selector _returnReplacementOperator1788 = metamutator.Selector.of(1788,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1788");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot323 = metamutator.Selector.of(323,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot323");
+    private static final metamutator.Selector _returnReplacementOperator1789 = metamutator.Selector.of(1789,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1789");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot324 = metamutator.Selector.of(324,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot324");
+    private static final metamutator.Selector _returnReplacementOperator1790 = metamutator.Selector.of(1790,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1790");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot325 = metamutator.Selector.of(325,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot325");
+    private static final metamutator.Selector _returnReplacementOperator1791 = metamutator.Selector.of(1791,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1791");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot326 = metamutator.Selector.of(326,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot326");
+    private static final metamutator.Selector _returnReplacementOperator1792 = metamutator.Selector.of(1792,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1792");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot327 = metamutator.Selector.of(327,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot327");
+    private static final metamutator.Selector _returnReplacementOperator1793 = metamutator.Selector.of(1793,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1793");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot328 = metamutator.Selector.of(328,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot328");
+    private static final metamutator.Selector _returnReplacementOperator1794 = metamutator.Selector.of(1794,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1794");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot329 = metamutator.Selector.of(329,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot329");
+    private static final metamutator.Selector _returnReplacementOperator1795 = metamutator.Selector.of(1795,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1795");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot330 = metamutator.Selector.of(330,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot330");
+    private static final metamutator.Selector _returnReplacementOperator1796 = metamutator.Selector.of(1796,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1796");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot331 = metamutator.Selector.of(331,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot331");
+    private static final metamutator.Selector _returnReplacementOperator1797 = metamutator.Selector.of(1797,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1797");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot332 = metamutator.Selector.of(332,new String[]{"PLUS","MINUS","MUL","DIV"}).id("_arithmeticOperatorHotSpot332");
+    private static final metamutator.Selector _returnReplacementOperator1798 = metamutator.Selector.of(1798,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1798");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot333 = metamutator.Selector.of(333,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot333");
+    private static final metamutator.Selector _returnReplacementOperator1799 = metamutator.Selector.of(1799,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1799");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot334 = metamutator.Selector.of(334,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot334");
+    private static final metamutator.Selector _returnReplacementOperator1800 = metamutator.Selector.of(1800,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1800");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot335 = metamutator.Selector.of(335,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot335");
+    private static final metamutator.Selector _returnReplacementOperator1801 = metamutator.Selector.of(1801,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1801");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot336 = metamutator.Selector.of(336,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot336");
+    private static final metamutator.Selector _returnReplacementOperator1802 = metamutator.Selector.of(1802,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1802");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot337 = metamutator.Selector.of(337,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot337");
+    private static final metamutator.Selector _returnReplacementOperator1803 = metamutator.Selector.of(1803,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1803");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot338 = metamutator.Selector.of(338,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot338");
+    private static final metamutator.Selector _returnReplacementOperator1804 = metamutator.Selector.of(1804,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1804");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot339 = metamutator.Selector.of(339,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot339");
+    private static final metamutator.Selector _returnReplacementOperator1805 = metamutator.Selector.of(1805,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1805");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot340 = metamutator.Selector.of(340,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot340");
+    private static final metamutator.Selector _returnReplacementOperator1806 = metamutator.Selector.of(1806,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1806");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot341 = metamutator.Selector.of(341,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_arithmeticOperatorHotSpot341");
+    private static final metamutator.Selector _returnReplacementOperator1807 = metamutator.Selector.of(1807,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1807");
+
+    private static final metamutator.Selector _returnReplacementOperator1808 = metamutator.Selector.of(1808,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1808");
+
+    private static final metamutator.Selector _returnReplacementOperator1809 = metamutator.Selector.of(1809,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1809");
+
+    private static final metamutator.Selector _returnReplacementOperator1810 = metamutator.Selector.of(1810,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1810");
+
+    private static final metamutator.Selector _returnReplacementOperator1811 = metamutator.Selector.of(1811,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1811");
+
+    private static final metamutator.Selector _returnReplacementOperator1812 = metamutator.Selector.of(1812,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1812");
+
+    private static final metamutator.Selector _returnReplacementOperator1813 = metamutator.Selector.of(1813,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1813");
+
+    private static final metamutator.Selector _returnReplacementOperator1814 = metamutator.Selector.of(1814,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1814");
+
+    private static final metamutator.Selector _returnReplacementOperator1815 = metamutator.Selector.of(1815,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1815");
+
+    private static final metamutator.Selector _returnReplacementOperator1816 = metamutator.Selector.of(1816,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1816");
+
+    private static final metamutator.Selector _returnReplacementOperator1817 = metamutator.Selector.of(1817,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1817");
+
+    private static final metamutator.Selector _returnReplacementOperator1818 = metamutator.Selector.of(1818,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1818");
+
+    private static final metamutator.Selector _returnReplacementOperator1819 = metamutator.Selector.of(1819,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1819");
+
+    private static final metamutator.Selector _returnReplacementOperator1820 = metamutator.Selector.of(1820,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1820");
+
+    private static final metamutator.Selector _returnReplacementOperator1821 = metamutator.Selector.of(1821,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1821");
+
+    private static final metamutator.Selector _returnReplacementOperator1822 = metamutator.Selector.of(1822,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1822");
+
+    private static final metamutator.Selector _returnReplacementOperator1823 = metamutator.Selector.of(1823,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1823");
+
+    private static final metamutator.Selector _returnReplacementOperator1824 = metamutator.Selector.of(1824,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1824");
+
+    private static final metamutator.Selector _returnReplacementOperator1825 = metamutator.Selector.of(1825,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1825");
+
+    private static final metamutator.Selector _returnReplacementOperator1826 = metamutator.Selector.of(1826,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1826");
+
+    private static final metamutator.Selector _returnReplacementOperator1827 = metamutator.Selector.of(1827,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1827");
+
+    private static final metamutator.Selector _returnReplacementOperator1828 = metamutator.Selector.of(1828,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1828");
+
+    private static final metamutator.Selector _returnReplacementOperator1829 = metamutator.Selector.of(1829,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1829");
+
+    private static final metamutator.Selector _returnReplacementOperator1830 = metamutator.Selector.of(1830,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1830");
+
+    private static final metamutator.Selector _returnReplacementOperator1831 = metamutator.Selector.of(1831,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1831");
+
+    private static final metamutator.Selector _returnReplacementOperator1832 = metamutator.Selector.of(1832,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1832");
+
+    private static final metamutator.Selector _returnReplacementOperator1833 = metamutator.Selector.of(1833,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1833");
+
+    private static final metamutator.Selector _returnReplacementOperator1834 = metamutator.Selector.of(1834,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1834");
+
+    private static final metamutator.Selector _returnReplacementOperator1835 = metamutator.Selector.of(1835,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1835");
+
+    private static final metamutator.Selector _returnReplacementOperator1836 = metamutator.Selector.of(1836,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FastDatePrinter.class).id("_returnReplacementOperator1836");
 }
 

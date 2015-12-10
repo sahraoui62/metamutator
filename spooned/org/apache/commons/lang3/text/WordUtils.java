@@ -7,12 +7,12 @@ public class WordUtils {
     }
 
     public static java.lang.String wrap(final java.lang.String str, final int wrapLength) {
-        return org.apache.commons.lang3.text.WordUtils.wrap(str, wrapLength, null, false);
+        return ((_returnReplacementOperator1580.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.wrap(str, wrapLength, null, false)));
     }
 
     public static java.lang.String wrap(final java.lang.String str, int wrapLength, java.lang.String newLineStr, final boolean wrapLongWords) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator1581.is("NULL")) ? ( null ) : (null));
         } 
         if (newLineStr == null) {
             newLineStr = org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR;
@@ -22,31 +22,31 @@ public class WordUtils {
         } 
         final int inputLineLength = str.length();
         int offset = 0;
-        final java.lang.StringBuilder wrappedLine = new java.lang.StringBuilder(((_arithmeticOperatorHotSpot270.is("PLUS")) ? ((inputLineLength + 32)) : (_arithmeticOperatorHotSpot270.is("MINUS")) ? ((inputLineLength - 32)) : (_arithmeticOperatorHotSpot270.is("MUL")) ? ((inputLineLength * 32)) :  ((inputLineLength / 32))));
+        final java.lang.StringBuilder wrappedLine = new java.lang.StringBuilder((inputLineLength + 32));
         while (offset < inputLineLength) {
             if ((str.charAt(offset)) == ' ') {
                 offset++;
                 continue;
             } 
-            if (((_arithmeticOperatorHotSpot271.is("PLUS")) ? ((inputLineLength + offset)) : (_arithmeticOperatorHotSpot271.is("MINUS")) ? ((inputLineLength - offset)) : (_arithmeticOperatorHotSpot271.is("MUL")) ? ((inputLineLength * offset)) :  ((inputLineLength / offset))) <= wrapLength) {
+            if ((inputLineLength - offset) <= wrapLength) {
                 break;
             } 
-            int spaceToWrapAt = str.lastIndexOf(' ', ((_arithmeticOperatorHotSpot272.is("PLUS")) ? ((wrapLength + offset)) : (_arithmeticOperatorHotSpot272.is("MINUS")) ? ((wrapLength - offset)) : (_arithmeticOperatorHotSpot272.is("MUL")) ? ((wrapLength * offset)) :  ((wrapLength / offset))));
+            int spaceToWrapAt = str.lastIndexOf(' ', (wrapLength + offset));
             if (spaceToWrapAt >= offset) {
                 wrappedLine.append(str.substring(offset, spaceToWrapAt));
                 wrappedLine.append(newLineStr);
-                offset = ((_arithmeticOperatorHotSpot273.is("PLUS")) ? (spaceToWrapAt + 1) : (_arithmeticOperatorHotSpot273.is("MINUS")) ? (spaceToWrapAt - 1) : (_arithmeticOperatorHotSpot273.is("MUL")) ? (spaceToWrapAt * 1) :  (spaceToWrapAt / 1));
+                offset = spaceToWrapAt + 1;
             } else {
                 if (wrapLongWords) {
-                    wrappedLine.append(str.substring(offset, ((_arithmeticOperatorHotSpot274.is("PLUS")) ? ((wrapLength + offset)) : (_arithmeticOperatorHotSpot274.is("MINUS")) ? ((wrapLength - offset)) : (_arithmeticOperatorHotSpot274.is("MUL")) ? ((wrapLength * offset)) :  ((wrapLength / offset)))));
+                    wrappedLine.append(str.substring(offset, (wrapLength + offset)));
                     wrappedLine.append(newLineStr);
                     offset += wrapLength;
                 } else {
-                    spaceToWrapAt = str.indexOf(' ', ((_arithmeticOperatorHotSpot275.is("PLUS")) ? ((wrapLength + offset)) : (_arithmeticOperatorHotSpot275.is("MINUS")) ? ((wrapLength - offset)) : (_arithmeticOperatorHotSpot275.is("MUL")) ? ((wrapLength * offset)) :  ((wrapLength / offset))));
+                    spaceToWrapAt = str.indexOf(' ', (wrapLength + offset));
                     if (spaceToWrapAt >= 0) {
                         wrappedLine.append(str.substring(offset, spaceToWrapAt));
                         wrappedLine.append(newLineStr);
-                        offset = ((_arithmeticOperatorHotSpot276.is("PLUS")) ? (spaceToWrapAt + 1) : (_arithmeticOperatorHotSpot276.is("MINUS")) ? (spaceToWrapAt - 1) : (_arithmeticOperatorHotSpot276.is("MUL")) ? (spaceToWrapAt * 1) :  (spaceToWrapAt / 1));
+                        offset = spaceToWrapAt + 1;
                     } else {
                         wrappedLine.append(str.substring(offset));
                         offset = inputLineLength;
@@ -55,17 +55,17 @@ public class WordUtils {
             }
         }
         wrappedLine.append(str.substring(offset));
-        return wrappedLine.toString();
+        return ((_returnReplacementOperator1582.is("NULL")) ? ( null ) : (wrappedLine.toString()));
     }
 
     public static java.lang.String capitalize(final java.lang.String str) {
-        return org.apache.commons.lang3.text.WordUtils.capitalize(str, null);
+        return ((_returnReplacementOperator1565.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalize(str, null)));
     }
 
     public static java.lang.String capitalize(final java.lang.String str, final char... delimiters) {
         final int delimLen = delimiters == null ? -1 : delimiters.length;
         if ((org.apache.commons.lang3.StringUtils.isEmpty(str)) || (delimLen == 0)) {
-            return str;
+            return ((_returnReplacementOperator1566.is("NULL")) ? ( null ) : (str));
         } 
         final char[] buffer = str.toCharArray();
         boolean capitalizeNext = true;
@@ -78,30 +78,30 @@ public class WordUtils {
                 capitalizeNext = false;
             } 
         }
-        return new java.lang.String(buffer);
+        return ((_returnReplacementOperator1567.is("NULL")) ? ( null ) : (new java.lang.String(buffer)));
     }
 
     public static java.lang.String capitalizeFully(final java.lang.String str) {
-        return org.apache.commons.lang3.text.WordUtils.capitalizeFully(str, null);
+        return ((_returnReplacementOperator1568.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalizeFully(str, null)));
     }
 
     public static java.lang.String capitalizeFully(java.lang.String str, final char... delimiters) {
         final int delimLen = delimiters == null ? -1 : delimiters.length;
         if ((org.apache.commons.lang3.StringUtils.isEmpty(str)) || (delimLen == 0)) {
-            return str;
+            return ((_returnReplacementOperator1569.is("NULL")) ? ( null ) : (str));
         } 
         str = str.toLowerCase();
-        return org.apache.commons.lang3.text.WordUtils.capitalize(str, delimiters);
+        return ((_returnReplacementOperator1570.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.capitalize(str, delimiters)));
     }
 
     public static java.lang.String uncapitalize(final java.lang.String str) {
-        return org.apache.commons.lang3.text.WordUtils.uncapitalize(str, null);
+        return ((_returnReplacementOperator1577.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.uncapitalize(str, null)));
     }
 
     public static java.lang.String uncapitalize(final java.lang.String str, final char... delimiters) {
         final int delimLen = delimiters == null ? -1 : delimiters.length;
         if ((org.apache.commons.lang3.StringUtils.isEmpty(str)) || (delimLen == 0)) {
-            return str;
+            return ((_returnReplacementOperator1578.is("NULL")) ? ( null ) : (str));
         } 
         final char[] buffer = str.toCharArray();
         boolean uncapitalizeNext = true;
@@ -114,12 +114,12 @@ public class WordUtils {
                 uncapitalizeNext = false;
             } 
         }
-        return new java.lang.String(buffer);
+        return ((_returnReplacementOperator1579.is("NULL")) ? ( null ) : (new java.lang.String(buffer)));
     }
 
     public static java.lang.String swapCase(final java.lang.String str) {
         if (org.apache.commons.lang3.StringUtils.isEmpty(str)) {
-            return str;
+            return ((_returnReplacementOperator1575.is("NULL")) ? ( null ) : (str));
         } 
         final char[] buffer = str.toCharArray();
         boolean whitespace = true;
@@ -142,22 +142,22 @@ public class WordUtils {
                 whitespace = java.lang.Character.isWhitespace(ch);
             }
         }
-        return new java.lang.String(buffer);
+        return ((_returnReplacementOperator1576.is("NULL")) ? ( null ) : (new java.lang.String(buffer)));
     }
 
     public static java.lang.String initials(final java.lang.String str) {
-        return org.apache.commons.lang3.text.WordUtils.initials(str, null);
+        return ((_returnReplacementOperator1571.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.WordUtils.initials(str, null)));
     }
 
     public static java.lang.String initials(final java.lang.String str, final char... delimiters) {
         if (org.apache.commons.lang3.StringUtils.isEmpty(str)) {
-            return str;
+            return ((_returnReplacementOperator1572.is("NULL")) ? ( null ) : (str));
         } 
         if ((delimiters != null) && ((delimiters.length) == 0)) {
-            return "";
+            return ((_returnReplacementOperator1573.is("NULL")) ? ( null ) : (""));
         } 
         final int strLen = str.length();
-        final char[] buf = new char[((_arithmeticOperatorHotSpot269.is("PLUS")) ? ((strLen + 2)) : (_arithmeticOperatorHotSpot269.is("MINUS")) ? ((strLen - 2)) : (_arithmeticOperatorHotSpot269.is("MUL")) ? ((strLen * 2)) :  ((strLen / 2))) + 1];
+        final char[] buf = new char[(strLen / 2) + 1];
         int count = 0;
         boolean lastWasGap = true;
         for (int i = 0 ; i < strLen ; i++) {
@@ -171,51 +171,85 @@ public class WordUtils {
                 continue;
             }
         }
-        return new java.lang.String(buf , 0 , count);
+        return ((_returnReplacementOperator1574.is("NULL")) ? ( null ) : (new java.lang.String(buf , 0 , count)));
     }
 
     public static boolean containsAllWords(java.lang.CharSequence word, java.lang.CharSequence... words) {
         if ((org.apache.commons.lang3.StringUtils.isEmpty(word)) || (org.apache.commons.lang3.ArrayUtils.isEmpty(words))) {
-            return false;
+            return ((_returnReplacementOperator1558.is("NULL")) ? ( null ) : (false));
         } 
         for (java.lang.CharSequence w : words) {
             if (org.apache.commons.lang3.StringUtils.isBlank(w)) {
-                return false;
+                return ((_returnReplacementOperator1559.is("NULL")) ? ( null ) : (false));
             } 
             java.util.regex.Pattern p = java.util.regex.Pattern.compile(((".*\\b" + w) + "\\b.*"));
             if (!(p.matcher(word).matches())) {
-                return false;
+                return ((_returnReplacementOperator1560.is("NULL")) ? ( null ) : (false));
             } 
         }
-        return true;
+        return ((_returnReplacementOperator1561.is("NULL")) ? ( null ) : (true));
     }
 
     private static boolean isDelimiter(final char ch, final char[] delimiters) {
         if (delimiters == null) {
-            return java.lang.Character.isWhitespace(ch);
+            return ((_returnReplacementOperator1562.is("NULL")) ? ( null ) : (java.lang.Character.isWhitespace(ch)));
         } 
         for (final char delimiter : delimiters) {
             if (ch == delimiter) {
-                return true;
+                return ((_returnReplacementOperator1563.is("NULL")) ? ( null ) : (true));
             } 
         }
-        return false;
+        return ((_returnReplacementOperator1564.is("NULL")) ? ( null ) : (false));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot269 = metamutator.Selector.of(269,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot269");
+    private static final metamutator.Selector _returnReplacementOperator1558 = metamutator.Selector.of(1558,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1558");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot270 = metamutator.Selector.of(270,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot270");
+    private static final metamutator.Selector _returnReplacementOperator1559 = metamutator.Selector.of(1559,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1559");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot271 = metamutator.Selector.of(271,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot271");
+    private static final metamutator.Selector _returnReplacementOperator1560 = metamutator.Selector.of(1560,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1560");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot272 = metamutator.Selector.of(272,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot272");
+    private static final metamutator.Selector _returnReplacementOperator1561 = metamutator.Selector.of(1561,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1561");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot273 = metamutator.Selector.of(273,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot273");
+    private static final metamutator.Selector _returnReplacementOperator1562 = metamutator.Selector.of(1562,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1562");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot274 = metamutator.Selector.of(274,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot274");
+    private static final metamutator.Selector _returnReplacementOperator1563 = metamutator.Selector.of(1563,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1563");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot275 = metamutator.Selector.of(275,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot275");
+    private static final metamutator.Selector _returnReplacementOperator1564 = metamutator.Selector.of(1564,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1564");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot276 = metamutator.Selector.of(276,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_arithmeticOperatorHotSpot276");
+    private static final metamutator.Selector _returnReplacementOperator1565 = metamutator.Selector.of(1565,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1565");
+
+    private static final metamutator.Selector _returnReplacementOperator1566 = metamutator.Selector.of(1566,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1566");
+
+    private static final metamutator.Selector _returnReplacementOperator1567 = metamutator.Selector.of(1567,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1567");
+
+    private static final metamutator.Selector _returnReplacementOperator1568 = metamutator.Selector.of(1568,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1568");
+
+    private static final metamutator.Selector _returnReplacementOperator1569 = metamutator.Selector.of(1569,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1569");
+
+    private static final metamutator.Selector _returnReplacementOperator1570 = metamutator.Selector.of(1570,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1570");
+
+    private static final metamutator.Selector _returnReplacementOperator1571 = metamutator.Selector.of(1571,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1571");
+
+    private static final metamutator.Selector _returnReplacementOperator1572 = metamutator.Selector.of(1572,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1572");
+
+    private static final metamutator.Selector _returnReplacementOperator1573 = metamutator.Selector.of(1573,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1573");
+
+    private static final metamutator.Selector _returnReplacementOperator1574 = metamutator.Selector.of(1574,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1574");
+
+    private static final metamutator.Selector _returnReplacementOperator1575 = metamutator.Selector.of(1575,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1575");
+
+    private static final metamutator.Selector _returnReplacementOperator1576 = metamutator.Selector.of(1576,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1576");
+
+    private static final metamutator.Selector _returnReplacementOperator1577 = metamutator.Selector.of(1577,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1577");
+
+    private static final metamutator.Selector _returnReplacementOperator1578 = metamutator.Selector.of(1578,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1578");
+
+    private static final metamutator.Selector _returnReplacementOperator1579 = metamutator.Selector.of(1579,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1579");
+
+    private static final metamutator.Selector _returnReplacementOperator1580 = metamutator.Selector.of(1580,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1580");
+
+    private static final metamutator.Selector _returnReplacementOperator1581 = metamutator.Selector.of(1581,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1581");
+
+    private static final metamutator.Selector _returnReplacementOperator1582 = metamutator.Selector.of(1582,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.WordUtils.class).id("_returnReplacementOperator1582");
 }
 

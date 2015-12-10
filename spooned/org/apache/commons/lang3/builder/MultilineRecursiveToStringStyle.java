@@ -16,10 +16,10 @@ public class MultilineRecursiveToStringStyle extends org.apache.commons.lang3.bu
     private void resetIndent() {
         setArrayStart((("{" + (org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR)) + (spacer(spaces))));
         setArraySeparator((("," + (org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR)) + (spacer(spaces))));
-        setArrayEnd((((org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR) + (spacer(((_arithmeticOperatorHotSpot21.is("PLUS")) ? (((spaces) + (indent))) : (_arithmeticOperatorHotSpot21.is("MINUS")) ? (((spaces) - (indent))) : (_arithmeticOperatorHotSpot21.is("MUL")) ? (((spaces) * (indent))) :  (((spaces) / (indent))))))) + "}"));
+        setArrayEnd((((org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR) + (spacer(((spaces) - (indent))))) + "}"));
         setContentStart((("[" + (org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR)) + (spacer(spaces))));
         setFieldSeparator((("," + (org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR)) + (spacer(spaces))));
-        setContentEnd((((org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR) + (spacer(((_arithmeticOperatorHotSpot22.is("PLUS")) ? (((spaces) + (indent))) : (_arithmeticOperatorHotSpot22.is("MINUS")) ? (((spaces) - (indent))) : (_arithmeticOperatorHotSpot22.is("MUL")) ? (((spaces) * (indent))) :  (((spaces) / (indent))))))) + "]"));
+        setContentEnd((((org.apache.commons.lang3.SystemUtils.LINE_SEPARATOR) + (spacer(((spaces) - (indent))))) + "]"));
     }
 
     private java.lang.StringBuilder spacer(int spaces) {
@@ -27,7 +27,7 @@ public class MultilineRecursiveToStringStyle extends org.apache.commons.lang3.bu
         for (int i = 0 ; i < spaces ; i++) {
             sb.append(" ");
         }
-        return sb;
+        return ((_returnReplacementOperator295.is("NULL")) ? ( null ) : (sb));
     }
 
     @java.lang.Override
@@ -133,8 +133,6 @@ public class MultilineRecursiveToStringStyle extends org.apache.commons.lang3.bu
         resetIndent();
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot21 = metamutator.Selector.of(21,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.builder.MultilineRecursiveToStringStyle.class).id("_arithmeticOperatorHotSpot21");
-
-    private static final metamutator.Selector _arithmeticOperatorHotSpot22 = metamutator.Selector.of(22,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.builder.MultilineRecursiveToStringStyle.class).id("_arithmeticOperatorHotSpot22");
+    private static final metamutator.Selector _returnReplacementOperator295 = metamutator.Selector.of(295,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.MultilineRecursiveToStringStyle.class).id("_returnReplacementOperator295");
 }
 

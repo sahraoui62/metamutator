@@ -12,10 +12,10 @@ public class LocaleUtils {
 
     public static java.util.Locale toLocale(final java.lang.String str) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator2829.is("NULL")) ? ( null ) : (null));
         } 
         if (str.isEmpty()) {
-            return new java.util.Locale("" , "");
+            return ((_returnReplacementOperator2830.is("NULL")) ? ( null ) : (new java.util.Locale("" , "")));
         } 
         if (str.contains("#")) {
             throw new java.lang.IllegalArgumentException(("Invalid locale format: " + str));
@@ -35,7 +35,7 @@ public class LocaleUtils {
                 throw new java.lang.IllegalArgumentException(("Invalid locale format: " + str));
             } 
             if (len == 3) {
-                return new java.util.Locale("" , str.substring(1, 3));
+                return ((_returnReplacementOperator2831.is("NULL")) ? ( null ) : (new java.util.Locale("" , str.substring(1, 3))));
             } 
             if (len < 5) {
                 throw new java.lang.IllegalArgumentException(("Invalid locale format: " + str));
@@ -43,24 +43,24 @@ public class LocaleUtils {
             if ((str.charAt(3)) != '_') {
                 throw new java.lang.IllegalArgumentException(("Invalid locale format: " + str));
             } 
-            return new java.util.Locale("" , str.substring(1, 3) , str.substring(4));
+            return ((_returnReplacementOperator2832.is("NULL")) ? ( null ) : (new java.util.Locale("" , str.substring(1, 3) , str.substring(4))));
         } 
         final java.lang.String[] split = str.split("_", -1);
-        final int occurrences = ((_arithmeticOperatorHotSpot694.is("PLUS")) ? ((split.length) + 1) : (_arithmeticOperatorHotSpot694.is("MINUS")) ? ((split.length) - 1) : (_arithmeticOperatorHotSpot694.is("MUL")) ? ((split.length) * 1) :  ((split.length) / 1));
+        final int occurrences = (split.length) - 1;
         switch (occurrences) {
             case 0 :
                 if ((org.apache.commons.lang3.StringUtils.isAllLowerCase(str)) && ((len == 2) || (len == 3))) {
-                    return new java.util.Locale(str);
+                    return ((_returnReplacementOperator2833.is("NULL")) ? ( null ) : (new java.util.Locale(str)));
                 } 
                 throw new java.lang.IllegalArgumentException(("Invalid locale format: " + str));
             case 1 :
                 if ((((org.apache.commons.lang3.StringUtils.isAllLowerCase(split[0])) && (((split[0].length()) == 2) || ((split[0].length()) == 3))) && ((split[1].length()) == 2)) && (org.apache.commons.lang3.StringUtils.isAllUpperCase(split[1]))) {
-                    return new java.util.Locale(split[0] , split[1]);
+                    return ((_returnReplacementOperator2834.is("NULL")) ? ( null ) : (new java.util.Locale(split[0] , split[1])));
                 } 
                 throw new java.lang.IllegalArgumentException(("Invalid locale format: " + str));
             case 2 :
                 if ((((org.apache.commons.lang3.StringUtils.isAllLowerCase(split[0])) && (((split[0].length()) == 2) || ((split[0].length()) == 3))) && (((split[1].length()) == 0) || (((split[1].length()) == 2) && (org.apache.commons.lang3.StringUtils.isAllUpperCase(split[1]))))) && ((split[2].length()) > 0)) {
-                    return new java.util.Locale(split[0] , split[1] , split[2]);
+                    return ((_returnReplacementOperator2835.is("NULL")) ? ( null ) : (new java.util.Locale(split[0] , split[1] , split[2])));
                 } 
             default :
                 throw new java.lang.IllegalArgumentException(("Invalid locale format: " + str));
@@ -68,7 +68,7 @@ public class LocaleUtils {
     }
 
     public static java.util.List<java.util.Locale> localeLookupList(final java.util.Locale locale) {
-        return org.apache.commons.lang3.LocaleUtils.localeLookupList(locale, locale);
+        return ((_returnReplacementOperator2827.is("NULL")) ? ( null ) : (org.apache.commons.lang3.LocaleUtils.localeLookupList(locale, locale)));
     }
 
     public static java.util.List<java.util.Locale> localeLookupList(final java.util.Locale locale, final java.util.Locale defaultLocale) {
@@ -85,24 +85,24 @@ public class LocaleUtils {
                 list.add(defaultLocale);
             } 
         } 
-        return java.util.Collections.unmodifiableList(list);
+        return ((_returnReplacementOperator2828.is("NULL")) ? ( null ) : (java.util.Collections.unmodifiableList(list)));
     }
 
     public static java.util.List<java.util.Locale> availableLocaleList() {
-        return org.apache.commons.lang3.LocaleUtils.SyncAvoid.AVAILABLE_LOCALE_LIST;
+        return ((_returnReplacementOperator2822.is("NULL")) ? ( null ) : (org.apache.commons.lang3.LocaleUtils.SyncAvoid.AVAILABLE_LOCALE_LIST));
     }
 
     public static java.util.Set<java.util.Locale> availableLocaleSet() {
-        return org.apache.commons.lang3.LocaleUtils.SyncAvoid.AVAILABLE_LOCALE_SET;
+        return ((_returnReplacementOperator2836.is("NULL")) ? ( null ) : (org.apache.commons.lang3.LocaleUtils.SyncAvoid.AVAILABLE_LOCALE_SET));
     }
 
     public static boolean isAvailableLocale(final java.util.Locale locale) {
-        return org.apache.commons.lang3.LocaleUtils.availableLocaleList().contains(locale);
+        return ((_returnReplacementOperator2821.is("NULL")) ? ( null ) : (org.apache.commons.lang3.LocaleUtils.availableLocaleList().contains(locale)));
     }
 
     public static java.util.List<java.util.Locale> languagesByCountry(final java.lang.String countryCode) {
         if (countryCode == null) {
-            return java.util.Collections.emptyList();
+            return ((_returnReplacementOperator2825.is("NULL")) ? ( null ) : (java.util.Collections.emptyList()));
         } 
         java.util.List<java.util.Locale> langs = cLanguagesByCountry.get(countryCode);
         if (langs == null) {
@@ -118,12 +118,12 @@ public class LocaleUtils {
             cLanguagesByCountry.putIfAbsent(countryCode, langs);
             langs = cLanguagesByCountry.get(countryCode);
         } 
-        return langs;
+        return ((_returnReplacementOperator2826.is("NULL")) ? ( null ) : (langs));
     }
 
     public static java.util.List<java.util.Locale> countriesByLanguage(final java.lang.String languageCode) {
         if (languageCode == null) {
-            return java.util.Collections.emptyList();
+            return ((_returnReplacementOperator2823.is("NULL")) ? ( null ) : (java.util.Collections.emptyList()));
         } 
         java.util.List<java.util.Locale> countries = cCountriesByLanguage.get(languageCode);
         if (countries == null) {
@@ -139,7 +139,7 @@ public class LocaleUtils {
             cCountriesByLanguage.putIfAbsent(languageCode, countries);
             countries = cCountriesByLanguage.get(languageCode);
         } 
-        return countries;
+        return ((_returnReplacementOperator2824.is("NULL")) ? ( null ) : (countries));
     }
 
     static class SyncAvoid {
@@ -154,6 +154,36 @@ public class LocaleUtils {
         }
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot694 = metamutator.Selector.of(694,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_arithmeticOperatorHotSpot694");
+    private static final metamutator.Selector _returnReplacementOperator2821 = metamutator.Selector.of(2821,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2821");
+
+    private static final metamutator.Selector _returnReplacementOperator2822 = metamutator.Selector.of(2822,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2822");
+
+    private static final metamutator.Selector _returnReplacementOperator2823 = metamutator.Selector.of(2823,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2823");
+
+    private static final metamutator.Selector _returnReplacementOperator2824 = metamutator.Selector.of(2824,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2824");
+
+    private static final metamutator.Selector _returnReplacementOperator2825 = metamutator.Selector.of(2825,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2825");
+
+    private static final metamutator.Selector _returnReplacementOperator2826 = metamutator.Selector.of(2826,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2826");
+
+    private static final metamutator.Selector _returnReplacementOperator2827 = metamutator.Selector.of(2827,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2827");
+
+    private static final metamutator.Selector _returnReplacementOperator2828 = metamutator.Selector.of(2828,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2828");
+
+    private static final metamutator.Selector _returnReplacementOperator2829 = metamutator.Selector.of(2829,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2829");
+
+    private static final metamutator.Selector _returnReplacementOperator2830 = metamutator.Selector.of(2830,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2830");
+
+    private static final metamutator.Selector _returnReplacementOperator2831 = metamutator.Selector.of(2831,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2831");
+
+    private static final metamutator.Selector _returnReplacementOperator2832 = metamutator.Selector.of(2832,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2832");
+
+    private static final metamutator.Selector _returnReplacementOperator2833 = metamutator.Selector.of(2833,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2833");
+
+    private static final metamutator.Selector _returnReplacementOperator2834 = metamutator.Selector.of(2834,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2834");
+
+    private static final metamutator.Selector _returnReplacementOperator2835 = metamutator.Selector.of(2835,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2835");
+
+    private static final metamutator.Selector _returnReplacementOperator2836 = metamutator.Selector.of(2836,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.LocaleUtils.class).id("_returnReplacementOperator2836");
 }
 

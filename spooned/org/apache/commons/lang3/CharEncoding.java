@@ -16,13 +16,19 @@ public class CharEncoding {
 
     public static boolean isSupported(final java.lang.String name) {
         if (name == null) {
-            return false;
+            return ((_returnReplacementOperator2455.is("NULL")) ? ( null ) : (false));
         } 
         try {
-            return java.nio.charset.Charset.isSupported(name);
+            return ((_returnReplacementOperator2456.is("NULL")) ? ( null ) : (java.nio.charset.Charset.isSupported(name)));
         } catch (final java.nio.charset.IllegalCharsetNameException ex) {
-            return false;
+            return ((_returnReplacementOperator2457.is("NULL")) ? ( null ) : (false));
         }
     }
+
+    private static final metamutator.Selector _returnReplacementOperator2455 = metamutator.Selector.of(2455,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperator2455");
+
+    private static final metamutator.Selector _returnReplacementOperator2456 = metamutator.Selector.of(2456,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperator2456");
+
+    private static final metamutator.Selector _returnReplacementOperator2457 = metamutator.Selector.of(2457,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharEncoding.class).id("_returnReplacementOperator2457");
 }
 

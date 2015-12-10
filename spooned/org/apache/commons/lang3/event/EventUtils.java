@@ -36,16 +36,24 @@ public class EventUtils {
         public java.lang.Object invoke(final java.lang.Object proxy, final java.lang.reflect.Method method, final java.lang.Object[] parameters) throws java.lang.Throwable {
             if ((eventTypes.isEmpty()) || (eventTypes.contains(method.getName()))) {
                 if (hasMatchingParametersMethod(method)) {
-                    return org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName, parameters);
+                    return ((_returnReplacementOperator516.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName, parameters)));
                 } 
-                return org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName);
+                return ((_returnReplacementOperator517.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(target, methodName)));
             } 
-            return null;
+            return ((_returnReplacementOperator518.is("NULL")) ? ( null ) : (null));
         }
 
         private boolean hasMatchingParametersMethod(final java.lang.reflect.Method method) {
-            return (org.apache.commons.lang3.reflect.MethodUtils.getAccessibleMethod(target.getClass(), methodName, method.getParameterTypes())) != null;
+            return ((_returnReplacementOperator515.is("NULL")) ? ( null ) : ((org.apache.commons.lang3.reflect.MethodUtils.getAccessibleMethod(target.getClass(), methodName, method.getParameterTypes())) != null));
         }
     }
+
+    private static final metamutator.Selector _returnReplacementOperator515 = metamutator.Selector.of(515,new String[]{"INIT","NULL"}).id("_returnReplacementOperator515");
+
+    private static final metamutator.Selector _returnReplacementOperator516 = metamutator.Selector.of(516,new String[]{"INIT","NULL"}).id("_returnReplacementOperator516");
+
+    private static final metamutator.Selector _returnReplacementOperator517 = metamutator.Selector.of(517,new String[]{"INIT","NULL"}).id("_returnReplacementOperator517");
+
+    private static final metamutator.Selector _returnReplacementOperator518 = metamutator.Selector.of(518,new String[]{"INIT","NULL"}).id("_returnReplacementOperator518");
 }
 

@@ -9,12 +9,12 @@ public class CharSequenceUtils {
     }
 
     public static java.lang.CharSequence subSequence(final java.lang.CharSequence cs, final int start) {
-        return cs == null ? null : cs.subSequence(start, cs.length());
+        return ((_returnReplacementOperator2495.is("NULL")) ? ( null ) : (cs == null ? null : cs.subSequence(start, cs.length())));
     }
 
     static int indexOf(final java.lang.CharSequence cs, final int searchChar, int start) {
         if (cs instanceof java.lang.String) {
-            return ((java.lang.String)(cs)).indexOf(searchChar, start);
+            return ((_returnReplacementOperator2486.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2486.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2486.is("ZERO")) ? ( 0 ) : (((java.lang.String)(cs)).indexOf(searchChar, start)));
         } 
         final int sz = cs.length();
         if (start < 0) {
@@ -22,65 +22,65 @@ public class CharSequenceUtils {
         } 
         for (int i = start ; i < sz ; i++) {
             if ((cs.charAt(i)) == searchChar) {
-                return i;
+                return ((_returnReplacementOperator2487.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2487.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2487.is("ZERO")) ? ( 0 ) : (i));
             } 
         }
-        return NOT_FOUND;
+        return ((_returnReplacementOperator2488.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2488.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2488.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.CharSequenceUtils.NOT_FOUND));
     }
 
     static int indexOf(final java.lang.CharSequence cs, final java.lang.CharSequence searchChar, final int start) {
-        return cs.toString().indexOf(searchChar.toString(), start);
+        return ((_returnReplacementOperator2489.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2489.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2489.is("ZERO")) ? ( 0 ) : (cs.toString().indexOf(searchChar.toString(), start)));
     }
 
     static int lastIndexOf(final java.lang.CharSequence cs, final int searchChar, int start) {
         if (cs instanceof java.lang.String) {
-            return ((java.lang.String)(cs)).lastIndexOf(searchChar, start);
+            return ((_returnReplacementOperator2490.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2490.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2490.is("ZERO")) ? ( 0 ) : (((java.lang.String)(cs)).lastIndexOf(searchChar, start)));
         } 
         final int sz = cs.length();
         if (start < 0) {
-            return NOT_FOUND;
+            return ((_returnReplacementOperator2491.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2491.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2491.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.CharSequenceUtils.NOT_FOUND));
         } 
         if (start >= sz) {
-            start = ((_arithmeticOperatorHotSpot516.is("PLUS")) ? (sz + 1) : (_arithmeticOperatorHotSpot516.is("MINUS")) ? (sz - 1) : (_arithmeticOperatorHotSpot516.is("MUL")) ? (sz * 1) :  (sz / 1));
+            start = sz - 1;
         } 
         for (int i = start ; i >= 0 ; --i) {
             if ((cs.charAt(i)) == searchChar) {
-                return i;
+                return ((_returnReplacementOperator2492.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2492.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2492.is("ZERO")) ? ( 0 ) : (i));
             } 
         }
-        return NOT_FOUND;
+        return ((_returnReplacementOperator2493.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2493.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2493.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.CharSequenceUtils.NOT_FOUND));
     }
 
     static int lastIndexOf(final java.lang.CharSequence cs, final java.lang.CharSequence searchChar, final int start) {
-        return cs.toString().lastIndexOf(searchChar.toString(), start);
+        return ((_returnReplacementOperator2494.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator2494.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator2494.is("ZERO")) ? ( 0 ) : (cs.toString().lastIndexOf(searchChar.toString(), start)));
     }
 
     static char[] toCharArray(final java.lang.CharSequence cs) {
         if (cs instanceof java.lang.String) {
-            return ((java.lang.String)(cs)).toCharArray();
+            return ((_returnReplacementOperator2484.is("NULL")) ? ( null ) : (((java.lang.String)(cs)).toCharArray()));
         } 
         final int sz = cs.length();
         final char[] array = new char[cs.length()];
         for (int i = 0 ; i < sz ; i++) {
             array[i] = cs.charAt(i);
         }
-        return array;
+        return ((_returnReplacementOperator2485.is("NULL")) ? ( null ) : (array));
     }
 
     static boolean regionMatches(final java.lang.CharSequence cs, final boolean ignoreCase, final int thisStart, final java.lang.CharSequence substring, final int start, final int length) {
         if ((cs instanceof java.lang.String) && (substring instanceof java.lang.String)) {
-            return ((java.lang.String)(cs)).regionMatches(ignoreCase, thisStart, ((java.lang.String)(substring)), start, length);
+            return ((_returnReplacementOperator2478.is("NULL")) ? ( null ) : (((java.lang.String)(cs)).regionMatches(ignoreCase, thisStart, ((java.lang.String)(substring)), start, length)));
         } 
         int index1 = thisStart;
         int index2 = start;
         int tmpLen = length;
-        final int srcLen = ((_arithmeticOperatorHotSpot514.is("PLUS")) ? ((cs.length()) + thisStart) : (_arithmeticOperatorHotSpot514.is("MINUS")) ? ((cs.length()) - thisStart) : (_arithmeticOperatorHotSpot514.is("MUL")) ? ((cs.length()) * thisStart) :  ((cs.length()) / thisStart));
-        final int otherLen = ((_arithmeticOperatorHotSpot515.is("PLUS")) ? ((substring.length()) + start) : (_arithmeticOperatorHotSpot515.is("MINUS")) ? ((substring.length()) - start) : (_arithmeticOperatorHotSpot515.is("MUL")) ? ((substring.length()) * start) :  ((substring.length()) / start));
+        final int srcLen = (cs.length()) - thisStart;
+        final int otherLen = (substring.length()) - start;
         if (((thisStart < 0) || (start < 0)) || (length < 0)) {
-            return false;
+            return ((_returnReplacementOperator2479.is("NULL")) ? ( null ) : (false));
         } 
         if ((srcLen < length) || (otherLen < length)) {
-            return false;
+            return ((_returnReplacementOperator2480.is("NULL")) ? ( null ) : (false));
         } 
         while ((tmpLen--) > 0) {
             final char c1 = cs.charAt(index1++);
@@ -89,19 +89,49 @@ public class CharSequenceUtils {
                 continue;
             } 
             if (!ignoreCase) {
-                return false;
+                return ((_returnReplacementOperator2481.is("NULL")) ? ( null ) : (false));
             } 
             if (((java.lang.Character.toUpperCase(c1)) != (java.lang.Character.toUpperCase(c2))) && ((java.lang.Character.toLowerCase(c1)) != (java.lang.Character.toLowerCase(c2)))) {
-                return false;
+                return ((_returnReplacementOperator2482.is("NULL")) ? ( null ) : (false));
             } 
         }
-        return true;
+        return ((_returnReplacementOperator2483.is("NULL")) ? ( null ) : (true));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot514 = metamutator.Selector.of(514,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_arithmeticOperatorHotSpot514");
+    private static final metamutator.Selector _returnReplacementOperator2478 = metamutator.Selector.of(2478,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2478");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot515 = metamutator.Selector.of(515,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_arithmeticOperatorHotSpot515");
+    private static final metamutator.Selector _returnReplacementOperator2479 = metamutator.Selector.of(2479,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2479");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot516 = metamutator.Selector.of(516,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_arithmeticOperatorHotSpot516");
+    private static final metamutator.Selector _returnReplacementOperator2480 = metamutator.Selector.of(2480,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2480");
+
+    private static final metamutator.Selector _returnReplacementOperator2481 = metamutator.Selector.of(2481,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2481");
+
+    private static final metamutator.Selector _returnReplacementOperator2482 = metamutator.Selector.of(2482,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2482");
+
+    private static final metamutator.Selector _returnReplacementOperator2483 = metamutator.Selector.of(2483,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2483");
+
+    private static final metamutator.Selector _returnReplacementOperator2484 = metamutator.Selector.of(2484,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2484");
+
+    private static final metamutator.Selector _returnReplacementOperator2485 = metamutator.Selector.of(2485,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2485");
+
+    private static final metamutator.Selector _returnReplacementOperator2486 = metamutator.Selector.of(2486,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2486");
+
+    private static final metamutator.Selector _returnReplacementOperator2487 = metamutator.Selector.of(2487,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2487");
+
+    private static final metamutator.Selector _returnReplacementOperator2488 = metamutator.Selector.of(2488,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2488");
+
+    private static final metamutator.Selector _returnReplacementOperator2489 = metamutator.Selector.of(2489,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2489");
+
+    private static final metamutator.Selector _returnReplacementOperator2490 = metamutator.Selector.of(2490,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2490");
+
+    private static final metamutator.Selector _returnReplacementOperator2491 = metamutator.Selector.of(2491,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2491");
+
+    private static final metamutator.Selector _returnReplacementOperator2492 = metamutator.Selector.of(2492,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2492");
+
+    private static final metamutator.Selector _returnReplacementOperator2493 = metamutator.Selector.of(2493,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2493");
+
+    private static final metamutator.Selector _returnReplacementOperator2494 = metamutator.Selector.of(2494,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2494");
+
+    private static final metamutator.Selector _returnReplacementOperator2495 = metamutator.Selector.of(2495,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.CharSequenceUtils.class).id("_returnReplacementOperator2495");
 }
 

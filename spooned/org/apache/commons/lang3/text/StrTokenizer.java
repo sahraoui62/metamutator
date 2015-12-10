@@ -42,43 +42,43 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
     private boolean ignoreEmptyTokens = true;
 
     private static org.apache.commons.lang3.text.StrTokenizer getCSVClone() {
-        return ((org.apache.commons.lang3.text.StrTokenizer)(CSV_TOKENIZER_PROTOTYPE.clone()));
+        return ((_returnReplacementOperator1537.is("NULL")) ? ( null ) : (((org.apache.commons.lang3.text.StrTokenizer)(org.apache.commons.lang3.text.StrTokenizer.CSV_TOKENIZER_PROTOTYPE.clone()))));
     }
 
     public static org.apache.commons.lang3.text.StrTokenizer getCSVInstance() {
-        return org.apache.commons.lang3.text.StrTokenizer.getCSVClone();
+        return ((_returnReplacementOperator1538.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.StrTokenizer.getCSVClone()));
     }
 
     public static org.apache.commons.lang3.text.StrTokenizer getCSVInstance(final java.lang.String input) {
         final org.apache.commons.lang3.text.StrTokenizer tok = org.apache.commons.lang3.text.StrTokenizer.getCSVClone();
         tok.reset(input);
-        return tok;
+        return ((_returnReplacementOperator1540.is("NULL")) ? ( null ) : (tok));
     }
 
     public static org.apache.commons.lang3.text.StrTokenizer getCSVInstance(final char[] input) {
         final org.apache.commons.lang3.text.StrTokenizer tok = org.apache.commons.lang3.text.StrTokenizer.getCSVClone();
         tok.reset(input);
-        return tok;
+        return ((_returnReplacementOperator1539.is("NULL")) ? ( null ) : (tok));
     }
 
     private static org.apache.commons.lang3.text.StrTokenizer getTSVClone() {
-        return ((org.apache.commons.lang3.text.StrTokenizer)(TSV_TOKENIZER_PROTOTYPE.clone()));
+        return ((_returnReplacementOperator1541.is("NULL")) ? ( null ) : (((org.apache.commons.lang3.text.StrTokenizer)(org.apache.commons.lang3.text.StrTokenizer.TSV_TOKENIZER_PROTOTYPE.clone()))));
     }
 
     public static org.apache.commons.lang3.text.StrTokenizer getTSVInstance() {
-        return org.apache.commons.lang3.text.StrTokenizer.getTSVClone();
+        return ((_returnReplacementOperator1542.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.StrTokenizer.getTSVClone()));
     }
 
     public static org.apache.commons.lang3.text.StrTokenizer getTSVInstance(final java.lang.String input) {
         final org.apache.commons.lang3.text.StrTokenizer tok = org.apache.commons.lang3.text.StrTokenizer.getTSVClone();
         tok.reset(input);
-        return tok;
+        return ((_returnReplacementOperator1544.is("NULL")) ? ( null ) : (tok));
     }
 
     public static org.apache.commons.lang3.text.StrTokenizer getTSVInstance(final char[] input) {
         final org.apache.commons.lang3.text.StrTokenizer tok = org.apache.commons.lang3.text.StrTokenizer.getTSVClone();
         tok.reset(input);
-        return tok;
+        return ((_returnReplacementOperator1543.is("NULL")) ? ( null ) : (tok));
     }
 
     public StrTokenizer() {
@@ -152,26 +152,26 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
 
     public int size() {
         checkTokenized();
-        return tokens.length;
+        return ((_returnReplacementOperator1515.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1515.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1515.is("ZERO")) ? ( 0 ) : (tokens.length));
     }
 
     public java.lang.String nextToken() {
         if (hasNext()) {
-            return tokens[(tokenPos)++];
+            return ((_returnReplacementOperator1522.is("NULL")) ? ( null ) : (tokens[(tokenPos)++]));
         } 
-        return null;
+        return ((_returnReplacementOperator1523.is("NULL")) ? ( null ) : (null));
     }
 
     public java.lang.String previousToken() {
         if (hasPrevious()) {
-            return tokens[--(tokenPos)];
+            return ((_returnReplacementOperator1525.is("NULL")) ? ( null ) : (tokens[--(tokenPos)]));
         } 
-        return null;
+        return ((_returnReplacementOperator1526.is("NULL")) ? ( null ) : (null));
     }
 
     public java.lang.String[] getTokenArray() {
         checkTokenized();
-        return tokens.clone();
+        return ((_returnReplacementOperator1529.is("NULL")) ? ( null ) : (tokens.clone()));
     }
 
     public java.util.List<java.lang.String> getTokenList() {
@@ -180,13 +180,13 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
         for (final java.lang.String element : tokens) {
             list.add(element);
         }
-        return list;
+        return ((_returnReplacementOperator1530.is("NULL")) ? ( null ) : (list));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer reset() {
         tokenPos = 0;
         tokens = null;
-        return this;
+        return ((_returnReplacementOperator1545.is("NULL")) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer reset(final java.lang.String input) {
@@ -196,51 +196,51 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
         } else {
             this.chars = null;
         }
-        return this;
+        return ((_returnReplacementOperator1547.is("NULL")) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer reset(final char[] input) {
         reset();
         this.chars = org.apache.commons.lang3.ArrayUtils.clone(input);
-        return this;
+        return ((_returnReplacementOperator1546.is("NULL")) ? ( null ) : (this));
     }
 
     @java.lang.Override
     public boolean hasNext() {
         checkTokenized();
-        return (tokenPos) < (tokens.length);
+        return ((_returnReplacementOperator1501.is("NULL")) ? ( null ) : ((tokenPos) < (tokens.length)));
     }
 
     @java.lang.Override
     public java.lang.String next() {
         if (hasNext()) {
-            return tokens[(tokenPos)++];
+            return ((_returnReplacementOperator1521.is("NULL")) ? ( null ) : (tokens[(tokenPos)++]));
         } 
         throw new java.util.NoSuchElementException();
     }
 
     @java.lang.Override
     public int nextIndex() {
-        return tokenPos;
+        return ((_returnReplacementOperator1507.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1507.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1507.is("ZERO")) ? ( 0 ) : (tokenPos));
     }
 
     @java.lang.Override
     public boolean hasPrevious() {
         checkTokenized();
-        return (tokenPos) > 0;
+        return ((_returnReplacementOperator1502.is("NULL")) ? ( null ) : ((tokenPos) > 0));
     }
 
     @java.lang.Override
     public java.lang.String previous() {
         if (hasPrevious()) {
-            return tokens[--(tokenPos)];
+            return ((_returnReplacementOperator1524.is("NULL")) ? ( null ) : (tokens[--(tokenPos)]));
         } 
         throw new java.util.NoSuchElementException();
     }
 
     @java.lang.Override
     public int previousIndex() {
-        return ((_arithmeticOperatorHotSpot263.is("PLUS")) ? ((tokenPos) + 1) : (_arithmeticOperatorHotSpot263.is("MINUS")) ? ((tokenPos) - 1) : (_arithmeticOperatorHotSpot263.is("MUL")) ? ((tokenPos) * 1) :  ((tokenPos) / 1));
+        return ((_returnReplacementOperator1508.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1508.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1508.is("ZERO")) ? ( 0 ) : ((tokenPos) - 1));
     }
 
     @java.lang.Override
@@ -272,7 +272,7 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
 
     protected java.util.List<java.lang.String> tokenize(final char[] srcChars, final int offset, final int count) {
         if ((srcChars == null) || (count == 0)) {
-            return java.util.Collections.emptyList();
+            return ((_returnReplacementOperator1531.is("NULL")) ? ( null ) : (java.util.Collections.emptyList()));
         } 
         final org.apache.commons.lang3.text.StrBuilder buf = new org.apache.commons.lang3.text.StrBuilder();
         final java.util.List<java.lang.String> tokenList = new java.util.ArrayList<java.lang.String>();
@@ -283,7 +283,7 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
                 addToken(tokenList, "");
             } 
         }
-        return tokenList;
+        return ((_returnReplacementOperator1532.is("NULL")) ? ( null ) : (tokenList));
     }
 
     private void addToken(final java.util.List<java.lang.String> list, java.lang.String tok) {
@@ -308,18 +308,18 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
         }
         if (start >= len) {
             addToken(tokenList, "");
-            return -1;
+            return ((_returnReplacementOperator1509.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1509.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1509.is("ZERO")) ? ( 0 ) : (-1));
         } 
         final int delimLen = getDelimiterMatcher().isMatch(srcChars, start, start, len);
         if (delimLen > 0) {
             addToken(tokenList, "");
-            return ((_arithmeticOperatorHotSpot264.is("PLUS")) ? (start + delimLen) : (_arithmeticOperatorHotSpot264.is("MINUS")) ? (start - delimLen) : (_arithmeticOperatorHotSpot264.is("MUL")) ? (start * delimLen) :  (start / delimLen));
+            return ((_returnReplacementOperator1510.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1510.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1510.is("ZERO")) ? ( 0 ) : (start + delimLen));
         } 
         final int quoteLen = getQuoteMatcher().isMatch(srcChars, start, start, len);
         if (quoteLen > 0) {
-            return readWithQuotes(srcChars, ((_arithmeticOperatorHotSpot265.is("PLUS")) ? ((start + quoteLen)) : (_arithmeticOperatorHotSpot265.is("MINUS")) ? ((start - quoteLen)) : (_arithmeticOperatorHotSpot265.is("MUL")) ? ((start * quoteLen)) :  ((start / quoteLen))), len, workArea, tokenList, start, quoteLen);
+            return ((_returnReplacementOperator1511.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1511.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1511.is("ZERO")) ? ( 0 ) : (readWithQuotes(srcChars, (start + quoteLen), len, workArea, tokenList, start, quoteLen)));
         } 
-        return readWithQuotes(srcChars, start, len, workArea, tokenList, 0, 0);
+        return ((_returnReplacementOperator1512.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1512.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1512.is("ZERO")) ? ( 0 ) : (readWithQuotes(srcChars, start, len, workArea, tokenList, 0, 0)));
     }
 
     private int readWithQuotes(final char[] srcChars, final int start, final int len, final org.apache.commons.lang3.text.StrBuilder workArea, final java.util.List<java.lang.String> tokenList, final int quoteStart, final int quoteLen) {
@@ -330,9 +330,9 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
         while (pos < len) {
             if (quoting) {
                 if (isQuote(srcChars, pos, len, quoteStart, quoteLen)) {
-                    if (isQuote(srcChars, ((_arithmeticOperatorHotSpot266.is("PLUS")) ? ((pos + quoteLen)) : (_arithmeticOperatorHotSpot266.is("MINUS")) ? ((pos - quoteLen)) : (_arithmeticOperatorHotSpot266.is("MUL")) ? ((pos * quoteLen)) :  ((pos / quoteLen))), len, quoteStart, quoteLen)) {
+                    if (isQuote(srcChars, (pos + quoteLen), len, quoteStart, quoteLen)) {
                         workArea.append(srcChars, pos, quoteLen);
-                        pos += ((_arithmeticOperatorHotSpot267.is("PLUS")) ? (quoteLen + 2) : (_arithmeticOperatorHotSpot267.is("MINUS")) ? (quoteLen - 2) : (_arithmeticOperatorHotSpot267.is("MUL")) ? (quoteLen * 2) :  (quoteLen / 2));
+                        pos += quoteLen * 2;
                         trimStart = workArea.size();
                         continue;
                     } 
@@ -346,7 +346,7 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
                 final int delimLen = getDelimiterMatcher().isMatch(srcChars, pos, start, len);
                 if (delimLen > 0) {
                     addToken(tokenList, workArea.substring(0, trimStart));
-                    return ((_arithmeticOperatorHotSpot268.is("PLUS")) ? (pos + delimLen) : (_arithmeticOperatorHotSpot268.is("MINUS")) ? (pos - delimLen) : (_arithmeticOperatorHotSpot268.is("MUL")) ? (pos * delimLen) :  (pos / delimLen));
+                    return ((_returnReplacementOperator1513.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1513.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1513.is("ZERO")) ? ( 0 ) : (pos + delimLen));
                 } 
                 if ((quoteLen > 0) && (isQuote(srcChars, pos, len, quoteStart, quoteLen))) {
                     quoting = true;
@@ -369,20 +369,20 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
             }
         }
         addToken(tokenList, workArea.substring(0, trimStart));
-        return -1;
+        return ((_returnReplacementOperator1514.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1514.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1514.is("ZERO")) ? ( 0 ) : (-1));
     }
 
     private boolean isQuote(final char[] srcChars, final int pos, final int len, final int quoteStart, final int quoteLen) {
         for (int i = 0 ; i < quoteLen ; i++) {
-            if ((((_arithmeticOperatorHotSpot260.is("PLUS")) ? ((pos + i)) : (_arithmeticOperatorHotSpot260.is("MINUS")) ? ((pos - i)) : (_arithmeticOperatorHotSpot260.is("MUL")) ? ((pos * i)) :  ((pos / i))) >= len) || ((srcChars[((_arithmeticOperatorHotSpot261.is("PLUS")) ? ((pos + i)) : (_arithmeticOperatorHotSpot261.is("MINUS")) ? ((pos - i)) : (_arithmeticOperatorHotSpot261.is("MUL")) ? ((pos * i)) :  ((pos / i)))]) != (srcChars[((_arithmeticOperatorHotSpot262.is("PLUS")) ? ((quoteStart + i)) : (_arithmeticOperatorHotSpot262.is("MINUS")) ? ((quoteStart - i)) : (_arithmeticOperatorHotSpot262.is("MUL")) ? ((quoteStart * i)) :  ((quoteStart / i)))]))) {
-                return false;
+            if (((pos + i) >= len) || ((srcChars[(pos + i)]) != (srcChars[(quoteStart + i)]))) {
+                return ((_returnReplacementOperator1505.is("NULL")) ? ( null ) : (false));
             } 
         }
-        return true;
+        return ((_returnReplacementOperator1506.is("NULL")) ? ( null ) : (true));
     }
 
     public org.apache.commons.lang3.text.StrMatcher getDelimiterMatcher() {
-        return this.delimMatcher;
+        return ((_returnReplacementOperator1533.is("NULL")) ? ( null ) : (this.delimMatcher));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setDelimiterMatcher(final org.apache.commons.lang3.text.StrMatcher delim) {
@@ -391,89 +391,89 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
         } else {
             this.delimMatcher = delim;
         }
-        return this;
+        return ((_returnReplacementOperator1549.is("NULL")) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setDelimiterChar(final char delim) {
-        return setDelimiterMatcher(org.apache.commons.lang3.text.StrMatcher.charMatcher(delim));
+        return ((_returnReplacementOperator1548.is("NULL")) ? ( null ) : (setDelimiterMatcher(org.apache.commons.lang3.text.StrMatcher.charMatcher(delim))));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setDelimiterString(final java.lang.String delim) {
-        return setDelimiterMatcher(org.apache.commons.lang3.text.StrMatcher.stringMatcher(delim));
+        return ((_returnReplacementOperator1550.is("NULL")) ? ( null ) : (setDelimiterMatcher(org.apache.commons.lang3.text.StrMatcher.stringMatcher(delim))));
     }
 
     public org.apache.commons.lang3.text.StrMatcher getQuoteMatcher() {
-        return quoteMatcher;
+        return ((_returnReplacementOperator1535.is("NULL")) ? ( null ) : (quoteMatcher));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setQuoteMatcher(final org.apache.commons.lang3.text.StrMatcher quote) {
         if (quote != null) {
             this.quoteMatcher = quote;
         } 
-        return this;
+        return ((_returnReplacementOperator1556.is("NULL")) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setQuoteChar(final char quote) {
-        return setQuoteMatcher(org.apache.commons.lang3.text.StrMatcher.charMatcher(quote));
+        return ((_returnReplacementOperator1555.is("NULL")) ? ( null ) : (setQuoteMatcher(org.apache.commons.lang3.text.StrMatcher.charMatcher(quote))));
     }
 
     public org.apache.commons.lang3.text.StrMatcher getIgnoredMatcher() {
-        return ignoredMatcher;
+        return ((_returnReplacementOperator1534.is("NULL")) ? ( null ) : (ignoredMatcher));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setIgnoredMatcher(final org.apache.commons.lang3.text.StrMatcher ignored) {
         if (ignored != null) {
             this.ignoredMatcher = ignored;
         } 
-        return this;
+        return ((_returnReplacementOperator1554.is("NULL")) ? ( null ) : (this));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setIgnoredChar(final char ignored) {
-        return setIgnoredMatcher(org.apache.commons.lang3.text.StrMatcher.charMatcher(ignored));
+        return ((_returnReplacementOperator1553.is("NULL")) ? ( null ) : (setIgnoredMatcher(org.apache.commons.lang3.text.StrMatcher.charMatcher(ignored))));
     }
 
     public org.apache.commons.lang3.text.StrMatcher getTrimmerMatcher() {
-        return trimmerMatcher;
+        return ((_returnReplacementOperator1536.is("NULL")) ? ( null ) : (trimmerMatcher));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setTrimmerMatcher(final org.apache.commons.lang3.text.StrMatcher trimmer) {
         if (trimmer != null) {
             this.trimmerMatcher = trimmer;
         } 
-        return this;
+        return ((_returnReplacementOperator1557.is("NULL")) ? ( null ) : (this));
     }
 
     public boolean isEmptyTokenAsNull() {
-        return this.emptyAsNull;
+        return ((_returnReplacementOperator1503.is("NULL")) ? ( null ) : (this.emptyAsNull));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setEmptyTokenAsNull(final boolean emptyAsNull) {
         this.emptyAsNull = emptyAsNull;
-        return this;
+        return ((_returnReplacementOperator1551.is("NULL")) ? ( null ) : (this));
     }
 
     public boolean isIgnoreEmptyTokens() {
-        return ignoreEmptyTokens;
+        return ((_returnReplacementOperator1504.is("NULL")) ? ( null ) : (ignoreEmptyTokens));
     }
 
     public org.apache.commons.lang3.text.StrTokenizer setIgnoreEmptyTokens(final boolean ignoreEmptyTokens) {
         this.ignoreEmptyTokens = ignoreEmptyTokens;
-        return this;
+        return ((_returnReplacementOperator1552.is("NULL")) ? ( null ) : (this));
     }
 
     public java.lang.String getContent() {
         if ((chars) == null) {
-            return null;
+            return ((_returnReplacementOperator1519.is("NULL")) ? ( null ) : (null));
         } 
-        return new java.lang.String(chars);
+        return ((_returnReplacementOperator1520.is("NULL")) ? ( null ) : (new java.lang.String(chars)));
     }
 
     @java.lang.Override
     public java.lang.Object clone() {
         try {
-            return cloneReset();
+            return ((_returnReplacementOperator1516.is("NULL")) ? ( null ) : (cloneReset()));
         } catch (final java.lang.CloneNotSupportedException ex) {
-            return null;
+            return ((_returnReplacementOperator1517.is("NULL")) ? ( null ) : (null));
         }
     }
 
@@ -483,33 +483,129 @@ public class StrTokenizer implements java.lang.Cloneable , java.util.ListIterato
             cloned.chars = cloned.chars.clone();
         } 
         cloned.reset();
-        return cloned;
+        return ((_returnReplacementOperator1518.is("NULL")) ? ( null ) : (cloned));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
         if ((tokens) == null) {
-            return "StrTokenizer[not tokenized yet]";
+            return ((_returnReplacementOperator1527.is("NULL")) ? ( null ) : ("StrTokenizer[not tokenized yet]"));
         } 
-        return "StrTokenizer" + (getTokenList());
+        return ((_returnReplacementOperator1528.is("NULL")) ? ( null ) : ("StrTokenizer" + (getTokenList())));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot260 = metamutator.Selector.of(260,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot260");
+    private static final metamutator.Selector _returnReplacementOperator1501 = metamutator.Selector.of(1501,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1501");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot261 = metamutator.Selector.of(261,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot261");
+    private static final metamutator.Selector _returnReplacementOperator1502 = metamutator.Selector.of(1502,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1502");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot262 = metamutator.Selector.of(262,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot262");
+    private static final metamutator.Selector _returnReplacementOperator1503 = metamutator.Selector.of(1503,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1503");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot263 = metamutator.Selector.of(263,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot263");
+    private static final metamutator.Selector _returnReplacementOperator1504 = metamutator.Selector.of(1504,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1504");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot264 = metamutator.Selector.of(264,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot264");
+    private static final metamutator.Selector _returnReplacementOperator1505 = metamutator.Selector.of(1505,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1505");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot265 = metamutator.Selector.of(265,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot265");
+    private static final metamutator.Selector _returnReplacementOperator1506 = metamutator.Selector.of(1506,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1506");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot266 = metamutator.Selector.of(266,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot266");
+    private static final metamutator.Selector _returnReplacementOperator1507 = metamutator.Selector.of(1507,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1507");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot267 = metamutator.Selector.of(267,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot267");
+    private static final metamutator.Selector _returnReplacementOperator1508 = metamutator.Selector.of(1508,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1508");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot268 = metamutator.Selector.of(268,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_arithmeticOperatorHotSpot268");
+    private static final metamutator.Selector _returnReplacementOperator1509 = metamutator.Selector.of(1509,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1509");
+
+    private static final metamutator.Selector _returnReplacementOperator1510 = metamutator.Selector.of(1510,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1510");
+
+    private static final metamutator.Selector _returnReplacementOperator1511 = metamutator.Selector.of(1511,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1511");
+
+    private static final metamutator.Selector _returnReplacementOperator1512 = metamutator.Selector.of(1512,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1512");
+
+    private static final metamutator.Selector _returnReplacementOperator1513 = metamutator.Selector.of(1513,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1513");
+
+    private static final metamutator.Selector _returnReplacementOperator1514 = metamutator.Selector.of(1514,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1514");
+
+    private static final metamutator.Selector _returnReplacementOperator1515 = metamutator.Selector.of(1515,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1515");
+
+    private static final metamutator.Selector _returnReplacementOperator1516 = metamutator.Selector.of(1516,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1516");
+
+    private static final metamutator.Selector _returnReplacementOperator1517 = metamutator.Selector.of(1517,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1517");
+
+    private static final metamutator.Selector _returnReplacementOperator1518 = metamutator.Selector.of(1518,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1518");
+
+    private static final metamutator.Selector _returnReplacementOperator1519 = metamutator.Selector.of(1519,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1519");
+
+    private static final metamutator.Selector _returnReplacementOperator1520 = metamutator.Selector.of(1520,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1520");
+
+    private static final metamutator.Selector _returnReplacementOperator1521 = metamutator.Selector.of(1521,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1521");
+
+    private static final metamutator.Selector _returnReplacementOperator1522 = metamutator.Selector.of(1522,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1522");
+
+    private static final metamutator.Selector _returnReplacementOperator1523 = metamutator.Selector.of(1523,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1523");
+
+    private static final metamutator.Selector _returnReplacementOperator1524 = metamutator.Selector.of(1524,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1524");
+
+    private static final metamutator.Selector _returnReplacementOperator1525 = metamutator.Selector.of(1525,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1525");
+
+    private static final metamutator.Selector _returnReplacementOperator1526 = metamutator.Selector.of(1526,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1526");
+
+    private static final metamutator.Selector _returnReplacementOperator1527 = metamutator.Selector.of(1527,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1527");
+
+    private static final metamutator.Selector _returnReplacementOperator1528 = metamutator.Selector.of(1528,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1528");
+
+    private static final metamutator.Selector _returnReplacementOperator1529 = metamutator.Selector.of(1529,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1529");
+
+    private static final metamutator.Selector _returnReplacementOperator1530 = metamutator.Selector.of(1530,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1530");
+
+    private static final metamutator.Selector _returnReplacementOperator1531 = metamutator.Selector.of(1531,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1531");
+
+    private static final metamutator.Selector _returnReplacementOperator1532 = metamutator.Selector.of(1532,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1532");
+
+    private static final metamutator.Selector _returnReplacementOperator1533 = metamutator.Selector.of(1533,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1533");
+
+    private static final metamutator.Selector _returnReplacementOperator1534 = metamutator.Selector.of(1534,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1534");
+
+    private static final metamutator.Selector _returnReplacementOperator1535 = metamutator.Selector.of(1535,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1535");
+
+    private static final metamutator.Selector _returnReplacementOperator1536 = metamutator.Selector.of(1536,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1536");
+
+    private static final metamutator.Selector _returnReplacementOperator1537 = metamutator.Selector.of(1537,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1537");
+
+    private static final metamutator.Selector _returnReplacementOperator1538 = metamutator.Selector.of(1538,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1538");
+
+    private static final metamutator.Selector _returnReplacementOperator1539 = metamutator.Selector.of(1539,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1539");
+
+    private static final metamutator.Selector _returnReplacementOperator1540 = metamutator.Selector.of(1540,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1540");
+
+    private static final metamutator.Selector _returnReplacementOperator1541 = metamutator.Selector.of(1541,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1541");
+
+    private static final metamutator.Selector _returnReplacementOperator1542 = metamutator.Selector.of(1542,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1542");
+
+    private static final metamutator.Selector _returnReplacementOperator1543 = metamutator.Selector.of(1543,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1543");
+
+    private static final metamutator.Selector _returnReplacementOperator1544 = metamutator.Selector.of(1544,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1544");
+
+    private static final metamutator.Selector _returnReplacementOperator1545 = metamutator.Selector.of(1545,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1545");
+
+    private static final metamutator.Selector _returnReplacementOperator1546 = metamutator.Selector.of(1546,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1546");
+
+    private static final metamutator.Selector _returnReplacementOperator1547 = metamutator.Selector.of(1547,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1547");
+
+    private static final metamutator.Selector _returnReplacementOperator1548 = metamutator.Selector.of(1548,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1548");
+
+    private static final metamutator.Selector _returnReplacementOperator1549 = metamutator.Selector.of(1549,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1549");
+
+    private static final metamutator.Selector _returnReplacementOperator1550 = metamutator.Selector.of(1550,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1550");
+
+    private static final metamutator.Selector _returnReplacementOperator1551 = metamutator.Selector.of(1551,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1551");
+
+    private static final metamutator.Selector _returnReplacementOperator1552 = metamutator.Selector.of(1552,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1552");
+
+    private static final metamutator.Selector _returnReplacementOperator1553 = metamutator.Selector.of(1553,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1553");
+
+    private static final metamutator.Selector _returnReplacementOperator1554 = metamutator.Selector.of(1554,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1554");
+
+    private static final metamutator.Selector _returnReplacementOperator1555 = metamutator.Selector.of(1555,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1555");
+
+    private static final metamutator.Selector _returnReplacementOperator1556 = metamutator.Selector.of(1556,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1556");
+
+    private static final metamutator.Selector _returnReplacementOperator1557 = metamutator.Selector.of(1557,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.StrTokenizer.class).id("_returnReplacementOperator1557");
 }
 

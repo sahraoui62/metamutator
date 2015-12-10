@@ -9,40 +9,40 @@ public class RandomStringUtils {
     }
 
     public static java.lang.String random(final int count) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, false, false);
+        return ((_returnReplacementOperator2877.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, false, false)));
     }
 
     public static java.lang.String randomAscii(final int count) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, 32, 127, false, false);
+        return ((_returnReplacementOperator2889.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, 32, 127, false, false)));
     }
 
     public static java.lang.String randomAlphabetic(final int count) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, true, false);
+        return ((_returnReplacementOperator2887.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, true, false)));
     }
 
     public static java.lang.String randomAlphanumeric(final int count) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, true, true);
+        return ((_returnReplacementOperator2888.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, true, true)));
     }
 
     public static java.lang.String randomNumeric(final int count) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, false, true);
+        return ((_returnReplacementOperator2890.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, false, true)));
     }
 
     public static java.lang.String random(final int count, final boolean letters, final boolean numbers) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, 0, 0, letters, numbers);
+        return ((_returnReplacementOperator2878.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, 0, 0, letters, numbers)));
     }
 
     public static java.lang.String random(final int count, final int start, final int end, final boolean letters, final boolean numbers) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, start, end, letters, numbers, null, RANDOM);
+        return ((_returnReplacementOperator2881.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, start, end, letters, numbers, null, org.apache.commons.lang3.RandomStringUtils.RANDOM)));
     }
 
     public static java.lang.String random(final int count, final int start, final int end, final boolean letters, final boolean numbers, final char... chars) {
-        return org.apache.commons.lang3.RandomStringUtils.random(count, start, end, letters, numbers, chars, RANDOM);
+        return ((_returnReplacementOperator2882.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, start, end, letters, numbers, chars, org.apache.commons.lang3.RandomStringUtils.RANDOM)));
     }
 
     public static java.lang.String random(int count, int start, int end, final boolean letters, final boolean numbers, final char[] chars, final java.util.Random random) {
         if (count == 0) {
-            return "";
+            return ((_returnReplacementOperator2883.is("NULL")) ? ( null ) : (""));
         } else if (count < 0) {
             throw new java.lang.IllegalArgumentException((("Requested random string length " + count) + " is less than 0."));
         } 
@@ -56,7 +56,7 @@ public class RandomStringUtils {
                 if ((!letters) && (!numbers)) {
                     end = java.lang.Integer.MAX_VALUE;
                 } else {
-                    end = ((_arithmeticOperatorHotSpot698.is("PLUS")) ? ('z' + 1) : (_arithmeticOperatorHotSpot698.is("MINUS")) ? ('z' - 1) : (_arithmeticOperatorHotSpot698.is("MUL")) ? ('z' * 1) :  ('z' / 1));
+                    end = 'z' + 1;
                     start = ' ';
                 }
             }
@@ -66,13 +66,13 @@ public class RandomStringUtils {
             } 
         }
         final char[] buffer = new char[count];
-        final int gap = ((_arithmeticOperatorHotSpot699.is("PLUS")) ? (end + start) : (_arithmeticOperatorHotSpot699.is("MINUS")) ? (end - start) : (_arithmeticOperatorHotSpot699.is("MUL")) ? (end * start) :  (end / start));
+        final int gap = end - start;
         while ((count--) != 0) {
             char ch;
             if (chars == null) {
-                ch = ((_arithmeticOperatorHotSpot700.is("PLUS")) ? (((char)((random.nextInt(gap)) + start))) : (_arithmeticOperatorHotSpot700.is("MINUS")) ? (((char)((random.nextInt(gap)) - start))) : (_arithmeticOperatorHotSpot700.is("MUL")) ? (((char)((random.nextInt(gap)) * start))) :  (((char)((random.nextInt(gap)) / start))));
+                ch = ((char)((random.nextInt(gap)) + start));
             } else {
-                ch = chars[((_arithmeticOperatorHotSpot701.is("PLUS")) ? (((random.nextInt(gap)) + start)) : (_arithmeticOperatorHotSpot701.is("MINUS")) ? (((random.nextInt(gap)) - start)) : (_arithmeticOperatorHotSpot701.is("MUL")) ? (((random.nextInt(gap)) * start)) :  (((random.nextInt(gap)) / start)))];
+                ch = chars[((random.nextInt(gap)) + start)];
             }
             if (((letters && (java.lang.Character.isLetter(ch))) || (numbers && (java.lang.Character.isDigit(ch)))) || ((!letters) && (!numbers))) {
                 if ((ch >= 56320) && (ch <= 57343)) {
@@ -81,13 +81,13 @@ public class RandomStringUtils {
                     } else {
                         buffer[count] = ch;
                         count--;
-                        buffer[count] = ((_arithmeticOperatorHotSpot702.is("PLUS")) ? (((char)(55296 + (random.nextInt(128))))) : (_arithmeticOperatorHotSpot702.is("MINUS")) ? (((char)(55296 - (random.nextInt(128))))) : (_arithmeticOperatorHotSpot702.is("MUL")) ? (((char)(55296 * (random.nextInt(128))))) :  (((char)(55296 / (random.nextInt(128))))));
+                        buffer[count] = ((char)(55296 + (random.nextInt(128))));
                     }
                 } else if ((ch >= 55296) && (ch <= 56191)) {
                     if (count == 0) {
                         count++;
                     } else {
-                        buffer[count] = ((_arithmeticOperatorHotSpot703.is("PLUS")) ? (((char)(56320 + (random.nextInt(128))))) : (_arithmeticOperatorHotSpot703.is("MINUS")) ? (((char)(56320 - (random.nextInt(128))))) : (_arithmeticOperatorHotSpot703.is("MUL")) ? (((char)(56320 * (random.nextInt(128))))) :  (((char)(56320 / (random.nextInt(128))))));
+                        buffer[count] = ((char)(56320 + (random.nextInt(128))));
                         count--;
                         buffer[count] = ch;
                     }
@@ -100,33 +100,49 @@ public class RandomStringUtils {
                 count++;
             }
         }
-        return new java.lang.String(buffer);
+        return ((_returnReplacementOperator2884.is("NULL")) ? ( null ) : (new java.lang.String(buffer)));
     }
 
     public static java.lang.String random(final int count, final java.lang.String chars) {
         if (chars == null) {
-            return org.apache.commons.lang3.RandomStringUtils.random(count, 0, 0, false, false, null, RANDOM);
+            return ((_returnReplacementOperator2885.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, 0, 0, false, false, null, org.apache.commons.lang3.RandomStringUtils.RANDOM)));
         } 
-        return org.apache.commons.lang3.RandomStringUtils.random(count, chars.toCharArray());
+        return ((_returnReplacementOperator2886.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, chars.toCharArray())));
     }
 
     public static java.lang.String random(final int count, final char... chars) {
         if (chars == null) {
-            return org.apache.commons.lang3.RandomStringUtils.random(count, 0, 0, false, false, null, RANDOM);
+            return ((_returnReplacementOperator2879.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, 0, 0, false, false, null, org.apache.commons.lang3.RandomStringUtils.RANDOM)));
         } 
-        return org.apache.commons.lang3.RandomStringUtils.random(count, 0, chars.length, false, false, chars, RANDOM);
+        return ((_returnReplacementOperator2880.is("NULL")) ? ( null ) : (org.apache.commons.lang3.RandomStringUtils.random(count, 0, chars.length, false, false, chars, org.apache.commons.lang3.RandomStringUtils.RANDOM)));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot698 = metamutator.Selector.of(698,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_arithmeticOperatorHotSpot698");
+    private static final metamutator.Selector _returnReplacementOperator2877 = metamutator.Selector.of(2877,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2877");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot699 = metamutator.Selector.of(699,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_arithmeticOperatorHotSpot699");
+    private static final metamutator.Selector _returnReplacementOperator2878 = metamutator.Selector.of(2878,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2878");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot700 = metamutator.Selector.of(700,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_arithmeticOperatorHotSpot700");
+    private static final metamutator.Selector _returnReplacementOperator2879 = metamutator.Selector.of(2879,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2879");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot701 = metamutator.Selector.of(701,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_arithmeticOperatorHotSpot701");
+    private static final metamutator.Selector _returnReplacementOperator2880 = metamutator.Selector.of(2880,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2880");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot702 = metamutator.Selector.of(702,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_arithmeticOperatorHotSpot702");
+    private static final metamutator.Selector _returnReplacementOperator2881 = metamutator.Selector.of(2881,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2881");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot703 = metamutator.Selector.of(703,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_arithmeticOperatorHotSpot703");
+    private static final metamutator.Selector _returnReplacementOperator2882 = metamutator.Selector.of(2882,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2882");
+
+    private static final metamutator.Selector _returnReplacementOperator2883 = metamutator.Selector.of(2883,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2883");
+
+    private static final metamutator.Selector _returnReplacementOperator2884 = metamutator.Selector.of(2884,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2884");
+
+    private static final metamutator.Selector _returnReplacementOperator2885 = metamutator.Selector.of(2885,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2885");
+
+    private static final metamutator.Selector _returnReplacementOperator2886 = metamutator.Selector.of(2886,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2886");
+
+    private static final metamutator.Selector _returnReplacementOperator2887 = metamutator.Selector.of(2887,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2887");
+
+    private static final metamutator.Selector _returnReplacementOperator2888 = metamutator.Selector.of(2888,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2888");
+
+    private static final metamutator.Selector _returnReplacementOperator2889 = metamutator.Selector.of(2889,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2889");
+
+    private static final metamutator.Selector _returnReplacementOperator2890 = metamutator.Selector.of(2890,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.RandomStringUtils.class).id("_returnReplacementOperator2890");
 }
 

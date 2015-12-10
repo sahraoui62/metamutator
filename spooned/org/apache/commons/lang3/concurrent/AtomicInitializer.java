@@ -13,9 +13,11 @@ public abstract class AtomicInitializer<T> implements org.apache.commons.lang3.c
                 result = reference.get();
             } 
         } 
-        return result;
+        return ((_returnReplacementOperator436.is("NULL")) ? ( null ) : (result));
     }
 
     protected abstract T initialize() throws org.apache.commons.lang3.concurrent.ConcurrentException;
+
+    private static final metamutator.Selector _returnReplacementOperator436 = metamutator.Selector.of(436,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.AtomicInitializer.class).id("_returnReplacementOperator436");
 }
 

@@ -7,7 +7,7 @@ public class StopWatch {
     public static org.apache.commons.lang3.time.StopWatch createStarted() {
         org.apache.commons.lang3.time.StopWatch sw = new org.apache.commons.lang3.time.StopWatch();
         sw.start();
-        return sw;
+        return ((_returnReplacementOperator1858.is("NULL")) ? ( null ) : (sw));
     }
 
     private enum State {
@@ -150,74 +150,88 @@ SPLIT, UNSPLIT;    }
         if ((this.runningState) != (State.SUSPENDED)) {
             throw new java.lang.IllegalStateException("Stopwatch must be suspended to resume. ");
         } 
-        this.startTime += ((_arithmeticOperatorHotSpot348.is("PLUS")) ? ((java.lang.System.nanoTime()) + (this.stopTime)) : (_arithmeticOperatorHotSpot348.is("MINUS")) ? ((java.lang.System.nanoTime()) - (this.stopTime)) : (_arithmeticOperatorHotSpot348.is("MUL")) ? ((java.lang.System.nanoTime()) * (this.stopTime)) :  ((java.lang.System.nanoTime()) / (this.stopTime)));
+        this.startTime += (java.lang.System.nanoTime()) - (this.stopTime);
         this.runningState = State.RUNNING;
     }
 
     public long getTime() {
-        return ((_arithmeticOperatorHotSpot347.is("PLUS")) ? ((getNanoTime()) + (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)) : (_arithmeticOperatorHotSpot347.is("MINUS")) ? ((getNanoTime()) - (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)) : (_arithmeticOperatorHotSpot347.is("MUL")) ? ((getNanoTime()) * (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)) :  ((getNanoTime()) / (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)));
+        return ((_returnReplacementOperator1857.is("NULL")) ? ( null ) : ((getNanoTime()) / (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)));
     }
 
     public long getNanoTime() {
         if (((this.runningState) == (State.STOPPED)) || ((this.runningState) == (State.SUSPENDED))) {
-            return ((_arithmeticOperatorHotSpot343.is("PLUS")) ? ((this.stopTime) + (this.startTime)) : (_arithmeticOperatorHotSpot343.is("MINUS")) ? ((this.stopTime) - (this.startTime)) : (_arithmeticOperatorHotSpot343.is("MUL")) ? ((this.stopTime) * (this.startTime)) :  ((this.stopTime) / (this.startTime)));
+            return ((_returnReplacementOperator1851.is("NULL")) ? ( null ) : ((this.stopTime) - (this.startTime)));
         } else if ((this.runningState) == (State.UNSTARTED)) {
-            return 0;
+            return ((_returnReplacementOperator1852.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1852.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1852.is("ZERO")) ? ( 0 ) : (0));
         } else if ((this.runningState) == (State.RUNNING)) {
-            return ((_arithmeticOperatorHotSpot344.is("PLUS")) ? ((java.lang.System.nanoTime()) + (this.startTime)) : (_arithmeticOperatorHotSpot344.is("MINUS")) ? ((java.lang.System.nanoTime()) - (this.startTime)) : (_arithmeticOperatorHotSpot344.is("MUL")) ? ((java.lang.System.nanoTime()) * (this.startTime)) :  ((java.lang.System.nanoTime()) / (this.startTime)));
+            return ((_returnReplacementOperator1853.is("NULL")) ? ( null ) : ((java.lang.System.nanoTime()) - (this.startTime)));
         } 
         throw new java.lang.RuntimeException("Illegal running state has occurred.");
     }
 
     public long getSplitTime() {
-        return ((_arithmeticOperatorHotSpot346.is("PLUS")) ? ((getSplitNanoTime()) + (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)) : (_arithmeticOperatorHotSpot346.is("MINUS")) ? ((getSplitNanoTime()) - (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)) : (_arithmeticOperatorHotSpot346.is("MUL")) ? ((getSplitNanoTime()) * (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)) :  ((getSplitNanoTime()) / (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)));
+        return ((_returnReplacementOperator1855.is("NULL")) ? ( null ) : ((getSplitNanoTime()) / (org.apache.commons.lang3.time.StopWatch.NANO_2_MILLIS)));
     }
 
     public long getSplitNanoTime() {
         if ((this.splitState) != (SplitState.SPLIT)) {
             throw new java.lang.IllegalStateException("Stopwatch must be split to get the split time. ");
         } 
-        return ((_arithmeticOperatorHotSpot345.is("PLUS")) ? ((this.stopTime) + (this.startTime)) : (_arithmeticOperatorHotSpot345.is("MINUS")) ? ((this.stopTime) - (this.startTime)) : (_arithmeticOperatorHotSpot345.is("MUL")) ? ((this.stopTime) * (this.startTime)) :  ((this.stopTime) / (this.startTime)));
+        return ((_returnReplacementOperator1854.is("NULL")) ? ( null ) : ((this.stopTime) - (this.startTime)));
     }
 
     public long getStartTime() {
         if ((this.runningState) == (State.UNSTARTED)) {
             throw new java.lang.IllegalStateException("Stopwatch has not been started");
         } 
-        return this.startTimeMillis;
+        return ((_returnReplacementOperator1856.is("NULL")) ? ( null ) : (this.startTimeMillis));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return org.apache.commons.lang3.time.DurationFormatUtils.formatDurationHMS(getTime());
+        return ((_returnReplacementOperator1850.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.formatDurationHMS(getTime())));
     }
 
     public java.lang.String toSplitString() {
-        return org.apache.commons.lang3.time.DurationFormatUtils.formatDurationHMS(getSplitTime());
+        return ((_returnReplacementOperator1849.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.formatDurationHMS(getSplitTime())));
     }
 
     public boolean isStarted() {
-        return runningState.isStarted();
+        return ((_returnReplacementOperator1846.is("NULL")) ? ( null ) : (runningState.isStarted()));
     }
 
     public boolean isSuspended() {
-        return runningState.isSuspended();
+        return ((_returnReplacementOperator1848.is("NULL")) ? ( null ) : (runningState.isSuspended()));
     }
 
     public boolean isStopped() {
-        return runningState.isStopped();
+        return ((_returnReplacementOperator1847.is("NULL")) ? ( null ) : (runningState.isStopped()));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot343 = metamutator.Selector.of(343,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_arithmeticOperatorHotSpot343");
+    private static final metamutator.Selector _returnReplacementOperator1846 = metamutator.Selector.of(1846,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1846");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot344 = metamutator.Selector.of(344,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_arithmeticOperatorHotSpot344");
+    private static final metamutator.Selector _returnReplacementOperator1847 = metamutator.Selector.of(1847,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1847");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot345 = metamutator.Selector.of(345,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_arithmeticOperatorHotSpot345");
+    private static final metamutator.Selector _returnReplacementOperator1848 = metamutator.Selector.of(1848,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1848");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot346 = metamutator.Selector.of(346,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_arithmeticOperatorHotSpot346");
+    private static final metamutator.Selector _returnReplacementOperator1849 = metamutator.Selector.of(1849,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1849");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot347 = metamutator.Selector.of(347,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_arithmeticOperatorHotSpot347");
+    private static final metamutator.Selector _returnReplacementOperator1850 = metamutator.Selector.of(1850,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1850");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot348 = metamutator.Selector.of(348,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_arithmeticOperatorHotSpot348");
+    private static final metamutator.Selector _returnReplacementOperator1851 = metamutator.Selector.of(1851,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1851");
+
+    private static final metamutator.Selector _returnReplacementOperator1852 = metamutator.Selector.of(1852,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1852");
+
+    private static final metamutator.Selector _returnReplacementOperator1853 = metamutator.Selector.of(1853,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1853");
+
+    private static final metamutator.Selector _returnReplacementOperator1854 = metamutator.Selector.of(1854,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1854");
+
+    private static final metamutator.Selector _returnReplacementOperator1855 = metamutator.Selector.of(1855,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1855");
+
+    private static final metamutator.Selector _returnReplacementOperator1856 = metamutator.Selector.of(1856,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1856");
+
+    private static final metamutator.Selector _returnReplacementOperator1857 = metamutator.Selector.of(1857,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1857");
+
+    private static final metamutator.Selector _returnReplacementOperator1858 = metamutator.Selector.of(1858,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.StopWatch.class).id("_returnReplacementOperator1858");
 }
 

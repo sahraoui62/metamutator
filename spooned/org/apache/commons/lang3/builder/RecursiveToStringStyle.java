@@ -25,7 +25,9 @@ public class RecursiveToStringStyle extends org.apache.commons.lang3.builder.ToS
     }
 
     protected boolean accept(final java.lang.Class<?> clazz) {
-        return true;
+        return ((_returnReplacementOperator296.is("NULL")) ? ( null ) : (true));
     }
+
+    private static final metamutator.Selector _returnReplacementOperator296 = metamutator.Selector.of(296,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.RecursiveToStringStyle.class).id("_returnReplacementOperator296");
 }
 

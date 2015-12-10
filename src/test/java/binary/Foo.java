@@ -1,3 +1,4 @@
+package binary;
 public class Foo {
 	
 	public boolean op(Boolean a, Boolean b) {
@@ -11,12 +12,5 @@ public class Foo {
 	public boolean op3(Class c) {
 		return Foo.class==c;
 	}
-	
-	public void op4(int a, int b){
-		System.out.println(a + b);
-	}
-	
-	public int op5(int a, int b){
-		return a + b;
-	}
+
 }

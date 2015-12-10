@@ -10,7 +10,7 @@ public class LaunchMutantSerachSpaceExplorator {
 
 	public static void main(String[] args) throws Exception {
 		
-		File dir = new File("/Users/slimane/Documents/master2/OPL/metamutator/target/classes/org/apache/commons/lang3");
+		File dir = new File("target/classes/org/apache/commons/lang3");
 		
 		File tab[] = dir.listFiles();
 		for(int i = 0 ; i < tab.length ; i++){
@@ -21,7 +21,6 @@ public class LaunchMutantSerachSpaceExplorator {
 				System.out.println(res[0]);
 				System.out.println(res[1]);				
 				MutantSearchSpaceExplorator.runMetaProgramWith(Class.forName("org.apache.commons.lang3."+res[0]));
-				System.out.println("**********  ***********");
 				//
 				//res[0];
 			}

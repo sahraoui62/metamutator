@@ -3,34 +3,34 @@ package org.apache.commons.lang3.builder;
 
 public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.ToStringBuilder {
     public static java.lang.String toString(final java.lang.Object object) {
-        return org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, null, false, false, null);
+        return ((_returnReplacementOperator311.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, null, false, false, null)));
     }
 
     public static java.lang.String toString(final java.lang.Object object, final org.apache.commons.lang3.builder.ToStringStyle style) {
-        return org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, style, false, false, null);
+        return ((_returnReplacementOperator312.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, style, false, false, null)));
     }
 
     public static java.lang.String toString(final java.lang.Object object, final org.apache.commons.lang3.builder.ToStringStyle style, final boolean outputTransients) {
-        return org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, style, outputTransients, false, null);
+        return ((_returnReplacementOperator313.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, style, outputTransients, false, null)));
     }
 
     public static java.lang.String toString(final java.lang.Object object, final org.apache.commons.lang3.builder.ToStringStyle style, final boolean outputTransients, final boolean outputStatics) {
-        return org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, style, outputTransients, outputStatics, null);
+        return ((_returnReplacementOperator314.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(object, style, outputTransients, outputStatics, null)));
     }
 
     public static <T>java.lang.String toString(final T object, final org.apache.commons.lang3.builder.ToStringStyle style, final boolean outputTransients, final boolean outputStatics, final java.lang.Class<? super T> reflectUpToClass) {
-        return new org.apache.commons.lang3.builder.ReflectionToStringBuilder(object , style , null , reflectUpToClass , outputTransients , outputStatics).toString();
+        return ((_returnReplacementOperator297.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.builder.ReflectionToStringBuilder(object , style , null , reflectUpToClass , outputTransients , outputStatics).toString()));
     }
 
     public static java.lang.String toStringExclude(final java.lang.Object object, final java.util.Collection<java.lang.String> excludeFieldNames) {
-        return org.apache.commons.lang3.builder.ReflectionToStringBuilder.toStringExclude(object, org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(excludeFieldNames));
+        return ((_returnReplacementOperator316.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ReflectionToStringBuilder.toStringExclude(object, org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(excludeFieldNames))));
     }
 
     static java.lang.String[] toNoNullStringArray(final java.util.Collection<java.lang.String> collection) {
         if (collection == null) {
-            return org.apache.commons.lang3.ArrayUtils.EMPTY_STRING_ARRAY;
+            return ((_returnReplacementOperator319.is("NULL")) ? ( null ) : (org.apache.commons.lang3.ArrayUtils.EMPTY_STRING_ARRAY));
         } 
-        return org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(collection.toArray());
+        return ((_returnReplacementOperator320.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(collection.toArray())));
     }
 
     static java.lang.String[] toNoNullStringArray(final java.lang.Object[] array) {
@@ -40,18 +40,18 @@ public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.
                 list.add(e.toString());
             } 
         }
-        return list.toArray(new java.lang.String[list.size()]);
+        return ((_returnReplacementOperator318.is("NULL")) ? ( null ) : (list.toArray(new java.lang.String[list.size()])));
     }
 
     public static java.lang.String toStringExclude(final java.lang.Object object, final java.lang.String... excludeFieldNames) {
-        return new org.apache.commons.lang3.builder.ReflectionToStringBuilder(object).setExcludeFieldNames(excludeFieldNames).toString();
+        return ((_returnReplacementOperator315.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.builder.ReflectionToStringBuilder(object).setExcludeFieldNames(excludeFieldNames).toString()));
     }
 
     private static java.lang.Object checkNotNull(final java.lang.Object obj) {
         if (obj == null) {
             throw new java.lang.IllegalArgumentException("The Object passed in should not be null.");
         } 
-        return obj;
+        return ((_returnReplacementOperator307.is("NULL")) ? ( null ) : (obj));
     }
 
     private boolean appendStatics = false;
@@ -83,21 +83,21 @@ public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.
 
     protected boolean accept(final java.lang.reflect.Field field) {
         if ((field.getName().indexOf(org.apache.commons.lang3.ClassUtils.INNER_CLASS_SEPARATOR_CHAR)) != (-1)) {
-            return false;
+            return ((_returnReplacementOperator298.is("NULL")) ? ( null ) : (false));
         } 
         if ((java.lang.reflect.Modifier.isTransient(field.getModifiers())) && (!(isAppendTransients()))) {
-            return false;
+            return ((_returnReplacementOperator299.is("NULL")) ? ( null ) : (false));
         } 
         if ((java.lang.reflect.Modifier.isStatic(field.getModifiers())) && (!(isAppendStatics()))) {
-            return false;
+            return ((_returnReplacementOperator300.is("NULL")) ? ( null ) : (false));
         } 
         if (((this.excludeFieldNames) != null) && ((java.util.Arrays.binarySearch(this.excludeFieldNames, field.getName())) >= 0)) {
-            return false;
+            return ((_returnReplacementOperator301.is("NULL")) ? ( null ) : (false));
         } 
         if (field.isAnnotationPresent(org.apache.commons.lang3.builder.ToStringExclude.class)) {
-            return false;
+            return ((_returnReplacementOperator302.is("NULL")) ? ( null ) : (false));
         } 
-        return true;
+        return ((_returnReplacementOperator303.is("NULL")) ? ( null ) : (true));
     }
 
     protected void appendFieldsIn(final java.lang.Class<?> clazz) {
@@ -121,28 +121,28 @@ public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.
     }
 
     public java.lang.String[] getExcludeFieldNames() {
-        return this.excludeFieldNames.clone();
+        return ((_returnReplacementOperator317.is("NULL")) ? ( null ) : (this.excludeFieldNames.clone()));
     }
 
     public java.lang.Class<?> getUpToClass() {
-        return this.upToClass;
+        return ((_returnReplacementOperator306.is("NULL")) ? ( null ) : (this.upToClass));
     }
 
     protected java.lang.Object getValue(final java.lang.reflect.Field field) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException {
-        return field.get(getObject());
+        return ((_returnReplacementOperator308.is("NULL")) ? ( null ) : (field.get(getObject())));
     }
 
     public boolean isAppendStatics() {
-        return this.appendStatics;
+        return ((_returnReplacementOperator304.is("NULL")) ? ( null ) : (this.appendStatics));
     }
 
     public boolean isAppendTransients() {
-        return this.appendTransients;
+        return ((_returnReplacementOperator305.is("NULL")) ? ( null ) : (this.appendTransients));
     }
 
     public org.apache.commons.lang3.builder.ReflectionToStringBuilder reflectionAppendArray(final java.lang.Object array) {
         getStyle().reflectionAppendArrayDetail(getStringBuffer(), null, array);
-        return this;
+        return ((_returnReplacementOperator321.is("NULL")) ? ( null ) : (this));
     }
 
     public void setAppendStatics(final boolean appendStatics) {
@@ -160,7 +160,7 @@ public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.
             this.excludeFieldNames = org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(excludeFieldNamesParam);
             java.util.Arrays.sort(this.excludeFieldNames);
         }
-        return this;
+        return ((_returnReplacementOperator322.is("NULL")) ? ( null ) : (this));
     }
 
     public void setUpToClass(final java.lang.Class<?> clazz) {
@@ -176,7 +176,7 @@ public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.
     @java.lang.Override
     public java.lang.String toString() {
         if ((getObject()) == null) {
-            return getStyle().getNullText();
+            return ((_returnReplacementOperator309.is("NULL")) ? ( null ) : (getStyle().getNullText()));
         } 
         java.lang.Class<?> clazz = getObject().getClass();
         appendFieldsIn(clazz);
@@ -184,7 +184,59 @@ public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.
             clazz = clazz.getSuperclass();
             appendFieldsIn(clazz);
         }
-        return super.toString();
+        return ((_returnReplacementOperator310.is("NULL")) ? ( null ) : (super.toString()));
     }
+
+    private static final metamutator.Selector _returnReplacementOperator297 = metamutator.Selector.of(297,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator297");
+
+    private static final metamutator.Selector _returnReplacementOperator298 = metamutator.Selector.of(298,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator298");
+
+    private static final metamutator.Selector _returnReplacementOperator299 = metamutator.Selector.of(299,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator299");
+
+    private static final metamutator.Selector _returnReplacementOperator300 = metamutator.Selector.of(300,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator300");
+
+    private static final metamutator.Selector _returnReplacementOperator301 = metamutator.Selector.of(301,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator301");
+
+    private static final metamutator.Selector _returnReplacementOperator302 = metamutator.Selector.of(302,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator302");
+
+    private static final metamutator.Selector _returnReplacementOperator303 = metamutator.Selector.of(303,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator303");
+
+    private static final metamutator.Selector _returnReplacementOperator304 = metamutator.Selector.of(304,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator304");
+
+    private static final metamutator.Selector _returnReplacementOperator305 = metamutator.Selector.of(305,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator305");
+
+    private static final metamutator.Selector _returnReplacementOperator306 = metamutator.Selector.of(306,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator306");
+
+    private static final metamutator.Selector _returnReplacementOperator307 = metamutator.Selector.of(307,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator307");
+
+    private static final metamutator.Selector _returnReplacementOperator308 = metamutator.Selector.of(308,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator308");
+
+    private static final metamutator.Selector _returnReplacementOperator309 = metamutator.Selector.of(309,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator309");
+
+    private static final metamutator.Selector _returnReplacementOperator310 = metamutator.Selector.of(310,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator310");
+
+    private static final metamutator.Selector _returnReplacementOperator311 = metamutator.Selector.of(311,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator311");
+
+    private static final metamutator.Selector _returnReplacementOperator312 = metamutator.Selector.of(312,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator312");
+
+    private static final metamutator.Selector _returnReplacementOperator313 = metamutator.Selector.of(313,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator313");
+
+    private static final metamutator.Selector _returnReplacementOperator314 = metamutator.Selector.of(314,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator314");
+
+    private static final metamutator.Selector _returnReplacementOperator315 = metamutator.Selector.of(315,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator315");
+
+    private static final metamutator.Selector _returnReplacementOperator316 = metamutator.Selector.of(316,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator316");
+
+    private static final metamutator.Selector _returnReplacementOperator317 = metamutator.Selector.of(317,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator317");
+
+    private static final metamutator.Selector _returnReplacementOperator318 = metamutator.Selector.of(318,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator318");
+
+    private static final metamutator.Selector _returnReplacementOperator319 = metamutator.Selector.of(319,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator319");
+
+    private static final metamutator.Selector _returnReplacementOperator320 = metamutator.Selector.of(320,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator320");
+
+    private static final metamutator.Selector _returnReplacementOperator321 = metamutator.Selector.of(321,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator321");
+
+    private static final metamutator.Selector _returnReplacementOperator322 = metamutator.Selector.of(322,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ReflectionToStringBuilder.class).id("_returnReplacementOperator322");
 }
 

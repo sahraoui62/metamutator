@@ -16,21 +16,21 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
     }
 
     public boolean isSet(final org.apache.commons.lang3.text.translate.NumericEntityUnescaper.OPTION option) {
-        return (options) == null ? false : options.contains(option);
+        return ((_returnReplacementOperator1127.is("NULL")) ? ( null ) : ((options) == null ? false : options.contains(option)));
     }
 
     @java.lang.Override
     public int translate(final java.lang.CharSequence input, final int index, final java.io.Writer out) throws java.io.IOException {
         final int seqEnd = input.length();
-        if ((((input.charAt(index)) == '&') && (index < ((_arithmeticOperatorHotSpot107.is("PLUS")) ? ((seqEnd + 2)) : (_arithmeticOperatorHotSpot107.is("MINUS")) ? ((seqEnd - 2)) : (_arithmeticOperatorHotSpot107.is("MUL")) ? ((seqEnd * 2)) :  ((seqEnd / 2))))) && ((input.charAt(((_arithmeticOperatorHotSpot108.is("PLUS")) ? ((index + 1)) : (_arithmeticOperatorHotSpot108.is("MINUS")) ? ((index - 1)) : (_arithmeticOperatorHotSpot108.is("MUL")) ? ((index * 1)) :  ((index / 1))))) == '#')) {
-            int start = ((_arithmeticOperatorHotSpot109.is("PLUS")) ? (index + 2) : (_arithmeticOperatorHotSpot109.is("MINUS")) ? (index - 2) : (_arithmeticOperatorHotSpot109.is("MUL")) ? (index * 2) :  (index / 2));
+        if ((((input.charAt(index)) == '&') && (index < (seqEnd - 2))) && ((input.charAt((index + 1))) == '#')) {
+            int start = index + 2;
             boolean isHex = false;
             final char firstChar = input.charAt(start);
             if ((firstChar == 'x') || (firstChar == 'X')) {
                 start++;
                 isHex = true;
                 if (start == seqEnd) {
-                    return 0;
+                    return ((_returnReplacementOperator1128.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1128.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1128.is("ZERO")) ? ( 0 ) : (0));
                 } 
             } 
             int end = start;
@@ -40,7 +40,7 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
             final boolean semiNext = (end != seqEnd) && ((input.charAt(end)) == ';');
             if (!semiNext) {
                 if (isSet(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.OPTION.semiColonRequired)) {
-                    return 0;
+                    return ((_returnReplacementOperator1129.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1129.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1129.is("ZERO")) ? ( 0 ) : (0));
                 } else if (isSet(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.OPTION.errorIfNoSemiColon)) {
                     throw new java.lang.IllegalArgumentException("Semi-colon required at end of numeric entity");
                 } 
@@ -53,7 +53,7 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
                     entityValue = java.lang.Integer.parseInt(input.subSequence(start, end).toString(), 10);
                 }
             } catch (final java.lang.NumberFormatException nfe) {
-                return 0;
+                return ((_returnReplacementOperator1130.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1130.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1130.is("ZERO")) ? ( 0 ) : (0));
             }
             if (entityValue > 65535) {
                 final char[] chrs = java.lang.Character.toChars(entityValue);
@@ -62,17 +62,21 @@ semiColonRequired, semiColonOptional, errorIfNoSemiColon;    }
             } else {
                 out.write(entityValue);
             }
-            return ((((_arithmeticOperatorHotSpot110.is("PLUS")) ? ((2 + end)) : (_arithmeticOperatorHotSpot110.is("MINUS")) ? ((2 - end)) : (_arithmeticOperatorHotSpot110.is("MUL")) ? ((2 * end)) :  ((2 / end))) - start) + (isHex ? 1 : 0)) + (semiNext ? 1 : 0);
+            return ((_returnReplacementOperator1131.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1131.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1131.is("ZERO")) ? ( 0 ) : ((((2 + end) - start) + (isHex ? 1 : 0)) + (semiNext ? 1 : 0)));
         } 
-        return 0;
+        return ((_returnReplacementOperator1132.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1132.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1132.is("ZERO")) ? ( 0 ) : (0));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot107 = metamutator.Selector.of(107,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_arithmeticOperatorHotSpot107");
+    private static final metamutator.Selector _returnReplacementOperator1127 = metamutator.Selector.of(1127,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1127");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot108 = metamutator.Selector.of(108,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_arithmeticOperatorHotSpot108");
+    private static final metamutator.Selector _returnReplacementOperator1128 = metamutator.Selector.of(1128,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1128");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot109 = metamutator.Selector.of(109,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_arithmeticOperatorHotSpot109");
+    private static final metamutator.Selector _returnReplacementOperator1129 = metamutator.Selector.of(1129,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1129");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot110 = metamutator.Selector.of(110,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_arithmeticOperatorHotSpot110");
+    private static final metamutator.Selector _returnReplacementOperator1130 = metamutator.Selector.of(1130,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1130");
+
+    private static final metamutator.Selector _returnReplacementOperator1131 = metamutator.Selector.of(1131,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1131");
+
+    private static final metamutator.Selector _returnReplacementOperator1132 = metamutator.Selector.of(1132,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.NumericEntityUnescaper.class).id("_returnReplacementOperator1132");
 }
 

@@ -9,7 +9,7 @@ abstract class FormatCache<F extends java.text.Format> {
     private static final java.util.concurrent.ConcurrentMap<org.apache.commons.lang3.time.FormatCache.MultipartKey, java.lang.String> cDateTimeInstanceCache = new java.util.concurrent.ConcurrentHashMap<org.apache.commons.lang3.time.FormatCache.MultipartKey, java.lang.String>(7);
 
     public F getInstance() {
-        return getDateTimeInstance(java.text.DateFormat.SHORT, java.text.DateFormat.SHORT, java.util.TimeZone.getDefault(), java.util.Locale.getDefault());
+        return ((_returnReplacementOperator1842.is("NULL")) ? ( null ) : (getDateTimeInstance(java.text.DateFormat.SHORT, java.text.DateFormat.SHORT, java.util.TimeZone.getDefault(), java.util.Locale.getDefault())));
     }
 
     public F getInstance(final java.lang.String pattern, java.util.TimeZone timeZone, java.util.Locale locale) {
@@ -31,7 +31,7 @@ abstract class FormatCache<F extends java.text.Format> {
                 format = previousValue;
             } 
         } 
-        return format;
+        return ((_returnReplacementOperator1843.is("NULL")) ? ( null ) : (format));
     }
 
     protected abstract F createInstance(java.lang.String pattern, java.util.TimeZone timeZone, java.util.Locale locale);
@@ -41,19 +41,19 @@ abstract class FormatCache<F extends java.text.Format> {
             locale = java.util.Locale.getDefault();
         } 
         final java.lang.String pattern = org.apache.commons.lang3.time.FormatCache.getPatternForStyle(dateStyle, timeStyle, locale);
-        return getInstance(pattern, timeZone, locale);
+        return ((_returnReplacementOperator1841.is("NULL")) ? ( null ) : (getInstance(pattern, timeZone, locale)));
     }
 
     F getDateTimeInstance(final int dateStyle, final int timeStyle, final java.util.TimeZone timeZone, final java.util.Locale locale) {
-        return getDateTimeInstance(java.lang.Integer.valueOf(dateStyle), java.lang.Integer.valueOf(timeStyle), timeZone, locale);
+        return ((_returnReplacementOperator1840.is("NULL")) ? ( null ) : (getDateTimeInstance(java.lang.Integer.valueOf(dateStyle), java.lang.Integer.valueOf(timeStyle), timeZone, locale)));
     }
 
     F getDateInstance(final int dateStyle, final java.util.TimeZone timeZone, final java.util.Locale locale) {
-        return getDateTimeInstance(java.lang.Integer.valueOf(dateStyle), null, timeZone, locale);
+        return ((_returnReplacementOperator1839.is("NULL")) ? ( null ) : (getDateTimeInstance(java.lang.Integer.valueOf(dateStyle), null, timeZone, locale)));
     }
 
     F getTimeInstance(final int timeStyle, final java.util.TimeZone timeZone, final java.util.Locale locale) {
-        return getDateTimeInstance(null, java.lang.Integer.valueOf(timeStyle), timeZone, locale);
+        return ((_returnReplacementOperator1844.is("NULL")) ? ( null ) : (getDateTimeInstance(null, java.lang.Integer.valueOf(timeStyle), timeZone, locale)));
     }
 
     static java.lang.String getPatternForStyle(final java.lang.Integer dateStyle, final java.lang.Integer timeStyle, final java.util.Locale locale) {
@@ -78,7 +78,7 @@ abstract class FormatCache<F extends java.text.Format> {
                 throw new java.lang.IllegalArgumentException(("No date time pattern for locale: " + locale));
             }
         } 
-        return pattern;
+        return ((_returnReplacementOperator1845.is("NULL")) ? ( null ) : (pattern));
     }
 
     private static class MultipartKey {
@@ -92,7 +92,7 @@ abstract class FormatCache<F extends java.text.Format> {
 
         @java.lang.Override
         public boolean equals(final java.lang.Object obj) {
-            return java.util.Arrays.equals(keys, ((org.apache.commons.lang3.time.FormatCache.MultipartKey)(obj)).keys);
+            return ((_returnReplacementOperator1837.is("NULL")) ? ( null ) : (java.util.Arrays.equals(keys, ((org.apache.commons.lang3.time.FormatCache.MultipartKey)(obj)).keys)));
         }
 
         @java.lang.Override
@@ -101,15 +101,31 @@ abstract class FormatCache<F extends java.text.Format> {
                 int rc = 0;
                 for (final java.lang.Object key : keys) {
                     if (key != null) {
-                        rc = ((_arithmeticOperatorHotSpot342.is("PLUS")) ? ((rc + 7)) : (_arithmeticOperatorHotSpot342.is("MINUS")) ? ((rc - 7)) : (_arithmeticOperatorHotSpot342.is("MUL")) ? ((rc * 7)) :  ((rc / 7))) + (key.hashCode());
+                        rc = (rc * 7) + (key.hashCode());
                     } 
                 }
                 hashCode = rc;
             } 
-            return hashCode;
+            return ((_returnReplacementOperator1838.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1838.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1838.is("ZERO")) ? ( 0 ) : (hashCode));
         }
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot342 = metamutator.Selector.of(342,new String[]{"MUL","PLUS","MINUS","DIV"}).id("_arithmeticOperatorHotSpot342");
+    private static final metamutator.Selector _returnReplacementOperator1837 = metamutator.Selector.of(1837,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1837");
+
+    private static final metamutator.Selector _returnReplacementOperator1838 = metamutator.Selector.of(1838,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1838");
+
+    private static final metamutator.Selector _returnReplacementOperator1839 = metamutator.Selector.of(1839,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FormatCache.class).id("_returnReplacementOperator1839");
+
+    private static final metamutator.Selector _returnReplacementOperator1840 = metamutator.Selector.of(1840,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FormatCache.class).id("_returnReplacementOperator1840");
+
+    private static final metamutator.Selector _returnReplacementOperator1841 = metamutator.Selector.of(1841,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FormatCache.class).id("_returnReplacementOperator1841");
+
+    private static final metamutator.Selector _returnReplacementOperator1842 = metamutator.Selector.of(1842,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FormatCache.class).id("_returnReplacementOperator1842");
+
+    private static final metamutator.Selector _returnReplacementOperator1843 = metamutator.Selector.of(1843,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FormatCache.class).id("_returnReplacementOperator1843");
+
+    private static final metamutator.Selector _returnReplacementOperator1844 = metamutator.Selector.of(1844,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FormatCache.class).id("_returnReplacementOperator1844");
+
+    private static final metamutator.Selector _returnReplacementOperator1845 = metamutator.Selector.of(1845,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.FormatCache.class).id("_returnReplacementOperator1845");
 }
 

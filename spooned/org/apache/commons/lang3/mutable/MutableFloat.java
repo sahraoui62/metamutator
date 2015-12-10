@@ -27,7 +27,7 @@ public class MutableFloat extends java.lang.Number implements java.lang.Comparab
 
     @java.lang.Override
     public java.lang.Float getValue() {
-        return java.lang.Float.valueOf(this.value);
+        return ((_returnReplacementOperator812.is("NULL")) ? ( null ) : (java.lang.Float.valueOf(this.value)));
     }
 
     public void setValue(final float value) {
@@ -40,11 +40,11 @@ public class MutableFloat extends java.lang.Number implements java.lang.Comparab
     }
 
     public boolean isNaN() {
-        return java.lang.Float.isNaN(value);
+        return ((_returnReplacementOperator806.is("NULL")) ? ( null ) : (java.lang.Float.isNaN(value)));
     }
 
     public boolean isInfinite() {
-        return java.lang.Float.isInfinite(value);
+        return ((_returnReplacementOperator805.is("NULL")) ? ( null ) : (java.lang.Float.isInfinite(value)));
     }
 
     public void increment() {
@@ -73,46 +73,70 @@ public class MutableFloat extends java.lang.Number implements java.lang.Comparab
 
     @java.lang.Override
     public int intValue() {
-        return ((int)(value));
+        return ((_returnReplacementOperator811.is("NULL")) ? ( null ) : (((int)(value))));
     }
 
     @java.lang.Override
     public long longValue() {
-        return ((long)(value));
+        return ((_returnReplacementOperator815.is("NULL")) ? ( null ) : (((long)(value))));
     }
 
     @java.lang.Override
     public float floatValue() {
-        return value;
+        return ((_returnReplacementOperator808.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public double doubleValue() {
-        return value;
+        return ((_returnReplacementOperator807.is("NULL")) ? ( null ) : (value));
     }
 
     public java.lang.Float toFloat() {
-        return java.lang.Float.valueOf(floatValue());
+        return ((_returnReplacementOperator813.is("NULL")) ? ( null ) : (java.lang.Float.valueOf(floatValue())));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
-        return (obj instanceof org.apache.commons.lang3.mutable.MutableFloat) && ((java.lang.Float.floatToIntBits(((org.apache.commons.lang3.mutable.MutableFloat)(obj)).value)) == (java.lang.Float.floatToIntBits(value)));
+        return ((_returnReplacementOperator804.is("NULL")) ? ( null ) : ((obj instanceof org.apache.commons.lang3.mutable.MutableFloat) && ((java.lang.Float.floatToIntBits(((org.apache.commons.lang3.mutable.MutableFloat)(obj)).value)) == (java.lang.Float.floatToIntBits(value)))));
     }
 
     @java.lang.Override
     public int hashCode() {
-        return java.lang.Float.floatToIntBits(value);
+        return ((_returnReplacementOperator810.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator810.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator810.is("ZERO")) ? ( 0 ) : (java.lang.Float.floatToIntBits(value)));
     }
 
     @java.lang.Override
     public int compareTo(final org.apache.commons.lang3.mutable.MutableFloat other) {
-        return java.lang.Float.compare(this.value, other.value);
+        return ((_returnReplacementOperator809.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator809.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator809.is("ZERO")) ? ( 0 ) : (java.lang.Float.compare(this.value, other.value)));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return java.lang.String.valueOf(value);
+        return ((_returnReplacementOperator814.is("NULL")) ? ( null ) : (java.lang.String.valueOf(value)));
     }
+
+    private static final metamutator.Selector _returnReplacementOperator804 = metamutator.Selector.of(804,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator804");
+
+    private static final metamutator.Selector _returnReplacementOperator805 = metamutator.Selector.of(805,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator805");
+
+    private static final metamutator.Selector _returnReplacementOperator806 = metamutator.Selector.of(806,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator806");
+
+    private static final metamutator.Selector _returnReplacementOperator807 = metamutator.Selector.of(807,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator807");
+
+    private static final metamutator.Selector _returnReplacementOperator808 = metamutator.Selector.of(808,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator808");
+
+    private static final metamutator.Selector _returnReplacementOperator809 = metamutator.Selector.of(809,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator809");
+
+    private static final metamutator.Selector _returnReplacementOperator810 = metamutator.Selector.of(810,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator810");
+
+    private static final metamutator.Selector _returnReplacementOperator811 = metamutator.Selector.of(811,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator811");
+
+    private static final metamutator.Selector _returnReplacementOperator812 = metamutator.Selector.of(812,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator812");
+
+    private static final metamutator.Selector _returnReplacementOperator813 = metamutator.Selector.of(813,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator813");
+
+    private static final metamutator.Selector _returnReplacementOperator814 = metamutator.Selector.of(814,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator814");
+
+    private static final metamutator.Selector _returnReplacementOperator815 = metamutator.Selector.of(815,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableFloat.class).id("_returnReplacementOperator815");
 }
 

@@ -27,7 +27,7 @@ public class MutableByte extends java.lang.Number implements java.lang.Comparabl
 
     @java.lang.Override
     public java.lang.Byte getValue() {
-        return java.lang.Byte.valueOf(this.value);
+        return ((_returnReplacementOperator788.is("NULL")) ? ( null ) : (java.lang.Byte.valueOf(this.value)));
     }
 
     public void setValue(final byte value) {
@@ -65,54 +65,78 @@ public class MutableByte extends java.lang.Number implements java.lang.Comparabl
 
     @java.lang.Override
     public byte byteValue() {
-        return value;
+        return ((_returnReplacementOperator782.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public int intValue() {
-        return value;
+        return ((_returnReplacementOperator787.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public long longValue() {
-        return value;
+        return ((_returnReplacementOperator791.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public float floatValue() {
-        return value;
+        return ((_returnReplacementOperator784.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public double doubleValue() {
-        return value;
+        return ((_returnReplacementOperator783.is("NULL")) ? ( null ) : (value));
     }
 
     public java.lang.Byte toByte() {
-        return java.lang.Byte.valueOf(byteValue());
+        return ((_returnReplacementOperator789.is("NULL")) ? ( null ) : (java.lang.Byte.valueOf(byteValue())));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
         if (obj instanceof org.apache.commons.lang3.mutable.MutableByte) {
-            return (value) == (((org.apache.commons.lang3.mutable.MutableByte)(obj)).byteValue());
+            return ((_returnReplacementOperator780.is("NULL")) ? ( null ) : ((value) == (((org.apache.commons.lang3.mutable.MutableByte)(obj)).byteValue())));
         } 
-        return false;
+        return ((_returnReplacementOperator781.is("NULL")) ? ( null ) : (false));
     }
 
     @java.lang.Override
     public int hashCode() {
-        return value;
+        return ((_returnReplacementOperator786.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public int compareTo(final org.apache.commons.lang3.mutable.MutableByte other) {
-        return org.apache.commons.lang3.math.NumberUtils.compare(this.value, other.value);
+        return ((_returnReplacementOperator785.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator785.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator785.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.math.NumberUtils.compare(this.value, other.value)));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return java.lang.String.valueOf(value);
+        return ((_returnReplacementOperator790.is("NULL")) ? ( null ) : (java.lang.String.valueOf(value)));
     }
+
+    private static final metamutator.Selector _returnReplacementOperator780 = metamutator.Selector.of(780,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator780");
+
+    private static final metamutator.Selector _returnReplacementOperator781 = metamutator.Selector.of(781,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator781");
+
+    private static final metamutator.Selector _returnReplacementOperator782 = metamutator.Selector.of(782,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator782");
+
+    private static final metamutator.Selector _returnReplacementOperator783 = metamutator.Selector.of(783,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator783");
+
+    private static final metamutator.Selector _returnReplacementOperator784 = metamutator.Selector.of(784,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator784");
+
+    private static final metamutator.Selector _returnReplacementOperator785 = metamutator.Selector.of(785,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator785");
+
+    private static final metamutator.Selector _returnReplacementOperator786 = metamutator.Selector.of(786,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator786");
+
+    private static final metamutator.Selector _returnReplacementOperator787 = metamutator.Selector.of(787,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator787");
+
+    private static final metamutator.Selector _returnReplacementOperator788 = metamutator.Selector.of(788,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator788");
+
+    private static final metamutator.Selector _returnReplacementOperator789 = metamutator.Selector.of(789,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator789");
+
+    private static final metamutator.Selector _returnReplacementOperator790 = metamutator.Selector.of(790,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator790");
+
+    private static final metamutator.Selector _returnReplacementOperator791 = metamutator.Selector.of(791,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableByte.class).id("_returnReplacementOperator791");
 }
 

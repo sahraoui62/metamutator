@@ -17,7 +17,7 @@ public class CallableBackgroundInitializer<T> extends org.apache.commons.lang3.c
 
     @java.lang.Override
     protected T initialize() throws java.lang.Exception {
-        return callable.call();
+        return ((_returnReplacementOperator462.is("NULL")) ? ( null ) : (callable.call()));
     }
 
     private void checkCallable(final java.util.concurrent.Callable<T> call) {
@@ -25,5 +25,7 @@ public class CallableBackgroundInitializer<T> extends org.apache.commons.lang3.c
             throw new java.lang.IllegalArgumentException("Callable must not be null!");
         } 
     }
+
+    private static final metamutator.Selector _returnReplacementOperator462 = metamutator.Selector.of(462,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.CallableBackgroundInitializer.class).id("_returnReplacementOperator462");
 }
 

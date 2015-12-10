@@ -14,9 +14,11 @@ public abstract class AtomicSafeInitializer<T> implements org.apache.commons.lan
                 reference.set(initialize());
             } 
         }
-        return result;
+        return ((_returnReplacementOperator437.is("NULL")) ? ( null ) : (result));
     }
 
     protected abstract T initialize() throws org.apache.commons.lang3.concurrent.ConcurrentException;
+
+    private static final metamutator.Selector _returnReplacementOperator437 = metamutator.Selector.of(437,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.AtomicSafeInitializer.class).id("_returnReplacementOperator437");
 }
 

@@ -28,11 +28,11 @@ public class BasicThreadFactory implements java.util.concurrent.ThreadFactory {
     }
 
     public final java.util.concurrent.ThreadFactory getWrappedFactory() {
-        return wrappedFactory;
+        return ((_returnReplacementOperator460.is("NULL")) ? ( null ) : (wrappedFactory));
     }
 
     public final java.lang.String getNamingPattern() {
-        return namingPattern;
+        return ((_returnReplacementOperator457.is("NULL")) ? ( null ) : (namingPattern));
     }
 
     public final java.lang.Boolean getDaemonFlag() {
@@ -40,22 +40,22 @@ public class BasicThreadFactory implements java.util.concurrent.ThreadFactory {
     }
 
     public final java.lang.Integer getPriority() {
-        return priority;
+        return ((_returnReplacementOperator456.is("NULL")) ? ( null ) : (priority));
     }
 
     public final java.lang.Thread.UncaughtExceptionHandler getUncaughtExceptionHandler() {
-        return uncaughtExceptionHandler;
+        return ((_returnReplacementOperator459.is("NULL")) ? ( null ) : (uncaughtExceptionHandler));
     }
 
     public long getThreadCount() {
-        return threadCounter.get();
+        return ((_returnReplacementOperator461.is("NULL")) ? ( null ) : (threadCounter.get()));
     }
 
     @java.lang.Override
     public java.lang.Thread newThread(final java.lang.Runnable r) {
         final java.lang.Thread t = getWrappedFactory().newThread(r);
         initializeThread(t);
-        return t;
+        return ((_returnReplacementOperator458.is("NULL")) ? ( null ) : (t));
     }
 
     private void initializeThread(final java.lang.Thread t) {
@@ -90,7 +90,7 @@ public class BasicThreadFactory implements java.util.concurrent.ThreadFactory {
                 throw new java.lang.NullPointerException("Wrapped ThreadFactory must not be null!");
             } 
             wrappedFactory = factory;
-            return this;
+            return ((_returnReplacementOperator455.is("NULL")) ? ( null ) : (this));
         }
 
         public org.apache.commons.lang3.concurrent.BasicThreadFactory.Builder namingPattern(final java.lang.String pattern) {
@@ -98,17 +98,17 @@ public class BasicThreadFactory implements java.util.concurrent.ThreadFactory {
                 throw new java.lang.NullPointerException("Naming pattern must not be null!");
             } 
             namingPattern = pattern;
-            return this;
+            return ((_returnReplacementOperator452.is("NULL")) ? ( null ) : (this));
         }
 
         public org.apache.commons.lang3.concurrent.BasicThreadFactory.Builder daemon(final boolean f) {
             daemonFlag = java.lang.Boolean.valueOf(f);
-            return this;
+            return ((_returnReplacementOperator451.is("NULL")) ? ( null ) : (this));
         }
 
         public org.apache.commons.lang3.concurrent.BasicThreadFactory.Builder priority(final int prio) {
             priority = java.lang.Integer.valueOf(prio);
-            return this;
+            return ((_returnReplacementOperator453.is("NULL")) ? ( null ) : (this));
         }
 
         public org.apache.commons.lang3.concurrent.BasicThreadFactory.Builder uncaughtExceptionHandler(final java.lang.Thread.UncaughtExceptionHandler handler) {
@@ -116,7 +116,7 @@ public class BasicThreadFactory implements java.util.concurrent.ThreadFactory {
                 throw new java.lang.NullPointerException("Uncaught exception handler must not be null!");
             } 
             exceptionHandler = handler;
-            return this;
+            return ((_returnReplacementOperator454.is("NULL")) ? ( null ) : (this));
         }
 
         public void reset() {
@@ -131,8 +131,32 @@ public class BasicThreadFactory implements java.util.concurrent.ThreadFactory {
         public org.apache.commons.lang3.concurrent.BasicThreadFactory build() {
             final org.apache.commons.lang3.concurrent.BasicThreadFactory factory = new org.apache.commons.lang3.concurrent.BasicThreadFactory(this);
             reset();
-            return factory;
+            return ((_returnReplacementOperator450.is("NULL")) ? ( null ) : (factory));
         }
     }
+
+    private static final metamutator.Selector _returnReplacementOperator450 = metamutator.Selector.of(450,new String[]{"INIT","NULL"}).id("_returnReplacementOperator450");
+
+    private static final metamutator.Selector _returnReplacementOperator451 = metamutator.Selector.of(451,new String[]{"INIT","NULL"}).id("_returnReplacementOperator451");
+
+    private static final metamutator.Selector _returnReplacementOperator452 = metamutator.Selector.of(452,new String[]{"INIT","NULL"}).id("_returnReplacementOperator452");
+
+    private static final metamutator.Selector _returnReplacementOperator453 = metamutator.Selector.of(453,new String[]{"INIT","NULL"}).id("_returnReplacementOperator453");
+
+    private static final metamutator.Selector _returnReplacementOperator454 = metamutator.Selector.of(454,new String[]{"INIT","NULL"}).id("_returnReplacementOperator454");
+
+    private static final metamutator.Selector _returnReplacementOperator455 = metamutator.Selector.of(455,new String[]{"INIT","NULL"}).id("_returnReplacementOperator455");
+
+    private static final metamutator.Selector _returnReplacementOperator456 = metamutator.Selector.of(456,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.BasicThreadFactory.class).id("_returnReplacementOperator456");
+
+    private static final metamutator.Selector _returnReplacementOperator457 = metamutator.Selector.of(457,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.BasicThreadFactory.class).id("_returnReplacementOperator457");
+
+    private static final metamutator.Selector _returnReplacementOperator458 = metamutator.Selector.of(458,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.BasicThreadFactory.class).id("_returnReplacementOperator458");
+
+    private static final metamutator.Selector _returnReplacementOperator459 = metamutator.Selector.of(459,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.BasicThreadFactory.class).id("_returnReplacementOperator459");
+
+    private static final metamutator.Selector _returnReplacementOperator460 = metamutator.Selector.of(460,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.BasicThreadFactory.class).id("_returnReplacementOperator460");
+
+    private static final metamutator.Selector _returnReplacementOperator461 = metamutator.Selector.of(461,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.concurrent.BasicThreadFactory.class).id("_returnReplacementOperator461");
 }
 

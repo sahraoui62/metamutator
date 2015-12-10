@@ -9,15 +9,15 @@ public class DurationFormatUtils {
     public static final java.lang.String ISO_EXTENDED_FORMAT_PATTERN = "'P'yyyy'Y'M'M'd'DT'H'H'm'M's.SSS'S'";
 
     public static java.lang.String formatDurationHMS(final long durationMillis) {
-        return org.apache.commons.lang3.time.DurationFormatUtils.formatDuration(durationMillis, "HH:mm:ss.SSS");
+        return ((_returnReplacementOperator1676.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.formatDuration(durationMillis, "HH:mm:ss.SSS")));
     }
 
     public static java.lang.String formatDurationISO(final long durationMillis) {
-        return org.apache.commons.lang3.time.DurationFormatUtils.formatDuration(durationMillis, ISO_EXTENDED_FORMAT_PATTERN, false);
+        return ((_returnReplacementOperator1677.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.formatDuration(durationMillis, org.apache.commons.lang3.time.DurationFormatUtils.ISO_EXTENDED_FORMAT_PATTERN, false)));
     }
 
     public static java.lang.String formatDuration(final long durationMillis, final java.lang.String format) {
-        return org.apache.commons.lang3.time.DurationFormatUtils.formatDuration(durationMillis, format, true);
+        return ((_returnReplacementOperator1674.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.formatDuration(durationMillis, format, true)));
     }
 
     public static java.lang.String formatDuration(final long durationMillis, final java.lang.String format, final boolean padWithZeros) {
@@ -29,22 +29,22 @@ public class DurationFormatUtils {
         long seconds = 0;
         long milliseconds = durationMillis;
         if (org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, d)) {
-            days = ((_arithmeticOperatorHotSpot289.is("PLUS")) ? (milliseconds + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY)) : (_arithmeticOperatorHotSpot289.is("MINUS")) ? (milliseconds - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY)) : (_arithmeticOperatorHotSpot289.is("MUL")) ? (milliseconds * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY)) :  (milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY)));
-            milliseconds = milliseconds - ((_arithmeticOperatorHotSpot290.is("PLUS")) ? ((days + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY))) : (_arithmeticOperatorHotSpot290.is("MINUS")) ? ((days - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY))) : (_arithmeticOperatorHotSpot290.is("MUL")) ? ((days * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY))) :  ((days / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY))));
+            days = milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY);
+            milliseconds = milliseconds - (days * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_DAY));
         } 
         if (org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, H)) {
-            hours = ((_arithmeticOperatorHotSpot291.is("PLUS")) ? (milliseconds + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR)) : (_arithmeticOperatorHotSpot291.is("MINUS")) ? (milliseconds - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR)) : (_arithmeticOperatorHotSpot291.is("MUL")) ? (milliseconds * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR)) :  (milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR)));
-            milliseconds = milliseconds - ((_arithmeticOperatorHotSpot292.is("PLUS")) ? ((hours + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR))) : (_arithmeticOperatorHotSpot292.is("MINUS")) ? ((hours - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR))) : (_arithmeticOperatorHotSpot292.is("MUL")) ? ((hours * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR))) :  ((hours / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR))));
+            hours = milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR);
+            milliseconds = milliseconds - (hours * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_HOUR));
         } 
         if (org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, m)) {
-            minutes = ((_arithmeticOperatorHotSpot293.is("PLUS")) ? (milliseconds + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE)) : (_arithmeticOperatorHotSpot293.is("MINUS")) ? (milliseconds - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE)) : (_arithmeticOperatorHotSpot293.is("MUL")) ? (milliseconds * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE)) :  (milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE)));
-            milliseconds = milliseconds - ((_arithmeticOperatorHotSpot294.is("PLUS")) ? ((minutes + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE))) : (_arithmeticOperatorHotSpot294.is("MINUS")) ? ((minutes - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE))) : (_arithmeticOperatorHotSpot294.is("MUL")) ? ((minutes * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE))) :  ((minutes / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE))));
+            minutes = milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE);
+            milliseconds = milliseconds - (minutes * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_MINUTE));
         } 
         if (org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, s)) {
-            seconds = ((_arithmeticOperatorHotSpot295.is("PLUS")) ? (milliseconds + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND)) : (_arithmeticOperatorHotSpot295.is("MINUS")) ? (milliseconds - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND)) : (_arithmeticOperatorHotSpot295.is("MUL")) ? (milliseconds * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND)) :  (milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND)));
-            milliseconds = milliseconds - ((_arithmeticOperatorHotSpot296.is("PLUS")) ? ((seconds + (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND))) : (_arithmeticOperatorHotSpot296.is("MINUS")) ? ((seconds - (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND))) : (_arithmeticOperatorHotSpot296.is("MUL")) ? ((seconds * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND))) :  ((seconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND))));
+            seconds = milliseconds / (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND);
+            milliseconds = milliseconds - (seconds * (org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND));
         } 
-        return org.apache.commons.lang3.time.DurationFormatUtils.format(tokens, 0, 0, days, hours, minutes, seconds, milliseconds, padWithZeros);
+        return ((_returnReplacementOperator1675.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.format(tokens, 0, 0, days, hours, minutes, seconds, milliseconds, padWithZeros)));
     }
 
     public static java.lang.String formatDurationWords(final long durationMillis, final boolean suppressLeadingZeroElements, final boolean suppressTrailingZeroElements) {
@@ -87,15 +87,15 @@ public class DurationFormatUtils {
         duration = org.apache.commons.lang3.StringUtils.replaceOnce(duration, " 1 minutes", " 1 minute");
         duration = org.apache.commons.lang3.StringUtils.replaceOnce(duration, " 1 hours", " 1 hour");
         duration = org.apache.commons.lang3.StringUtils.replaceOnce(duration, " 1 days", " 1 day");
-        return duration.trim();
+        return ((_returnReplacementOperator1678.is("NULL")) ? ( null ) : (duration.trim()));
     }
 
     public static java.lang.String formatPeriodISO(final long startMillis, final long endMillis) {
-        return org.apache.commons.lang3.time.DurationFormatUtils.formatPeriod(startMillis, endMillis, ISO_EXTENDED_FORMAT_PATTERN, false, java.util.TimeZone.getDefault());
+        return ((_returnReplacementOperator1681.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.formatPeriod(startMillis, endMillis, org.apache.commons.lang3.time.DurationFormatUtils.ISO_EXTENDED_FORMAT_PATTERN, false, java.util.TimeZone.getDefault())));
     }
 
     public static java.lang.String formatPeriod(final long startMillis, final long endMillis, final java.lang.String format) {
-        return org.apache.commons.lang3.time.DurationFormatUtils.formatPeriod(startMillis, endMillis, format, true, java.util.TimeZone.getDefault());
+        return ((_returnReplacementOperator1679.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.formatPeriod(startMillis, endMillis, format, true, java.util.TimeZone.getDefault())));
     }
 
     public static java.lang.String formatPeriod(final long startMillis, final long endMillis, final java.lang.String format, final boolean padWithZeros, final java.util.TimeZone timezone) {
@@ -105,13 +105,13 @@ public class DurationFormatUtils {
         start.setTime(new java.util.Date(startMillis));
         final java.util.Calendar end = java.util.Calendar.getInstance(timezone);
         end.setTime(new java.util.Date(endMillis));
-        int milliseconds = ((_arithmeticOperatorHotSpot297.is("PLUS")) ? ((end.get(java.util.Calendar.MILLISECOND)) + (start.get(java.util.Calendar.MILLISECOND))) : (_arithmeticOperatorHotSpot297.is("MINUS")) ? ((end.get(java.util.Calendar.MILLISECOND)) - (start.get(java.util.Calendar.MILLISECOND))) : (_arithmeticOperatorHotSpot297.is("MUL")) ? ((end.get(java.util.Calendar.MILLISECOND)) * (start.get(java.util.Calendar.MILLISECOND))) :  ((end.get(java.util.Calendar.MILLISECOND)) / (start.get(java.util.Calendar.MILLISECOND))));
-        int seconds = ((_arithmeticOperatorHotSpot298.is("PLUS")) ? ((end.get(java.util.Calendar.SECOND)) + (start.get(java.util.Calendar.SECOND))) : (_arithmeticOperatorHotSpot298.is("MINUS")) ? ((end.get(java.util.Calendar.SECOND)) - (start.get(java.util.Calendar.SECOND))) : (_arithmeticOperatorHotSpot298.is("MUL")) ? ((end.get(java.util.Calendar.SECOND)) * (start.get(java.util.Calendar.SECOND))) :  ((end.get(java.util.Calendar.SECOND)) / (start.get(java.util.Calendar.SECOND))));
-        int minutes = ((_arithmeticOperatorHotSpot299.is("PLUS")) ? ((end.get(java.util.Calendar.MINUTE)) + (start.get(java.util.Calendar.MINUTE))) : (_arithmeticOperatorHotSpot299.is("MINUS")) ? ((end.get(java.util.Calendar.MINUTE)) - (start.get(java.util.Calendar.MINUTE))) : (_arithmeticOperatorHotSpot299.is("MUL")) ? ((end.get(java.util.Calendar.MINUTE)) * (start.get(java.util.Calendar.MINUTE))) :  ((end.get(java.util.Calendar.MINUTE)) / (start.get(java.util.Calendar.MINUTE))));
-        int hours = ((_arithmeticOperatorHotSpot300.is("PLUS")) ? ((end.get(java.util.Calendar.HOUR_OF_DAY)) + (start.get(java.util.Calendar.HOUR_OF_DAY))) : (_arithmeticOperatorHotSpot300.is("MINUS")) ? ((end.get(java.util.Calendar.HOUR_OF_DAY)) - (start.get(java.util.Calendar.HOUR_OF_DAY))) : (_arithmeticOperatorHotSpot300.is("MUL")) ? ((end.get(java.util.Calendar.HOUR_OF_DAY)) * (start.get(java.util.Calendar.HOUR_OF_DAY))) :  ((end.get(java.util.Calendar.HOUR_OF_DAY)) / (start.get(java.util.Calendar.HOUR_OF_DAY))));
-        int days = ((_arithmeticOperatorHotSpot301.is("PLUS")) ? ((end.get(java.util.Calendar.DAY_OF_MONTH)) + (start.get(java.util.Calendar.DAY_OF_MONTH))) : (_arithmeticOperatorHotSpot301.is("MINUS")) ? ((end.get(java.util.Calendar.DAY_OF_MONTH)) - (start.get(java.util.Calendar.DAY_OF_MONTH))) : (_arithmeticOperatorHotSpot301.is("MUL")) ? ((end.get(java.util.Calendar.DAY_OF_MONTH)) * (start.get(java.util.Calendar.DAY_OF_MONTH))) :  ((end.get(java.util.Calendar.DAY_OF_MONTH)) / (start.get(java.util.Calendar.DAY_OF_MONTH))));
-        int months = ((_arithmeticOperatorHotSpot302.is("PLUS")) ? ((end.get(java.util.Calendar.MONTH)) + (start.get(java.util.Calendar.MONTH))) : (_arithmeticOperatorHotSpot302.is("MINUS")) ? ((end.get(java.util.Calendar.MONTH)) - (start.get(java.util.Calendar.MONTH))) : (_arithmeticOperatorHotSpot302.is("MUL")) ? ((end.get(java.util.Calendar.MONTH)) * (start.get(java.util.Calendar.MONTH))) :  ((end.get(java.util.Calendar.MONTH)) / (start.get(java.util.Calendar.MONTH))));
-        int years = ((_arithmeticOperatorHotSpot303.is("PLUS")) ? ((end.get(java.util.Calendar.YEAR)) + (start.get(java.util.Calendar.YEAR))) : (_arithmeticOperatorHotSpot303.is("MINUS")) ? ((end.get(java.util.Calendar.YEAR)) - (start.get(java.util.Calendar.YEAR))) : (_arithmeticOperatorHotSpot303.is("MUL")) ? ((end.get(java.util.Calendar.YEAR)) * (start.get(java.util.Calendar.YEAR))) :  ((end.get(java.util.Calendar.YEAR)) / (start.get(java.util.Calendar.YEAR))));
+        int milliseconds = (end.get(java.util.Calendar.MILLISECOND)) - (start.get(java.util.Calendar.MILLISECOND));
+        int seconds = (end.get(java.util.Calendar.SECOND)) - (start.get(java.util.Calendar.SECOND));
+        int minutes = (end.get(java.util.Calendar.MINUTE)) - (start.get(java.util.Calendar.MINUTE));
+        int hours = (end.get(java.util.Calendar.HOUR_OF_DAY)) - (start.get(java.util.Calendar.HOUR_OF_DAY));
+        int days = (end.get(java.util.Calendar.DAY_OF_MONTH)) - (start.get(java.util.Calendar.DAY_OF_MONTH));
+        int months = (end.get(java.util.Calendar.MONTH)) - (start.get(java.util.Calendar.MONTH));
+        int years = (end.get(java.util.Calendar.YEAR)) - (start.get(java.util.Calendar.YEAR));
         while (milliseconds < 0) {
             milliseconds += 1000;
             seconds -= 1;
@@ -140,7 +140,7 @@ public class DurationFormatUtils {
             }
             if ((!(org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, y))) && (years != 0)) {
                 while (years != 0) {
-                    months += ((_arithmeticOperatorHotSpot304.is("PLUS")) ? (12 + years) : (_arithmeticOperatorHotSpot304.is("MINUS")) ? (12 - years) : (_arithmeticOperatorHotSpot304.is("MUL")) ? (12 * years) :  (12 / years));
+                    months += 12 * years;
                     years = 0;
                 }
             } 
@@ -151,7 +151,7 @@ public class DurationFormatUtils {
                     target -= 1;
                 } 
                 while ((start.get(java.util.Calendar.YEAR)) != target) {
-                    days += ((_arithmeticOperatorHotSpot305.is("PLUS")) ? ((start.getActualMaximum(java.util.Calendar.DAY_OF_YEAR)) + (start.get(java.util.Calendar.DAY_OF_YEAR))) : (_arithmeticOperatorHotSpot305.is("MINUS")) ? ((start.getActualMaximum(java.util.Calendar.DAY_OF_YEAR)) - (start.get(java.util.Calendar.DAY_OF_YEAR))) : (_arithmeticOperatorHotSpot305.is("MUL")) ? ((start.getActualMaximum(java.util.Calendar.DAY_OF_YEAR)) * (start.get(java.util.Calendar.DAY_OF_YEAR))) :  ((start.getActualMaximum(java.util.Calendar.DAY_OF_YEAR)) / (start.get(java.util.Calendar.DAY_OF_YEAR))));
+                    days += (start.getActualMaximum(java.util.Calendar.DAY_OF_YEAR)) - (start.get(java.util.Calendar.DAY_OF_YEAR));
                     if (((start instanceof java.util.GregorianCalendar) && ((start.get(java.util.Calendar.MONTH)) == (java.util.Calendar.FEBRUARY))) && ((start.get(java.util.Calendar.DAY_OF_MONTH)) == 29)) {
                         days += 1;
                     } 
@@ -172,22 +172,22 @@ public class DurationFormatUtils {
             }
         }
         if (!(org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, d))) {
-            hours += ((_arithmeticOperatorHotSpot306.is("PLUS")) ? (24 + days) : (_arithmeticOperatorHotSpot306.is("MINUS")) ? (24 - days) : (_arithmeticOperatorHotSpot306.is("MUL")) ? (24 * days) :  (24 / days));
+            hours += 24 * days;
             days = 0;
         } 
         if (!(org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, H))) {
-            minutes += ((_arithmeticOperatorHotSpot307.is("PLUS")) ? (60 + hours) : (_arithmeticOperatorHotSpot307.is("MINUS")) ? (60 - hours) : (_arithmeticOperatorHotSpot307.is("MUL")) ? (60 * hours) :  (60 / hours));
+            minutes += 60 * hours;
             hours = 0;
         } 
         if (!(org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, m))) {
-            seconds += ((_arithmeticOperatorHotSpot308.is("PLUS")) ? (60 + minutes) : (_arithmeticOperatorHotSpot308.is("MINUS")) ? (60 - minutes) : (_arithmeticOperatorHotSpot308.is("MUL")) ? (60 * minutes) :  (60 / minutes));
+            seconds += 60 * minutes;
             minutes = 0;
         } 
         if (!(org.apache.commons.lang3.time.DurationFormatUtils.Token.containsTokenWithValue(tokens, s))) {
-            milliseconds += ((_arithmeticOperatorHotSpot309.is("PLUS")) ? (1000 + seconds) : (_arithmeticOperatorHotSpot309.is("MINUS")) ? (1000 - seconds) : (_arithmeticOperatorHotSpot309.is("MUL")) ? (1000 * seconds) :  (1000 / seconds));
+            milliseconds += 1000 * seconds;
             seconds = 0;
         } 
-        return org.apache.commons.lang3.time.DurationFormatUtils.format(tokens, years, months, days, hours, minutes, seconds, milliseconds, padWithZeros);
+        return ((_returnReplacementOperator1680.is("NULL")) ? ( null ) : (org.apache.commons.lang3.time.DurationFormatUtils.format(tokens, years, months, days, hours, minutes, seconds, milliseconds, padWithZeros)));
     }
 
     static java.lang.String format(final org.apache.commons.lang3.time.DurationFormatUtils.Token[] tokens, final long years, final long months, final long days, final long hours, final long minutes, final long seconds, final long milliseconds, final boolean padWithZeros) {
@@ -228,12 +228,12 @@ public class DurationFormatUtils {
                 } 
             }
         }
-        return buffer.toString();
+        return ((_returnReplacementOperator1673.is("NULL")) ? ( null ) : (buffer.toString()));
     }
 
     private static java.lang.String paddedValue(final long value, final boolean padWithZeros, final int count) {
         final java.lang.String longString = java.lang.Long.toString(value);
-        return padWithZeros ? org.apache.commons.lang3.StringUtils.leftPad(longString, count, '0') : longString;
+        return ((_returnReplacementOperator1682.is("NULL")) ? ( null ) : (padWithZeros ? org.apache.commons.lang3.StringUtils.leftPad(longString, count, '0') : longString));
     }
 
     static final java.lang.Object y = "y";
@@ -315,17 +315,17 @@ public class DurationFormatUtils {
         if (inLiteral) {
             throw new java.lang.IllegalArgumentException(("Unmatched quote in format: " + format));
         } 
-        return list.toArray(new org.apache.commons.lang3.time.DurationFormatUtils.Token[list.size()]);
+        return ((_returnReplacementOperator1683.is("NULL")) ? ( null ) : (list.toArray(new org.apache.commons.lang3.time.DurationFormatUtils.Token[list.size()])));
     }
 
     static class Token {
         static boolean containsTokenWithValue(final org.apache.commons.lang3.time.DurationFormatUtils.Token[] tokens, final java.lang.Object value) {
             for (final org.apache.commons.lang3.time.DurationFormatUtils.Token token : tokens) {
                 if ((token.getValue()) == value) {
-                    return true;
+                    return ((_returnReplacementOperator1661.is("NULL")) ? ( null ) : (true));
                 } 
             }
-            return false;
+            return ((_returnReplacementOperator1662.is("NULL")) ? ( null ) : (false));
         }
 
         private final java.lang.Object value;
@@ -347,11 +347,11 @@ public class DurationFormatUtils {
         }
 
         int getCount() {
-            return count;
+            return ((_returnReplacementOperator1669.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1669.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1669.is("ZERO")) ? ( 0 ) : (count));
         }
 
         java.lang.Object getValue() {
-            return value;
+            return ((_returnReplacementOperator1671.is("NULL")) ? ( null ) : (value));
         }
 
         @java.lang.Override
@@ -359,73 +359,77 @@ public class DurationFormatUtils {
             if (obj2 instanceof org.apache.commons.lang3.time.DurationFormatUtils.Token) {
                 final org.apache.commons.lang3.time.DurationFormatUtils.Token tok2 = ((org.apache.commons.lang3.time.DurationFormatUtils.Token)(obj2));
                 if ((this.value.getClass()) != (tok2.value.getClass())) {
-                    return false;
+                    return ((_returnReplacementOperator1663.is("NULL")) ? ( null ) : (false));
                 } 
                 if ((this.count) != (tok2.count)) {
-                    return false;
+                    return ((_returnReplacementOperator1664.is("NULL")) ? ( null ) : (false));
                 } 
                 if ((this.value) instanceof java.lang.StringBuilder) {
-                    return this.value.toString().equals(tok2.value.toString());
+                    return ((_returnReplacementOperator1665.is("NULL")) ? ( null ) : (this.value.toString().equals(tok2.value.toString())));
                 } else if ((this.value) instanceof java.lang.Number) {
-                    return this.value.equals(tok2.value);
+                    return ((_returnReplacementOperator1666.is("NULL")) ? ( null ) : (this.value.equals(tok2.value)));
                 } else {
-                    return (this.value) == (tok2.value);
+                    return ((_returnReplacementOperator1667.is("NULL")) ? ( null ) : ((this.value) == (tok2.value)));
                 }
             } 
-            return false;
+            return ((_returnReplacementOperator1668.is("NULL")) ? ( null ) : (false));
         }
 
         @java.lang.Override
         public int hashCode() {
-            return this.value.hashCode();
+            return ((_returnReplacementOperator1670.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1670.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1670.is("ZERO")) ? ( 0 ) : (this.value.hashCode()));
         }
 
         @java.lang.Override
         public java.lang.String toString() {
-            return org.apache.commons.lang3.StringUtils.repeat(this.value.toString(), this.count);
+            return ((_returnReplacementOperator1672.is("NULL")) ? ( null ) : (org.apache.commons.lang3.StringUtils.repeat(this.value.toString(), this.count)));
         }
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot289 = metamutator.Selector.of(289,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot289");
+    private static final metamutator.Selector _returnReplacementOperator1661 = metamutator.Selector.of(1661,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1661");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot290 = metamutator.Selector.of(290,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot290");
+    private static final metamutator.Selector _returnReplacementOperator1662 = metamutator.Selector.of(1662,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1662");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot291 = metamutator.Selector.of(291,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot291");
+    private static final metamutator.Selector _returnReplacementOperator1663 = metamutator.Selector.of(1663,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1663");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot292 = metamutator.Selector.of(292,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot292");
+    private static final metamutator.Selector _returnReplacementOperator1664 = metamutator.Selector.of(1664,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1664");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot293 = metamutator.Selector.of(293,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot293");
+    private static final metamutator.Selector _returnReplacementOperator1665 = metamutator.Selector.of(1665,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1665");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot294 = metamutator.Selector.of(294,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot294");
+    private static final metamutator.Selector _returnReplacementOperator1666 = metamutator.Selector.of(1666,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1666");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot295 = metamutator.Selector.of(295,new String[]{"DIV","PLUS","MINUS","MUL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot295");
+    private static final metamutator.Selector _returnReplacementOperator1667 = metamutator.Selector.of(1667,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1667");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot296 = metamutator.Selector.of(296,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot296");
+    private static final metamutator.Selector _returnReplacementOperator1668 = metamutator.Selector.of(1668,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1668");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot297 = metamutator.Selector.of(297,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot297");
+    private static final metamutator.Selector _returnReplacementOperator1669 = metamutator.Selector.of(1669,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1669");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot298 = metamutator.Selector.of(298,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot298");
+    private static final metamutator.Selector _returnReplacementOperator1670 = metamutator.Selector.of(1670,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).id("_returnReplacementOperator1670");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot299 = metamutator.Selector.of(299,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot299");
+    private static final metamutator.Selector _returnReplacementOperator1671 = metamutator.Selector.of(1671,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1671");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot300 = metamutator.Selector.of(300,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot300");
+    private static final metamutator.Selector _returnReplacementOperator1672 = metamutator.Selector.of(1672,new String[]{"INIT","NULL"}).id("_returnReplacementOperator1672");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot301 = metamutator.Selector.of(301,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot301");
+    private static final metamutator.Selector _returnReplacementOperator1673 = metamutator.Selector.of(1673,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1673");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot302 = metamutator.Selector.of(302,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot302");
+    private static final metamutator.Selector _returnReplacementOperator1674 = metamutator.Selector.of(1674,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1674");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot303 = metamutator.Selector.of(303,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot303");
+    private static final metamutator.Selector _returnReplacementOperator1675 = metamutator.Selector.of(1675,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1675");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot304 = metamutator.Selector.of(304,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot304");
+    private static final metamutator.Selector _returnReplacementOperator1676 = metamutator.Selector.of(1676,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1676");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot305 = metamutator.Selector.of(305,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot305");
+    private static final metamutator.Selector _returnReplacementOperator1677 = metamutator.Selector.of(1677,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1677");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot306 = metamutator.Selector.of(306,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot306");
+    private static final metamutator.Selector _returnReplacementOperator1678 = metamutator.Selector.of(1678,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1678");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot307 = metamutator.Selector.of(307,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot307");
+    private static final metamutator.Selector _returnReplacementOperator1679 = metamutator.Selector.of(1679,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1679");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot308 = metamutator.Selector.of(308,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot308");
+    private static final metamutator.Selector _returnReplacementOperator1680 = metamutator.Selector.of(1680,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1680");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot309 = metamutator.Selector.of(309,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_arithmeticOperatorHotSpot309");
+    private static final metamutator.Selector _returnReplacementOperator1681 = metamutator.Selector.of(1681,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1681");
+
+    private static final metamutator.Selector _returnReplacementOperator1682 = metamutator.Selector.of(1682,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1682");
+
+    private static final metamutator.Selector _returnReplacementOperator1683 = metamutator.Selector.of(1683,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.time.DurationFormatUtils.class).id("_returnReplacementOperator1683");
 }
 

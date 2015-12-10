@@ -9,7 +9,7 @@ public class FieldUtils {
     public static java.lang.reflect.Field getField(final java.lang.Class<?> cls, final java.lang.String fieldName) {
         final java.lang.reflect.Field field = org.apache.commons.lang3.reflect.FieldUtils.getField(cls, fieldName, false);
         org.apache.commons.lang3.reflect.MemberUtils.setAccessibleWorkaround(field);
-        return field;
+        return ((_returnReplacementOperator884.is("NULL")) ? ( null ) : (field));
     }
 
     public static java.lang.reflect.Field getField(final java.lang.Class<?> cls, final java.lang.String fieldName, final boolean forceAccess) {
@@ -25,7 +25,7 @@ public class FieldUtils {
                         continue;
                     }
                 } 
-                return field;
+                return ((_returnReplacementOperator885.is("NULL")) ? ( null ) : (field));
             } catch (final java.lang.NoSuchFieldException ex) {
             }
         }
@@ -38,11 +38,11 @@ public class FieldUtils {
             } catch (final java.lang.NoSuchFieldException ex) {
             }
         }
-        return match;
+        return ((_returnReplacementOperator886.is("NULL")) ? ( null ) : (match));
     }
 
     public static java.lang.reflect.Field getDeclaredField(final java.lang.Class<?> cls, final java.lang.String fieldName) {
-        return org.apache.commons.lang3.reflect.FieldUtils.getDeclaredField(cls, fieldName, false);
+        return ((_returnReplacementOperator880.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.getDeclaredField(cls, fieldName, false)));
     }
 
     public static java.lang.reflect.Field getDeclaredField(final java.lang.Class<?> cls, final java.lang.String fieldName, final boolean forceAccess) {
@@ -54,18 +54,18 @@ public class FieldUtils {
                 if (forceAccess) {
                     field.setAccessible(true);
                 } else {
-                    return null;
+                    return ((_returnReplacementOperator881.is("NULL")) ? ( null ) : (null));
                 }
             } 
-            return field;
+            return ((_returnReplacementOperator882.is("NULL")) ? ( null ) : (field));
         } catch (final java.lang.NoSuchFieldException e) {
         }
-        return null;
+        return ((_returnReplacementOperator883.is("NULL")) ? ( null ) : (null));
     }
 
     public static java.lang.reflect.Field[] getAllFields(final java.lang.Class<?> cls) {
         final java.util.List<java.lang.reflect.Field> allFieldsList = org.apache.commons.lang3.reflect.FieldUtils.getAllFieldsList(cls);
-        return allFieldsList.toArray(new java.lang.reflect.Field[allFieldsList.size()]);
+        return ((_returnReplacementOperator887.is("NULL")) ? ( null ) : (allFieldsList.toArray(new java.lang.reflect.Field[allFieldsList.size()])));
     }
 
     public static java.util.List<java.lang.reflect.Field> getAllFieldsList(final java.lang.Class<?> cls) {
@@ -79,12 +79,12 @@ public class FieldUtils {
             }
             currentClass = currentClass.getSuperclass();
         }
-        return allFields;
+        return ((_returnReplacementOperator889.is("NULL")) ? ( null ) : (allFields));
     }
 
     public static java.lang.reflect.Field[] getFieldsWithAnnotation(final java.lang.Class<?> cls, final java.lang.Class<? extends java.lang.annotation.Annotation> annotationCls) {
         final java.util.List<java.lang.reflect.Field> annotatedFieldsList = org.apache.commons.lang3.reflect.FieldUtils.getFieldsListWithAnnotation(cls, annotationCls);
-        return annotatedFieldsList.toArray(new java.lang.reflect.Field[annotatedFieldsList.size()]);
+        return ((_returnReplacementOperator888.is("NULL")) ? ( null ) : (annotatedFieldsList.toArray(new java.lang.reflect.Field[annotatedFieldsList.size()])));
     }
 
     public static java.util.List<java.lang.reflect.Field> getFieldsListWithAnnotation(final java.lang.Class<?> cls, final java.lang.Class<? extends java.lang.annotation.Annotation> annotationCls) {
@@ -96,41 +96,41 @@ public class FieldUtils {
                 annotatedFields.add(field);
             } 
         }
-        return annotatedFields;
+        return ((_returnReplacementOperator890.is("NULL")) ? ( null ) : (annotatedFields));
     }
 
     public static java.lang.Object readStaticField(final java.lang.reflect.Field field) throws java.lang.IllegalAccessException {
-        return org.apache.commons.lang3.reflect.FieldUtils.readStaticField(field, false);
+        return ((_returnReplacementOperator878.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readStaticField(field, false)));
     }
 
     public static java.lang.Object readStaticField(final java.lang.reflect.Field field, final boolean forceAccess) throws java.lang.IllegalAccessException {
         org.apache.commons.lang3.Validate.isTrue((field != null), "The field must not be null");
         org.apache.commons.lang3.Validate.isTrue(java.lang.reflect.Modifier.isStatic(field.getModifiers()), "The field '%s' is not static", field.getName());
-        return org.apache.commons.lang3.reflect.FieldUtils.readField(field, ((java.lang.Object)(null)), forceAccess);
+        return ((_returnReplacementOperator879.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readField(field, ((java.lang.Object)(null)), forceAccess)));
     }
 
     public static java.lang.Object readStaticField(final java.lang.Class<?> cls, final java.lang.String fieldName) throws java.lang.IllegalAccessException {
-        return org.apache.commons.lang3.reflect.FieldUtils.readStaticField(cls, fieldName, false);
+        return ((_returnReplacementOperator876.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readStaticField(cls, fieldName, false)));
     }
 
     public static java.lang.Object readStaticField(final java.lang.Class<?> cls, final java.lang.String fieldName, final boolean forceAccess) throws java.lang.IllegalAccessException {
         final java.lang.reflect.Field field = org.apache.commons.lang3.reflect.FieldUtils.getField(cls, fieldName, forceAccess);
         org.apache.commons.lang3.Validate.isTrue((field != null), "Cannot locate field '%s' on %s", fieldName, cls);
-        return org.apache.commons.lang3.reflect.FieldUtils.readStaticField(field, false);
+        return ((_returnReplacementOperator877.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readStaticField(field, false)));
     }
 
     public static java.lang.Object readDeclaredStaticField(final java.lang.Class<?> cls, final java.lang.String fieldName) throws java.lang.IllegalAccessException {
-        return org.apache.commons.lang3.reflect.FieldUtils.readDeclaredStaticField(cls, fieldName, false);
+        return ((_returnReplacementOperator870.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readDeclaredStaticField(cls, fieldName, false)));
     }
 
     public static java.lang.Object readDeclaredStaticField(final java.lang.Class<?> cls, final java.lang.String fieldName, final boolean forceAccess) throws java.lang.IllegalAccessException {
         final java.lang.reflect.Field field = org.apache.commons.lang3.reflect.FieldUtils.getDeclaredField(cls, fieldName, forceAccess);
         org.apache.commons.lang3.Validate.isTrue((field != null), "Cannot locate declared field %s.%s", cls.getName(), fieldName);
-        return org.apache.commons.lang3.reflect.FieldUtils.readStaticField(field, false);
+        return ((_returnReplacementOperator871.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readStaticField(field, false)));
     }
 
     public static java.lang.Object readField(final java.lang.reflect.Field field, final java.lang.Object target) throws java.lang.IllegalAccessException {
-        return org.apache.commons.lang3.reflect.FieldUtils.readField(field, target, false);
+        return ((_returnReplacementOperator874.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readField(field, target, false)));
     }
 
     public static java.lang.Object readField(final java.lang.reflect.Field field, final java.lang.Object target, final boolean forceAccess) throws java.lang.IllegalAccessException {
@@ -140,11 +140,11 @@ public class FieldUtils {
         } else {
             org.apache.commons.lang3.reflect.MemberUtils.setAccessibleWorkaround(field);
         }
-        return field.get(target);
+        return ((_returnReplacementOperator875.is("NULL")) ? ( null ) : (field.get(target)));
     }
 
     public static java.lang.Object readField(final java.lang.Object target, final java.lang.String fieldName) throws java.lang.IllegalAccessException {
-        return org.apache.commons.lang3.reflect.FieldUtils.readField(target, fieldName, false);
+        return ((_returnReplacementOperator872.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readField(target, fieldName, false)));
     }
 
     public static java.lang.Object readField(final java.lang.Object target, final java.lang.String fieldName, final boolean forceAccess) throws java.lang.IllegalAccessException {
@@ -152,11 +152,11 @@ public class FieldUtils {
         final java.lang.Class<?> cls = target.getClass();
         final java.lang.reflect.Field field = org.apache.commons.lang3.reflect.FieldUtils.getField(cls, fieldName, forceAccess);
         org.apache.commons.lang3.Validate.isTrue((field != null), "Cannot locate field %s on %s", fieldName, cls);
-        return org.apache.commons.lang3.reflect.FieldUtils.readField(field, target, false);
+        return ((_returnReplacementOperator873.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readField(field, target, false)));
     }
 
     public static java.lang.Object readDeclaredField(final java.lang.Object target, final java.lang.String fieldName) throws java.lang.IllegalAccessException {
-        return org.apache.commons.lang3.reflect.FieldUtils.readDeclaredField(target, fieldName, false);
+        return ((_returnReplacementOperator868.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readDeclaredField(target, fieldName, false)));
     }
 
     public static java.lang.Object readDeclaredField(final java.lang.Object target, final java.lang.String fieldName, final boolean forceAccess) throws java.lang.IllegalAccessException {
@@ -164,7 +164,7 @@ public class FieldUtils {
         final java.lang.Class<?> cls = target.getClass();
         final java.lang.reflect.Field field = org.apache.commons.lang3.reflect.FieldUtils.getDeclaredField(cls, fieldName, forceAccess);
         org.apache.commons.lang3.Validate.isTrue((field != null), "Cannot locate declared field %s.%s", cls, fieldName);
-        return org.apache.commons.lang3.reflect.FieldUtils.readField(field, target, false);
+        return ((_returnReplacementOperator869.is("NULL")) ? ( null ) : (org.apache.commons.lang3.reflect.FieldUtils.readField(field, target, false)));
     }
 
     public static void writeStaticField(final java.lang.reflect.Field field, final java.lang.Object value) throws java.lang.IllegalAccessException {
@@ -260,5 +260,51 @@ public class FieldUtils {
         org.apache.commons.lang3.Validate.isTrue((field != null), "Cannot locate declared field %s.%s", cls.getName(), fieldName);
         org.apache.commons.lang3.reflect.FieldUtils.writeField(field, target, value, false);
     }
+
+    private static final metamutator.Selector _returnReplacementOperator868 = metamutator.Selector.of(868,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator868");
+
+    private static final metamutator.Selector _returnReplacementOperator869 = metamutator.Selector.of(869,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator869");
+
+    private static final metamutator.Selector _returnReplacementOperator870 = metamutator.Selector.of(870,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator870");
+
+    private static final metamutator.Selector _returnReplacementOperator871 = metamutator.Selector.of(871,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator871");
+
+    private static final metamutator.Selector _returnReplacementOperator872 = metamutator.Selector.of(872,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator872");
+
+    private static final metamutator.Selector _returnReplacementOperator873 = metamutator.Selector.of(873,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator873");
+
+    private static final metamutator.Selector _returnReplacementOperator874 = metamutator.Selector.of(874,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator874");
+
+    private static final metamutator.Selector _returnReplacementOperator875 = metamutator.Selector.of(875,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator875");
+
+    private static final metamutator.Selector _returnReplacementOperator876 = metamutator.Selector.of(876,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator876");
+
+    private static final metamutator.Selector _returnReplacementOperator877 = metamutator.Selector.of(877,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator877");
+
+    private static final metamutator.Selector _returnReplacementOperator878 = metamutator.Selector.of(878,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator878");
+
+    private static final metamutator.Selector _returnReplacementOperator879 = metamutator.Selector.of(879,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator879");
+
+    private static final metamutator.Selector _returnReplacementOperator880 = metamutator.Selector.of(880,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator880");
+
+    private static final metamutator.Selector _returnReplacementOperator881 = metamutator.Selector.of(881,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator881");
+
+    private static final metamutator.Selector _returnReplacementOperator882 = metamutator.Selector.of(882,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator882");
+
+    private static final metamutator.Selector _returnReplacementOperator883 = metamutator.Selector.of(883,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator883");
+
+    private static final metamutator.Selector _returnReplacementOperator884 = metamutator.Selector.of(884,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator884");
+
+    private static final metamutator.Selector _returnReplacementOperator885 = metamutator.Selector.of(885,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator885");
+
+    private static final metamutator.Selector _returnReplacementOperator886 = metamutator.Selector.of(886,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator886");
+
+    private static final metamutator.Selector _returnReplacementOperator887 = metamutator.Selector.of(887,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator887");
+
+    private static final metamutator.Selector _returnReplacementOperator888 = metamutator.Selector.of(888,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator888");
+
+    private static final metamutator.Selector _returnReplacementOperator889 = metamutator.Selector.of(889,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator889");
+
+    private static final metamutator.Selector _returnReplacementOperator890 = metamutator.Selector.of(890,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.reflect.FieldUtils.class).id("_returnReplacementOperator890");
 }
 

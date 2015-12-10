@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import com.google.common.collect.Sets;
 
-import metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT;
+import metamutator.ReturnReplacementOperatorMetaMutator.RETURN_REPLACEMENT_INT;
 import spoon.processing.AbstractProcessor;
 import spoon.reflect.code.BinaryOperatorKind;
 import spoon.reflect.code.CtBinaryOperator;

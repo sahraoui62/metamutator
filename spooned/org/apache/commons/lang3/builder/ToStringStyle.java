@@ -21,12 +21,12 @@ public abstract class ToStringStyle implements java.io.Serializable {
     private static final java.lang.ThreadLocal<java.util.WeakHashMap<java.lang.Object, java.lang.Object>> REGISTRY = new java.lang.ThreadLocal<java.util.WeakHashMap<java.lang.Object, java.lang.Object>>();
 
     static java.util.Map<java.lang.Object, java.lang.Object> getRegistry() {
-        return REGISTRY.get();
+        return ((_returnReplacementOperator435.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.REGISTRY.get()));
     }
 
     static boolean isRegistered(final java.lang.Object value) {
         final java.util.Map<java.lang.Object, java.lang.Object> m = org.apache.commons.lang3.builder.ToStringStyle.getRegistry();
-        return (m != null) && (m.containsKey(value));
+        return ((_returnReplacementOperator417.is("NULL")) ? ( null ) : ((m != null) && (m.containsKey(value))));
     }
 
     static void register(final java.lang.Object value) {
@@ -101,7 +101,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
 
     public void appendToString(final java.lang.StringBuffer buffer, final java.lang.String toString) {
         if (toString != null) {
-            final int pos1 = ((_arithmeticOperatorHotSpot23.is("PLUS")) ? ((toString.indexOf(contentStart)) + (contentStart.length())) : (_arithmeticOperatorHotSpot23.is("MINUS")) ? ((toString.indexOf(contentStart)) - (contentStart.length())) : (_arithmeticOperatorHotSpot23.is("MUL")) ? ((toString.indexOf(contentStart)) * (contentStart.length())) :  ((toString.indexOf(contentStart)) / (contentStart.length())));
+            final int pos1 = (toString.indexOf(contentStart)) + (contentStart.length());
             final int pos2 = toString.lastIndexOf(contentEnd);
             if (((pos1 != pos2) && (pos1 >= 0)) && (pos2 >= 0)) {
                 final java.lang.String data = toString.substring(pos1, pos2);
@@ -139,13 +139,13 @@ public abstract class ToStringStyle implements java.io.Serializable {
         if (((len > 0) && (sepLen > 0)) && (len >= sepLen)) {
             boolean match = true;
             for (int i = 0 ; i < sepLen ; i++) {
-                if ((buffer.charAt((((_arithmeticOperatorHotSpot24.is("PLUS")) ? ((len + 1)) : (_arithmeticOperatorHotSpot24.is("MINUS")) ? ((len - 1)) : (_arithmeticOperatorHotSpot24.is("MUL")) ? ((len * 1)) :  ((len / 1))) - i))) != (fieldSeparator.charAt((((_arithmeticOperatorHotSpot25.is("PLUS")) ? ((sepLen + 1)) : (_arithmeticOperatorHotSpot25.is("MINUS")) ? ((sepLen - 1)) : (_arithmeticOperatorHotSpot25.is("MUL")) ? ((sepLen * 1)) :  ((sepLen / 1))) - i)))) {
+                if ((buffer.charAt(((len - 1) - i))) != (fieldSeparator.charAt(((sepLen - 1) - i)))) {
                     match = false;
                     break;
                 } 
             }
             if (match) {
-                buffer.setLength(((_arithmeticOperatorHotSpot26.is("PLUS")) ? ((len + sepLen)) : (_arithmeticOperatorHotSpot26.is("MINUS")) ? ((len - sepLen)) : (_arithmeticOperatorHotSpot26.is("MUL")) ? ((len * sepLen)) :  ((len / sepLen))));
+                buffer.setLength((len - sepLen));
             } 
         } 
     }
@@ -666,17 +666,17 @@ public abstract class ToStringStyle implements java.io.Serializable {
 
     protected boolean isFullDetail(final java.lang.Boolean fullDetailRequest) {
         if (fullDetailRequest == null) {
-            return defaultFullDetail;
+            return ((_returnReplacementOperator415.is("NULL")) ? ( null ) : (defaultFullDetail));
         } 
-        return fullDetailRequest.booleanValue();
+        return ((_returnReplacementOperator416.is("NULL")) ? ( null ) : (fullDetailRequest.booleanValue()));
     }
 
     protected java.lang.String getShortClassName(final java.lang.Class<?> cls) {
-        return org.apache.commons.lang3.ClassUtils.getShortClassName(cls);
+        return ((_returnReplacementOperator430.is("NULL")) ? ( null ) : (org.apache.commons.lang3.ClassUtils.getShortClassName(cls)));
     }
 
     protected boolean isUseClassName() {
-        return useClassName;
+        return ((_returnReplacementOperator418.is("NULL")) ? ( null ) : (useClassName));
     }
 
     protected void setUseClassName(final boolean useClassName) {
@@ -684,7 +684,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected boolean isUseShortClassName() {
-        return useShortClassName;
+        return ((_returnReplacementOperator421.is("NULL")) ? ( null ) : (useShortClassName));
     }
 
     protected void setUseShortClassName(final boolean useShortClassName) {
@@ -692,7 +692,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected boolean isUseIdentityHashCode() {
-        return useIdentityHashCode;
+        return ((_returnReplacementOperator420.is("NULL")) ? ( null ) : (useIdentityHashCode));
     }
 
     protected void setUseIdentityHashCode(final boolean useIdentityHashCode) {
@@ -700,7 +700,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected boolean isUseFieldNames() {
-        return useFieldNames;
+        return ((_returnReplacementOperator419.is("NULL")) ? ( null ) : (useFieldNames));
     }
 
     protected void setUseFieldNames(final boolean useFieldNames) {
@@ -708,7 +708,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected boolean isDefaultFullDetail() {
-        return defaultFullDetail;
+        return ((_returnReplacementOperator412.is("NULL")) ? ( null ) : (defaultFullDetail));
     }
 
     protected void setDefaultFullDetail(final boolean defaultFullDetail) {
@@ -716,7 +716,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected boolean isArrayContentDetail() {
-        return arrayContentDetail;
+        return ((_returnReplacementOperator411.is("NULL")) ? ( null ) : (arrayContentDetail));
     }
 
     protected void setArrayContentDetail(final boolean arrayContentDetail) {
@@ -724,7 +724,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getArrayStart() {
-        return arrayStart;
+        return ((_returnReplacementOperator424.is("NULL")) ? ( null ) : (arrayStart));
     }
 
     protected void setArrayStart(java.lang.String arrayStart) {
@@ -735,7 +735,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getArrayEnd() {
-        return arrayEnd;
+        return ((_returnReplacementOperator422.is("NULL")) ? ( null ) : (arrayEnd));
     }
 
     protected void setArrayEnd(java.lang.String arrayEnd) {
@@ -746,7 +746,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getArraySeparator() {
-        return arraySeparator;
+        return ((_returnReplacementOperator423.is("NULL")) ? ( null ) : (arraySeparator));
     }
 
     protected void setArraySeparator(java.lang.String arraySeparator) {
@@ -757,7 +757,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getContentStart() {
-        return contentStart;
+        return ((_returnReplacementOperator426.is("NULL")) ? ( null ) : (contentStart));
     }
 
     protected void setContentStart(java.lang.String contentStart) {
@@ -768,7 +768,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getContentEnd() {
-        return contentEnd;
+        return ((_returnReplacementOperator425.is("NULL")) ? ( null ) : (contentEnd));
     }
 
     protected void setContentEnd(java.lang.String contentEnd) {
@@ -779,7 +779,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getFieldNameValueSeparator() {
-        return fieldNameValueSeparator;
+        return ((_returnReplacementOperator427.is("NULL")) ? ( null ) : (fieldNameValueSeparator));
     }
 
     protected void setFieldNameValueSeparator(java.lang.String fieldNameValueSeparator) {
@@ -790,7 +790,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getFieldSeparator() {
-        return fieldSeparator;
+        return ((_returnReplacementOperator428.is("NULL")) ? ( null ) : (fieldSeparator));
     }
 
     protected void setFieldSeparator(java.lang.String fieldSeparator) {
@@ -801,7 +801,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected boolean isFieldSeparatorAtStart() {
-        return fieldSeparatorAtStart;
+        return ((_returnReplacementOperator414.is("NULL")) ? ( null ) : (fieldSeparatorAtStart));
     }
 
     protected void setFieldSeparatorAtStart(final boolean fieldSeparatorAtStart) {
@@ -809,7 +809,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected boolean isFieldSeparatorAtEnd() {
-        return fieldSeparatorAtEnd;
+        return ((_returnReplacementOperator413.is("NULL")) ? ( null ) : (fieldSeparatorAtEnd));
     }
 
     protected void setFieldSeparatorAtEnd(final boolean fieldSeparatorAtEnd) {
@@ -817,7 +817,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getNullText() {
-        return nullText;
+        return ((_returnReplacementOperator429.is("NULL")) ? ( null ) : (nullText));
     }
 
     protected void setNullText(java.lang.String nullText) {
@@ -828,7 +828,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getSizeStartText() {
-        return sizeStartText;
+        return ((_returnReplacementOperator432.is("NULL")) ? ( null ) : (sizeStartText));
     }
 
     protected void setSizeStartText(java.lang.String sizeStartText) {
@@ -839,7 +839,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getSizeEndText() {
-        return sizeEndText;
+        return ((_returnReplacementOperator431.is("NULL")) ? ( null ) : (sizeEndText));
     }
 
     protected void setSizeEndText(java.lang.String sizeEndText) {
@@ -850,7 +850,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getSummaryObjectStartText() {
-        return summaryObjectStartText;
+        return ((_returnReplacementOperator434.is("NULL")) ? ( null ) : (summaryObjectStartText));
     }
 
     protected void setSummaryObjectStartText(java.lang.String summaryObjectStartText) {
@@ -861,7 +861,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
     }
 
     protected java.lang.String getSummaryObjectEndText() {
-        return summaryObjectEndText;
+        return ((_returnReplacementOperator433.is("NULL")) ? ( null ) : (summaryObjectEndText));
     }
 
     protected void setSummaryObjectEndText(java.lang.String summaryObjectEndText) {
@@ -879,7 +879,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private java.lang.Object readResolve() {
-            return org.apache.commons.lang3.builder.ToStringStyle.DEFAULT_STYLE;
+            return ((_returnReplacementOperator402.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.DEFAULT_STYLE));
         }
     }
 
@@ -892,7 +892,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private java.lang.Object readResolve() {
-            return org.apache.commons.lang3.builder.ToStringStyle.NO_FIELD_NAMES_STYLE;
+            return ((_returnReplacementOperator408.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.NO_FIELD_NAMES_STYLE));
         }
     }
 
@@ -906,7 +906,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private java.lang.Object readResolve() {
-            return org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
+            return ((_returnReplacementOperator409.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE));
         }
     }
 
@@ -923,7 +923,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private java.lang.Object readResolve() {
-            return org.apache.commons.lang3.builder.ToStringStyle.SIMPLE_STYLE;
+            return ((_returnReplacementOperator410.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.SIMPLE_STYLE));
         }
     }
 
@@ -939,7 +939,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private java.lang.Object readResolve() {
-            return org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
+            return ((_returnReplacementOperator406.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE));
         }
     }
 
@@ -953,7 +953,7 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private java.lang.Object readResolve() {
-            return org.apache.commons.lang3.builder.ToStringStyle.NO_CLASS_NAME_STYLE;
+            return ((_returnReplacementOperator407.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.NO_CLASS_NAME_STYLE));
         }
     }
 
@@ -1117,11 +1117,11 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private boolean isJsonArray(java.lang.String valueAsString) {
-            return (valueAsString.startsWith(getArrayStart())) && (valueAsString.startsWith(getArrayEnd()));
+            return ((_returnReplacementOperator403.is("NULL")) ? ( null ) : ((valueAsString.startsWith(getArrayStart())) && (valueAsString.startsWith(getArrayEnd()))));
         }
 
         private boolean isJsonObject(java.lang.String valueAsString) {
-            return (valueAsString.startsWith(getContentStart())) && (valueAsString.endsWith(getContentEnd()));
+            return ((_returnReplacementOperator404.is("NULL")) ? ( null ) : ((valueAsString.startsWith(getContentStart())) && (valueAsString.endsWith(getContentEnd()))));
         }
 
         private void appendValueAsString(java.lang.StringBuffer buffer, java.lang.String value) {
@@ -1137,16 +1137,76 @@ public abstract class ToStringStyle implements java.io.Serializable {
         }
 
         private java.lang.Object readResolve() {
-            return org.apache.commons.lang3.builder.ToStringStyle.JSON_STYLE;
+            return ((_returnReplacementOperator405.is("NULL")) ? ( null ) : (org.apache.commons.lang3.builder.ToStringStyle.JSON_STYLE));
         }
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot23 = metamutator.Selector.of(23,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_arithmeticOperatorHotSpot23");
+    private static final metamutator.Selector _returnReplacementOperator402 = metamutator.Selector.of(402,new String[]{"INIT","NULL"}).id("_returnReplacementOperator402");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot24 = metamutator.Selector.of(24,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_arithmeticOperatorHotSpot24");
+    private static final metamutator.Selector _returnReplacementOperator403 = metamutator.Selector.of(403,new String[]{"INIT","NULL"}).id("_returnReplacementOperator403");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot25 = metamutator.Selector.of(25,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_arithmeticOperatorHotSpot25");
+    private static final metamutator.Selector _returnReplacementOperator404 = metamutator.Selector.of(404,new String[]{"INIT","NULL"}).id("_returnReplacementOperator404");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot26 = metamutator.Selector.of(26,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_arithmeticOperatorHotSpot26");
+    private static final metamutator.Selector _returnReplacementOperator405 = metamutator.Selector.of(405,new String[]{"INIT","NULL"}).id("_returnReplacementOperator405");
+
+    private static final metamutator.Selector _returnReplacementOperator406 = metamutator.Selector.of(406,new String[]{"INIT","NULL"}).id("_returnReplacementOperator406");
+
+    private static final metamutator.Selector _returnReplacementOperator407 = metamutator.Selector.of(407,new String[]{"INIT","NULL"}).id("_returnReplacementOperator407");
+
+    private static final metamutator.Selector _returnReplacementOperator408 = metamutator.Selector.of(408,new String[]{"INIT","NULL"}).id("_returnReplacementOperator408");
+
+    private static final metamutator.Selector _returnReplacementOperator409 = metamutator.Selector.of(409,new String[]{"INIT","NULL"}).id("_returnReplacementOperator409");
+
+    private static final metamutator.Selector _returnReplacementOperator410 = metamutator.Selector.of(410,new String[]{"INIT","NULL"}).id("_returnReplacementOperator410");
+
+    private static final metamutator.Selector _returnReplacementOperator411 = metamutator.Selector.of(411,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator411");
+
+    private static final metamutator.Selector _returnReplacementOperator412 = metamutator.Selector.of(412,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator412");
+
+    private static final metamutator.Selector _returnReplacementOperator413 = metamutator.Selector.of(413,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator413");
+
+    private static final metamutator.Selector _returnReplacementOperator414 = metamutator.Selector.of(414,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator414");
+
+    private static final metamutator.Selector _returnReplacementOperator415 = metamutator.Selector.of(415,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator415");
+
+    private static final metamutator.Selector _returnReplacementOperator416 = metamutator.Selector.of(416,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator416");
+
+    private static final metamutator.Selector _returnReplacementOperator417 = metamutator.Selector.of(417,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator417");
+
+    private static final metamutator.Selector _returnReplacementOperator418 = metamutator.Selector.of(418,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator418");
+
+    private static final metamutator.Selector _returnReplacementOperator419 = metamutator.Selector.of(419,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator419");
+
+    private static final metamutator.Selector _returnReplacementOperator420 = metamutator.Selector.of(420,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator420");
+
+    private static final metamutator.Selector _returnReplacementOperator421 = metamutator.Selector.of(421,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator421");
+
+    private static final metamutator.Selector _returnReplacementOperator422 = metamutator.Selector.of(422,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator422");
+
+    private static final metamutator.Selector _returnReplacementOperator423 = metamutator.Selector.of(423,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator423");
+
+    private static final metamutator.Selector _returnReplacementOperator424 = metamutator.Selector.of(424,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator424");
+
+    private static final metamutator.Selector _returnReplacementOperator425 = metamutator.Selector.of(425,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator425");
+
+    private static final metamutator.Selector _returnReplacementOperator426 = metamutator.Selector.of(426,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator426");
+
+    private static final metamutator.Selector _returnReplacementOperator427 = metamutator.Selector.of(427,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator427");
+
+    private static final metamutator.Selector _returnReplacementOperator428 = metamutator.Selector.of(428,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator428");
+
+    private static final metamutator.Selector _returnReplacementOperator429 = metamutator.Selector.of(429,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator429");
+
+    private static final metamutator.Selector _returnReplacementOperator430 = metamutator.Selector.of(430,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator430");
+
+    private static final metamutator.Selector _returnReplacementOperator431 = metamutator.Selector.of(431,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator431");
+
+    private static final metamutator.Selector _returnReplacementOperator432 = metamutator.Selector.of(432,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator432");
+
+    private static final metamutator.Selector _returnReplacementOperator433 = metamutator.Selector.of(433,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator433");
+
+    private static final metamutator.Selector _returnReplacementOperator434 = metamutator.Selector.of(434,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator434");
+
+    private static final metamutator.Selector _returnReplacementOperator435 = metamutator.Selector.of(435,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.builder.ToStringStyle.class).id("_returnReplacementOperator435");
 }
 

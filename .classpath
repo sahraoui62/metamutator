@@ -6,7 +6,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="org"/>
+	<classpathentry kind="src" path="commons-sources"/>
+	<classpathentry kind="src" path="commons-tests"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="optional" value="true"/>

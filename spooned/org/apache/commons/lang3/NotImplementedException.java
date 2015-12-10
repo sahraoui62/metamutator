@@ -34,7 +34,9 @@ public class NotImplementedException extends java.lang.UnsupportedOperationExcep
     }
 
     public java.lang.String getCode() {
-        return this.code;
+        return ((_returnReplacementOperator2837.is("NULL")) ? ( null ) : (this.code));
     }
+
+    private static final metamutator.Selector _returnReplacementOperator2837 = metamutator.Selector.of(2837,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.NotImplementedException.class).id("_returnReplacementOperator2837");
 }
 

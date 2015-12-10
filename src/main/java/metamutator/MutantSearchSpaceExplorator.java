@@ -57,7 +57,7 @@ public class MutantSearchSpaceExplorator {
 		// {
 		
 		int nattempts=0;
-		
+
 		for (int sel = 0; sel < selectors.size(); sel++) {
 			outputTraces.println(selectors.get(sel).getIdentifier());
 			

@@ -43,98 +43,98 @@ public class NumberUtils {
     }
 
     public static int toInt(final java.lang.String str) {
-        return org.apache.commons.lang3.math.NumberUtils.toInt(str, 0);
+        return ((_returnReplacementOperator723.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator723.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator723.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.math.NumberUtils.toInt(str, 0)));
     }
 
     public static int toInt(final java.lang.String str, final int defaultValue) {
         if (str == null) {
-            return defaultValue;
+            return ((_returnReplacementOperator724.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator724.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator724.is("ZERO")) ? ( 0 ) : (defaultValue));
         } 
         try {
-            return java.lang.Integer.parseInt(str);
+            return ((_returnReplacementOperator725.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator725.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator725.is("ZERO")) ? ( 0 ) : (java.lang.Integer.parseInt(str)));
         } catch (final java.lang.NumberFormatException nfe) {
-            return defaultValue;
+            return ((_returnReplacementOperator726.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator726.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator726.is("ZERO")) ? ( 0 ) : (defaultValue));
         }
     }
 
     public static long toLong(final java.lang.String str) {
-        return org.apache.commons.lang3.math.NumberUtils.toLong(str, 0L);
+        return ((_returnReplacementOperator760.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.toLong(str, 0L)));
     }
 
     public static long toLong(final java.lang.String str, final long defaultValue) {
         if (str == null) {
-            return defaultValue;
+            return ((_returnReplacementOperator761.is("NULL")) ? ( null ) : (defaultValue));
         } 
         try {
-            return java.lang.Long.parseLong(str);
+            return ((_returnReplacementOperator762.is("NULL")) ? ( null ) : (java.lang.Long.parseLong(str)));
         } catch (final java.lang.NumberFormatException nfe) {
-            return defaultValue;
+            return ((_returnReplacementOperator763.is("NULL")) ? ( null ) : (defaultValue));
         }
     }
 
     public static float toFloat(final java.lang.String str) {
-        return org.apache.commons.lang3.math.NumberUtils.toFloat(str, 0.0F);
+        return ((_returnReplacementOperator705.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.toFloat(str, 0.0F)));
     }
 
     public static float toFloat(final java.lang.String str, final float defaultValue) {
         if (str == null) {
-            return defaultValue;
+            return ((_returnReplacementOperator706.is("NULL")) ? ( null ) : (defaultValue));
         } 
         try {
-            return java.lang.Float.parseFloat(str);
+            return ((_returnReplacementOperator707.is("NULL")) ? ( null ) : (java.lang.Float.parseFloat(str)));
         } catch (final java.lang.NumberFormatException nfe) {
-            return defaultValue;
+            return ((_returnReplacementOperator708.is("NULL")) ? ( null ) : (defaultValue));
         }
     }
 
     public static double toDouble(final java.lang.String str) {
-        return org.apache.commons.lang3.math.NumberUtils.toDouble(str, 0.0);
+        return ((_returnReplacementOperator695.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.toDouble(str, 0.0)));
     }
 
     public static double toDouble(final java.lang.String str, final double defaultValue) {
         if (str == null) {
-            return defaultValue;
+            return ((_returnReplacementOperator696.is("NULL")) ? ( null ) : (defaultValue));
         } 
         try {
-            return java.lang.Double.parseDouble(str);
+            return ((_returnReplacementOperator697.is("NULL")) ? ( null ) : (java.lang.Double.parseDouble(str)));
         } catch (final java.lang.NumberFormatException nfe) {
-            return defaultValue;
+            return ((_returnReplacementOperator698.is("NULL")) ? ( null ) : (defaultValue));
         }
     }
 
     public static byte toByte(final java.lang.String str) {
-        return org.apache.commons.lang3.math.NumberUtils.toByte(str, ((byte)(0)));
+        return ((_returnReplacementOperator685.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.toByte(str, ((byte)(0)))));
     }
 
     public static byte toByte(final java.lang.String str, final byte defaultValue) {
         if (str == null) {
-            return defaultValue;
+            return ((_returnReplacementOperator686.is("NULL")) ? ( null ) : (defaultValue));
         } 
         try {
-            return java.lang.Byte.parseByte(str);
+            return ((_returnReplacementOperator687.is("NULL")) ? ( null ) : (java.lang.Byte.parseByte(str)));
         } catch (final java.lang.NumberFormatException nfe) {
-            return defaultValue;
+            return ((_returnReplacementOperator688.is("NULL")) ? ( null ) : (defaultValue));
         }
     }
 
     public static short toShort(final java.lang.String str) {
-        return org.apache.commons.lang3.math.NumberUtils.toShort(str, ((short)(0)));
+        return ((_returnReplacementOperator768.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.toShort(str, ((short)(0)))));
     }
 
     public static short toShort(final java.lang.String str, final short defaultValue) {
         if (str == null) {
-            return defaultValue;
+            return ((_returnReplacementOperator769.is("NULL")) ? ( null ) : (defaultValue));
         } 
         try {
-            return java.lang.Short.parseShort(str);
+            return ((_returnReplacementOperator770.is("NULL")) ? ( null ) : (java.lang.Short.parseShort(str)));
         } catch (final java.lang.NumberFormatException nfe) {
-            return defaultValue;
+            return ((_returnReplacementOperator771.is("NULL")) ? ( null ) : (defaultValue));
         }
     }
 
     public static java.lang.Number createNumber(final java.lang.String str) throws java.lang.NumberFormatException {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator735.is("NULL")) ? ( null ) : (null));
         } 
         if (org.apache.commons.lang3.StringUtils.isBlank(str)) {
             throw new java.lang.NumberFormatException("A blank string is not a valid number");
@@ -157,30 +157,30 @@ public class NumberUtils {
                     break;
                 }
             }
-            final int hexDigits = ((_arithmeticOperatorHotSpot87.is("PLUS")) ? ((str.length()) + pfxLen) : (_arithmeticOperatorHotSpot87.is("MINUS")) ? ((str.length()) - pfxLen) : (_arithmeticOperatorHotSpot87.is("MUL")) ? ((str.length()) * pfxLen) :  ((str.length()) / pfxLen));
+            final int hexDigits = (str.length()) - pfxLen;
             if ((hexDigits > 16) || ((hexDigits == 16) && (firstSigDigit > '7'))) {
-                return org.apache.commons.lang3.math.NumberUtils.createBigInteger(str);
+                return ((_returnReplacementOperator736.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createBigInteger(str)));
             } 
             if ((hexDigits > 8) || ((hexDigits == 8) && (firstSigDigit > '7'))) {
-                return org.apache.commons.lang3.math.NumberUtils.createLong(str);
+                return ((_returnReplacementOperator737.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createLong(str)));
             } 
-            return org.apache.commons.lang3.math.NumberUtils.createInteger(str);
+            return ((_returnReplacementOperator738.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createInteger(str)));
         } 
-        final char lastChar = str.charAt(((_arithmeticOperatorHotSpot88.is("PLUS")) ? (((str.length()) + 1)) : (_arithmeticOperatorHotSpot88.is("MINUS")) ? (((str.length()) - 1)) : (_arithmeticOperatorHotSpot88.is("MUL")) ? (((str.length()) * 1)) :  (((str.length()) / 1))));
+        final char lastChar = str.charAt(((str.length()) - 1));
         java.lang.String mant;
         java.lang.String dec;
         java.lang.String exp;
         final int decPos = str.indexOf('.');
-        final int expPos = ((_arithmeticOperatorHotSpot89.is("PLUS")) ? (((str.indexOf('e')) + (str.indexOf('E')))) : (_arithmeticOperatorHotSpot89.is("MINUS")) ? (((str.indexOf('e')) - (str.indexOf('E')))) : (_arithmeticOperatorHotSpot89.is("MUL")) ? (((str.indexOf('e')) * (str.indexOf('E')))) :  (((str.indexOf('e')) / (str.indexOf('E'))))) + 1;
+        final int expPos = ((str.indexOf('e')) + (str.indexOf('E'))) + 1;
         int numDecimals = 0;
         if (decPos > (-1)) {
             if (expPos > (-1)) {
                 if ((expPos < decPos) || (expPos > (str.length()))) {
                     throw new java.lang.NumberFormatException((str + " is not a valid number."));
                 } 
-                dec = str.substring(((_arithmeticOperatorHotSpot90.is("PLUS")) ? ((decPos + 1)) : (_arithmeticOperatorHotSpot90.is("MINUS")) ? ((decPos - 1)) : (_arithmeticOperatorHotSpot90.is("MUL")) ? ((decPos * 1)) :  ((decPos / 1))), expPos);
+                dec = str.substring((decPos + 1), expPos);
             } else {
-                dec = str.substring(((_arithmeticOperatorHotSpot91.is("PLUS")) ? ((decPos + 1)) : (_arithmeticOperatorHotSpot91.is("MINUS")) ? ((decPos - 1)) : (_arithmeticOperatorHotSpot91.is("MUL")) ? ((decPos * 1)) :  ((decPos / 1))));
+                dec = str.substring((decPos + 1));
             }
             mant = org.apache.commons.lang3.math.NumberUtils.getMantissa(str, decPos);
             numDecimals = dec.length();
@@ -196,22 +196,22 @@ public class NumberUtils {
             dec = null;
         }
         if ((!(java.lang.Character.isDigit(lastChar))) && (lastChar != '.')) {
-            if ((expPos > (-1)) && (expPos < ((_arithmeticOperatorHotSpot92.is("PLUS")) ? (((str.length()) + 1)) : (_arithmeticOperatorHotSpot92.is("MINUS")) ? (((str.length()) - 1)) : (_arithmeticOperatorHotSpot92.is("MUL")) ? (((str.length()) * 1)) :  (((str.length()) / 1))))) {
-                exp = str.substring(((_arithmeticOperatorHotSpot93.is("PLUS")) ? ((expPos + 1)) : (_arithmeticOperatorHotSpot93.is("MINUS")) ? ((expPos - 1)) : (_arithmeticOperatorHotSpot93.is("MUL")) ? ((expPos * 1)) :  ((expPos / 1))), ((_arithmeticOperatorHotSpot94.is("PLUS")) ? (((str.length()) + 1)) : (_arithmeticOperatorHotSpot94.is("MINUS")) ? (((str.length()) - 1)) : (_arithmeticOperatorHotSpot94.is("MUL")) ? (((str.length()) * 1)) :  (((str.length()) / 1))));
+            if ((expPos > (-1)) && (expPos < ((str.length()) - 1))) {
+                exp = str.substring((expPos + 1), ((str.length()) - 1));
             } else {
                 exp = null;
             }
-            final java.lang.String numeric = str.substring(0, ((_arithmeticOperatorHotSpot95.is("PLUS")) ? (((str.length()) + 1)) : (_arithmeticOperatorHotSpot95.is("MINUS")) ? (((str.length()) - 1)) : (_arithmeticOperatorHotSpot95.is("MUL")) ? (((str.length()) * 1)) :  (((str.length()) / 1))));
+            final java.lang.String numeric = str.substring(0, ((str.length()) - 1));
             final boolean allZeros = (org.apache.commons.lang3.math.NumberUtils.isAllZeros(mant)) && (org.apache.commons.lang3.math.NumberUtils.isAllZeros(exp));
             switch (lastChar) {
                 case 'l' :
                 case 'L' :
                     if (((dec == null) && (exp == null)) && ((((numeric.charAt(0)) == '-') && (org.apache.commons.lang3.math.NumberUtils.isDigits(numeric.substring(1)))) || (org.apache.commons.lang3.math.NumberUtils.isDigits(numeric)))) {
                         try {
-                            return org.apache.commons.lang3.math.NumberUtils.createLong(numeric);
+                            return ((_returnReplacementOperator739.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createLong(numeric)));
                         } catch (final java.lang.NumberFormatException nfe) {
                         }
-                        return org.apache.commons.lang3.math.NumberUtils.createBigInteger(numeric);
+                        return ((_returnReplacementOperator740.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createBigInteger(numeric)));
                     } 
                     throw new java.lang.NumberFormatException((str + " is not a valid number."));
                 case 'f' :
@@ -219,7 +219,7 @@ public class NumberUtils {
                     try {
                         final java.lang.Float f = org.apache.commons.lang3.math.NumberUtils.createFloat(numeric);
                         if (!((f.isInfinite()) || (((f.floatValue()) == 0.0F) && (!allZeros)))) {
-                            return f;
+                            return ((_returnReplacementOperator741.is("NULL")) ? ( null ) : (f));
                         } 
                     } catch (final java.lang.NumberFormatException nfe) {
                     }
@@ -228,40 +228,40 @@ public class NumberUtils {
                     try {
                         final java.lang.Double d = org.apache.commons.lang3.math.NumberUtils.createDouble(numeric);
                         if (!((d.isInfinite()) || (((d.floatValue()) == 0.0) && (!allZeros)))) {
-                            return d;
+                            return ((_returnReplacementOperator742.is("NULL")) ? ( null ) : (d));
                         } 
                     } catch (final java.lang.NumberFormatException nfe) {
                     }
                     try {
-                        return org.apache.commons.lang3.math.NumberUtils.createBigDecimal(numeric);
+                        return ((_returnReplacementOperator743.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createBigDecimal(numeric)));
                     } catch (final java.lang.NumberFormatException e) {
                     }
                 default :
                     throw new java.lang.NumberFormatException((str + " is not a valid number."));
             }
         } 
-        if ((expPos > (-1)) && (expPos < ((_arithmeticOperatorHotSpot96.is("PLUS")) ? (((str.length()) + 1)) : (_arithmeticOperatorHotSpot96.is("MINUS")) ? (((str.length()) - 1)) : (_arithmeticOperatorHotSpot96.is("MUL")) ? (((str.length()) * 1)) :  (((str.length()) / 1))))) {
-            exp = str.substring(((_arithmeticOperatorHotSpot97.is("PLUS")) ? ((expPos + 1)) : (_arithmeticOperatorHotSpot97.is("MINUS")) ? ((expPos - 1)) : (_arithmeticOperatorHotSpot97.is("MUL")) ? ((expPos * 1)) :  ((expPos / 1))), str.length());
+        if ((expPos > (-1)) && (expPos < ((str.length()) - 1))) {
+            exp = str.substring((expPos + 1), str.length());
         } else {
             exp = null;
         }
         if ((dec == null) && (exp == null)) {
             try {
-                return org.apache.commons.lang3.math.NumberUtils.createInteger(str);
+                return ((_returnReplacementOperator744.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createInteger(str)));
             } catch (final java.lang.NumberFormatException nfe) {
             }
             try {
-                return org.apache.commons.lang3.math.NumberUtils.createLong(str);
+                return ((_returnReplacementOperator745.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createLong(str)));
             } catch (final java.lang.NumberFormatException nfe) {
             }
-            return org.apache.commons.lang3.math.NumberUtils.createBigInteger(str);
+            return ((_returnReplacementOperator746.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createBigInteger(str)));
         } 
         final boolean allZeros = (org.apache.commons.lang3.math.NumberUtils.isAllZeros(mant)) && (org.apache.commons.lang3.math.NumberUtils.isAllZeros(exp));
         try {
             if (numDecimals <= 7) {
                 final java.lang.Float f = org.apache.commons.lang3.math.NumberUtils.createFloat(str);
                 if (!((f.isInfinite()) || (((f.floatValue()) == 0.0F) && (!allZeros)))) {
-                    return f;
+                    return ((_returnReplacementOperator747.is("NULL")) ? ( null ) : (f));
                 } 
             } 
         } catch (final java.lang.NumberFormatException nfe) {
@@ -270,67 +270,67 @@ public class NumberUtils {
             if (numDecimals <= 16) {
                 final java.lang.Double d = org.apache.commons.lang3.math.NumberUtils.createDouble(str);
                 if (!((d.isInfinite()) || (((d.doubleValue()) == 0.0) && (!allZeros)))) {
-                    return d;
+                    return ((_returnReplacementOperator748.is("NULL")) ? ( null ) : (d));
                 } 
             } 
         } catch (final java.lang.NumberFormatException nfe) {
         }
-        return org.apache.commons.lang3.math.NumberUtils.createBigDecimal(str);
+        return ((_returnReplacementOperator749.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.createBigDecimal(str)));
     }
 
     private static java.lang.String getMantissa(final java.lang.String str) {
-        return org.apache.commons.lang3.math.NumberUtils.getMantissa(str, str.length());
+        return ((_returnReplacementOperator750.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.getMantissa(str, str.length())));
     }
 
     private static java.lang.String getMantissa(final java.lang.String str, final int stopPos) {
         final char firstChar = str.charAt(0);
         final boolean hasSign = (firstChar == '-') || (firstChar == '+');
-        return hasSign ? str.substring(1, stopPos) : str.substring(0, stopPos);
+        return ((_returnReplacementOperator751.is("NULL")) ? ( null ) : (hasSign ? str.substring(1, stopPos) : str.substring(0, stopPos)));
     }
 
     private static boolean isAllZeros(final java.lang.String str) {
         if (str == null) {
-            return true;
+            return ((_returnReplacementOperator655.is("NULL")) ? ( null ) : (true));
         } 
-        for (int i = ((_arithmeticOperatorHotSpot78.is("PLUS")) ? ((str.length()) + 1) : (_arithmeticOperatorHotSpot78.is("MINUS")) ? ((str.length()) - 1) : (_arithmeticOperatorHotSpot78.is("MUL")) ? ((str.length()) * 1) :  ((str.length()) / 1)) ; i >= 0 ; i--) {
+        for (int i = (str.length()) - 1 ; i >= 0 ; i--) {
             if ((str.charAt(i)) != '0') {
-                return false;
+                return ((_returnReplacementOperator656.is("NULL")) ? ( null ) : (false));
             } 
         }
-        return (str.length()) > 0;
+        return ((_returnReplacementOperator657.is("NULL")) ? ( null ) : ((str.length()) > 0));
     }
 
     public static java.lang.Float createFloat(final java.lang.String str) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator729.is("NULL")) ? ( null ) : (null));
         } 
-        return java.lang.Float.valueOf(str);
+        return ((_returnReplacementOperator730.is("NULL")) ? ( null ) : (java.lang.Float.valueOf(str)));
     }
 
     public static java.lang.Double createDouble(final java.lang.String str) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator727.is("NULL")) ? ( null ) : (null));
         } 
-        return java.lang.Double.valueOf(str);
+        return ((_returnReplacementOperator728.is("NULL")) ? ( null ) : (java.lang.Double.valueOf(str)));
     }
 
     public static java.lang.Integer createInteger(final java.lang.String str) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator731.is("NULL")) ? ( null ) : (null));
         } 
-        return java.lang.Integer.decode(str);
+        return ((_returnReplacementOperator732.is("NULL")) ? ( null ) : (java.lang.Integer.decode(str)));
     }
 
     public static java.lang.Long createLong(final java.lang.String str) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator733.is("NULL")) ? ( null ) : (null));
         } 
-        return java.lang.Long.decode(str);
+        return ((_returnReplacementOperator734.is("NULL")) ? ( null ) : (java.lang.Long.decode(str)));
     }
 
     public static java.math.BigInteger createBigInteger(final java.lang.String str) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator754.is("NULL")) ? ( null ) : (null));
         } 
         int pos = 0;
         int radix = 10;
@@ -345,17 +345,17 @@ public class NumberUtils {
         } else if (str.startsWith("#", pos)) {
             radix = 16;
             pos++;
-        } else if ((str.startsWith("0", pos)) && ((str.length()) > ((_arithmeticOperatorHotSpot98.is("PLUS")) ? ((pos + 1)) : (_arithmeticOperatorHotSpot98.is("MINUS")) ? ((pos - 1)) : (_arithmeticOperatorHotSpot98.is("MUL")) ? ((pos * 1)) :  ((pos / 1))))) {
+        } else if ((str.startsWith("0", pos)) && ((str.length()) > (pos + 1))) {
             radix = 8;
             pos++;
         } 
         final java.math.BigInteger value = new java.math.BigInteger(str.substring(pos) , radix);
-        return negate ? value.negate() : value;
+        return ((_returnReplacementOperator755.is("NULL")) ? ( null ) : (negate ? value.negate() : value));
     }
 
     public static java.math.BigDecimal createBigDecimal(final java.lang.String str) {
         if (str == null) {
-            return null;
+            return ((_returnReplacementOperator752.is("NULL")) ? ( null ) : (null));
         } 
         if (org.apache.commons.lang3.StringUtils.isBlank(str)) {
             throw new java.lang.NumberFormatException("A blank string is not a valid number");
@@ -363,7 +363,7 @@ public class NumberUtils {
         if (str.trim().startsWith("--")) {
             throw new java.lang.NumberFormatException((str + " is not a valid number."));
         } 
-        return new java.math.BigDecimal(str);
+        return ((_returnReplacementOperator753.is("NULL")) ? ( null ) : (new java.math.BigDecimal(str)));
     }
 
     public static long min(final long... array) {
@@ -374,7 +374,7 @@ public class NumberUtils {
                 min = array[i];
             } 
         }
-        return min;
+        return ((_returnReplacementOperator759.is("NULL")) ? ( null ) : (min));
     }
 
     public static int min(final int... array) {
@@ -385,7 +385,7 @@ public class NumberUtils {
                 min = array[j];
             } 
         }
-        return min;
+        return ((_returnReplacementOperator722.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator722.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator722.is("ZERO")) ? ( 0 ) : (min));
     }
 
     public static short min(final short... array) {
@@ -396,7 +396,7 @@ public class NumberUtils {
                 min = array[i];
             } 
         }
-        return min;
+        return ((_returnReplacementOperator767.is("NULL")) ? ( null ) : (min));
     }
 
     public static byte min(final byte... array) {
@@ -407,7 +407,7 @@ public class NumberUtils {
                 min = array[i];
             } 
         }
-        return min;
+        return ((_returnReplacementOperator684.is("NULL")) ? ( null ) : (min));
     }
 
     public static double min(final double... array) {
@@ -415,13 +415,13 @@ public class NumberUtils {
         double min = array[0];
         for (int i = 1 ; i < (array.length) ; i++) {
             if (java.lang.Double.isNaN(array[i])) {
-                return java.lang.Double.NaN;
+                return ((_returnReplacementOperator693.is("NULL")) ? ( null ) : (java.lang.Double.NaN));
             } 
             if ((array[i]) < min) {
                 min = array[i];
             } 
         }
-        return min;
+        return ((_returnReplacementOperator694.is("NULL")) ? ( null ) : (min));
     }
 
     public static float min(final float... array) {
@@ -429,13 +429,13 @@ public class NumberUtils {
         float min = array[0];
         for (int i = 1 ; i < (array.length) ; i++) {
             if (java.lang.Float.isNaN(array[i])) {
-                return java.lang.Float.NaN;
+                return ((_returnReplacementOperator703.is("NULL")) ? ( null ) : (java.lang.Float.NaN));
             } 
             if ((array[i]) < min) {
                 min = array[i];
             } 
         }
-        return min;
+        return ((_returnReplacementOperator704.is("NULL")) ? ( null ) : (min));
     }
 
     public static long max(final long... array) {
@@ -446,7 +446,7 @@ public class NumberUtils {
                 max = array[j];
             } 
         }
-        return max;
+        return ((_returnReplacementOperator757.is("NULL")) ? ( null ) : (max));
     }
 
     public static int max(final int... array) {
@@ -457,7 +457,7 @@ public class NumberUtils {
                 max = array[j];
             } 
         }
-        return max;
+        return ((_returnReplacementOperator720.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator720.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator720.is("ZERO")) ? ( 0 ) : (max));
     }
 
     public static short max(final short... array) {
@@ -468,7 +468,7 @@ public class NumberUtils {
                 max = array[i];
             } 
         }
-        return max;
+        return ((_returnReplacementOperator765.is("NULL")) ? ( null ) : (max));
     }
 
     public static byte max(final byte... array) {
@@ -479,7 +479,7 @@ public class NumberUtils {
                 max = array[i];
             } 
         }
-        return max;
+        return ((_returnReplacementOperator682.is("NULL")) ? ( null ) : (max));
     }
 
     public static double max(final double... array) {
@@ -487,13 +487,13 @@ public class NumberUtils {
         double max = array[0];
         for (int j = 1 ; j < (array.length) ; j++) {
             if (java.lang.Double.isNaN(array[j])) {
-                return java.lang.Double.NaN;
+                return ((_returnReplacementOperator690.is("NULL")) ? ( null ) : (java.lang.Double.NaN));
             } 
             if ((array[j]) > max) {
                 max = array[j];
             } 
         }
-        return max;
+        return ((_returnReplacementOperator691.is("NULL")) ? ( null ) : (max));
     }
 
     public static float max(final float... array) {
@@ -501,13 +501,13 @@ public class NumberUtils {
         float max = array[0];
         for (int j = 1 ; j < (array.length) ; j++) {
             if (java.lang.Float.isNaN(array[j])) {
-                return java.lang.Float.NaN;
+                return ((_returnReplacementOperator700.is("NULL")) ? ( null ) : (java.lang.Float.NaN));
             } 
             if ((array[j]) > max) {
                 max = array[j];
             } 
         }
-        return max;
+        return ((_returnReplacementOperator701.is("NULL")) ? ( null ) : (max));
     }
 
     private static void validateArray(final java.lang.Object array) {
@@ -524,7 +524,7 @@ public class NumberUtils {
         if (c < a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator758.is("NULL")) ? ( null ) : (a));
     }
 
     public static int min(int a, final int b, final int c) {
@@ -534,7 +534,7 @@ public class NumberUtils {
         if (c < a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator721.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator721.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator721.is("ZERO")) ? ( 0 ) : (a));
     }
 
     public static short min(short a, final short b, final short c) {
@@ -544,7 +544,7 @@ public class NumberUtils {
         if (c < a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator766.is("NULL")) ? ( null ) : (a));
     }
 
     public static byte min(byte a, final byte b, final byte c) {
@@ -554,15 +554,15 @@ public class NumberUtils {
         if (c < a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator683.is("NULL")) ? ( null ) : (a));
     }
 
     public static double min(final double a, final double b, final double c) {
-        return java.lang.Math.min(java.lang.Math.min(a, b), c);
+        return ((_returnReplacementOperator692.is("NULL")) ? ( null ) : (java.lang.Math.min(java.lang.Math.min(a, b), c)));
     }
 
     public static float min(final float a, final float b, final float c) {
-        return java.lang.Math.min(java.lang.Math.min(a, b), c);
+        return ((_returnReplacementOperator702.is("NULL")) ? ( null ) : (java.lang.Math.min(java.lang.Math.min(a, b), c)));
     }
 
     public static long max(long a, final long b, final long c) {
@@ -572,7 +572,7 @@ public class NumberUtils {
         if (c > a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator756.is("NULL")) ? ( null ) : (a));
     }
 
     public static int max(int a, final int b, final int c) {
@@ -582,7 +582,7 @@ public class NumberUtils {
         if (c > a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator719.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator719.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator719.is("ZERO")) ? ( 0 ) : (a));
     }
 
     public static short max(short a, final short b, final short c) {
@@ -592,7 +592,7 @@ public class NumberUtils {
         if (c > a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator764.is("NULL")) ? ( null ) : (a));
     }
 
     public static byte max(byte a, final byte b, final byte c) {
@@ -602,24 +602,24 @@ public class NumberUtils {
         if (c > a) {
             a = c;
         } 
-        return a;
+        return ((_returnReplacementOperator681.is("NULL")) ? ( null ) : (a));
     }
 
     public static double max(final double a, final double b, final double c) {
-        return java.lang.Math.max(java.lang.Math.max(a, b), c);
+        return ((_returnReplacementOperator689.is("NULL")) ? ( null ) : (java.lang.Math.max(java.lang.Math.max(a, b), c)));
     }
 
     public static float max(final float a, final float b, final float c) {
-        return java.lang.Math.max(java.lang.Math.max(a, b), c);
+        return ((_returnReplacementOperator699.is("NULL")) ? ( null ) : (java.lang.Math.max(java.lang.Math.max(a, b), c)));
     }
 
     public static boolean isDigits(final java.lang.String str) {
-        return org.apache.commons.lang3.StringUtils.isNumeric(str);
+        return ((_returnReplacementOperator658.is("NULL")) ? ( null ) : (org.apache.commons.lang3.StringUtils.isNumeric(str)));
     }
 
     public static boolean isNumber(final java.lang.String str) {
         if (org.apache.commons.lang3.StringUtils.isEmpty(str)) {
-            return false;
+            return ((_returnReplacementOperator659.is("NULL")) ? ( null ) : (false));
         } 
         final char[] chars = str.toCharArray();
         int sz = chars.length;
@@ -628,171 +628,363 @@ public class NumberUtils {
         boolean allowSigns = false;
         boolean foundDigit = false;
         final int start = (chars[0]) == '-' ? 1 : 0;
-        if ((sz > ((_arithmeticOperatorHotSpot79.is("PLUS")) ? ((start + 1)) : (_arithmeticOperatorHotSpot79.is("MINUS")) ? ((start - 1)) : (_arithmeticOperatorHotSpot79.is("MUL")) ? ((start * 1)) :  ((start / 1)))) && ((chars[start]) == '0')) {
-            if (((chars[((_arithmeticOperatorHotSpot80.is("PLUS")) ? ((start + 1)) : (_arithmeticOperatorHotSpot80.is("MINUS")) ? ((start - 1)) : (_arithmeticOperatorHotSpot80.is("MUL")) ? ((start * 1)) :  ((start / 1)))]) == 'x') || ((chars[((_arithmeticOperatorHotSpot81.is("PLUS")) ? ((start + 1)) : (_arithmeticOperatorHotSpot81.is("MINUS")) ? ((start - 1)) : (_arithmeticOperatorHotSpot81.is("MUL")) ? ((start * 1)) :  ((start / 1)))]) == 'X')) {
-                int i = ((_arithmeticOperatorHotSpot82.is("PLUS")) ? (start + 2) : (_arithmeticOperatorHotSpot82.is("MINUS")) ? (start - 2) : (_arithmeticOperatorHotSpot82.is("MUL")) ? (start * 2) :  (start / 2));
+        if ((sz > (start + 1)) && ((chars[start]) == '0')) {
+            if (((chars[(start + 1)]) == 'x') || ((chars[(start + 1)]) == 'X')) {
+                int i = start + 2;
                 if (i == sz) {
-                    return false;
+                    return ((_returnReplacementOperator660.is("NULL")) ? ( null ) : (false));
                 } 
                 for ( ; i < (chars.length) ; i++) {
                     if (((((chars[i]) < '0') || ((chars[i]) > '9')) && (((chars[i]) < 'a') || ((chars[i]) > 'f'))) && (((chars[i]) < 'A') || ((chars[i]) > 'F'))) {
-                        return false;
+                        return ((_returnReplacementOperator661.is("NULL")) ? ( null ) : (false));
                     } 
                 }
-                return true;
-            } else if (java.lang.Character.isDigit(chars[((_arithmeticOperatorHotSpot83.is("PLUS")) ? ((start + 1)) : (_arithmeticOperatorHotSpot83.is("MINUS")) ? ((start - 1)) : (_arithmeticOperatorHotSpot83.is("MUL")) ? ((start * 1)) :  ((start / 1)))])) {
-                int i = ((_arithmeticOperatorHotSpot84.is("PLUS")) ? (start + 1) : (_arithmeticOperatorHotSpot84.is("MINUS")) ? (start - 1) : (_arithmeticOperatorHotSpot84.is("MUL")) ? (start * 1) :  (start / 1));
+                return ((_returnReplacementOperator662.is("NULL")) ? ( null ) : (true));
+            } else if (java.lang.Character.isDigit(chars[(start + 1)])) {
+                int i = start + 1;
                 for ( ; i < (chars.length) ; i++) {
                     if (((chars[i]) < '0') || ((chars[i]) > '7')) {
-                        return false;
+                        return ((_returnReplacementOperator663.is("NULL")) ? ( null ) : (false));
                     } 
                 }
-                return true;
+                return ((_returnReplacementOperator664.is("NULL")) ? ( null ) : (true));
             } 
         } 
         sz--;
         int i = start;
-        while ((i < sz) || (((i < ((_arithmeticOperatorHotSpot85.is("PLUS")) ? ((sz + 1)) : (_arithmeticOperatorHotSpot85.is("MINUS")) ? ((sz - 1)) : (_arithmeticOperatorHotSpot85.is("MUL")) ? ((sz * 1)) :  ((sz / 1)))) && allowSigns) && (!foundDigit))) {
+        while ((i < sz) || (((i < (sz + 1)) && allowSigns) && (!foundDigit))) {
             if (((chars[i]) >= '0') && ((chars[i]) <= '9')) {
                 foundDigit = true;
                 allowSigns = false;
             } else if ((chars[i]) == '.') {
                 if (hasDecPoint || hasExp) {
-                    return false;
+                    return ((_returnReplacementOperator665.is("NULL")) ? ( null ) : (false));
                 } 
                 hasDecPoint = true;
             } else if (((chars[i]) == 'e') || ((chars[i]) == 'E')) {
                 if (hasExp) {
-                    return false;
+                    return ((_returnReplacementOperator666.is("NULL")) ? ( null ) : (false));
                 } 
                 if (!foundDigit) {
-                    return false;
+                    return ((_returnReplacementOperator667.is("NULL")) ? ( null ) : (false));
                 } 
                 hasExp = true;
                 allowSigns = true;
             } else if (((chars[i]) == '+') || ((chars[i]) == '-')) {
                 if (!allowSigns) {
-                    return false;
+                    return ((_returnReplacementOperator668.is("NULL")) ? ( null ) : (false));
                 } 
                 allowSigns = false;
                 foundDigit = false;
             } else {
-                return false;
+                return ((_returnReplacementOperator669.is("NULL")) ? ( null ) : (false));
             }
             i++;
         }
         if (i < (chars.length)) {
             if (((chars[i]) >= '0') && ((chars[i]) <= '9')) {
-                return true;
+                return ((_returnReplacementOperator670.is("NULL")) ? ( null ) : (true));
             } 
             if (((chars[i]) == 'e') || ((chars[i]) == 'E')) {
-                return false;
+                return ((_returnReplacementOperator671.is("NULL")) ? ( null ) : (false));
             } 
             if ((chars[i]) == '.') {
                 if (hasDecPoint || hasExp) {
-                    return false;
+                    return ((_returnReplacementOperator672.is("NULL")) ? ( null ) : (false));
                 } 
-                return foundDigit;
+                return ((_returnReplacementOperator673.is("NULL")) ? ( null ) : (foundDigit));
             } 
             if ((!allowSigns) && (((((chars[i]) == 'd') || ((chars[i]) == 'D')) || ((chars[i]) == 'f')) || ((chars[i]) == 'F'))) {
-                return foundDigit;
+                return ((_returnReplacementOperator674.is("NULL")) ? ( null ) : (foundDigit));
             } 
             if (((chars[i]) == 'l') || ((chars[i]) == 'L')) {
-                return (foundDigit && (!hasExp)) && (!hasDecPoint);
+                return ((_returnReplacementOperator675.is("NULL")) ? ( null ) : ((foundDigit && (!hasExp)) && (!hasDecPoint)));
             } 
-            return false;
+            return ((_returnReplacementOperator676.is("NULL")) ? ( null ) : (false));
         } 
-        return (!allowSigns) && foundDigit;
+        return ((_returnReplacementOperator677.is("NULL")) ? ( null ) : ((!allowSigns) && foundDigit));
     }
 
     public static boolean isParsable(final java.lang.String str) {
         if (org.apache.commons.lang3.StringUtils.endsWith(str, ".")) {
-            return false;
+            return ((_returnReplacementOperator678.is("NULL")) ? ( null ) : (false));
         } 
         if (org.apache.commons.lang3.StringUtils.startsWith(str, "-")) {
-            return org.apache.commons.lang3.math.NumberUtils.isDigits(org.apache.commons.lang3.StringUtils.replaceOnce(str.substring(1), ".", org.apache.commons.lang3.StringUtils.EMPTY));
+            return ((_returnReplacementOperator679.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.isDigits(org.apache.commons.lang3.StringUtils.replaceOnce(str.substring(1), ".", org.apache.commons.lang3.StringUtils.EMPTY))));
         } else {
-            return org.apache.commons.lang3.math.NumberUtils.isDigits(org.apache.commons.lang3.StringUtils.replaceOnce(str, ".", org.apache.commons.lang3.StringUtils.EMPTY));
+            return ((_returnReplacementOperator680.is("NULL")) ? ( null ) : (org.apache.commons.lang3.math.NumberUtils.isDigits(org.apache.commons.lang3.StringUtils.replaceOnce(str, ".", org.apache.commons.lang3.StringUtils.EMPTY))));
         }
     }
 
     public static int compare(int x, int y) {
         if (x == y) {
-            return 0;
+            return ((_returnReplacementOperator710.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator710.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator710.is("ZERO")) ? ( 0 ) : (0));
         } 
         if (x < y) {
-            return -1;
+            return ((_returnReplacementOperator711.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator711.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator711.is("ZERO")) ? ( 0 ) : (-1));
         } else {
-            return 1;
+            return ((_returnReplacementOperator712.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator712.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator712.is("ZERO")) ? ( 0 ) : (1));
         }
     }
 
     public static int compare(long x, long y) {
         if (x == y) {
-            return 0;
+            return ((_returnReplacementOperator713.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator713.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator713.is("ZERO")) ? ( 0 ) : (0));
         } 
         if (x < y) {
-            return -1;
+            return ((_returnReplacementOperator714.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator714.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator714.is("ZERO")) ? ( 0 ) : (-1));
         } else {
-            return 1;
+            return ((_returnReplacementOperator715.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator715.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator715.is("ZERO")) ? ( 0 ) : (1));
         }
     }
 
     public static int compare(short x, short y) {
         if (x == y) {
-            return 0;
+            return ((_returnReplacementOperator716.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator716.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator716.is("ZERO")) ? ( 0 ) : (0));
         } 
         if (x < y) {
-            return -1;
+            return ((_returnReplacementOperator717.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator717.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator717.is("ZERO")) ? ( 0 ) : (-1));
         } else {
-            return 1;
+            return ((_returnReplacementOperator718.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator718.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator718.is("ZERO")) ? ( 0 ) : (1));
         }
     }
 
     public static int compare(byte x, byte y) {
-        return ((_arithmeticOperatorHotSpot86.is("PLUS")) ? (x + y) : (_arithmeticOperatorHotSpot86.is("MINUS")) ? (x - y) : (_arithmeticOperatorHotSpot86.is("MUL")) ? (x * y) :  (x / y));
+        return ((_returnReplacementOperator709.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator709.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator709.is("ZERO")) ? ( 0 ) : (x - y));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot78 = metamutator.Selector.of(78,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot78");
+    private static final metamutator.Selector _returnReplacementOperator655 = metamutator.Selector.of(655,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator655");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot79 = metamutator.Selector.of(79,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot79");
+    private static final metamutator.Selector _returnReplacementOperator656 = metamutator.Selector.of(656,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator656");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot80 = metamutator.Selector.of(80,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot80");
+    private static final metamutator.Selector _returnReplacementOperator657 = metamutator.Selector.of(657,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator657");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot81 = metamutator.Selector.of(81,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot81");
+    private static final metamutator.Selector _returnReplacementOperator658 = metamutator.Selector.of(658,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator658");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot82 = metamutator.Selector.of(82,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot82");
+    private static final metamutator.Selector _returnReplacementOperator659 = metamutator.Selector.of(659,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator659");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot83 = metamutator.Selector.of(83,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot83");
+    private static final metamutator.Selector _returnReplacementOperator660 = metamutator.Selector.of(660,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator660");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot84 = metamutator.Selector.of(84,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot84");
+    private static final metamutator.Selector _returnReplacementOperator661 = metamutator.Selector.of(661,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator661");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot85 = metamutator.Selector.of(85,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot85");
+    private static final metamutator.Selector _returnReplacementOperator662 = metamutator.Selector.of(662,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator662");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot86 = metamutator.Selector.of(86,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot86");
+    private static final metamutator.Selector _returnReplacementOperator663 = metamutator.Selector.of(663,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator663");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot87 = metamutator.Selector.of(87,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot87");
+    private static final metamutator.Selector _returnReplacementOperator664 = metamutator.Selector.of(664,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator664");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot88 = metamutator.Selector.of(88,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot88");
+    private static final metamutator.Selector _returnReplacementOperator665 = metamutator.Selector.of(665,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator665");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot89 = metamutator.Selector.of(89,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot89");
+    private static final metamutator.Selector _returnReplacementOperator666 = metamutator.Selector.of(666,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator666");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot90 = metamutator.Selector.of(90,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot90");
+    private static final metamutator.Selector _returnReplacementOperator667 = metamutator.Selector.of(667,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator667");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot91 = metamutator.Selector.of(91,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot91");
+    private static final metamutator.Selector _returnReplacementOperator668 = metamutator.Selector.of(668,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator668");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot92 = metamutator.Selector.of(92,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot92");
+    private static final metamutator.Selector _returnReplacementOperator669 = metamutator.Selector.of(669,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator669");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot93 = metamutator.Selector.of(93,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot93");
+    private static final metamutator.Selector _returnReplacementOperator670 = metamutator.Selector.of(670,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator670");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot94 = metamutator.Selector.of(94,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot94");
+    private static final metamutator.Selector _returnReplacementOperator671 = metamutator.Selector.of(671,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator671");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot95 = metamutator.Selector.of(95,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot95");
+    private static final metamutator.Selector _returnReplacementOperator672 = metamutator.Selector.of(672,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator672");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot96 = metamutator.Selector.of(96,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot96");
+    private static final metamutator.Selector _returnReplacementOperator673 = metamutator.Selector.of(673,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator673");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot97 = metamutator.Selector.of(97,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot97");
+    private static final metamutator.Selector _returnReplacementOperator674 = metamutator.Selector.of(674,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator674");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot98 = metamutator.Selector.of(98,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_arithmeticOperatorHotSpot98");
+    private static final metamutator.Selector _returnReplacementOperator675 = metamutator.Selector.of(675,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator675");
+
+    private static final metamutator.Selector _returnReplacementOperator676 = metamutator.Selector.of(676,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator676");
+
+    private static final metamutator.Selector _returnReplacementOperator677 = metamutator.Selector.of(677,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator677");
+
+    private static final metamutator.Selector _returnReplacementOperator678 = metamutator.Selector.of(678,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator678");
+
+    private static final metamutator.Selector _returnReplacementOperator679 = metamutator.Selector.of(679,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator679");
+
+    private static final metamutator.Selector _returnReplacementOperator680 = metamutator.Selector.of(680,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator680");
+
+    private static final metamutator.Selector _returnReplacementOperator681 = metamutator.Selector.of(681,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator681");
+
+    private static final metamutator.Selector _returnReplacementOperator682 = metamutator.Selector.of(682,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator682");
+
+    private static final metamutator.Selector _returnReplacementOperator683 = metamutator.Selector.of(683,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator683");
+
+    private static final metamutator.Selector _returnReplacementOperator684 = metamutator.Selector.of(684,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator684");
+
+    private static final metamutator.Selector _returnReplacementOperator685 = metamutator.Selector.of(685,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator685");
+
+    private static final metamutator.Selector _returnReplacementOperator686 = metamutator.Selector.of(686,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator686");
+
+    private static final metamutator.Selector _returnReplacementOperator687 = metamutator.Selector.of(687,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator687");
+
+    private static final metamutator.Selector _returnReplacementOperator688 = metamutator.Selector.of(688,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator688");
+
+    private static final metamutator.Selector _returnReplacementOperator689 = metamutator.Selector.of(689,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator689");
+
+    private static final metamutator.Selector _returnReplacementOperator690 = metamutator.Selector.of(690,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator690");
+
+    private static final metamutator.Selector _returnReplacementOperator691 = metamutator.Selector.of(691,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator691");
+
+    private static final metamutator.Selector _returnReplacementOperator692 = metamutator.Selector.of(692,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator692");
+
+    private static final metamutator.Selector _returnReplacementOperator693 = metamutator.Selector.of(693,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator693");
+
+    private static final metamutator.Selector _returnReplacementOperator694 = metamutator.Selector.of(694,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator694");
+
+    private static final metamutator.Selector _returnReplacementOperator695 = metamutator.Selector.of(695,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator695");
+
+    private static final metamutator.Selector _returnReplacementOperator696 = metamutator.Selector.of(696,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator696");
+
+    private static final metamutator.Selector _returnReplacementOperator697 = metamutator.Selector.of(697,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator697");
+
+    private static final metamutator.Selector _returnReplacementOperator698 = metamutator.Selector.of(698,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator698");
+
+    private static final metamutator.Selector _returnReplacementOperator699 = metamutator.Selector.of(699,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator699");
+
+    private static final metamutator.Selector _returnReplacementOperator700 = metamutator.Selector.of(700,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator700");
+
+    private static final metamutator.Selector _returnReplacementOperator701 = metamutator.Selector.of(701,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator701");
+
+    private static final metamutator.Selector _returnReplacementOperator702 = metamutator.Selector.of(702,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator702");
+
+    private static final metamutator.Selector _returnReplacementOperator703 = metamutator.Selector.of(703,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator703");
+
+    private static final metamutator.Selector _returnReplacementOperator704 = metamutator.Selector.of(704,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator704");
+
+    private static final metamutator.Selector _returnReplacementOperator705 = metamutator.Selector.of(705,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator705");
+
+    private static final metamutator.Selector _returnReplacementOperator706 = metamutator.Selector.of(706,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator706");
+
+    private static final metamutator.Selector _returnReplacementOperator707 = metamutator.Selector.of(707,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator707");
+
+    private static final metamutator.Selector _returnReplacementOperator708 = metamutator.Selector.of(708,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator708");
+
+    private static final metamutator.Selector _returnReplacementOperator709 = metamutator.Selector.of(709,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator709");
+
+    private static final metamutator.Selector _returnReplacementOperator710 = metamutator.Selector.of(710,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator710");
+
+    private static final metamutator.Selector _returnReplacementOperator711 = metamutator.Selector.of(711,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator711");
+
+    private static final metamutator.Selector _returnReplacementOperator712 = metamutator.Selector.of(712,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator712");
+
+    private static final metamutator.Selector _returnReplacementOperator713 = metamutator.Selector.of(713,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator713");
+
+    private static final metamutator.Selector _returnReplacementOperator714 = metamutator.Selector.of(714,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator714");
+
+    private static final metamutator.Selector _returnReplacementOperator715 = metamutator.Selector.of(715,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator715");
+
+    private static final metamutator.Selector _returnReplacementOperator716 = metamutator.Selector.of(716,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator716");
+
+    private static final metamutator.Selector _returnReplacementOperator717 = metamutator.Selector.of(717,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator717");
+
+    private static final metamutator.Selector _returnReplacementOperator718 = metamutator.Selector.of(718,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator718");
+
+    private static final metamutator.Selector _returnReplacementOperator719 = metamutator.Selector.of(719,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator719");
+
+    private static final metamutator.Selector _returnReplacementOperator720 = metamutator.Selector.of(720,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator720");
+
+    private static final metamutator.Selector _returnReplacementOperator721 = metamutator.Selector.of(721,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator721");
+
+    private static final metamutator.Selector _returnReplacementOperator722 = metamutator.Selector.of(722,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator722");
+
+    private static final metamutator.Selector _returnReplacementOperator723 = metamutator.Selector.of(723,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator723");
+
+    private static final metamutator.Selector _returnReplacementOperator724 = metamutator.Selector.of(724,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator724");
+
+    private static final metamutator.Selector _returnReplacementOperator725 = metamutator.Selector.of(725,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator725");
+
+    private static final metamutator.Selector _returnReplacementOperator726 = metamutator.Selector.of(726,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator726");
+
+    private static final metamutator.Selector _returnReplacementOperator727 = metamutator.Selector.of(727,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator727");
+
+    private static final metamutator.Selector _returnReplacementOperator728 = metamutator.Selector.of(728,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator728");
+
+    private static final metamutator.Selector _returnReplacementOperator729 = metamutator.Selector.of(729,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator729");
+
+    private static final metamutator.Selector _returnReplacementOperator730 = metamutator.Selector.of(730,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator730");
+
+    private static final metamutator.Selector _returnReplacementOperator731 = metamutator.Selector.of(731,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator731");
+
+    private static final metamutator.Selector _returnReplacementOperator732 = metamutator.Selector.of(732,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator732");
+
+    private static final metamutator.Selector _returnReplacementOperator733 = metamutator.Selector.of(733,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator733");
+
+    private static final metamutator.Selector _returnReplacementOperator734 = metamutator.Selector.of(734,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator734");
+
+    private static final metamutator.Selector _returnReplacementOperator735 = metamutator.Selector.of(735,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator735");
+
+    private static final metamutator.Selector _returnReplacementOperator736 = metamutator.Selector.of(736,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator736");
+
+    private static final metamutator.Selector _returnReplacementOperator737 = metamutator.Selector.of(737,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator737");
+
+    private static final metamutator.Selector _returnReplacementOperator738 = metamutator.Selector.of(738,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator738");
+
+    private static final metamutator.Selector _returnReplacementOperator739 = metamutator.Selector.of(739,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator739");
+
+    private static final metamutator.Selector _returnReplacementOperator740 = metamutator.Selector.of(740,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator740");
+
+    private static final metamutator.Selector _returnReplacementOperator741 = metamutator.Selector.of(741,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator741");
+
+    private static final metamutator.Selector _returnReplacementOperator742 = metamutator.Selector.of(742,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator742");
+
+    private static final metamutator.Selector _returnReplacementOperator743 = metamutator.Selector.of(743,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator743");
+
+    private static final metamutator.Selector _returnReplacementOperator744 = metamutator.Selector.of(744,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator744");
+
+    private static final metamutator.Selector _returnReplacementOperator745 = metamutator.Selector.of(745,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator745");
+
+    private static final metamutator.Selector _returnReplacementOperator746 = metamutator.Selector.of(746,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator746");
+
+    private static final metamutator.Selector _returnReplacementOperator747 = metamutator.Selector.of(747,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator747");
+
+    private static final metamutator.Selector _returnReplacementOperator748 = metamutator.Selector.of(748,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator748");
+
+    private static final metamutator.Selector _returnReplacementOperator749 = metamutator.Selector.of(749,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator749");
+
+    private static final metamutator.Selector _returnReplacementOperator750 = metamutator.Selector.of(750,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator750");
+
+    private static final metamutator.Selector _returnReplacementOperator751 = metamutator.Selector.of(751,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator751");
+
+    private static final metamutator.Selector _returnReplacementOperator752 = metamutator.Selector.of(752,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator752");
+
+    private static final metamutator.Selector _returnReplacementOperator753 = metamutator.Selector.of(753,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator753");
+
+    private static final metamutator.Selector _returnReplacementOperator754 = metamutator.Selector.of(754,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator754");
+
+    private static final metamutator.Selector _returnReplacementOperator755 = metamutator.Selector.of(755,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator755");
+
+    private static final metamutator.Selector _returnReplacementOperator756 = metamutator.Selector.of(756,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator756");
+
+    private static final metamutator.Selector _returnReplacementOperator757 = metamutator.Selector.of(757,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator757");
+
+    private static final metamutator.Selector _returnReplacementOperator758 = metamutator.Selector.of(758,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator758");
+
+    private static final metamutator.Selector _returnReplacementOperator759 = metamutator.Selector.of(759,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator759");
+
+    private static final metamutator.Selector _returnReplacementOperator760 = metamutator.Selector.of(760,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator760");
+
+    private static final metamutator.Selector _returnReplacementOperator761 = metamutator.Selector.of(761,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator761");
+
+    private static final metamutator.Selector _returnReplacementOperator762 = metamutator.Selector.of(762,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator762");
+
+    private static final metamutator.Selector _returnReplacementOperator763 = metamutator.Selector.of(763,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator763");
+
+    private static final metamutator.Selector _returnReplacementOperator764 = metamutator.Selector.of(764,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator764");
+
+    private static final metamutator.Selector _returnReplacementOperator765 = metamutator.Selector.of(765,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator765");
+
+    private static final metamutator.Selector _returnReplacementOperator766 = metamutator.Selector.of(766,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator766");
+
+    private static final metamutator.Selector _returnReplacementOperator767 = metamutator.Selector.of(767,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator767");
+
+    private static final metamutator.Selector _returnReplacementOperator768 = metamutator.Selector.of(768,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator768");
+
+    private static final metamutator.Selector _returnReplacementOperator769 = metamutator.Selector.of(769,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator769");
+
+    private static final metamutator.Selector _returnReplacementOperator770 = metamutator.Selector.of(770,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator770");
+
+    private static final metamutator.Selector _returnReplacementOperator771 = metamutator.Selector.of(771,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.math.NumberUtils.class).id("_returnReplacementOperator771");
 }
 

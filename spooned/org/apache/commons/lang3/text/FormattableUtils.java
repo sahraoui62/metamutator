@@ -9,19 +9,19 @@ public class FormattableUtils {
     }
 
     public static java.lang.String toString(final java.util.Formattable formattable) {
-        return java.lang.String.format(SIMPLEST_FORMAT, formattable);
+        return ((_returnReplacementOperator1174.is("NULL")) ? ( null ) : (java.lang.String.format(org.apache.commons.lang3.text.FormattableUtils.SIMPLEST_FORMAT, formattable)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision) {
-        return org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', null);
+        return ((_returnReplacementOperator1175.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', null)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision, final char padChar) {
-        return org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, padChar, null);
+        return ((_returnReplacementOperator1176.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, padChar, null)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision, final java.lang.CharSequence ellipsis) {
-        return org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', ellipsis);
+        return ((_returnReplacementOperator1178.is("NULL")) ? ( null ) : (org.apache.commons.lang3.text.FormattableUtils.append(seq, formatter, flags, width, precision, ' ', ellipsis)));
     }
 
     public static java.util.Formatter append(final java.lang.CharSequence seq, final java.util.Formatter formatter, final int flags, final int width, final int precision, final char padChar, final java.lang.CharSequence ellipsis) {
@@ -29,16 +29,24 @@ public class FormattableUtils {
         final java.lang.StringBuilder buf = new java.lang.StringBuilder(seq);
         if ((precision >= 0) && (precision < (seq.length()))) {
             final java.lang.CharSequence _ellipsis = org.apache.commons.lang3.ObjectUtils.defaultIfNull(ellipsis, org.apache.commons.lang3.StringUtils.EMPTY);
-            buf.replace(((_arithmeticOperatorHotSpot134.is("PLUS")) ? ((precision + (_ellipsis.length()))) : (_arithmeticOperatorHotSpot134.is("MINUS")) ? ((precision - (_ellipsis.length()))) : (_arithmeticOperatorHotSpot134.is("MUL")) ? ((precision * (_ellipsis.length()))) :  ((precision / (_ellipsis.length())))), seq.length(), _ellipsis.toString());
+            buf.replace((precision - (_ellipsis.length())), seq.length(), _ellipsis.toString());
         } 
         final boolean leftJustify = (flags & (java.util.FormattableFlags.LEFT_JUSTIFY)) == (java.util.FormattableFlags.LEFT_JUSTIFY);
         for (int i = buf.length() ; i < width ; i++) {
             buf.insert((leftJustify ? i : 0), padChar);
         }
         formatter.format(buf.toString());
-        return formatter;
+        return ((_returnReplacementOperator1177.is("NULL")) ? ( null ) : (formatter));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot134 = metamutator.Selector.of(134,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_arithmeticOperatorHotSpot134");
+    private static final metamutator.Selector _returnReplacementOperator1174 = metamutator.Selector.of(1174,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1174");
+
+    private static final metamutator.Selector _returnReplacementOperator1175 = metamutator.Selector.of(1175,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1175");
+
+    private static final metamutator.Selector _returnReplacementOperator1176 = metamutator.Selector.of(1176,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1176");
+
+    private static final metamutator.Selector _returnReplacementOperator1177 = metamutator.Selector.of(1177,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1177");
+
+    private static final metamutator.Selector _returnReplacementOperator1178 = metamutator.Selector.of(1178,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.FormattableUtils.class).id("_returnReplacementOperator1178");
 }
 

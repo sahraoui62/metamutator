@@ -11,7 +11,7 @@ public class EventListenerSupport<L> implements java.io.Serializable {
     private transient L[] prototypeArray;
 
     public static <T>org.apache.commons.lang3.event.EventListenerSupport<T> create(final java.lang.Class<T> listenerInterface) {
-        return new org.apache.commons.lang3.event.EventListenerSupport<T>(listenerInterface);
+        return ((_returnReplacementOperator510.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.event.EventListenerSupport<T>(listenerInterface)));
     }
 
     public EventListenerSupport(final java.lang.Class<L> listenerInterface) {
@@ -30,7 +30,7 @@ public class EventListenerSupport<L> implements java.io.Serializable {
     }
 
     public L fire() {
-        return proxy;
+        return ((_returnReplacementOperator511.is("NULL")) ? ( null ) : (proxy));
     }
 
     public void addListener(final L listener) {
@@ -47,7 +47,7 @@ public class EventListenerSupport<L> implements java.io.Serializable {
     }
 
     int getListenerCount() {
-        return listeners.size();
+        return ((_returnReplacementOperator513.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator513.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator513.is("ZERO")) ? ( 0 ) : (listeners.size()));
     }
 
     public void removeListener(final L listener) {
@@ -56,7 +56,7 @@ public class EventListenerSupport<L> implements java.io.Serializable {
     }
 
     public L[] getListeners() {
-        return listeners.toArray(prototypeArray);
+        return ((_returnReplacementOperator512.is("NULL")) ? ( null ) : (listeners.toArray(prototypeArray)));
     }
 
     private void writeObject(final java.io.ObjectOutputStream objectOutputStream) throws java.io.IOException {
@@ -94,7 +94,7 @@ public class EventListenerSupport<L> implements java.io.Serializable {
     }
 
     protected java.lang.reflect.InvocationHandler createInvocationHandler() {
-        return new ProxyInvocationHandler();
+        return ((_returnReplacementOperator514.is("NULL")) ? ( null ) : (new ProxyInvocationHandler()));
     }
 
     protected class ProxyInvocationHandler implements java.lang.reflect.InvocationHandler {
@@ -103,8 +103,20 @@ public class EventListenerSupport<L> implements java.io.Serializable {
             for (final L listener : listeners) {
                 method.invoke(listener, args);
             }
-            return null;
+            return ((_returnReplacementOperator509.is("NULL")) ? ( null ) : (null));
         }
     }
+
+    private static final metamutator.Selector _returnReplacementOperator509 = metamutator.Selector.of(509,new String[]{"INIT","NULL"}).id("_returnReplacementOperator509");
+
+    private static final metamutator.Selector _returnReplacementOperator510 = metamutator.Selector.of(510,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.event.EventListenerSupport.class).id("_returnReplacementOperator510");
+
+    private static final metamutator.Selector _returnReplacementOperator511 = metamutator.Selector.of(511,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.event.EventListenerSupport.class).id("_returnReplacementOperator511");
+
+    private static final metamutator.Selector _returnReplacementOperator512 = metamutator.Selector.of(512,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.event.EventListenerSupport.class).id("_returnReplacementOperator512");
+
+    private static final metamutator.Selector _returnReplacementOperator513 = metamutator.Selector.of(513,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.event.EventListenerSupport.class).id("_returnReplacementOperator513");
+
+    private static final metamutator.Selector _returnReplacementOperator514 = metamutator.Selector.of(514,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.event.EventListenerSupport.class).id("_returnReplacementOperator514");
 }
 

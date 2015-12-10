@@ -27,7 +27,7 @@ public class MutableShort extends java.lang.Number implements java.lang.Comparab
 
     @java.lang.Override
     public java.lang.Short getValue() {
-        return java.lang.Short.valueOf(this.value);
+        return ((_returnReplacementOperator852.is("NULL")) ? ( null ) : (java.lang.Short.valueOf(this.value)));
     }
 
     public void setValue(final short value) {
@@ -65,54 +65,78 @@ public class MutableShort extends java.lang.Number implements java.lang.Comparab
 
     @java.lang.Override
     public short shortValue() {
-        return value;
+        return ((_returnReplacementOperator856.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public int intValue() {
-        return value;
+        return ((_returnReplacementOperator851.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public long longValue() {
-        return value;
+        return ((_returnReplacementOperator855.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public float floatValue() {
-        return value;
+        return ((_returnReplacementOperator848.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public double doubleValue() {
-        return value;
+        return ((_returnReplacementOperator847.is("NULL")) ? ( null ) : (value));
     }
 
     public java.lang.Short toShort() {
-        return java.lang.Short.valueOf(shortValue());
+        return ((_returnReplacementOperator853.is("NULL")) ? ( null ) : (java.lang.Short.valueOf(shortValue())));
     }
 
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
         if (obj instanceof org.apache.commons.lang3.mutable.MutableShort) {
-            return (value) == (((org.apache.commons.lang3.mutable.MutableShort)(obj)).shortValue());
+            return ((_returnReplacementOperator845.is("NULL")) ? ( null ) : ((value) == (((org.apache.commons.lang3.mutable.MutableShort)(obj)).shortValue())));
         } 
-        return false;
+        return ((_returnReplacementOperator846.is("NULL")) ? ( null ) : (false));
     }
 
     @java.lang.Override
     public int hashCode() {
-        return value;
+        return ((_returnReplacementOperator850.is("NULL")) ? ( null ) : (value));
     }
 
     @java.lang.Override
     public int compareTo(final org.apache.commons.lang3.mutable.MutableShort other) {
-        return org.apache.commons.lang3.math.NumberUtils.compare(this.value, other.value);
+        return ((_returnReplacementOperator849.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator849.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator849.is("ZERO")) ? ( 0 ) : (org.apache.commons.lang3.math.NumberUtils.compare(this.value, other.value)));
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-        return java.lang.String.valueOf(value);
+        return ((_returnReplacementOperator854.is("NULL")) ? ( null ) : (java.lang.String.valueOf(value)));
     }
+
+    private static final metamutator.Selector _returnReplacementOperator845 = metamutator.Selector.of(845,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator845");
+
+    private static final metamutator.Selector _returnReplacementOperator846 = metamutator.Selector.of(846,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator846");
+
+    private static final metamutator.Selector _returnReplacementOperator847 = metamutator.Selector.of(847,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator847");
+
+    private static final metamutator.Selector _returnReplacementOperator848 = metamutator.Selector.of(848,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator848");
+
+    private static final metamutator.Selector _returnReplacementOperator849 = metamutator.Selector.of(849,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator849");
+
+    private static final metamutator.Selector _returnReplacementOperator850 = metamutator.Selector.of(850,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator850");
+
+    private static final metamutator.Selector _returnReplacementOperator851 = metamutator.Selector.of(851,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator851");
+
+    private static final metamutator.Selector _returnReplacementOperator852 = metamutator.Selector.of(852,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator852");
+
+    private static final metamutator.Selector _returnReplacementOperator853 = metamutator.Selector.of(853,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator853");
+
+    private static final metamutator.Selector _returnReplacementOperator854 = metamutator.Selector.of(854,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator854");
+
+    private static final metamutator.Selector _returnReplacementOperator855 = metamutator.Selector.of(855,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator855");
+
+    private static final metamutator.Selector _returnReplacementOperator856 = metamutator.Selector.of(856,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.mutable.MutableShort.class).id("_returnReplacementOperator856");
 }
 

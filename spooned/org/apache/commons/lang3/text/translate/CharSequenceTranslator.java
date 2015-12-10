@@ -8,12 +8,12 @@ public abstract class CharSequenceTranslator {
 
     public final java.lang.String translate(final java.lang.CharSequence input) {
         if (input == null) {
-            return null;
+            return ((_returnReplacementOperator1098.is("NULL")) ? ( null ) : (null));
         } 
         try {
-            final java.io.StringWriter writer = new java.io.StringWriter(((_arithmeticOperatorHotSpot102.is("PLUS")) ? (((input.length()) + 2)) : (_arithmeticOperatorHotSpot102.is("MINUS")) ? (((input.length()) - 2)) : (_arithmeticOperatorHotSpot102.is("MUL")) ? (((input.length()) * 2)) :  (((input.length()) / 2))));
+            final java.io.StringWriter writer = new java.io.StringWriter(((input.length()) * 2));
             translate(input, writer);
-            return writer.toString();
+            return ((_returnReplacementOperator1099.is("NULL")) ? ( null ) : (writer.toString()));
         } catch (final java.io.IOException ioe) {
             throw new java.lang.RuntimeException(ioe);
         }
@@ -50,18 +50,22 @@ public abstract class CharSequenceTranslator {
     }
 
     public final org.apache.commons.lang3.text.translate.CharSequenceTranslator with(final org.apache.commons.lang3.text.translate.CharSequenceTranslator... translators) {
-        final org.apache.commons.lang3.text.translate.CharSequenceTranslator[] newArray = new org.apache.commons.lang3.text.translate.CharSequenceTranslator[((_arithmeticOperatorHotSpot103.is("PLUS")) ? ((translators.length) + 1) : (_arithmeticOperatorHotSpot103.is("MINUS")) ? ((translators.length) - 1) : (_arithmeticOperatorHotSpot103.is("MUL")) ? ((translators.length) * 1) :  ((translators.length) / 1))];
+        final org.apache.commons.lang3.text.translate.CharSequenceTranslator[] newArray = new org.apache.commons.lang3.text.translate.CharSequenceTranslator[(translators.length) + 1];
         newArray[0] = this;
         java.lang.System.arraycopy(translators, 0, newArray, 1, translators.length);
-        return new org.apache.commons.lang3.text.translate.AggregateTranslator(newArray);
+        return ((_returnReplacementOperator1100.is("NULL")) ? ( null ) : (new org.apache.commons.lang3.text.translate.AggregateTranslator(newArray)));
     }
 
     public static java.lang.String hex(final int codepoint) {
-        return java.lang.Integer.toHexString(codepoint).toUpperCase(java.util.Locale.ENGLISH);
+        return ((_returnReplacementOperator1097.is("NULL")) ? ( null ) : (java.lang.Integer.toHexString(codepoint).toUpperCase(java.util.Locale.ENGLISH)));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot102 = metamutator.Selector.of(102,new String[]{"MUL","PLUS","MINUS","DIV"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_arithmeticOperatorHotSpot102");
+    private static final metamutator.Selector _returnReplacementOperator1097 = metamutator.Selector.of(1097,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1097");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot103 = metamutator.Selector.of(103,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_arithmeticOperatorHotSpot103");
+    private static final metamutator.Selector _returnReplacementOperator1098 = metamutator.Selector.of(1098,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1098");
+
+    private static final metamutator.Selector _returnReplacementOperator1099 = metamutator.Selector.of(1099,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1099");
+
+    private static final metamutator.Selector _returnReplacementOperator1100 = metamutator.Selector.of(1100,new String[]{"INIT","NULL"}).in(org.apache.commons.lang3.text.translate.CharSequenceTranslator.class).id("_returnReplacementOperator1100");
 }
 

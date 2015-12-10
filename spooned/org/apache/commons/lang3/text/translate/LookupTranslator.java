@@ -36,25 +36,23 @@ public class LookupTranslator extends org.apache.commons.lang3.text.translate.Ch
     public int translate(final java.lang.CharSequence input, final int index, final java.io.Writer out) throws java.io.IOException {
         if (prefixSet.contains(input.charAt(index))) {
             int max = longest;
-            if (((_arithmeticOperatorHotSpot104.is("PLUS")) ? ((index + (longest))) : (_arithmeticOperatorHotSpot104.is("MINUS")) ? ((index - (longest))) : (_arithmeticOperatorHotSpot104.is("MUL")) ? ((index * (longest))) :  ((index / (longest)))) > (input.length())) {
-                max = ((_arithmeticOperatorHotSpot105.is("PLUS")) ? ((input.length()) + index) : (_arithmeticOperatorHotSpot105.is("MINUS")) ? ((input.length()) - index) : (_arithmeticOperatorHotSpot105.is("MUL")) ? ((input.length()) * index) :  ((input.length()) / index));
+            if ((index + (longest)) > (input.length())) {
+                max = (input.length()) - index;
             } 
             for (int i = max ; i >= (shortest) ; i--) {
-                final java.lang.CharSequence subSeq = input.subSequence(index, ((_arithmeticOperatorHotSpot106.is("PLUS")) ? ((index + i)) : (_arithmeticOperatorHotSpot106.is("MINUS")) ? ((index - i)) : (_arithmeticOperatorHotSpot106.is("MUL")) ? ((index * i)) :  ((index / i))));
+                final java.lang.CharSequence subSeq = input.subSequence(index, (index + i));
                 final java.lang.String result = lookupMap.get(subSeq.toString());
                 if (result != null) {
                     out.write(result);
-                    return i;
+                    return ((_returnReplacementOperator1118.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1118.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1118.is("ZERO")) ? ( 0 ) : (i));
                 } 
             }
         } 
-        return 0;
+        return ((_returnReplacementOperator1119.is("INT_MIN")) ? ( -2147483647 ) : (_returnReplacementOperator1119.is("INT_MAX")) ? ( 2147483646 ) : (_returnReplacementOperator1119.is("ZERO")) ? ( 0 ) : (0));
     }
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot104 = metamutator.Selector.of(104,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_arithmeticOperatorHotSpot104");
+    private static final metamutator.Selector _returnReplacementOperator1118 = metamutator.Selector.of(1118,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_returnReplacementOperator1118");
 
-    private static final metamutator.Selector _arithmeticOperatorHotSpot105 = metamutator.Selector.of(105,new String[]{"MINUS","PLUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_arithmeticOperatorHotSpot105");
-
-    private static final metamutator.Selector _arithmeticOperatorHotSpot106 = metamutator.Selector.of(106,new String[]{"PLUS","MINUS","MUL","DIV"}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_arithmeticOperatorHotSpot106");
+    private static final metamutator.Selector _returnReplacementOperator1119 = metamutator.Selector.of(1119,new String[]{"INIT","INT_MIN","INT_MAX","ZERO"}).in(org.apache.commons.lang3.text.translate.LookupTranslator.class).id("_returnReplacementOperator1119");
 }
 
