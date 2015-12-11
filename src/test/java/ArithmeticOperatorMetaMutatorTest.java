@@ -39,7 +39,7 @@ public class ArithmeticOperatorMetaMutatorTest {
         // creating a new instance of the class
         Object o = ((Class)bsh.eval(c.toString())).newInstance();        
         
-        assertEquals(1,Selector.getAllSelectors().size());
+        assertEquals(2,Selector.getAllSelectors().size());
       
         // test with the first
         Selector sel=Selector.getSelectorByName(ArithmeticOperatorMetaMutator.PREFIX + "1");
@@ -60,5 +60,24 @@ public class ArithmeticOperatorMetaMutatorTest {
         sel.choose(3);
         assertEquals(4, invokeExactMethod(o, "op_add", new Object[] {20, 5}));
         
+        // second selector 
+        sel=Selector.getSelectorByName(ArithmeticOperatorMetaMutator.PREFIX + "2");
+
+        
+        // check MINUS
+        sel.choose(0);
+        assertEquals(5, invokeExactMethod(o, "op_minus", new Object[] {10, 5}));
+
+        // check PLUS
+        sel.choose(1);
+        assertEquals(5, invokeExactMethod(o, "op_minus", new Object[] {2, 3}));
+        
+        // check MUL
+        sel.choose(2);
+        assertEquals(16, invokeExactMethod(o, "op_minus", new Object[] {4, 4}));
+        
+        // check DIV
+        sel.choose(3);
+        assertEquals(4, invokeExactMethod(o, "op_minus", new Object[] {20, 5}));
     }
 }

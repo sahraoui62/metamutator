@@ -116,7 +116,7 @@ public class ArithmeticOperatorMetaMutator extends
 		}
 
 		int thisIndex = ++index;
-		String originalKind = expression.getKind().toString();
+		BinaryOperatorKind originalKind = expression.getKind();
 		String originalExpression = expression.toString();
 		
 		String newExpression = "";
@@ -126,7 +126,7 @@ public class ArithmeticOperatorMetaMutator extends
 		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){
 			//if(!op.equals(expression.getKind())){
 				expression.setKind(op);
-				newExpression += "(" + PREFIX + thisIndex + ".is(\"" + op + "\")) ? (" + expression + ")";
+				newExpression += "(" + PREFIX + thisIndex + ".is(" + op.getClass().getCanonicalName()+"."+op.toString() + ")) ? (" + expression + ")";
 				newExpression += " : ";
 			//}
 		}

@@ -26,5 +26,10 @@
 			<type>2</type>
 			<location>/Users/slimane/Documents/master2/OPL/commons-lang-master/src/test/java</location>
 		</link>
+		<link>
+			<name>jsoup-tests</name>
+			<type>2</type>
+			<location>/Users/slimane/Documents/master2/OPL/jsoup-master/src/test/java</location>
+		</link>
 	</linkedResources>
 </projectDescription>

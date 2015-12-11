@@ -63,7 +63,7 @@ public class MutantSearchSpaceExplorator {
 			outputTraces.println(selectors.get(sel).getIdentifier());
 			
 			//int k=0;
-			System.out.println(selectors.get(sel).getOptionCount());
+			//System.out.println(selectors.get(sel).getOptionCount());
 			for (int k = 0; k < selectors.get(sel).getOptionCount(); k++) 
 			{
 
@@ -101,7 +101,7 @@ public class MutantSearchSpaceExplorator {
 					outputFailures.println(txt_trace);
 					failures.add(txt);
 					failures2.put(result.getFailureCount(), txt);
-					System.out.println(result.getFailures().get(0).getException());
+					//System.out.println(result.getFailures().get(0).getException());
 				}
 			}
 
