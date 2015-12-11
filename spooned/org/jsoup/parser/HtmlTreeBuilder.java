@@ -246,7 +246,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     org.jsoup.nodes.Element pop() {
-        int size = stack.size();
+        int size = (_constantOperatorMetaMutator74.is("ZERO")?( 0 ):(_constantOperatorMetaMutator74.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator74.is("MIN_MIN")?( -2147483647 ):(stack.size()))));
         return stack.remove((size - 1));
     }
 
@@ -263,7 +263,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     private boolean isElementInQueue(java.util.ArrayList<org.jsoup.nodes.Element> queue, org.jsoup.nodes.Element element) {
-        for (int pos = (queue.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator69.is("ZERO")?( 0 ):(_constantOperatorMetaMutator69.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator69.is("MIN_MIN")?( -2147483647 ):((queue.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = queue.get(pos);
             if (next == element) {
                 return true;
@@ -273,7 +273,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     org.jsoup.nodes.Element getFromStack(java.lang.String elName) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator73.is("ZERO")?( 0 ):(_constantOperatorMetaMutator73.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator73.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             if (next.nodeName().equals(elName)) {
                 return next;
@@ -283,7 +283,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     boolean removeFromStack(org.jsoup.nodes.Element el) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator70.is("ZERO")?( 0 ):(_constantOperatorMetaMutator70.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator70.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             if (next == el) {
                 stack.remove(pos);
@@ -294,7 +294,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     void popStackToClose(java.lang.String elName) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator79.is("ZERO")?( 0 ):(_constantOperatorMetaMutator79.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator79.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             stack.remove(pos);
             if (next.nodeName().equals(elName))
@@ -304,7 +304,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     void popStackToClose(java.lang.String... elNames) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator80.is("ZERO")?( 0 ):(_constantOperatorMetaMutator80.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator80.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             stack.remove(pos);
             if (org.jsoup.helper.StringUtil.in(next.nodeName(), elNames))
@@ -314,7 +314,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     void popStackToBefore(java.lang.String elName) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator78.is("ZERO")?( 0 ):(_constantOperatorMetaMutator78.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator78.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             if (next.nodeName().equals(elName)) {
                 break;
@@ -337,7 +337,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     private void clearStackToContext(java.lang.String... nodeNames) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator76.is("ZERO")?( 0 ):(_constantOperatorMetaMutator76.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator76.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             if ((org.jsoup.helper.StringUtil.in(next.nodeName(), nodeNames)) || (next.nodeName().equals("html")))
                 break;
@@ -349,7 +349,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
 
     org.jsoup.nodes.Element aboveOnStack(org.jsoup.nodes.Element el) {
         assert onStack(el);
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator71.is("ZERO")?( 0 ):(_constantOperatorMetaMutator71.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator71.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             if (next == el) {
                 return stack.get((pos - 1));
@@ -359,7 +359,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     void insertOnStackAfter(org.jsoup.nodes.Element after, org.jsoup.nodes.Element in) {
-        int i = stack.lastIndexOf(after);
+        int i = (_constantOperatorMetaMutator77.is("ZERO")?( 0 ):(_constantOperatorMetaMutator77.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator77.is("MIN_MIN")?( -2147483647 ):(stack.lastIndexOf(after)))));
         org.jsoup.helper.Validate.isTrue((i != (-1)));
         stack.add((i + 1), in);
     }
@@ -369,14 +369,14 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     private void replaceInQueue(java.util.ArrayList<org.jsoup.nodes.Element> queue, org.jsoup.nodes.Element out, org.jsoup.nodes.Element in) {
-        int i = queue.lastIndexOf(out);
+        int i = (_constantOperatorMetaMutator86.is("ZERO")?( 0 ):(_constantOperatorMetaMutator86.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator86.is("MIN_MIN")?( -2147483647 ):(queue.lastIndexOf(out)))));
         org.jsoup.helper.Validate.isTrue((i != (-1)));
         queue.set(i, in);
     }
 
     void resetInsertionMode() {
         boolean last = false;
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator87.is("ZERO")?( 0 ):(_constantOperatorMetaMutator87.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator87.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element node = stack.get(pos);
             if (pos == 0) {
                 last = true;
@@ -431,7 +431,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     private boolean inSpecificScope(java.lang.String[] targetNames, java.lang.String[] baseTypes, java.lang.String[] extraTypes) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator68.is("ZERO")?( 0 ):(_constantOperatorMetaMutator68.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator68.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element el = stack.get(pos);
             java.lang.String elName = el.nodeName();
             if (org.jsoup.helper.StringUtil.in(elName, targetNames))
@@ -473,7 +473,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     boolean inSelectScope(java.lang.String targetName) {
-        for (int pos = (stack.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator67.is("ZERO")?( 0 ):(_constantOperatorMetaMutator67.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator67.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element el = stack.get(pos);
             java.lang.String elName = el.nodeName();
             if (elName.equals(targetName))
@@ -542,7 +542,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     org.jsoup.nodes.Element removeLastFormattingElement() {
-        int size = formattingElements.size();
+        int size = (_constantOperatorMetaMutator75.is("ZERO")?( 0 ):(_constantOperatorMetaMutator75.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator75.is("MIN_MIN")?( -2147483647 ):(formattingElements.size()))));
         if (size > 0)
             return formattingElements.remove((size - 1));
         else
@@ -551,8 +551,8 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     void pushActiveFormattingElements(org.jsoup.nodes.Element in) {
-        int numSeen = 0;
-        for (int pos = (formattingElements.size()) - 1 ; pos >= 0 ; pos--) {
+        int numSeen = (_constantOperatorMetaMutator82.is("ZERO")?( 0 ):(_constantOperatorMetaMutator82.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator82.is("MIN_MIN")?( -2147483647 ):(0))));
+        for (int pos = (_constantOperatorMetaMutator81.is("ZERO")?( 0 ):(_constantOperatorMetaMutator81.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator81.is("MIN_MIN")?( -2147483647 ):((formattingElements.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element el = formattingElements.get(pos);
             if (el == null)
                 break;
@@ -578,8 +578,8 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
             return ;
         
         org.jsoup.nodes.Element entry = last;
-        int size = formattingElements.size();
-        int pos = size - 1;
+        int size = (_constantOperatorMetaMutator83.is("ZERO")?( 0 ):(_constantOperatorMetaMutator83.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator83.is("MIN_MIN")?( -2147483647 ):(formattingElements.size()))));
+        int pos = (_constantOperatorMetaMutator84.is("ZERO")?( 0 ):(_constantOperatorMetaMutator84.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator84.is("MIN_MIN")?( -2147483647 ):(size - 1))));
         boolean skip = false;
         while (true) {
             if (pos == 0) {
@@ -616,7 +616,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     void removeFromActiveFormattingElements(org.jsoup.nodes.Element el) {
-        for (int pos = (formattingElements.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator85.is("ZERO")?( 0 ):(_constantOperatorMetaMutator85.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator85.is("MIN_MIN")?( -2147483647 ):((formattingElements.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = formattingElements.get(pos);
             if (next == el) {
                 formattingElements.remove(pos);
@@ -630,7 +630,7 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     }
 
     org.jsoup.nodes.Element getActiveFormattingElement(java.lang.String nodeName) {
-        for (int pos = (formattingElements.size()) - 1 ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator72.is("ZERO")?( 0 ):(_constantOperatorMetaMutator72.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator72.is("MIN_MIN")?( -2147483647 ):((formattingElements.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = formattingElements.get(pos);
             if (next == null)
                 break;
@@ -675,5 +675,47 @@ public class HtmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     public java.lang.String toString() {
         return (((((("TreeBuilder{" + "currentToken=") + (currentToken)) + ", state=") + (state)) + ", currentElement=") + (currentElement())) + '}';
     }
+
+    private static final metamutator.Selector _constantOperatorMetaMutator67 = metamutator.Selector.of(67,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator67");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator68 = metamutator.Selector.of(68,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator68");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator69 = metamutator.Selector.of(69,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator69");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator70 = metamutator.Selector.of(70,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator70");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator71 = metamutator.Selector.of(71,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator71");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator72 = metamutator.Selector.of(72,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator72");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator73 = metamutator.Selector.of(73,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator73");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator74 = metamutator.Selector.of(74,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator74");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator75 = metamutator.Selector.of(75,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator75");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator76 = metamutator.Selector.of(76,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator76");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator77 = metamutator.Selector.of(77,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator77");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator78 = metamutator.Selector.of(78,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator78");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator79 = metamutator.Selector.of(79,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator79");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator80 = metamutator.Selector.of(80,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator80");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator81 = metamutator.Selector.of(81,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator81");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator82 = metamutator.Selector.of(82,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator82");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator83 = metamutator.Selector.of(83,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator83");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator84 = metamutator.Selector.of(84,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator84");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator85 = metamutator.Selector.of(85,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator85");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator86 = metamutator.Selector.of(86,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator86");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator87 = metamutator.Selector.of(87,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.HtmlTreeBuilder.class).id("_constantOperatorMetaMutator87");
 }
 

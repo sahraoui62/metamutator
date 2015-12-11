@@ -169,7 +169,7 @@ public class Attributes implements java.lang.Cloneable , java.lang.Iterable<org.
 
             @java.lang.Override
             public int size() {
-                int count = 0;
+                int count = (_constantOperatorMetaMutator18.is("ZERO")?( 0 ):(_constantOperatorMetaMutator18.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator18.is("MIN_MIN")?( -2147483647 ):(0))));
                 java.util.Iterator iter = new DatasetIterator();
                 while (iter.hasNext())
                     count++;
@@ -205,5 +205,7 @@ public class Attributes implements java.lang.Cloneable , java.lang.Iterable<org.
     private static java.lang.String dataKey(java.lang.String key) {
         return (dataPrefix) + key;
     }
+
+    private static final metamutator.Selector _constantOperatorMetaMutator18 = metamutator.Selector.of(18,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator18");
 }
 

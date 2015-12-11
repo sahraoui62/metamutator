@@ -142,7 +142,7 @@ public class Tag {
 
     @java.lang.Override
     public int hashCode() {
-        int result = (_constantOperatorMetaMutator10.is("ZERO")?( 0 ):(_constantOperatorMetaMutator10.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator10.is("MIN_MIN")?( -2147483647 ):(tagName.hashCode()))));
+        int result = (_constantOperatorMetaMutator90.is("ZERO")?( 0 ):(_constantOperatorMetaMutator90.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator90.is("MIN_MIN")?( -2147483647 ):(tagName.hashCode()))));
         result = (31 * result) + (isBlock ? 1 : 0);
         result = (31 * result) + (formatAsBlock ? 1 : 0);
         result = (31 * result) + (canContainBlock ? 1 : 0);
@@ -219,6 +219,6 @@ public class Tag {
         tags.put(tag.tagName, tag);
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator10 = metamutator.Selector.of(10,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.Tag.class).id("_constantOperatorMetaMutator10");
+    private static final metamutator.Selector _constantOperatorMetaMutator90 = metamutator.Selector.of(90,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.Tag.class).id("_constantOperatorMetaMutator90");
 }
 

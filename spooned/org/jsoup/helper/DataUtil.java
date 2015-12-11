@@ -93,7 +93,7 @@ public final class DataUtil {
         byte[] buffer = new byte[bufferSize];
         java.io.ByteArrayOutputStream outStream = new java.io.ByteArrayOutputStream(bufferSize);
         int read;
-        int remaining = (_constantOperatorMetaMutator1.is("ZERO")?( 0 ):(_constantOperatorMetaMutator1.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator1.is("MIN_MIN")?( -2147483647 ):(maxSize))));
+        int remaining = (_constantOperatorMetaMutator4.is("ZERO")?( 0 ):(_constantOperatorMetaMutator4.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator4.is("MIN_MIN")?( -2147483647 ):(maxSize))));
         while (true) {
             read = inStream.read(buffer);
             if (read == (-1))
@@ -162,12 +162,14 @@ public final class DataUtil {
     static java.lang.String mimeBoundary() {
         final java.lang.StringBuilder mime = new java.lang.StringBuilder(boundaryLength);
         final java.util.Random rand = new java.util.Random();
-        for (int i = 0 ; i < (boundaryLength) ; i++) {
+        for (int i = (_constantOperatorMetaMutator3.is("ZERO")?( 0 ):(_constantOperatorMetaMutator3.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator3.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (boundaryLength) ; i++) {
             mime.append(mimeBoundaryChars[rand.nextInt(mimeBoundaryChars.length)]);
         }
         return mime.toString();
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator1 = metamutator.Selector.of(1,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.DataUtil.class).id("_constantOperatorMetaMutator1");
+    private static final metamutator.Selector _constantOperatorMetaMutator3 = metamutator.Selector.of(3,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.DataUtil.class).id("_constantOperatorMetaMutator3");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator4 = metamutator.Selector.of(4,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.DataUtil.class).id("_constantOperatorMetaMutator4");
 }
 

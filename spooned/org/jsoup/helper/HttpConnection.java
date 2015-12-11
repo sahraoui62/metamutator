@@ -128,7 +128,7 @@ public class HttpConnection implements org.jsoup.Connection {
     public org.jsoup.Connection data(java.lang.String... keyvals) {
         org.jsoup.helper.Validate.notNull(keyvals, "Data key value pairs must not be null");
         org.jsoup.helper.Validate.isTrue((((keyvals.length) % 2) == 0), "Must supply an even number of key value pairs");
-        for (int i = (_constantOperatorMetaMutator2.is("ZERO")?( 0 ):(_constantOperatorMetaMutator2.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator2.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (keyvals.length) ; i += 2) {
+        for (int i = (_constantOperatorMetaMutator9.is("ZERO")?( 0 ):(_constantOperatorMetaMutator9.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator9.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (keyvals.length) ; i += 2) {
             java.lang.String key = keyvals[i];
             java.lang.String value = keyvals[(i + 1)];
             org.jsoup.helper.Validate.notEmpty(key, "Data key must not be empty");
@@ -471,7 +471,7 @@ public class HttpConnection implements org.jsoup.Connection {
 
         private boolean executed = false;
 
-        private int numRedirects = 0;
+        private int numRedirects = (_constantOperatorMetaMutator5.is("ZERO")?( 0 ):(_constantOperatorMetaMutator5.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator5.is("MIN_MIN")?( -2147483647 ):(0))));
 
         private org.jsoup.Connection.Request req;
 
@@ -514,7 +514,7 @@ public class HttpConnection implements org.jsoup.Connection {
                 if (conn.getDoOutput())
                     org.jsoup.helper.HttpConnection.Response.writePost(req, conn.getOutputStream(), mimeBoundary);
                 
-                int status = conn.getResponseCode();
+                int status = (_constantOperatorMetaMutator7.is("ZERO")?( 0 ):(_constantOperatorMetaMutator7.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator7.is("MIN_MIN")?( -2147483647 ):(conn.getResponseCode()))));
                 res = new org.jsoup.helper.HttpConnection.Response(previousResponse);
                 res.setupFromConnection(conn, previousResponse);
                 res.req = req;
@@ -688,7 +688,7 @@ public class HttpConnection implements org.jsoup.Connection {
 
         private static java.util.LinkedHashMap<java.lang.String, java.util.List<java.lang.String>> createHeaderMap(java.net.HttpURLConnection conn) {
             final java.util.LinkedHashMap<java.lang.String, java.util.List<java.lang.String>> headers = new java.util.LinkedHashMap<java.lang.String, java.util.List<java.lang.String>>();
-            int i = 0;
+            int i = (_constantOperatorMetaMutator6.is("ZERO")?( 0 ):(_constantOperatorMetaMutator6.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator6.is("MIN_MIN")?( -2147483647 ):(0))));
             while (true) {
                 final java.lang.String key = conn.getHeaderFieldKey(i);
                 final java.lang.String val = conn.getHeaderField(i);
@@ -734,7 +734,7 @@ public class HttpConnection implements org.jsoup.Connection {
                         header(name, values.get(0));
                     else if ((values.size()) > 1) {
                         java.lang.StringBuilder accum = new java.lang.StringBuilder();
-                        for (int i = 0 ; i < (values.size()) ; i++) {
+                        for (int i = (_constantOperatorMetaMutator8.is("ZERO")?( 0 ):(_constantOperatorMetaMutator8.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator8.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (values.size()) ; i++) {
                             final java.lang.String val = values.get(i);
                             if (i != 0)
                                 accum.append(", ");
@@ -902,6 +902,14 @@ public class HttpConnection implements org.jsoup.Connection {
         }
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator2 = metamutator.Selector.of(2,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.HttpConnection.class).id("_constantOperatorMetaMutator2");
+    private static final metamutator.Selector _constantOperatorMetaMutator5 = metamutator.Selector.of(5,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator5");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator6 = metamutator.Selector.of(6,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator6");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator7 = metamutator.Selector.of(7,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator7");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator8 = metamutator.Selector.of(8,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator8");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator9 = metamutator.Selector.of(9,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.HttpConnection.class).id("_constantOperatorMetaMutator9");
 }
 

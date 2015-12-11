@@ -34,7 +34,7 @@ public class HtmlToPlainText {
     private class FormattingVisitor implements org.jsoup.select.NodeVisitor {
         private static final int maxWidth = 80;
 
-        private int width = 0;
+        private int width = (_constantOperatorMetaMutator1.is("ZERO")?( 0 ):(_constantOperatorMetaMutator1.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator1.is("MIN_MIN")?( -2147483647 ):(0))));
 
         private java.lang.StringBuilder accum = new java.lang.StringBuilder();
 
@@ -71,7 +71,7 @@ public class HtmlToPlainText {
             
             if (((text.length()) + (width)) > (maxWidth)) {
                 java.lang.String[] words = text.split("\\s+");
-                for (int i = 0 ; i < (words.length) ; i++) {
+                for (int i = (_constantOperatorMetaMutator2.is("ZERO")?( 0 ):(_constantOperatorMetaMutator2.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator2.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (words.length) ; i++) {
                     java.lang.String word = words[i];
                     boolean last = i == ((words.length) - 1);
                     if (!last)
@@ -96,5 +96,9 @@ public class HtmlToPlainText {
             return accum.toString();
         }
     }
+
+    private static final metamutator.Selector _constantOperatorMetaMutator1 = metamutator.Selector.of(1,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator1");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator2 = metamutator.Selector.of(2,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator2");
 }
 

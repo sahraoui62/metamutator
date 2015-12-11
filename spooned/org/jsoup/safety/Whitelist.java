@@ -319,8 +319,8 @@ public class Whitelist {
 
         @java.lang.Override
         public int hashCode() {
-            final int prime = 31;
-            int result = (_constantOperatorMetaMutator14.is("ZERO")?( 0 ):(_constantOperatorMetaMutator14.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator14.is("MIN_MIN")?( -2147483647 ):(1))));
+            final int prime = (_constantOperatorMetaMutator121.is("ZERO")?( 0 ):(_constantOperatorMetaMutator121.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator121.is("MIN_MIN")?( -2147483647 ):(31))));
+            int result = (_constantOperatorMetaMutator122.is("ZERO")?( 0 ):(_constantOperatorMetaMutator122.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator122.is("MIN_MIN")?( -2147483647 ):(1))));
             result = (prime * result) + ((value) == null ? 0 : value.hashCode());
             return result;
         }
@@ -353,6 +353,8 @@ public class Whitelist {
         }
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator14 = metamutator.Selector.of(14,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator14");
+    private static final metamutator.Selector _constantOperatorMetaMutator121 = metamutator.Selector.of(121,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator121");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator122 = metamutator.Selector.of(122,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator122");
 }
 

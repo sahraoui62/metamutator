@@ -51,9 +51,9 @@ xhtml(org.jsoup.nodes.Entities.xhtmlByVal), base(org.jsoup.nodes.Entities.baseBy
         final java.nio.charset.CharsetEncoder encoder = out.encoder();
         final CoreCharset coreCharset = CoreCharset.byName(encoder.charset().name());
         final java.util.Map<java.lang.Character, java.lang.String> map = escapeMode.getMap();
-        final int length = string.length();
+        final int length = (_constantOperatorMetaMutator26.is("ZERO")?( 0 ):(_constantOperatorMetaMutator26.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator26.is("MIN_MIN")?( -2147483647 ):(string.length()))));
         int codePoint;
-        for (int offset = (_constantOperatorMetaMutator6.is("ZERO")?( 0 ):(_constantOperatorMetaMutator6.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator6.is("MIN_MIN")?( -2147483647 ):(0)))) ; offset < length ; offset += java.lang.Character.charCount(codePoint)) {
+        for (int offset = (_constantOperatorMetaMutator25.is("ZERO")?( 0 ):(_constantOperatorMetaMutator25.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator25.is("MIN_MIN")?( -2147483647 ):(0)))) ; offset < length ; offset += java.lang.Character.charCount(codePoint)) {
             codePoint = string.codePointAt(offset);
             if (normaliseWhite) {
                 if (org.jsoup.helper.StringUtil.isWhitespace(codePoint)) {
@@ -202,6 +202,8 @@ ascii, utf, fallback;
         return outMap;
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator6 = metamutator.Selector.of(6,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.Entities.class).id("_constantOperatorMetaMutator6");
+    private static final metamutator.Selector _constantOperatorMetaMutator25 = metamutator.Selector.of(25,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.Entities.class).id("_constantOperatorMetaMutator25");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator26 = metamutator.Selector.of(26,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.Entities.class).id("_constantOperatorMetaMutator26");
 }
 

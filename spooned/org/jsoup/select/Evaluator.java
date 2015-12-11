@@ -335,7 +335,7 @@ public abstract class Evaluator {
             if ((p == null) || (p instanceof org.jsoup.nodes.Document))
                 return false;
             
-            final int pos = calculatePosition(root, element);
+            final int pos = (_constantOperatorMetaMutator126.is("ZERO")?( 0 ):(_constantOperatorMetaMutator126.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator126.is("MIN_MIN")?( -2147483647 ):(calculatePosition(root, element)))));
             if ((a) == 0)
                 return pos == (b);
             
@@ -394,9 +394,9 @@ public abstract class Evaluator {
         }
 
         protected int calculatePosition(org.jsoup.nodes.Element root, org.jsoup.nodes.Element element) {
-            int pos = 0;
+            int pos = (_constantOperatorMetaMutator131.is("ZERO")?( 0 ):(_constantOperatorMetaMutator131.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator131.is("MIN_MIN")?( -2147483647 ):(0))));
             org.jsoup.select.Elements family = element.parent().children();
-            for (int i = 0 ; i < (family.size()) ; i++) {
+            for (int i = (_constantOperatorMetaMutator130.is("ZERO")?( 0 ):(_constantOperatorMetaMutator130.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator130.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (family.size()) ; i++) {
                 if (family.get(i).tag().equals(element.tag()))
                     pos++;
                 
@@ -420,9 +420,9 @@ public abstract class Evaluator {
 
         @java.lang.Override
         protected int calculatePosition(org.jsoup.nodes.Element root, org.jsoup.nodes.Element element) {
-            int pos = 0;
+            int pos = (_constantOperatorMetaMutator129.is("ZERO")?( 0 ):(_constantOperatorMetaMutator129.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator129.is("MIN_MIN")?( -2147483647 ):(0))));
             org.jsoup.select.Elements family = element.parent().children();
-            for (int i = element.elementSiblingIndex() ; i < (family.size()) ; i++) {
+            for (int i = (_constantOperatorMetaMutator128.is("ZERO")?( 0 ):(_constantOperatorMetaMutator128.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator128.is("MIN_MIN")?( -2147483647 ):(element.elementSiblingIndex())))) ; i < (family.size()) ; i++) {
                 if (family.get(i).tag().equals(element.tag()))
                     pos++;
                 
@@ -482,9 +482,9 @@ public abstract class Evaluator {
             if ((p == null) || (p instanceof org.jsoup.nodes.Document))
                 return false;
             
-            int pos = 0;
+            int pos = (_constantOperatorMetaMutator133.is("ZERO")?( 0 ):(_constantOperatorMetaMutator133.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator133.is("MIN_MIN")?( -2147483647 ):(0))));
             org.jsoup.select.Elements family = p.children();
-            for (int i = 0 ; i < (family.size()) ; i++) {
+            for (int i = (_constantOperatorMetaMutator132.is("ZERO")?( 0 ):(_constantOperatorMetaMutator132.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator132.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (family.size()) ; i++) {
                 if (family.get(i).tag().equals(element.tag()))
                     pos++;
                 
@@ -502,7 +502,7 @@ public abstract class Evaluator {
         @java.lang.Override
         public boolean matches(org.jsoup.nodes.Element root, org.jsoup.nodes.Element element) {
             java.util.List<org.jsoup.nodes.Node> family = element.childNodes();
-            for (int i = 0 ; i < (family.size()) ; i++) {
+            for (int i = (_constantOperatorMetaMutator127.is("ZERO")?( 0 ):(_constantOperatorMetaMutator127.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator127.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (family.size()) ; i++) {
                 org.jsoup.nodes.Node n = family.get(i);
                 if (!(((n instanceof org.jsoup.nodes.Comment) || (n instanceof org.jsoup.nodes.XmlDeclaration)) || (n instanceof org.jsoup.nodes.DocumentType)))
                     return false;
@@ -598,5 +598,21 @@ public abstract class Evaluator {
             return java.lang.String.format(":matchesOwn(%s", pattern);
         }
     }
+
+    private static final metamutator.Selector _constantOperatorMetaMutator126 = metamutator.Selector.of(126,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator126");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator127 = metamutator.Selector.of(127,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator127");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator128 = metamutator.Selector.of(128,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator128");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator129 = metamutator.Selector.of(129,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator129");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator130 = metamutator.Selector.of(130,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator130");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator131 = metamutator.Selector.of(131,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator131");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator132 = metamutator.Selector.of(132,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator132");
+
+    private static final metamutator.Selector _constantOperatorMetaMutator133 = metamutator.Selector.of(133,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator133");
 }
 

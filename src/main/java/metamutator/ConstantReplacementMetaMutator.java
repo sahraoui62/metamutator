@@ -5,11 +5,11 @@ import java.util.EnumSet;
 import spoon.processing.AbstractProcessor;
 import spoon.reflect.code.CtCodeSnippetExpression;
 import spoon.reflect.code.CtExpression;
-import spoon.reflect.code.CtVariableAccess;
 import spoon.reflect.code.CtVariableRead;
 import spoon.reflect.code.CtVariableWrite;
+import spoon.reflect.declaration.ModifierKind;
 
-public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariableWrite<?>> {
+public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariableRead<?>> {
 
 	public static final String PREFIX = "_constantOperatorMetaMutator";
 	
@@ -27,23 +27,19 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 	private static final EnumSet<CONSTANT_REP> consRep = EnumSet.
 			of(CONSTANT_REP.ZERO, CONSTANT_REP.INT_MAX, CONSTANT_REP.MIN_MIN);
 	
-	public boolean isToBeProcessed(CtVariableWrite element){
+	public boolean isToBeProcessed(CtVariableRead element){
 		try {
 			if((element.getType().toString().contains("int"))&&
 					(!(element.getVariable().getDeclaration().getDefaultExpression() == null))){
-						if(!(element.getVariable().getDeclaration().getDefaultExpression().toString().contains(PREFIX)))
-							return true;		
+						if(!(element.getVariable().getDeclaration().getDefaultExpression().toString().contains(PREFIX))
+								&& (!element.getVariable().getDeclaration().getModifiers().contains(ModifierKind.STATIC)))
+									return true;				
 			}
 		} catch (Exception e) {
 			System.err.println("The element is not supported");
 		}
-		
-	
-		return false;
-		
+		return false;	
 	}
-	
-
 	
 	private String permutations(CONSTANT_REP value) {
 		switch(value) {
@@ -54,17 +50,15 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 		}
 	
 	@Override
-	public void process(CtVariableWrite element) {
+	public void process(CtVariableRead element) {
 		
 		thisIndex++;
 		CtExpression valToChange= null;
 		try {
+			System.out.println(element.getVariable().getDeclaration().getModifiers() +"    "+ element.getVariable().getDeclaration().getDefaultExpression());
 			valToChange = element.getVariable().getDeclaration().getDefaultExpression();
-			System.out.print(element.getVariable().getType()+" "+element.getVariable().toString()+" = ");
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-		// Test if the constant variable is not a generated one
+			//System.out.print(element.getVariable().getType()+" "+element.getVariable().toString()+" = ");
+			
 			String expression = "(";
 			for(CONSTANT_REP c : consRep){
 				expression += PREFIX+thisIndex + ".is(\"" + c.toString() + "\")?( "+permutations(c)+" ):(";
@@ -80,9 +74,12 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 				valToChange.replace(codeSnippet);
 				Selector.generateSelector(element, CONSTANT_REP.ZERO.toString(), thisIndex, consRep, PREFIX);
 			} catch (Exception e) {
-				System.err.println("Element not supported");
+				System.err.println("Element not changed");
 			}
-		
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}		
 		
 	}
 	

@@ -142,11 +142,11 @@ public class TextNode extends org.jsoup.nodes.Node {
 
     @java.lang.Override
     public int hashCode() {
-        int result = (_constantOperatorMetaMutator8.is("ZERO")?( 0 ):(_constantOperatorMetaMutator8.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator8.is("MIN_MIN")?( -2147483647 ):(super.hashCode()))));
+        int result = (_constantOperatorMetaMutator35.is("ZERO")?( 0 ):(_constantOperatorMetaMutator35.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator35.is("MIN_MIN")?( -2147483647 ):(super.hashCode()))));
         result = (31 * result) + ((text) != null ? text.hashCode() : 0);
         return result;
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator8 = metamutator.Selector.of(8,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.TextNode.class).id("_constantOperatorMetaMutator8");
+    private static final metamutator.Selector _constantOperatorMetaMutator35 = metamutator.Selector.of(35,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.TextNode.class).id("_constantOperatorMetaMutator35");
 }
 
