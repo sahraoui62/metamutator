@@ -14,7 +14,6 @@ public class Foo {
 	
 	public int constant() {
 		  int i = 42;
-		  
 		  return i;
 	}
 }

@@ -3,15 +3,13 @@ package metamutator;
 import java.util.EnumSet;
 
 import spoon.processing.AbstractProcessor;
-import spoon.reflect.code.CtAssignment;
 import spoon.reflect.code.CtCodeSnippetExpression;
 import spoon.reflect.code.CtExpression;
-import spoon.reflect.code.CtLocalVariable;
 import spoon.reflect.code.CtVariableAccess;
 import spoon.reflect.code.CtVariableRead;
-import spoon.reflect.declaration.CtVariable;
+import spoon.reflect.code.CtVariableWrite;
 
-public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable<?>> {
+public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariableWrite<?>> {
 
 	public static final String PREFIX = "_constantOperatorMetaMutator";
 	
@@ -29,26 +27,23 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 	private static final EnumSet<CONSTANT_REP> consRep = EnumSet.
 			of(CONSTANT_REP.ZERO, CONSTANT_REP.INT_MAX, CONSTANT_REP.MIN_MIN);
 	
-	public boolean isToBeProcessed(CtVariable element){
-		
-		if(element.getType().toString().equals("int")){
-			//System.out.println(element.getVariable().getDeclaration().getDefaultExpression());
-			return true;		
+	public boolean isToBeProcessed(CtVariableWrite element){
+		try {
+			if((element.getType().toString().contains("int"))&&
+					(!(element.getVariable().getDeclaration().getDefaultExpression() == null))){
+						if(!(element.getVariable().getDeclaration().getDefaultExpression().toString().contains(PREFIX)))
+							return true;		
+			}
+		} catch (Exception e) {
+			System.err.println("The element is not supported");
 		}
+		
 	
 		return false;
 		
 	}
 	
-//	private String permutations(RETURN_REPLACEMENT value) {
-//		switch(value) {
-//			case NULL : return "null";
-//			case INT_MIN : return Integer.toString(Integer.MIN_VALUE);
-//			case INT_MAX : return Integer.toString(Integer.MAX_VALUE);
-//			case ZERO : return Integer.toString(0);
-//			default : return "";
-//		}
-//	}
+
 	
 	private String permutations(CONSTANT_REP value) {
 		switch(value) {
@@ -59,24 +54,36 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 		}
 	
 	@Override
-	public void process(CtVariable element) {
+	public void process(CtVariableWrite element) {
 		
 		thisIndex++;
-		CtExpression valToChange = element.getDefaultExpression();
-		System.out.println(element.getClass()+" ***** "+element.toString()+" ***** "+valToChange);
-		String expression = "(";
-		
-		for(CONSTANT_REP c : consRep){
-			expression += PREFIX+thisIndex + ".is(\"" + c.toString() + "\")?( "+permutations(c)+" ):(";
+		CtExpression valToChange= null;
+		try {
+			valToChange = element.getVariable().getDeclaration().getDefaultExpression();
+			System.out.print(element.getVariable().getType()+" "+element.getVariable().toString()+" = ");
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
-		//(_constantOperatorMetaMutator1.is("ZERO")?( 0 ):(_constantOperatorMetaMutator1.is("INT_MAX")?( 2147483647 ):(_constantOperatorMetaMutator1.is("MIN_MIN")?( -2147483648 ):((42)))));
-		expression += valToChange + "))))";
-
-		CtCodeSnippetExpression<String> codeSnippet = getFactory().Core()
-				.createCodeSnippetExpression();
-		codeSnippet.setValue(expression);
-		valToChange.replace(codeSnippet);
-		Selector.generateSelector(element, CONSTANT_REP.ZERO.toString(), thisIndex, consRep, PREFIX);
+		// Test if the constant variable is not a generated one
+			String expression = "(";
+			for(CONSTANT_REP c : consRep){
+				expression += PREFIX+thisIndex + ".is(\"" + c.toString() + "\")?( "+permutations(c)+" ):(";
+			}
+			expression += valToChange + "))))";
+	
+			CtCodeSnippetExpression<String> codeSnippet = getFactory().Core()
+					.createCodeSnippetExpression();
+			codeSnippet.setValue(expression);
+			
+			System.out.println(codeSnippet+"\n#############");
+			try {
+				valToChange.replace(codeSnippet);
+				Selector.generateSelector(element, CONSTANT_REP.ZERO.toString(), thisIndex, consRep, PREFIX);
+			} catch (Exception e) {
+				System.err.println("Element not supported");
+			}
+		
+		
 	}
 	
 }

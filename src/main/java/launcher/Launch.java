@@ -9,13 +9,13 @@ import spoon.Launcher;
 public class Launch {
 	public static void main(String[] args) {
 		Launcher l = new Launcher();
-		l.addInputResource("/local/yousfi/jsoup-master/src/main/java/org/jsoup");// src/test/java/Foo.java
+		//l.addInputResource("/local/yousfi/jsoup-master/src/main/java/org/jsoup");// src/test/java/Foo.java
 		l.addProcessor(new ConstantReplacementMetaMutator());
-//	    final List<String> arguments = new LinkedList<String>();
-//	    arguments.add("--source-classpath");
-//	    arguments.add("lib/jsoup-1.8.3.jar");
-//	    final String[] argumentsArray = arguments.toArray(new String[arguments.size()]);
-//		l.run(argumentsArray);
-		l.run();
+	    final List<String> arguments = new LinkedList<String>();
+	    arguments.add("-i");
+	    arguments.add("/local/yousfi/jsoup-master/src/main/java/org/jsoup");
+	    final String[] argumentsArray = arguments.toArray(new String[arguments.size()]);
+		l.run(argumentsArray);
+//		l.run();
 	}
 }
