@@ -38,8 +38,6 @@ public class HtmlToPlainText {
 
         private java.lang.StringBuilder accum = new java.lang.StringBuilder();
 
-        private int sofianeKabylino = 42;
-
         public void head(org.jsoup.nodes.Node node, int depth) {
             java.lang.String name = node.nodeName();
             if (node instanceof org.jsoup.nodes.TextNode)
