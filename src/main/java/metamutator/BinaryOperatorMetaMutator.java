@@ -73,14 +73,16 @@ public class BinaryOperatorMetaMutator extends
 		if (LOGICAL_OPERATORS.contains(kind)) {
 			mutateOperator(binaryOperator, LOGICAL_OPERATORS);
 		} else if (COMPARISON_OPERATORS.contains(kind)) {
-			if (isNumber(binaryOperator.getLeftHandOperand())
-			 || isNumber(binaryOperator.getRightHandOperand()))
-			{
-				mutateOperator(binaryOperator, COMPARISON_OPERATORS);
+			if(binaryOperator.getLeftHandOperand().getType() != null && binaryOperator.getRightHandOperand().getType() != null){	
+				if (isNumber(binaryOperator.getLeftHandOperand())
+				 || isNumber(binaryOperator.getRightHandOperand()))
+				{
+					mutateOperator(binaryOperator, COMPARISON_OPERATORS);
+				}
+				else {
+					 mutateOperator(binaryOperator, REDUCED_COMPARISON_OPERATORS);
+				}
 			}
-			 else {
-			 mutateOperator(binaryOperator, REDUCED_COMPARISON_OPERATORS);
-			 }
 		}
 	}
 
@@ -90,8 +92,8 @@ public class BinaryOperatorMetaMutator extends
 			|| operand.getType().getSimpleName().equals("byte")
 			|| operand.getType().getSimpleName().equals("char")
 		|| operand.getType().getSimpleName().equals("float")
-		|| operand.getType().getSimpleName().equals("double")
-		|| Number.class.isAssignableFrom(operand.getType().getActualClass());
+		|| operand.getType().getSimpleName().equals("double");
+		//|| Number.class.isAssignableFrom(operand.getType().getActualClass());
 	}
 
 /**
@@ -139,7 +141,7 @@ public class BinaryOperatorMetaMutator extends
 
 		expression.replace(codeSnippet);
 		expression.replace(expression);
-		//Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
+		Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
 
 		hostSpots.add(expression);
 

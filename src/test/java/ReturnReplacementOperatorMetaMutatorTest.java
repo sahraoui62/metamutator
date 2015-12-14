@@ -39,10 +39,10 @@ public class ReturnReplacementOperatorMetaMutatorTest {
         // creating a new instance of the class
         Object o = ((Class)bsh.eval(c.toString())).newInstance();        
 
-        assertEquals(8,Selector.getAllSelectors().size());
+        assertEquals(9,Selector.getAllSelectors().size());
       
         // test with the first
-        Selector sel = Selector.getSelectorByName(ReturnReplacementOperatorMetaMutator.PREFIX + "4");
+        Selector sel = Selector.getSelectorByName(ReturnReplacementOperatorMetaMutator.PREFIX + "5");
         
         // INIT
         sel.choose(0);
@@ -61,7 +61,7 @@ public class ReturnReplacementOperatorMetaMutatorTest {
         assertEquals(0, invokeExactMethod(o, "op_add", new Object[] {20, 5}));
         
         // test with the second
-        sel = Selector.getSelectorByName(ReturnReplacementOperatorMetaMutator.PREFIX + "8");
+        sel = Selector.getSelectorByName(ReturnReplacementOperatorMetaMutator.PREFIX + "9");
         
         // INIT
         sel.choose(0);

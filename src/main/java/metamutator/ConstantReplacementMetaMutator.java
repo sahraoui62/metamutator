@@ -14,11 +14,8 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 	public static final String PREFIX = "_constantOperatorMetaMutator";
 	
 	public enum CONSTANT_REP {
-		
 		ZERO,
-		
 		INT_MAX,
-		
 		MIN_MIN
 	};
 	
@@ -36,7 +33,7 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 									return true;				
 			}
 		} catch (Exception e) {
-			System.err.println("The element is not supported");
+
 		}
 		return false;	
 	}
@@ -55,10 +52,7 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 		thisIndex++;
 		CtExpression valToChange= null;
 		try {
-			System.out.println(element.getVariable().getDeclaration().getModifiers() +"    "+ element.getVariable().getDeclaration().getDefaultExpression());
-			valToChange = element.getVariable().getDeclaration().getDefaultExpression();
-			//System.out.print(element.getVariable().getType()+" "+element.getVariable().toString()+" = ");
-			
+			valToChange = element.getVariable().getDeclaration().getDefaultExpression();			
 			String expression = "(";
 			for(CONSTANT_REP c : consRep){
 				expression += PREFIX+thisIndex + ".is(" + c.getClass().getCanonicalName() +"."+c.toString()+ ")?( "+permutations(c)+" ):(";
@@ -69,7 +63,6 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 					.createCodeSnippetExpression();
 			codeSnippet.setValue(expression);
 			
-			System.out.println(codeSnippet+"\n#############");
 			try {
 				valToChange.replace(codeSnippet);
 				Selector.generateSelector(element, CONSTANT_REP.ZERO, thisIndex, consRep, PREFIX);
@@ -78,7 +71,7 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 			}
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+
 		}		
 		
 	}
