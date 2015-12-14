@@ -14,7 +14,7 @@ public class MutantGenerator {
 		arguments.add("-i");
 		arguments.add("/Users/slimane/Documents/master2/OPL/jsoup-master/src/main");
 		
-		l.addProcessor(new ReturnReplacementOperatorMetaMutator());
+		//l.addProcessor(new ReturnReplacementOperatorMetaMutator());
 	    l.addProcessor(new ArithmeticOperatorMetaMutator());
 	    //l.addProcessor(new BinaryOperatorMetaMutator());
 	    

@@ -63,13 +63,6 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 		} catch (NullPointerException e) {
 			return false;
 		}
-		if (element.getParent(CtConstructor.class) != null) {
-			return false;
-		}
-		if (element.getParent(CtField.class) != null) {
-			return false;
-		}
-
 		return (element.getReturnedExpression() != null && !element.getReturnedExpression().getType().getSimpleName().equals("Boolean"));
 	}
 	
@@ -125,11 +118,6 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 				
 				hostSpots.add(returnStatement);
 			}
-				
-				/*else{
-				expression += PREFIX+index + ".is(\"NULL\")?( " + permutations(RETURN_REPLACEMENT.NULL) +" )):";
-			}*/
-
 		}
 	}
 	

@@ -44,9 +44,6 @@ public class ArithmeticOperatorMetaMutator extends
 	
 	@Override
 	public boolean isToBeProcessed(CtBinaryOperator<Boolean> element) {
-		// if (element.getParent(CtAnonymousExecutable.class)!=null) {
-		// System.out.println(element.getParent(CtAnonymousExecutable.class));
-		// }
 		try {
 			Selector.getTopLevelClass(element);
 		} catch (NullPointerException e) {
@@ -124,32 +121,19 @@ public class ArithmeticOperatorMetaMutator extends
 		int cpt = 0;
 		BinaryOperatorKind tmp = null;
 		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){
-			//if(!op.equals(expression.getKind())){
 				expression.setKind(op);
 				newExpression += "(" + PREFIX + thisIndex + ".is(" + op.getClass().getCanonicalName()+"."+op.toString() + ")) ? (" + expression + ")";
 				newExpression += " : ";
-			//}
 		}
 
-		
-		//newExpression += "(" + expression + ")";
 		newExpression += "(" + originalExpression + ")"; 
-		
-		/*String newExpression = "";
-		for(BinaryOperatorKind op : ARITHMETIC_OPERATORS){
-			newExpression += PREFIX + index + ".is(\"" + op.toString() + "\")?( " + permutations(op) + " )):";
-		}		
-		*/
 		CtCodeSnippetExpression<Boolean> codeSnippet = getFactory().Core()
 				.createCodeSnippetExpression();
 		codeSnippet.setValue('(' + newExpression + ')');
-
 		expression.replace(codeSnippet);
 		expression.replace(expression);
 		Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
-
 		hostSpots.add(expression);
-
 	}
 
 	/**
