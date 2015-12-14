@@ -74,10 +74,6 @@ public class Selector<E> {
 
 		return chosenVariant >= 0 && variants[chosenVariant].equals(variant);
 	}
-	
-	public E getChosenVariant(){
-		return variants[chosenVariant];
-	}
 
 	@Override public String toString() {
 		return "chosenVariant " +  chosenVariant +"\n"

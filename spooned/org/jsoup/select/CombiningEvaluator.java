@@ -4,7 +4,7 @@ package org.jsoup.select;
 abstract class CombiningEvaluator extends org.jsoup.select.Evaluator {
     final java.util.ArrayList<org.jsoup.select.Evaluator> evaluators;
 
-    int num = (_constantOperatorMetaMutator124.is("ZERO")?( 0 ):(_constantOperatorMetaMutator124.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator124.is("MIN_MIN")?( -2147483647 ):(0))));
+    int num = (_constantOperatorMetaMutator124.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator124.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator124.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
 
     CombiningEvaluator() {
         super();
@@ -40,7 +40,7 @@ abstract class CombiningEvaluator extends org.jsoup.select.Evaluator {
 
         @java.lang.Override
         public boolean matches(org.jsoup.nodes.Element root, org.jsoup.nodes.Element node) {
-            for (int i = (_constantOperatorMetaMutator123.is("ZERO")?( 0 ):(_constantOperatorMetaMutator123.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator123.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (num) ; i++) {
+            for (int i = (_constantOperatorMetaMutator123.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator123.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator123.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; i < (num) ; i++) {
                 org.jsoup.select.Evaluator s = evaluators.get(i);
                 if (!(s.matches(root, node)))
                     return false;
@@ -77,7 +77,7 @@ abstract class CombiningEvaluator extends org.jsoup.select.Evaluator {
 
         @java.lang.Override
         public boolean matches(org.jsoup.nodes.Element root, org.jsoup.nodes.Element node) {
-            for (int i = (_constantOperatorMetaMutator125.is("ZERO")?( 0 ):(_constantOperatorMetaMutator125.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator125.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < (num) ; i++) {
+            for (int i = (_constantOperatorMetaMutator125.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator125.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator125.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; i < (num) ; i++) {
                 org.jsoup.select.Evaluator s = evaluators.get(i);
                 if (s.matches(root, node))
                     return true;
@@ -92,10 +92,10 @@ abstract class CombiningEvaluator extends org.jsoup.select.Evaluator {
         }
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator123 = metamutator.Selector.of(123,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator123");
+    private static final metamutator.Selector _constantOperatorMetaMutator123 = metamutator.Selector.of(123,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).id("_constantOperatorMetaMutator123");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator124 = metamutator.Selector.of(124,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator124");
+    private static final metamutator.Selector _constantOperatorMetaMutator124 = metamutator.Selector.of(124,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).id("_constantOperatorMetaMutator124");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator125 = metamutator.Selector.of(125,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator125");
+    private static final metamutator.Selector _constantOperatorMetaMutator125 = metamutator.Selector.of(125,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).id("_constantOperatorMetaMutator125");
 }
 

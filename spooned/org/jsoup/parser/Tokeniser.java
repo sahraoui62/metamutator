@@ -148,9 +148,9 @@ final class Tokeniser {
             if (!(reader.matchConsume(";")))
                 characterReferenceError("missing semicolon");
             
-            int charval = (_constantOperatorMetaMutator106.is("ZERO")?( 0 ):(_constantOperatorMetaMutator106.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator106.is("MIN_MIN")?( -2147483647 ):(-1))));
+            int charval = (_constantOperatorMetaMutator106.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator106.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator106.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(-1))));
             try {
-                int base = (_constantOperatorMetaMutator105.is("ZERO")?( 0 ):(_constantOperatorMetaMutator105.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator105.is("MIN_MIN")?( -2147483647 ):(isHexMode ? 16 : 10))));
+                int base = (_constantOperatorMetaMutator105.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator105.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator105.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(isHexMode ? 16 : 10))));
                 charval = java.lang.Integer.valueOf(numRef, base);
             } catch (java.lang.NumberFormatException e) {
             }
@@ -275,8 +275,8 @@ final class Tokeniser {
         return builder.toString();
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator105 = metamutator.Selector.of(105,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.Tokeniser.class).id("_constantOperatorMetaMutator105");
+    private static final metamutator.Selector _constantOperatorMetaMutator105 = metamutator.Selector.of(105,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.Tokeniser.class).id("_constantOperatorMetaMutator105");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator106 = metamutator.Selector.of(106,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.Tokeniser.class).id("_constantOperatorMetaMutator106");
+    private static final metamutator.Selector _constantOperatorMetaMutator106 = metamutator.Selector.of(106,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.Tokeniser.class).id("_constantOperatorMetaMutator106");
 }
 

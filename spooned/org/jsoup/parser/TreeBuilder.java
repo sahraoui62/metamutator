@@ -78,10 +78,10 @@ abstract class TreeBuilder {
     }
 
     protected org.jsoup.nodes.Element currentElement() {
-        int size = (_constantOperatorMetaMutator107.is("ZERO")?( 0 ):(_constantOperatorMetaMutator107.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator107.is("MIN_MIN")?( -2147483647 ):(stack.size()))));
+        int size = (_constantOperatorMetaMutator107.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator107.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator107.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(stack.size()))));
         return size > 0 ? stack.get((size - 1)) : null;
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator107 = metamutator.Selector.of(107,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TreeBuilder.class).id("_constantOperatorMetaMutator107");
+    private static final metamutator.Selector _constantOperatorMetaMutator107 = metamutator.Selector.of(107,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TreeBuilder.class).id("_constantOperatorMetaMutator107");
 }
 

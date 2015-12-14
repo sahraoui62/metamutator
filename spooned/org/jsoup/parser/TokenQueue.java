@@ -4,7 +4,7 @@ package org.jsoup.parser;
 public class TokenQueue {
     private java.lang.String queue;
 
-    private int pos = (_constantOperatorMetaMutator91.is("ZERO")?( 0 ):(_constantOperatorMetaMutator91.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator91.is("MIN_MIN")?( -2147483647 ):(0))));
+    private int pos = (_constantOperatorMetaMutator91.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator91.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator91.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
 
     private static final char ESC = '\\';
 
@@ -98,7 +98,7 @@ public class TokenQueue {
         if (!(matches(seq)))
             throw new java.lang.IllegalStateException("Queue did not match expected sequence");
         
-        int len = (_constantOperatorMetaMutator104.is("ZERO")?( 0 ):(_constantOperatorMetaMutator104.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator104.is("MIN_MIN")?( -2147483647 ):(seq.length()))));
+        int len = (_constantOperatorMetaMutator104.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator104.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator104.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(seq.length()))));
         if (len > (remainingLength()))
             throw new java.lang.IllegalStateException("Queue not long enough to consume sequence");
         
@@ -106,7 +106,7 @@ public class TokenQueue {
     }
 
     public java.lang.String consumeTo(java.lang.String seq) {
-        int offset = (_constantOperatorMetaMutator99.is("ZERO")?( 0 ):(_constantOperatorMetaMutator99.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator99.is("MIN_MIN")?( -2147483647 ):(queue.indexOf(seq, pos)))));
+        int offset = (_constantOperatorMetaMutator99.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator99.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator99.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(queue.indexOf(seq, pos)))));
         if (offset != (-1)) {
             java.lang.String consumed = queue.substring(pos, offset);
             pos += consumed.length();
@@ -117,7 +117,7 @@ public class TokenQueue {
     }
 
     public java.lang.String consumeToIgnoreCase(java.lang.String seq) {
-        int start = (_constantOperatorMetaMutator102.is("ZERO")?( 0 ):(_constantOperatorMetaMutator102.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator102.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator102.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator102.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator102.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         java.lang.String first = seq.substring(0, 1);
         boolean canScan = first.toLowerCase().equals(first.toUpperCase());
         while (!(isEmpty())) {
@@ -125,7 +125,7 @@ public class TokenQueue {
                 break;
             
             if (canScan) {
-                int skip = (_constantOperatorMetaMutator101.is("ZERO")?( 0 ):(_constantOperatorMetaMutator101.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator101.is("MIN_MIN")?( -2147483647 ):((queue.indexOf(first, pos)) - (pos)))));
+                int skip = (_constantOperatorMetaMutator101.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator101.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator101.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):((queue.indexOf(first, pos)) - (pos)))));
                 if (skip == 0)
                     (pos)++;
                 else if (skip < 0)
@@ -141,7 +141,7 @@ public class TokenQueue {
     }
 
     public java.lang.String consumeToAny(java.lang.String... seq) {
-        int start = (_constantOperatorMetaMutator100.is("ZERO")?( 0 ):(_constantOperatorMetaMutator100.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator100.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator100.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator100.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator100.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((!(isEmpty())) && (!(matchesAny(seq)))) {
             (pos)++;
         }
@@ -161,9 +161,9 @@ public class TokenQueue {
     }
 
     public java.lang.String chompBalanced(char open, char close) {
-        int start = (_constantOperatorMetaMutator93.is("ZERO")?( 0 ):(_constantOperatorMetaMutator93.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator93.is("MIN_MIN")?( -2147483647 ):(-1))));
-        int end = (_constantOperatorMetaMutator94.is("ZERO")?( 0 ):(_constantOperatorMetaMutator94.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator94.is("MIN_MIN")?( -2147483647 ):(-1))));
-        int depth = (_constantOperatorMetaMutator92.is("ZERO")?( 0 ):(_constantOperatorMetaMutator92.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator92.is("MIN_MIN")?( -2147483647 ):(0))));
+        int start = (_constantOperatorMetaMutator93.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator93.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator93.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(-1))));
+        int end = (_constantOperatorMetaMutator94.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator94.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator94.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(-1))));
+        int depth = (_constantOperatorMetaMutator92.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator92.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator92.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
         char last = 0;
         do {
             if (isEmpty())
@@ -214,35 +214,35 @@ public class TokenQueue {
     }
 
     public java.lang.String consumeWord() {
-        int start = (_constantOperatorMetaMutator103.is("ZERO")?( 0 ):(_constantOperatorMetaMutator103.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator103.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator103.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator103.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator103.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while (matchesWord())
             (pos)++;
         return queue.substring(start, pos);
     }
 
     public java.lang.String consumeTagName() {
-        int start = (_constantOperatorMetaMutator98.is("ZERO")?( 0 ):(_constantOperatorMetaMutator98.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator98.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator98.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator98.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator98.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((!(isEmpty())) && ((matchesWord()) || (matchesAny(':', '_', '-'))))
             (pos)++;
         return queue.substring(start, pos);
     }
 
     public java.lang.String consumeElementSelector() {
-        int start = (_constantOperatorMetaMutator97.is("ZERO")?( 0 ):(_constantOperatorMetaMutator97.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator97.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator97.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator97.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator97.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((!(isEmpty())) && ((matchesWord()) || (matchesAny('|', '_', '-'))))
             (pos)++;
         return queue.substring(start, pos);
     }
 
     public java.lang.String consumeCssIdentifier() {
-        int start = (_constantOperatorMetaMutator96.is("ZERO")?( 0 ):(_constantOperatorMetaMutator96.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator96.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator96.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator96.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator96.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((!(isEmpty())) && ((matchesWord()) || (matchesAny('-', '_'))))
             (pos)++;
         return queue.substring(start, pos);
     }
 
     public java.lang.String consumeAttributeKey() {
-        int start = (_constantOperatorMetaMutator95.is("ZERO")?( 0 ):(_constantOperatorMetaMutator95.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator95.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator95.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator95.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator95.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((!(isEmpty())) && ((matchesWord()) || (matchesAny('-', '_', ':'))))
             (pos)++;
         return queue.substring(start, pos);
@@ -259,32 +259,32 @@ public class TokenQueue {
         return queue.substring(pos);
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator91 = metamutator.Selector.of(91,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator91");
+    private static final metamutator.Selector _constantOperatorMetaMutator91 = metamutator.Selector.of(91,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator91");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator92 = metamutator.Selector.of(92,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator92");
+    private static final metamutator.Selector _constantOperatorMetaMutator92 = metamutator.Selector.of(92,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator92");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator93 = metamutator.Selector.of(93,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator93");
+    private static final metamutator.Selector _constantOperatorMetaMutator93 = metamutator.Selector.of(93,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator93");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator94 = metamutator.Selector.of(94,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator94");
+    private static final metamutator.Selector _constantOperatorMetaMutator94 = metamutator.Selector.of(94,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator94");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator95 = metamutator.Selector.of(95,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator95");
+    private static final metamutator.Selector _constantOperatorMetaMutator95 = metamutator.Selector.of(95,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator95");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator96 = metamutator.Selector.of(96,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator96");
+    private static final metamutator.Selector _constantOperatorMetaMutator96 = metamutator.Selector.of(96,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator96");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator97 = metamutator.Selector.of(97,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator97");
+    private static final metamutator.Selector _constantOperatorMetaMutator97 = metamutator.Selector.of(97,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator97");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator98 = metamutator.Selector.of(98,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator98");
+    private static final metamutator.Selector _constantOperatorMetaMutator98 = metamutator.Selector.of(98,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator98");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator99 = metamutator.Selector.of(99,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator99");
+    private static final metamutator.Selector _constantOperatorMetaMutator99 = metamutator.Selector.of(99,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator99");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator100 = metamutator.Selector.of(100,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator100");
+    private static final metamutator.Selector _constantOperatorMetaMutator100 = metamutator.Selector.of(100,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator100");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator101 = metamutator.Selector.of(101,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator101");
+    private static final metamutator.Selector _constantOperatorMetaMutator101 = metamutator.Selector.of(101,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator101");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator102 = metamutator.Selector.of(102,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator102");
+    private static final metamutator.Selector _constantOperatorMetaMutator102 = metamutator.Selector.of(102,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator102");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator103 = metamutator.Selector.of(103,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator103");
+    private static final metamutator.Selector _constantOperatorMetaMutator103 = metamutator.Selector.of(103,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator103");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator104 = metamutator.Selector.of(104,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator104");
+    private static final metamutator.Selector _constantOperatorMetaMutator104 = metamutator.Selector.of(104,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.TokenQueue.class).id("_constantOperatorMetaMutator104");
 }
 

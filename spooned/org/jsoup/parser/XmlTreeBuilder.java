@@ -80,7 +80,7 @@ public class XmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
     private void popStackToClose(org.jsoup.parser.Token.EndTag endTag) {
         java.lang.String elName = endTag.name();
         org.jsoup.nodes.Element firstFound = null;
-        for (int pos = (_constantOperatorMetaMutator108.is("ZERO")?( 0 ):(_constantOperatorMetaMutator108.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator108.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator108.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator108.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator108.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             if (next.nodeName().equals(elName)) {
                 firstFound = next;
@@ -90,7 +90,7 @@ public class XmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
         if (firstFound == null)
             return ;
         
-        for (int pos = (_constantOperatorMetaMutator109.is("ZERO")?( 0 ):(_constantOperatorMetaMutator109.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator109.is("MIN_MIN")?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
+        for (int pos = (_constantOperatorMetaMutator109.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator109.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator109.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):((stack.size()) - 1)))) ; pos >= 0 ; pos--) {
             org.jsoup.nodes.Element next = stack.get(pos);
             stack.remove(pos);
             if (next == firstFound)
@@ -105,8 +105,8 @@ public class XmlTreeBuilder extends org.jsoup.parser.TreeBuilder {
         return doc.childNodes();
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator108 = metamutator.Selector.of(108,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.XmlTreeBuilder.class).id("_constantOperatorMetaMutator108");
+    private static final metamutator.Selector _constantOperatorMetaMutator108 = metamutator.Selector.of(108,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.XmlTreeBuilder.class).id("_constantOperatorMetaMutator108");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator109 = metamutator.Selector.of(109,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.XmlTreeBuilder.class).id("_constantOperatorMetaMutator109");
+    private static final metamutator.Selector _constantOperatorMetaMutator109 = metamutator.Selector.of(109,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.XmlTreeBuilder.class).id("_constantOperatorMetaMutator109");
 }
 

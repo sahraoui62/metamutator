@@ -32,7 +32,7 @@ public final class StringUtil {
             return padding[width];
         
         char[] out = new char[width];
-        for (int i = (_constantOperatorMetaMutator14.is("ZERO")?( 0 ):(_constantOperatorMetaMutator14.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator14.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < width ; i++)
+        for (int i = (_constantOperatorMetaMutator14.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator14.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator14.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; i < width ; i++)
             out[i] = ' ';
         return java.lang.String.valueOf(out);
     }
@@ -41,8 +41,8 @@ public final class StringUtil {
         if ((string == null) || ((string.length()) == 0))
             return true;
         
-        int l = (_constantOperatorMetaMutator11.is("ZERO")?( 0 ):(_constantOperatorMetaMutator11.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator11.is("MIN_MIN")?( -2147483647 ):(string.length()))));
-        for (int i = (_constantOperatorMetaMutator10.is("ZERO")?( 0 ):(_constantOperatorMetaMutator10.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator10.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < l ; i++) {
+        int l = (_constantOperatorMetaMutator11.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator11.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator11.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(string.length()))));
+        for (int i = (_constantOperatorMetaMutator10.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator10.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator10.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; i < l ; i++) {
             if (!(org.jsoup.helper.StringUtil.isWhitespace(string.codePointAt(i))))
                 return false;
             
@@ -54,8 +54,8 @@ public final class StringUtil {
         if ((string == null) || ((string.length()) == 0))
             return false;
         
-        int l = (_constantOperatorMetaMutator13.is("ZERO")?( 0 ):(_constantOperatorMetaMutator13.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator13.is("MIN_MIN")?( -2147483647 ):(string.length()))));
-        for (int i = (_constantOperatorMetaMutator12.is("ZERO")?( 0 ):(_constantOperatorMetaMutator12.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator12.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < l ; i++) {
+        int l = (_constantOperatorMetaMutator13.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator13.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator13.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(string.length()))));
+        for (int i = (_constantOperatorMetaMutator12.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator12.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator12.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; i < l ; i++) {
             if (!(java.lang.Character.isDigit(string.codePointAt(i))))
                 return false;
             
@@ -76,9 +76,9 @@ public final class StringUtil {
     public static void appendNormalisedWhitespace(java.lang.StringBuilder accum, java.lang.String string, boolean stripLeading) {
         boolean lastWasWhite = false;
         boolean reachedNonWhite = false;
-        int len = (_constantOperatorMetaMutator16.is("ZERO")?( 0 ):(_constantOperatorMetaMutator16.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator16.is("MIN_MIN")?( -2147483647 ):(string.length()))));
+        int len = (_constantOperatorMetaMutator16.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator16.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator16.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(string.length()))));
         int c;
-        for (int i = (_constantOperatorMetaMutator15.is("ZERO")?( 0 ):(_constantOperatorMetaMutator15.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator15.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < len ; i += java.lang.Character.charCount(c)) {
+        for (int i = (_constantOperatorMetaMutator15.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator15.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator15.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; i < len ; i += java.lang.Character.charCount(c)) {
             c = string.codePointAt(i);
             if (org.jsoup.helper.StringUtil.isWhitespace(c)) {
                 if ((stripLeading && (!reachedNonWhite)) || lastWasWhite)
@@ -132,18 +132,18 @@ public final class StringUtil {
         }
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator10 = metamutator.Selector.of(10,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator10");
+    private static final metamutator.Selector _constantOperatorMetaMutator10 = metamutator.Selector.of(10,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator10");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator11 = metamutator.Selector.of(11,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator11");
+    private static final metamutator.Selector _constantOperatorMetaMutator11 = metamutator.Selector.of(11,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator11");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator12 = metamutator.Selector.of(12,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator12");
+    private static final metamutator.Selector _constantOperatorMetaMutator12 = metamutator.Selector.of(12,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator12");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator13 = metamutator.Selector.of(13,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator13");
+    private static final metamutator.Selector _constantOperatorMetaMutator13 = metamutator.Selector.of(13,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator13");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator14 = metamutator.Selector.of(14,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator14");
+    private static final metamutator.Selector _constantOperatorMetaMutator14 = metamutator.Selector.of(14,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator14");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator15 = metamutator.Selector.of(15,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator15");
+    private static final metamutator.Selector _constantOperatorMetaMutator15 = metamutator.Selector.of(15,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator15");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator16 = metamutator.Selector.of(16,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator16");
+    private static final metamutator.Selector _constantOperatorMetaMutator16 = metamutator.Selector.of(16,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.helper.StringUtil.class).id("_constantOperatorMetaMutator16");
 }
 

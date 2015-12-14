@@ -139,7 +139,7 @@ public class BinaryOperatorMetaMutator extends
 
 		expression.replace(codeSnippet);
 		expression.replace(expression);
-		Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
+		//Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
 
 		hostSpots.add(expression);
 

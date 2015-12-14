@@ -93,7 +93,7 @@ public class MutantSearchSpaceExplorator {
 			for (int k = 0; k < selectors.get(sel).getOptionCount(); k++) 
 			{
 
-				if (nattempts++>99) break;
+				//if (nattempts++>99) break;
 				int[] options = new int[selectors.size()];
 				// System.out.println(Arrays.toString(options));
 				for (int i = options.length - 1; i >= 0; i--) {

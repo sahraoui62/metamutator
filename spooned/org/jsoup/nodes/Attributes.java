@@ -169,7 +169,7 @@ public class Attributes implements java.lang.Cloneable , java.lang.Iterable<org.
 
             @java.lang.Override
             public int size() {
-                int count = (_constantOperatorMetaMutator18.is("ZERO")?( 0 ):(_constantOperatorMetaMutator18.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator18.is("MIN_MIN")?( -2147483647 ):(0))));
+                int count = (_constantOperatorMetaMutator18.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator18.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator18.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
                 java.util.Iterator iter = new DatasetIterator();
                 while (iter.hasNext())
                     count++;
@@ -206,6 +206,6 @@ public class Attributes implements java.lang.Cloneable , java.lang.Iterable<org.
         return (dataPrefix) + key;
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator18 = metamutator.Selector.of(18,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator18");
+    private static final metamutator.Selector _constantOperatorMetaMutator18 = metamutator.Selector.of(18,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).id("_constantOperatorMetaMutator18");
 }
 

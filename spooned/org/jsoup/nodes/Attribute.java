@@ -89,7 +89,7 @@ public class Attribute implements java.lang.Cloneable , java.util.Map.Entry<java
 
     @java.lang.Override
     public int hashCode() {
-        int result = (_constantOperatorMetaMutator17.is("ZERO")?( 0 ):(_constantOperatorMetaMutator17.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator17.is("MIN_MIN")?( -2147483647 ):((key) != null ? key.hashCode() : 0))));
+        int result = (_constantOperatorMetaMutator17.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator17.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator17.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):((key) != null ? key.hashCode() : 0))));
         result = (31 * result) + ((value) != null ? value.hashCode() : 0);
         return result;
     }
@@ -103,6 +103,6 @@ public class Attribute implements java.lang.Cloneable , java.util.Map.Entry<java
         }
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator17 = metamutator.Selector.of(17,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.Attribute.class).id("_constantOperatorMetaMutator17");
+    private static final metamutator.Selector _constantOperatorMetaMutator17 = metamutator.Selector.of(17,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.nodes.Attribute.class).id("_constantOperatorMetaMutator17");
 }
 

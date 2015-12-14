@@ -85,7 +85,7 @@ public class Document extends org.jsoup.nodes.Element {
                 
             } 
         }
-        for (int i = (_constantOperatorMetaMutator21.is("ZERO")?( 0 ):(_constantOperatorMetaMutator21.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator21.is("MIN_MIN")?( -2147483647 ):((toMove.size()) - 1)))) ; i >= 0 ; i--) {
+        for (int i = (_constantOperatorMetaMutator21.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator21.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator21.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):((toMove.size()) - 1)))) ; i >= 0 ; i--) {
             org.jsoup.nodes.Node node = toMove.get(i);
             element.removeChild(node);
             body().prependChild(new org.jsoup.nodes.TextNode(" " , ""));
@@ -98,7 +98,7 @@ public class Document extends org.jsoup.nodes.Element {
         org.jsoup.nodes.Element master = elements.first();
         if ((elements.size()) > 1) {
             java.util.List<org.jsoup.nodes.Node> toMove = new java.util.ArrayList<org.jsoup.nodes.Node>();
-            for (int i = (_constantOperatorMetaMutator20.is("ZERO")?( 0 ):(_constantOperatorMetaMutator20.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator20.is("MIN_MIN")?( -2147483647 ):(1)))) ; i < (elements.size()) ; i++) {
+            for (int i = (_constantOperatorMetaMutator20.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator20.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator20.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(1)))) ; i < (elements.size()) ; i++) {
                 org.jsoup.nodes.Node dupe = elements.get(i);
                 for (org.jsoup.nodes.Node node : dupe.childNodes)
                     toMove.add(node);
@@ -222,7 +222,7 @@ html, xml;        }
 
         private boolean outline = false;
 
-        private int indentAmount = (_constantOperatorMetaMutator19.is("ZERO")?( 0 ):(_constantOperatorMetaMutator19.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator19.is("MIN_MIN")?( -2147483647 ):(1))));
+        private int indentAmount = (_constantOperatorMetaMutator19.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator19.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator19.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(1))));
 
         private Syntax syntax = Syntax.html;
 
@@ -330,10 +330,10 @@ noQuirks, quirks, limitedQuirks;    }
         return this;
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator19 = metamutator.Selector.of(19,new String[]{"ZERO","INT_MAX","MIN_MIN"}).id("_constantOperatorMetaMutator19");
+    private static final metamutator.Selector _constantOperatorMetaMutator19 = metamutator.Selector.of(19,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).id("_constantOperatorMetaMutator19");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator20 = metamutator.Selector.of(20,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.Document.class).id("_constantOperatorMetaMutator20");
+    private static final metamutator.Selector _constantOperatorMetaMutator20 = metamutator.Selector.of(20,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.nodes.Document.class).id("_constantOperatorMetaMutator20");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator21 = metamutator.Selector.of(21,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.nodes.Document.class).id("_constantOperatorMetaMutator21");
+    private static final metamutator.Selector _constantOperatorMetaMutator21 = metamutator.Selector.of(21,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.nodes.Document.class).id("_constantOperatorMetaMutator21");
 }
 

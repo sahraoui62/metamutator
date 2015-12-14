@@ -61,7 +61,7 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 			
 			String expression = "(";
 			for(CONSTANT_REP c : consRep){
-				expression += PREFIX+thisIndex + ".is(\"" + c.toString() + "\")?( "+permutations(c)+" ):(";
+				expression += PREFIX+thisIndex + ".is(" + c.getClass().getCanonicalName() +"."+c.toString()+ ")?( "+permutations(c)+" ):(";
 			}
 			expression += valToChange + "))))";
 	
@@ -72,7 +72,7 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 			System.out.println(codeSnippet+"\n#############");
 			try {
 				valToChange.replace(codeSnippet);
-				Selector.generateSelector(element, CONSTANT_REP.ZERO.toString(), thisIndex, consRep, PREFIX);
+				Selector.generateSelector(element, CONSTANT_REP.ZERO, thisIndex, consRep, PREFIX);
 			} catch (Exception e) {
 				System.err.println("Element not changed");
 			}

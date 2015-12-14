@@ -10,9 +10,9 @@ final class CharacterReader {
 
     private final int length;
 
-    private int pos = (_constantOperatorMetaMutator36.is("ZERO")?( 0 ):(_constantOperatorMetaMutator36.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator36.is("MIN_MIN")?( -2147483647 ):(0))));
+    private int pos = (_constantOperatorMetaMutator36.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator36.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator36.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
 
-    private int mark = (_constantOperatorMetaMutator66.is("ZERO")?( 0 ):(_constantOperatorMetaMutator66.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator66.is("MIN_MIN")?( -2147483647 ):(0))));
+    private int mark = (_constantOperatorMetaMutator66.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator66.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator66.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
 
     private final java.lang.String[] stringCache = new java.lang.String[512];
 
@@ -61,7 +61,7 @@ final class CharacterReader {
     }
 
     int nextIndexOf(char c) {
-        for (int i = (_constantOperatorMetaMutator43.is("ZERO")?( 0 ):(_constantOperatorMetaMutator43.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator43.is("MIN_MIN")?( -2147483647 ):(pos)))) ; i < (length) ; i++) {
+        for (int i = (_constantOperatorMetaMutator43.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator43.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator43.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos)))) ; i < (length) ; i++) {
             if (c == (input[i]))
                 return i - (pos);
             
@@ -71,15 +71,15 @@ final class CharacterReader {
 
     int nextIndexOf(java.lang.CharSequence seq) {
         char startChar = seq.charAt(0);
-        for (int offset = (_constantOperatorMetaMutator44.is("ZERO")?( 0 ):(_constantOperatorMetaMutator44.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator44.is("MIN_MIN")?( -2147483647 ):(pos)))) ; offset < (length) ; offset++) {
+        for (int offset = (_constantOperatorMetaMutator44.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator44.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator44.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos)))) ; offset < (length) ; offset++) {
             if (startChar != (input[offset]))
                 while (((++offset) < (length)) && (startChar != (input[offset]))) {
                 }
             
-            int i = (_constantOperatorMetaMutator45.is("ZERO")?( 0 ):(_constantOperatorMetaMutator45.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator45.is("MIN_MIN")?( -2147483647 ):(offset + 1))));
-            int last = (_constantOperatorMetaMutator46.is("ZERO")?( 0 ):(_constantOperatorMetaMutator46.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator46.is("MIN_MIN")?( -2147483647 ):((i + (seq.length())) - 1))));
+            int i = (_constantOperatorMetaMutator45.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator45.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator45.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(offset + 1))));
+            int last = (_constantOperatorMetaMutator46.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator46.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator46.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):((i + (seq.length())) - 1))));
             if ((offset < (length)) && (last <= (length))) {
-                for (int j = (_constantOperatorMetaMutator47.is("ZERO")?( 0 ):(_constantOperatorMetaMutator47.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator47.is("MIN_MIN")?( -2147483647 ):(1)))) ; (i < last) && ((seq.charAt(j)) == (input[i])) ; i++ , j++) {
+                for (int j = (_constantOperatorMetaMutator47.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator47.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator47.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(1)))) ; (i < last) && ((seq.charAt(j)) == (input[i])) ; i++ , j++) {
                 }
                 if (i == last)
                     return offset - (pos);
@@ -90,7 +90,7 @@ final class CharacterReader {
     }
 
     java.lang.String consumeTo(char c) {
-        int offset = (_constantOperatorMetaMutator60.is("ZERO")?( 0 ):(_constantOperatorMetaMutator60.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator60.is("MIN_MIN")?( -2147483647 ):(nextIndexOf(c)))));
+        int offset = (_constantOperatorMetaMutator60.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator60.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator60.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(nextIndexOf(c)))));
         if (offset != (-1)) {
             java.lang.String consumed = cacheString(pos, offset);
             pos += offset;
@@ -101,7 +101,7 @@ final class CharacterReader {
     }
 
     java.lang.String consumeTo(java.lang.String seq) {
-        int offset = (_constantOperatorMetaMutator61.is("ZERO")?( 0 ):(_constantOperatorMetaMutator61.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator61.is("MIN_MIN")?( -2147483647 ):(nextIndexOf(seq)))));
+        int offset = (_constantOperatorMetaMutator61.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator61.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator61.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(nextIndexOf(seq)))));
         if (offset != (-1)) {
             java.lang.String consumed = cacheString(pos, offset);
             pos += offset;
@@ -112,8 +112,8 @@ final class CharacterReader {
     }
 
     java.lang.String consumeToAny(final char... chars) {
-        final int start = (_constantOperatorMetaMutator63.is("ZERO")?( 0 ):(_constantOperatorMetaMutator63.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator63.is("MIN_MIN")?( -2147483647 ):(pos))));
-        final int remaining = (_constantOperatorMetaMutator62.is("ZERO")?( 0 ):(_constantOperatorMetaMutator62.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator62.is("MIN_MIN")?( -2147483647 ):(length))));
+        final int start = (_constantOperatorMetaMutator63.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator63.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator63.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
+        final int remaining = (_constantOperatorMetaMutator62.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator62.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator62.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(length))));
         OUTER : while ((pos) < remaining) {
             for (char c : chars) {
                 if ((input[pos]) == c)
@@ -126,8 +126,8 @@ final class CharacterReader {
     }
 
     java.lang.String consumeToAnySorted(final char... chars) {
-        final int start = (_constantOperatorMetaMutator65.is("ZERO")?( 0 ):(_constantOperatorMetaMutator65.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator65.is("MIN_MIN")?( -2147483647 ):(pos))));
-        final int remaining = (_constantOperatorMetaMutator64.is("ZERO")?( 0 ):(_constantOperatorMetaMutator64.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator64.is("MIN_MIN")?( -2147483647 ):(length))));
+        final int start = (_constantOperatorMetaMutator65.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator65.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator65.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
+        final int remaining = (_constantOperatorMetaMutator64.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator64.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator64.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(length))));
         final char[] val = input;
         while ((pos) < remaining) {
             if ((java.util.Arrays.binarySearch(chars, val[pos])) >= 0)
@@ -139,8 +139,8 @@ final class CharacterReader {
     }
 
     java.lang.String consumeData() {
-        final int start = (_constantOperatorMetaMutator53.is("ZERO")?( 0 ):(_constantOperatorMetaMutator53.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator53.is("MIN_MIN")?( -2147483647 ):(pos))));
-        final int remaining = (_constantOperatorMetaMutator52.is("ZERO")?( 0 ):(_constantOperatorMetaMutator52.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator52.is("MIN_MIN")?( -2147483647 ):(length))));
+        final int start = (_constantOperatorMetaMutator53.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator53.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator53.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
+        final int remaining = (_constantOperatorMetaMutator52.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator52.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator52.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(length))));
         final char[] val = input;
         while ((pos) < remaining) {
             final char c = val[pos];
@@ -153,8 +153,8 @@ final class CharacterReader {
     }
 
     java.lang.String consumeTagName() {
-        final int start = (_constantOperatorMetaMutator59.is("ZERO")?( 0 ):(_constantOperatorMetaMutator59.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator59.is("MIN_MIN")?( -2147483647 ):(pos))));
-        final int remaining = (_constantOperatorMetaMutator58.is("ZERO")?( 0 ):(_constantOperatorMetaMutator58.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator58.is("MIN_MIN")?( -2147483647 ):(length))));
+        final int start = (_constantOperatorMetaMutator59.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator59.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator59.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
+        final int remaining = (_constantOperatorMetaMutator58.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator58.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator58.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(length))));
         final char[] val = input;
         while ((pos) < remaining) {
             final char c = val[pos];
@@ -173,7 +173,7 @@ final class CharacterReader {
     }
 
     java.lang.String consumeLetterSequence() {
-        int start = (_constantOperatorMetaMutator56.is("ZERO")?( 0 ):(_constantOperatorMetaMutator56.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator56.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator56.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator56.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator56.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((pos) < (length)) {
             char c = input[pos];
             if (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z')))
@@ -186,7 +186,7 @@ final class CharacterReader {
     }
 
     java.lang.String consumeLetterThenDigitSequence() {
-        int start = (_constantOperatorMetaMutator57.is("ZERO")?( 0 ):(_constantOperatorMetaMutator57.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator57.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator57.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator57.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator57.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((pos) < (length)) {
             char c = input[pos];
             if (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z')))
@@ -207,7 +207,7 @@ final class CharacterReader {
     }
 
     java.lang.String consumeHexSequence() {
-        int start = (_constantOperatorMetaMutator55.is("ZERO")?( 0 ):(_constantOperatorMetaMutator55.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator55.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator55.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator55.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator55.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((pos) < (length)) {
             char c = input[pos];
             if ((((c >= '0') && (c <= '9')) || ((c >= 'A') && (c <= 'F'))) || ((c >= 'a') && (c <= 'f')))
@@ -220,7 +220,7 @@ final class CharacterReader {
     }
 
     java.lang.String consumeDigitSequence() {
-        int start = (_constantOperatorMetaMutator54.is("ZERO")?( 0 ):(_constantOperatorMetaMutator54.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator54.is("MIN_MIN")?( -2147483647 ):(pos))));
+        int start = (_constantOperatorMetaMutator54.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator54.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator54.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(pos))));
         while ((pos) < (length)) {
             char c = input[pos];
             if ((c >= '0') && (c <= '9'))
@@ -237,11 +237,11 @@ final class CharacterReader {
     }
 
     boolean matches(java.lang.String seq) {
-        int scanLength = (_constantOperatorMetaMutator37.is("ZERO")?( 0 ):(_constantOperatorMetaMutator37.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator37.is("MIN_MIN")?( -2147483647 ):(seq.length()))));
+        int scanLength = (_constantOperatorMetaMutator37.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator37.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator37.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(seq.length()))));
         if (scanLength > ((length) - (pos)))
             return false;
         
-        for (int offset = (_constantOperatorMetaMutator38.is("ZERO")?( 0 ):(_constantOperatorMetaMutator38.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator38.is("MIN_MIN")?( -2147483647 ):(0)))) ; offset < scanLength ; offset++)
+        for (int offset = (_constantOperatorMetaMutator38.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator38.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator38.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; offset < scanLength ; offset++)
             if ((seq.charAt(offset)) != (input[((pos) + offset)]))
                 return false;
             
@@ -249,11 +249,11 @@ final class CharacterReader {
     }
 
     boolean matchesIgnoreCase(java.lang.String seq) {
-        int scanLength = (_constantOperatorMetaMutator39.is("ZERO")?( 0 ):(_constantOperatorMetaMutator39.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator39.is("MIN_MIN")?( -2147483647 ):(seq.length()))));
+        int scanLength = (_constantOperatorMetaMutator39.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator39.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator39.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(seq.length()))));
         if (scanLength > ((length) - (pos)))
             return false;
         
-        for (int offset = (_constantOperatorMetaMutator40.is("ZERO")?( 0 ):(_constantOperatorMetaMutator40.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator40.is("MIN_MIN")?( -2147483647 ):(0)))) ; offset < scanLength ; offset++) {
+        for (int offset = (_constantOperatorMetaMutator40.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator40.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator40.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; offset < scanLength ; offset++) {
             char upScan = java.lang.Character.toUpperCase(seq.charAt(offset));
             char upTarget = java.lang.Character.toUpperCase(input[((pos) + offset)]);
             if (upScan != upTarget)
@@ -331,12 +331,12 @@ final class CharacterReader {
         if (count > (maxCacheLen))
             return new java.lang.String(val , start , count);
         
-        int hash = (_constantOperatorMetaMutator49.is("ZERO")?( 0 ):(_constantOperatorMetaMutator49.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator49.is("MIN_MIN")?( -2147483647 ):(0))));
-        int offset = (_constantOperatorMetaMutator50.is("ZERO")?( 0 ):(_constantOperatorMetaMutator50.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator50.is("MIN_MIN")?( -2147483647 ):(start))));
-        for (int i = (_constantOperatorMetaMutator48.is("ZERO")?( 0 ):(_constantOperatorMetaMutator48.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator48.is("MIN_MIN")?( -2147483647 ):(0)))) ; i < count ; i++) {
+        int hash = (_constantOperatorMetaMutator49.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator49.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator49.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
+        int offset = (_constantOperatorMetaMutator50.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator50.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator50.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(start))));
+        for (int i = (_constantOperatorMetaMutator48.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator48.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator48.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0)))) ; i < count ; i++) {
             hash = (31 * hash) + (val[offset++]);
         }
-        final int index = (_constantOperatorMetaMutator51.is("ZERO")?( 0 ):(_constantOperatorMetaMutator51.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator51.is("MIN_MIN")?( -2147483647 ):(hash & ((cache.length) - 1)))));
+        final int index = (_constantOperatorMetaMutator51.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator51.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator51.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(hash & ((cache.length) - 1)))));
         java.lang.String cached = cache[index];
         if (cached == null) {
             cached = new java.lang.String(val , start , count);
@@ -354,8 +354,8 @@ final class CharacterReader {
     boolean rangeEquals(final int start, int count, final java.lang.String cached) {
         if (count == (cached.length())) {
             char[] one = input;
-            int i = (_constantOperatorMetaMutator41.is("ZERO")?( 0 ):(_constantOperatorMetaMutator41.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator41.is("MIN_MIN")?( -2147483647 ):(start))));
-            int j = (_constantOperatorMetaMutator42.is("ZERO")?( 0 ):(_constantOperatorMetaMutator42.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator42.is("MIN_MIN")?( -2147483647 ):(0))));
+            int i = (_constantOperatorMetaMutator41.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator41.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator41.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(start))));
+            int j = (_constantOperatorMetaMutator42.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator42.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator42.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(0))));
             while ((count--) != 0) {
                 if ((one[i++]) != (cached.charAt(j++)))
                     return false;
@@ -366,66 +366,66 @@ final class CharacterReader {
         return false;
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator36 = metamutator.Selector.of(36,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator36");
+    private static final metamutator.Selector _constantOperatorMetaMutator36 = metamutator.Selector.of(36,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator36");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator37 = metamutator.Selector.of(37,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator37");
+    private static final metamutator.Selector _constantOperatorMetaMutator37 = metamutator.Selector.of(37,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator37");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator38 = metamutator.Selector.of(38,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator38");
+    private static final metamutator.Selector _constantOperatorMetaMutator38 = metamutator.Selector.of(38,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator38");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator39 = metamutator.Selector.of(39,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator39");
+    private static final metamutator.Selector _constantOperatorMetaMutator39 = metamutator.Selector.of(39,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator39");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator40 = metamutator.Selector.of(40,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator40");
+    private static final metamutator.Selector _constantOperatorMetaMutator40 = metamutator.Selector.of(40,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator40");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator41 = metamutator.Selector.of(41,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator41");
+    private static final metamutator.Selector _constantOperatorMetaMutator41 = metamutator.Selector.of(41,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator41");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator42 = metamutator.Selector.of(42,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator42");
+    private static final metamutator.Selector _constantOperatorMetaMutator42 = metamutator.Selector.of(42,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator42");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator43 = metamutator.Selector.of(43,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator43");
+    private static final metamutator.Selector _constantOperatorMetaMutator43 = metamutator.Selector.of(43,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator43");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator44 = metamutator.Selector.of(44,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator44");
+    private static final metamutator.Selector _constantOperatorMetaMutator44 = metamutator.Selector.of(44,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator44");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator45 = metamutator.Selector.of(45,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator45");
+    private static final metamutator.Selector _constantOperatorMetaMutator45 = metamutator.Selector.of(45,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator45");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator46 = metamutator.Selector.of(46,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator46");
+    private static final metamutator.Selector _constantOperatorMetaMutator46 = metamutator.Selector.of(46,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator46");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator47 = metamutator.Selector.of(47,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator47");
+    private static final metamutator.Selector _constantOperatorMetaMutator47 = metamutator.Selector.of(47,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator47");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator48 = metamutator.Selector.of(48,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator48");
+    private static final metamutator.Selector _constantOperatorMetaMutator48 = metamutator.Selector.of(48,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator48");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator49 = metamutator.Selector.of(49,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator49");
+    private static final metamutator.Selector _constantOperatorMetaMutator49 = metamutator.Selector.of(49,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator49");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator50 = metamutator.Selector.of(50,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator50");
+    private static final metamutator.Selector _constantOperatorMetaMutator50 = metamutator.Selector.of(50,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator50");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator51 = metamutator.Selector.of(51,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator51");
+    private static final metamutator.Selector _constantOperatorMetaMutator51 = metamutator.Selector.of(51,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator51");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator52 = metamutator.Selector.of(52,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator52");
+    private static final metamutator.Selector _constantOperatorMetaMutator52 = metamutator.Selector.of(52,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator52");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator53 = metamutator.Selector.of(53,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator53");
+    private static final metamutator.Selector _constantOperatorMetaMutator53 = metamutator.Selector.of(53,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator53");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator54 = metamutator.Selector.of(54,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator54");
+    private static final metamutator.Selector _constantOperatorMetaMutator54 = metamutator.Selector.of(54,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator54");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator55 = metamutator.Selector.of(55,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator55");
+    private static final metamutator.Selector _constantOperatorMetaMutator55 = metamutator.Selector.of(55,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator55");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator56 = metamutator.Selector.of(56,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator56");
+    private static final metamutator.Selector _constantOperatorMetaMutator56 = metamutator.Selector.of(56,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator56");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator57 = metamutator.Selector.of(57,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator57");
+    private static final metamutator.Selector _constantOperatorMetaMutator57 = metamutator.Selector.of(57,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator57");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator58 = metamutator.Selector.of(58,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator58");
+    private static final metamutator.Selector _constantOperatorMetaMutator58 = metamutator.Selector.of(58,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator58");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator59 = metamutator.Selector.of(59,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator59");
+    private static final metamutator.Selector _constantOperatorMetaMutator59 = metamutator.Selector.of(59,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator59");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator60 = metamutator.Selector.of(60,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator60");
+    private static final metamutator.Selector _constantOperatorMetaMutator60 = metamutator.Selector.of(60,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator60");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator61 = metamutator.Selector.of(61,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator61");
+    private static final metamutator.Selector _constantOperatorMetaMutator61 = metamutator.Selector.of(61,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator61");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator62 = metamutator.Selector.of(62,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator62");
+    private static final metamutator.Selector _constantOperatorMetaMutator62 = metamutator.Selector.of(62,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator62");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator63 = metamutator.Selector.of(63,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator63");
+    private static final metamutator.Selector _constantOperatorMetaMutator63 = metamutator.Selector.of(63,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator63");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator64 = metamutator.Selector.of(64,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator64");
+    private static final metamutator.Selector _constantOperatorMetaMutator64 = metamutator.Selector.of(64,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator64");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator65 = metamutator.Selector.of(65,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator65");
+    private static final metamutator.Selector _constantOperatorMetaMutator65 = metamutator.Selector.of(65,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator65");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator66 = metamutator.Selector.of(66,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator66");
+    private static final metamutator.Selector _constantOperatorMetaMutator66 = metamutator.Selector.of(66,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.CharacterReader.class).id("_constantOperatorMetaMutator66");
 }
 

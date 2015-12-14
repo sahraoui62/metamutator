@@ -6,7 +6,7 @@ public class Parser {
 
     private org.jsoup.parser.TreeBuilder treeBuilder;
 
-    private int maxErrors = (_constantOperatorMetaMutator88.is("ZERO")?( 0 ):(_constantOperatorMetaMutator88.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator88.is("MIN_MIN")?( -2147483647 ):(org.jsoup.parser.Parser.DEFAULT_MAX_ERRORS))));
+    private int maxErrors = (_constantOperatorMetaMutator88.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator88.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator88.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):(org.jsoup.parser.Parser.DEFAULT_MAX_ERRORS))));
 
     private org.jsoup.parser.ParseErrorList errors;
 
@@ -61,7 +61,7 @@ public class Parser {
         org.jsoup.nodes.Element body = doc.body();
         java.util.List<org.jsoup.nodes.Node> nodeList = org.jsoup.parser.Parser.parseFragment(bodyHtml, body, baseUri);
         org.jsoup.nodes.Node[] nodes = nodeList.toArray(new org.jsoup.nodes.Node[nodeList.size()]);
-        for (int i = (_constantOperatorMetaMutator89.is("ZERO")?( 0 ):(_constantOperatorMetaMutator89.is("INT_MAX")?( 2147483646 ):(_constantOperatorMetaMutator89.is("MIN_MIN")?( -2147483647 ):((nodes.length) - 1)))) ; i > 0 ; i--) {
+        for (int i = (_constantOperatorMetaMutator89.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO)?( 0 ):(_constantOperatorMetaMutator89.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX)?( 2147483646 ):(_constantOperatorMetaMutator89.is(metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN)?( -2147483647 ):((nodes.length) - 1)))) ; i > 0 ; i--) {
             nodes[i].remove();
         }
         for (org.jsoup.nodes.Node node : nodes) {
@@ -87,8 +87,8 @@ public class Parser {
         return new org.jsoup.parser.Parser(new org.jsoup.parser.XmlTreeBuilder());
     }
 
-    private static final metamutator.Selector _constantOperatorMetaMutator88 = metamutator.Selector.of(88,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.Parser.class).id("_constantOperatorMetaMutator88");
+    private static final metamutator.Selector _constantOperatorMetaMutator88 = metamutator.Selector.of(88,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.Parser.class).id("_constantOperatorMetaMutator88");
 
-    private static final metamutator.Selector _constantOperatorMetaMutator89 = metamutator.Selector.of(89,new String[]{"ZERO","INT_MAX","MIN_MIN"}).in(org.jsoup.parser.Parser.class).id("_constantOperatorMetaMutator89");
+    private static final metamutator.Selector _constantOperatorMetaMutator89 = metamutator.Selector.of(89,new metamutator.ConstantReplacementMetaMutator.CONSTANT_REP[]{metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.ZERO,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.INT_MAX,metamutator.ConstantReplacementMetaMutator.CONSTANT_REP.MIN_MIN}).in(org.jsoup.parser.Parser.class).id("_constantOperatorMetaMutator89");
 }
 
