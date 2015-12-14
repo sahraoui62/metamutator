@@ -35,5 +35,9 @@ public class Foo {
 	public boolean op_get_b(Boolean a){
 		return a;
 	}
-	
+		
+	public int constant() {
+		  int i = 42;
+		  return i;
+	}
 }
