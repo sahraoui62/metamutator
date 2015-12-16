@@ -115,7 +115,7 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 				newReturn.setReturnedExpression(codeSnippet);
 				returnStatement.replace(newReturn);
 				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_OBJECT.INIT, index, object_replacement, PREFIX);
-				
+				System.out.println(index);
 				hostSpots.add(returnStatement);
 			}
 		}

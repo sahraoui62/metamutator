@@ -17,7 +17,7 @@ public class MutantGenerator {
 		l.addProcessor(new ReturnReplacementOperatorMetaMutator());
 	    l.addProcessor(new ArithmeticOperatorMetaMutator());
 	    //l.addProcessor(new BinaryOperatorMetaMutator());
-	    l.addProcessor(new ConstantReplacementMetaMutator());
+	    //l.addProcessor(new ConstantReplacementMetaMutator());
 	    
 	    System.out.println("Start running ...");
 	    l.run(arguments.toArray(new String[arguments.size()]));

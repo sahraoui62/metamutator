@@ -142,6 +142,7 @@ public class BinaryOperatorMetaMutator extends
 		expression.replace(codeSnippet);
 		expression.replace(expression);
 		Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
+		System.out.println("nb mutants " + thisIndex);
 
 		hostSpots.add(expression);
 

@@ -66,6 +66,8 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 			try {
 				valToChange.replace(codeSnippet);
 				Selector.generateSelector(element, CONSTANT_REP.ZERO, thisIndex, consRep, PREFIX);
+				System.out.println("nb mutants " + thisIndex);
+
 			} catch (Exception e) {
 				System.err.println("Element not changed");
 			}
