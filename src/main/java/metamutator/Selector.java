@@ -127,7 +127,7 @@ public class Selector<E> {
 	/** Generates a field containing a new selector for this element and adds it to the current class 
 	 * 
 	 */
-	public static <E> void generateSelector(CtElement element, E initialChoice, int selectorId, EnumSet<?> possibleChoices, String prefix ) {
+	public static <E> void generateSelector(CtElement element, E initialChoice, int selectorId, int procId, EnumSet<?> possibleChoices, String prefix ) {
 		
 		Class<?> choiceClass = possibleChoices.iterator().next().getClass();
 		

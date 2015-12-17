@@ -24,6 +24,7 @@ public class BinaryOperatorMetaMutator extends
 		AbstractProcessor<CtBinaryOperator<Boolean>> {
 
 	public static final String PREFIX =  "_binaryLogicalOperatorHotSpot";
+	private static final int procId = 1;
 	private static int index = 0;
 
 	private static final EnumSet<BinaryOperatorKind> LOGICAL_OPERATORS = EnumSet
@@ -96,6 +97,8 @@ public class BinaryOperatorMetaMutator extends
 		//|| Number.class.isAssignableFrom(operand.getType().getActualClass());
 	}
 
+	
+	
 /**
 	 * Converts "a op b" bean op one of "<", "<=", "==", ">=", "!=" to:
 	 *    (  (op(1, 0, "<")  && (a < b))
@@ -141,9 +144,10 @@ public class BinaryOperatorMetaMutator extends
 
 		expression.replace(codeSnippet);
 		expression.replace(expression);
-		Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
+		Selector.generateSelector(expression, originalKind, thisIndex, procId, operators, PREFIX);
 		hostSpots.add(expression);
 
+		System.out.println("nb mutants " +thisIndex);
 	}
 
 	/**

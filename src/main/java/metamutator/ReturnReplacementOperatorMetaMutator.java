@@ -19,6 +19,7 @@ import spoon.reflect.declaration.CtField;
 public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtReturn> {
 
 	public static final String PREFIX = "_returnReplacementOperatorHotSpot";
+	private static final int procId = 6;
 	private static int index = 0;	
 	private static final EnumSet<RETURN_REPLACEMENT_INT> int_replacement = EnumSet.of(RETURN_REPLACEMENT_INT.INT_MIN, RETURN_REPLACEMENT_INT.INT_MAX, RETURN_REPLACEMENT_INT.ZERO);
 	private static final EnumSet<RETURN_REPLACEMENT_OBJECT> object_replacement = EnumSet.of(RETURN_REPLACEMENT_OBJECT.NULL);
@@ -68,6 +69,7 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 	
 	
 	public void process(CtReturn returnStatement) {
+		
 		CtExpression returnValue = returnStatement.getReturnedExpression();
 		// test if the returned value is not null
 		if(returnValue != null){
@@ -99,7 +101,7 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 				CtReturn newReturn = getFactory().Core().createReturn();
 				newReturn.setReturnedExpression(codeSnippet);
 				returnStatement.replace(newReturn);
-				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_INT.INIT, index, int_replacement, PREFIX);
+				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_INT.INIT, index, procId, int_replacement, PREFIX);
 				
 				hostSpots.add(returnStatement);
 				
@@ -114,9 +116,10 @@ public class ReturnReplacementOperatorMetaMutator extends AbstractProcessor<CtRe
 				CtReturn newReturn = getFactory().Core().createReturn();
 				newReturn.setReturnedExpression(codeSnippet);
 				returnStatement.replace(newReturn);
-				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_OBJECT.INIT, index, object_replacement, PREFIX);
+				Selector.generateSelector(returnStatement, RETURN_REPLACEMENT_OBJECT.INIT, index, procId, object_replacement, PREFIX);
 				hostSpots.add(returnStatement);
 			}
+			System.out.println("nb mutants " +index);
 		}
 	}
 	

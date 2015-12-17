@@ -12,6 +12,7 @@ import spoon.reflect.declaration.ModifierKind;
 public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariableRead<?>> {
 
 	public static final String PREFIX = "_constantOperatorMetaMutator";
+	private static final int procId = 5;
 	
 	public enum CONSTANT_REP {
 		ZERO,
@@ -46,6 +47,7 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 		default : return "";}
 		}
 	
+	
 	@Override
 	public void process(CtVariableRead element) {
 		
@@ -65,7 +67,7 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 			
 			try {
 				valToChange.replace(codeSnippet);
-				Selector.generateSelector(element, CONSTANT_REP.ZERO, thisIndex, consRep, PREFIX);
+				Selector.generateSelector(element, CONSTANT_REP.ZERO, thisIndex, procId, consRep, PREFIX);
 
 			} catch (Exception e) {
 				System.err.println("Element not changed");
@@ -73,7 +75,9 @@ public class ConstantReplacementMetaMutator extends AbstractProcessor<CtVariable
 			
 		} catch (Exception e) {
 
-		}		
+		} finally {
+			System.out.println("nb mutants " +thisIndex);
+		}
 		
 	}
 	

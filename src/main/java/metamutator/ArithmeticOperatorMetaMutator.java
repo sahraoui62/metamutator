@@ -25,6 +25,7 @@ public class ArithmeticOperatorMetaMutator extends
 		AbstractProcessor<CtBinaryOperator<Boolean>> {
 
 	public static final String PREFIX =  "_arithmeticOperatorHotSpot";
+	private static final int procId = 7;
 	private static int index = 0;
 	private static final EnumSet<BinaryOperatorKind> ARITHMETIC_OPERATORS = EnumSet
 			.of(BinaryOperatorKind.PLUS, BinaryOperatorKind.MINUS, BinaryOperatorKind.DIV, BinaryOperatorKind.MUL);
@@ -85,7 +86,7 @@ public class ArithmeticOperatorMetaMutator extends
 		|| operand.getType().getSimpleName().equals("double")
 		|| Number.class.isAssignableFrom(operand.getType().getActualClass());
 	}
-
+	
 /**
 	 * Converts "a op b" bean op one of "-", "+", "*", "/"
 	 *    (  (op(1, 0, "-") && (a - b))
@@ -98,7 +99,6 @@ public class ArithmeticOperatorMetaMutator extends
 	 * @param operators
 	 */
 	private void mutateOperator(final CtBinaryOperator<Boolean> expression, EnumSet<BinaryOperatorKind> operators) {
-		
 		if (!operators.contains(expression.getKind())) {
 			throw new IllegalArgumentException("not consistent");
 		}
@@ -132,10 +132,12 @@ public class ArithmeticOperatorMetaMutator extends
 		codeSnippet.setValue('(' + newExpression + ')');
 		expression.replace(codeSnippet);
 		expression.replace(expression);
-		Selector.generateSelector(expression, originalKind, thisIndex, operators, PREFIX);
+		Selector.generateSelector(expression, originalKind, thisIndex, procId, operators, PREFIX);
 		System.out.println("nb mutants " +index);
 
 		hostSpots.add(expression);
+		
+		System.out.println("nb mutants " +thisIndex);
 	}
 
 	/**
@@ -163,4 +165,5 @@ public class ArithmeticOperatorMetaMutator extends
 	private boolean isTopLevel(CtElement parent) {
 		return parent instanceof CtClass && ((CtClass) parent).isTopLevel();
 	}
+	
 }

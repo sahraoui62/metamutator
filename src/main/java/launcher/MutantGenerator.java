@@ -12,12 +12,12 @@ public class MutantGenerator {
 		Launcher l = new Launcher();
 		final List<String> arguments = new LinkedList<String>();
 		arguments.add("-i");
-		arguments.add("/Users/slimane/Documents/master2/OPL/jsoup-master/src/main");
+		arguments.add("/home/sofiane/Documents/Master/IAGL/OPL/jsoup-master/src/main");
 		
 		l.addProcessor(new ReturnReplacementOperatorMetaMutator());
-	    l.addProcessor(new ArithmeticOperatorMetaMutator());
-	    //l.addProcessor(new BinaryOperatorMetaMutator());
-	    //l.addProcessor(new ConstantReplacementMetaMutator());
+//	    l.addProcessor(new ArithmeticOperatorMetaMutator());
+//	    l.addProcessor(new BinaryOperatorMetaMutator());
+//	    l.addProcessor(new ConstantReplacementMetaMutator());
 	    
 	    System.out.println("Start running ...");
 	    l.run(arguments.toArray(new String[arguments.size()]));
